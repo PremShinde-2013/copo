@@ -1,0 +1,368 @@
+{
+    "po11": "Sample PO11",
+    "po12": "Sample PO12",
+    "po13": "Sample PO13",
+    "po14": "Sample PO14",
+    "po15": "Sample PO15",
+    "competency11": "Sample Competency 11",
+    "competency12": "Sample Competency 12",
+    "competency13": "Sample Competency 13",
+    "competency14": "Sample Competency 14",
+    "competency15": "Sample Competency 15",
+    "indicators11": "Sample Indicators 11",
+    "indicators12": "Sample Indicators 12",
+    "indicators13": "Sample Indicators 13",
+    "indicators14": "Sample Indicators 14",
+    "indicators15": "Sample Indicators 15",
+    "weight11": " 11",
+    "weight12": " 12",
+    "weight13": " 13",
+    "weight14": " 14",
+    "weight15": " 15",
+    "co111": "111",
+    "co112": "112",
+    "co113": "113",
+    "co114": "114",
+    "co115": "115",
+    "co211": "211",
+    "co212": "212",
+    "co213": "213",
+    "co214": "214",
+    "co215": "215",
+    "co311": "311",
+    "co312": "312",
+    "co313": "313",
+    "co314": "314",
+    "co315": "315",
+    "co411": "411",
+    "co412": "412",
+    "co413": "413",
+    "co414": "414",
+    "co415": "415",
+    "co511": "511",
+    "co512": "512",
+    "co513": "513",
+    "co514": "514",
+    "co515": "515",
+    "co611": "611",
+    "co612": "612",
+    "co613": "613",
+    "co614": "614",
+    "co615": "615",
+    "co711": "711",
+    "co712": "712",
+    "co713": "713",
+    "co714": "714",
+    "co715": "715"
+
+
+
+
+
+
+	// const columns: GridColDef[] = [
+	// 	// Define your columns with editable set to true
+	// 	{ field: "PO", headerName: "PO", width: 180, editable: true },
+	// 	{
+	// 		field: "Competency",
+	// 		headerName: "Competency",
+	// 		type: "string",
+	// 		width: 180,
+	// 		editable: true,
+	// 	},
+	// 	{
+	// 		field: "Indicators",
+	// 		headerName: "Indicators",
+	// 		type: "string",
+	// 		width: 220,
+	// 		editable: true,
+	// 	},
+	// 	{
+	// 		field: "Weight",
+	// 		headerName: "Weight",
+	// 		type: "number",
+	// 		width: 220,
+	// 		editable: true,
+	// 	},
+	// 	{
+	// 		field: "CO1",
+	// 		headerName: "CO1",
+	// 		type: "number",
+	// 		width: 220,
+	// 		editable: true,
+	// 	},
+	// 	{
+	// 		field: "CO2",
+	// 		headerName: "CO2",
+	// 		type: "number",
+	// 		width: 220,
+	// 		editable: true,
+	// 	},
+	// 	{
+	// 		field: "CO3",
+	// 		headerName: "CO3",
+	// 		type: "number",
+	// 		width: 220,
+	// 		editable: true,
+	// 	},
+	// 	{
+	// 		field: "CO4",
+	// 		headerName: "CO4",
+	// 		type: "number",
+	// 		width: 220,
+	// 		editable: true,
+	// 	},
+	// 	{
+	// 		field: "CO5",
+	// 		headerName: "CO5",
+	// 		type: "number",
+	// 		width: 220,
+	// 		editable: true,
+	// 	},
+	// 	{
+	// 		field: "CO6",
+	// 		headerName: "CO6",
+	// 		type: "number",
+	// 		width: 220,
+	// 		editable: true,
+	// 	},
+	// 	{
+	// 		field: "CO7",
+	// 		headerName: "CO7",
+	// 		type: "number",
+	// 		width: 220,
+	// 		editable: true,
+	// 	},
+	// ];
+
+	// const rows: GridRowsProp = [
+	// 	/* Your rows data */
+	// 	{
+	// 		id: 1,
+	// 		PO: "PO 1: Engineering knowledge: Apply the knowledge of mathematics, science, engineering fundamentals, and an engineering specialisation for the solution of complex engineering problems.",
+	// 		Competency: "1.1  Demonstrate competence in mathematical modelling",
+	// 		Indicators:
+	// 			"1.1.1      Apply mathematical techniques such as calculus, linear algebra, and statistics to solve problems",
+	// 		Weight: 0.2,
+	// 		CO1: 1,
+	// 		CO2: 1,
+	// 		CO3: 1,
+	// 		CO4: 1,
+	// 		CO5: 1,
+	// 		CO6: 1,
+	// 		CO7: 1,
+	// 	},
+	// 	{
+	// 		id: 2,
+	// 		PO: "PO 1: Engineering knowledge: Apply the knowledge of mathematics, science, engineering fundamentals, and an engineering specialisation for the solution of complex engineering problems.",
+	// 		Competency: "1.1  Demonstrate competence in mathematical modelling",
+	// 		Indicators:
+	// 			"1.1.2      Apply advanced mathematical techniques to model and solve mechanical engineering problems",
+	// 		Weight: 0.2,
+	// 		CO1: 1,
+	// 		CO2: 1,
+	// 		CO3: 1,
+	// 		CO4: 1,
+	// 		CO5: 1,
+	// 		CO6: 1,
+	// 		CO7: 1,
+	// 	},
+	// 	{
+	// 		id: 3,
+	// 		PO: "PO 1: Engineering knowledge: Apply the knowledge of mathematics, science, engineering fundamentals, and an engineering specialisation for the solution of complex engineering problems.",
+	// 		Competency: "1.2 Demonstrate competence in basic sciences",
+	// 		Indicators:
+	// 			"1.2.1  Apply laws of natural science to an engineering problem",
+	// 		Weight: 0.2,
+	// 		CO1: 1,
+	// 		CO2: 1,
+	// 		CO3: 1,
+	// 		CO4: 1,
+	// 		CO5: 1,
+	// 		CO6: 1,
+	// 		CO7: 1,
+	// 	},
+	// 	{
+	// 		id: 4,
+	// 		PO: "PO 1: Engineering knowledge: Apply the knowledge of mathematics, science, engineering fundamentals, and an engineering specialisation for the solution of complex engineering problems.",
+	// 		Competency: "1.3 Demonstrate competence in engineering fundamentals",
+	// 		Indicators:
+	// 			"1.3.1  Apply fundamental engineering concepts to solve engineering problems",
+	// 		Weight: 0.2,
+	// 		CO1: 1,
+	// 		CO2: 1,
+	// 		CO3: 1,
+	// 		CO4: 1,
+	// 		CO5: 1,
+	// 		CO6: 1,
+	// 		CO7: 1,
+	// 	},
+	// 	{
+	// 		id: 5,
+	// 		PO: "PO 1: Engineering knowledge: Apply the knowledge of mathematics, science, engineering fundamentals, and an engineering specialisation for the solution of complex engineering problems.",
+	// 		Competency:
+	// 			"1.4 Demonstrate competence in specialized engineering knowledge to the program",
+	// 		Indicators:
+	// 			"1.4.1  Apply Mechanical engineering concepts to solve engineering problems.",
+	// 		Weight: 0.2,
+	// 		CO1: 1,
+	// 		CO2: 1,
+	// 		CO3: 1,
+	// 		CO4: 1,
+	// 		CO5: 1,
+	// 		CO6: 1,
+	// 		CO7: 1,
+	// 	},
+	// 	{
+	// 		id: 6,
+	// 		PO: "Mapping Level",
+	// 		colSpan: 4,
+	// 		hideable: false,
+
+	// 		CO1: 1,
+	// 		CO2: 1,
+	// 		CO3: 1,
+	// 		CO4: 1,
+	// 		CO5: 1,
+	// 		CO6: 1,
+	// 		CO7: 1,
+	// 	},
+	// ];
+
+
+
+
+
+
+
+
+
+
+
+**************************   fix code *******************************
+
+
+import {
+	Table,
+	TableHeader,
+	TableColumn,
+	TableBody,
+	TableRow,
+	TableCell,
+	Card,
+} from "@nextui-org/react";
+import * as XLSX from "xlsx";
+import { saveAs } from "file-saver";
+import { Button } from "@nextui-org/button";
+
+const getTable = async () => {
+	try {
+		const res = await fetch("http://localhost:3000/api/table", {
+			cache: "no-store",
+		});
+
+		if (!res.ok) {
+			throw new Error("Failed to fetch toptics");
+		}
+
+		return await res.json(); // Return the JSON response
+	} catch (error) {
+		console.log("error loding topics", error);
+	}
+};
+
+export default async function DocsPage() {
+	const { table } = await getTable();
+
+	if (!table) {
+		// Handle the case where table is null
+		return <div>Error loading data</div>;
+	}
+
+	const exportToExcel = () => {
+		const ws = XLSX.utils.aoa_to_sheet([
+			[
+				"PO",
+				"Competency",
+				"Indicators",
+				"Weight",
+				"CO1",
+				"CO2",
+				"CO3",
+				"CO4",
+				"CO5",
+				"CO6",
+				"CO7",
+			],
+			...table.map((t: any) => [
+				t.po11,
+				t.competency11,
+				t.indicators11,
+				t.weight11,
+				t.co111,
+				t.co211,
+				t.co311,
+				t.co411,
+				t.co511,
+				t.co611,
+				t.co711,
+			]),
+		]);
+		const wb = XLSX.utils.book_new();
+		XLSX.utils.book_append_sheet(wb, ws, "Sheet1");
+		const excelBuffer = XLSX.write(wb, { bookType: "xlsx", type: "array" });
+		saveAs(
+			new Blob([excelBuffer], { type: "application/octet-stream" }),
+			"table.xlsx"
+		);
+	};
+
+	return (
+		<>
+			<Card className='flex justify-center  overflow-x-visible  '>
+				<table className='table-fixed'>
+					<thead className='bg-gray-100 dark:bg-gray-800 gap-2   h-20'>
+						<tr>
+							<th className='px-28'>PO</th>
+							<th className='px-24'>Competency</th>
+							<th className='px-24'>Indicators</th>
+							<th className='px-8'>Weight</th>
+							<th className='px-8'>CO1</th>
+							<th className='px-8'>CO2</th>
+							<th className='px-8'>CO3</th>
+							<th className='px-8'>CO4</th>
+							<th className='px-8'>CO5</th>
+							<th className='px-8'>CO6</th>
+							<th className='px-8'>CO7</th>
+						</tr>
+					</thead>
+					<tbody>
+						{table.map((t: any, index: number) => (
+							<tr key={index}>
+								<td>{t.po11}</td>
+								<td>{t.competency11}</td>
+								<td>{t.indicators11}</td>
+								<td>{t.weight11}</td>
+								<td>{t.co111}</td>
+								<td>{t.co211}</td>
+								<td>{t.co311}</td>
+								<td>{t.co411}</td>
+								<td>{t.co511}</td>
+								<td>{t.co611}</td>
+								<td>{t.co711}</td>
+							</tr>
+						))}
+					</tbody>
+				</table>
+			</Card>
+		</>
+	);
+}
+
+
+
+
+
+
+
+
