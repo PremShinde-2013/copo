@@ -70,7 +70,8 @@ interface TableData {
 
 const fetchData = async (): Promise<TableData[] | null> => {
 	try {
-		const res = await fetch("http://localhost:3000/api/table", {
+		// const res = await fetch("http://localhost:3000/api/table", {
+		const res = await fetch("https://copo-attainment.vercel.app/api/table", {
 			cache: "no-store",
 		});
 
