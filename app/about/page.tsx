@@ -102,6 +102,20 @@ const DisplayTable = () => {
 				t.co615,
 				t.co715,
 			]),
+
+			[
+				"PO1 :Mapping Level", // Label for the special row
+				"", // Empty cell for Competency
+				"", // Empty cell for Indicators
+				"", // Empty cell for Weight
+				table[0].po1mapco1, // Data for po1mapco1
+				table[0].po1mapco2, // Data for po1mapco2
+				table[0].po1mapco3, // Data for po1mapco3
+				table[0].po1mapco4, // Data for po1mapco4
+				table[0].po1mapco5, // Data for po1mapco5
+				table[0].po1mapco6, // Data for po1mapco6
+				table[0].po1mapco7, // Data for po1mapco7
+			],
 		]);
 		const wb = XLSX.utils.book_new();
 		XLSX.utils.book_append_sheet(wb, ws, "Sheet1");
@@ -205,6 +219,21 @@ const DisplayTable = () => {
 								<td>{t.co515}</td>
 								<td>{t.co615}</td>
 								<td>{t.co715}</td>
+							</tr>
+						))}
+						{table.map((t: any, index: number) => (
+							<tr key={index}>
+								<td colSpan={4} className='h-16'>
+									PO1 :Mapping Level
+								</td>
+
+								<td>{t.po1mapco1}</td>
+								<td>{t.po1mapco2}</td>
+								<td>{t.po1mapco3}</td>
+								<td>{t.po1mapco4}</td>
+								<td>{t.po1mapco5}</td>
+								<td>{t.po1mapco6}</td>
+								<td>{t.po1mapco7}</td>
 							</tr>
 						))}
 					</tbody>

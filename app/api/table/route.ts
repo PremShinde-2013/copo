@@ -69,6 +69,14 @@ export async function POST(request: any) {
 		co713,
 		co714,
 		co715,
+
+		po1mapco1,
+		po1mapco2,
+		po1mapco3,
+		po1mapco4,
+		po1mapco5,
+		po1mapco6,
+		po1mapco7,
 	} = await request.json();
 	await connectDB();
 	await Table.create({
@@ -137,6 +145,14 @@ export async function POST(request: any) {
 		co713,
 		co714,
 		co715,
+
+		po1mapco1,
+		po1mapco2,
+		po1mapco3,
+		po1mapco4,
+		po1mapco5,
+		po1mapco6,
+		po1mapco7,
 	});
 
 	return NextResponse.json({ message: "Topic Created" });

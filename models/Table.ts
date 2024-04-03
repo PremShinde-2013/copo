@@ -68,6 +68,14 @@ export interface TableInterface extends Document {
 	co713: number;
 	co714: number;
 	co715: number;
+
+	po1mapco1: number;
+	po1mapco2: number;
+	po1mapco3: number;
+	po1mapco4: number;
+	po1mapco5: number;
+	po1mapco6: number;
+	po1mapco7: number;
 }
 
 const TableSchema = new Schema<TableInterface>({
@@ -136,6 +144,14 @@ const TableSchema = new Schema<TableInterface>({
 	co713: { type: Number, required: true },
 	co714: { type: Number, required: true },
 	co715: { type: Number, required: true },
+
+	po1mapco1: { type: Number, required: true },
+	po1mapco2: { type: Number, required: true },
+	po1mapco3: { type: Number, required: true },
+	po1mapco4: { type: Number, required: true },
+	po1mapco5: { type: Number, required: true },
+	po1mapco6: { type: Number, required: true },
+	po1mapco7: { type: Number, required: true },
 });
 
 const Table =

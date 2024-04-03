@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import {
 	Table,
 	TableHeader,
@@ -81,6 +81,14 @@ interface TableRowData {
 	co713: number;
 	co714: number;
 	co715: number;
+
+	po1mapco1: number;
+	po1mapco2: number;
+	po1mapco3: number;
+	po1mapco4: number;
+	po1mapco5: number;
+	po1mapco6: number;
+	po1mapco7: number;
 }
 
 export default function App() {
@@ -108,29 +116,29 @@ export default function App() {
 		"1.1  Demonstrate competence in mathematical modelling"
 	);
 	const [competency13, setCompetency13] = useState(
-		"1.1  Demonstrate competence in mathematical modelling"
+		"1.2 Demonstrate competence in basic sciences"
 	);
 	const [competency14, setCompetency14] = useState(
-		"1.1  Demonstrate competence in mathematical modelling"
+		"1.3 Demonstrate competence in engineering fundamentals"
 	);
 	const [competency15, setCompetency15] = useState(
-		"1.1  Demonstrate competence in mathematical modelling"
+		"1.4 Demonstrate competence in specialized engineering knowledge to the program"
 	);
 
 	const [indicators11, setIndicators11] = useState(
 		"1.1.1      Apply mathematical techniques such as calculus, linear algebra, and statistics to solve problems"
 	);
 	const [indicators12, setIndicators12] = useState(
-		"1.1.1      Apply mathematical techniques such as calculus, linear algebra, and statistics to solve problems"
+		"1.1.2      Apply advanced mathematical techniques to model and solve mechanical engineering problems"
 	);
 	const [indicators13, setIndicators13] = useState(
-		"1.1.1      Apply mathematical techniques such as calculus, linear algebra, and statistics to solve problems"
+		"1.2.1  Apply laws of natural science to an engineering problem"
 	);
 	const [indicators14, setIndicators14] = useState(
-		"1.1.1      Apply mathematical techniques such as calculus, linear algebra, and statistics to solve problems"
+		"1.3.1  Apply fundamental engineering concepts to solve engineering problems"
 	);
 	const [indicators15, setIndicators15] = useState(
-		"1.1.1      Apply mathematical techniques such as calculus, linear algebra, and statistics to solve problems"
+		"1.4.1  Apply Mechanical engineering concepts to solve engineering problems."
 	);
 
 	const [weight11, setWeight11] = useState("0.2");
@@ -180,6 +188,136 @@ export default function App() {
 	const [co713, setCo713] = useState("");
 	const [co714, setCo714] = useState("");
 	const [co715, setCo715] = useState("");
+
+	const [po1mapco1, setPo1mapco1] = useState<number | string>("");
+	const [po1mapco2, setPo1mapco2] = useState<number | string>("");
+	const [po1mapco3, setPo1mapco3] = useState<number | string>("");
+	const [po1mapco4, setPo1mapco4] = useState<number | string>("");
+	const [po1mapco5, setPo1mapco5] = useState<number | string>("");
+	const [po1mapco6, setPo1mapco6] = useState<number | string>("");
+	const [po1mapco7, setPo1mapco7] = useState<number | string>("");
+
+	const calculatePo1mapco1 = () => {
+		const sumCo =
+			parseInt(co111) +
+			parseInt(co112) +
+			parseInt(co113) +
+			parseInt(co114) +
+			parseInt(co115);
+		const calculatedValue = Math.round((sumCo * 0.2) / 0.33);
+		setPo1mapco1(calculatedValue);
+	};
+	const calculatePo1mapco2 = () => {
+		const sumCo =
+			parseInt(co211) +
+			parseInt(co212) +
+			parseInt(co213) +
+			parseInt(co214) +
+			parseInt(co215);
+		const calculatedValue = Math.round((sumCo * 0.2) / 0.33);
+		setPo1mapco2(calculatedValue);
+	};
+	const calculatePo1mapco3 = () => {
+		const sumCo =
+			parseInt(co311) +
+			parseInt(co312) +
+			parseInt(co313) +
+			parseInt(co314) +
+			parseInt(co315);
+		const calculatedValue = Math.round((sumCo * 0.2) / 0.33);
+		setPo1mapco3(calculatedValue);
+	};
+	const calculatePo1mapco4 = () => {
+		const sumCo =
+			parseInt(co411) +
+			parseInt(co412) +
+			parseInt(co413) +
+			parseInt(co414) +
+			parseInt(co415);
+		const calculatedValue = Math.round((sumCo * 0.2) / 0.33);
+		setPo1mapco4(calculatedValue);
+	};
+	const calculatePo1mapco5 = () => {
+		const sumCo =
+			parseInt(co511) +
+			parseInt(co512) +
+			parseInt(co513) +
+			parseInt(co514) +
+			parseInt(co515);
+		const calculatedValue = Math.round((sumCo * 0.2) / 0.33);
+		setPo1mapco5(calculatedValue);
+	};
+	const calculatePo1mapco6 = () => {
+		const sumCo =
+			parseInt(co611) +
+			parseInt(co612) +
+			parseInt(co613) +
+			parseInt(co614) +
+			parseInt(co615);
+		const calculatedValue = Math.round((sumCo * 0.2) / 0.33);
+		setPo1mapco6(calculatedValue);
+	};
+	const calculatePo1mapco7 = () => {
+		const sumCo =
+			parseInt(co711) +
+			parseInt(co712) +
+			parseInt(co713) +
+			parseInt(co714) +
+			parseInt(co715);
+		const calculatedValue = Math.round((sumCo * 0.2) / 0.33);
+		setPo1mapco7(calculatedValue);
+	};
+
+	// Effect to call calculatePo1mapco1 whenever any of the co variables change
+	useEffect(() => {
+		calculatePo1mapco1();
+		calculatePo1mapco2();
+		calculatePo1mapco3();
+		calculatePo1mapco4();
+		calculatePo1mapco5();
+		calculatePo1mapco6();
+		calculatePo1mapco7();
+	}, [
+		co111,
+		co112,
+		co113,
+		co114,
+		co115,
+		co211,
+		co212,
+		co213,
+		co214,
+		co215,
+		co311,
+		co312,
+		co313,
+		co314,
+		co315,
+
+		co411,
+		co412,
+		co413,
+		co414,
+		co415,
+
+		co511,
+		co512,
+		co513,
+		co514,
+		co515,
+
+		co611,
+		co612,
+		co613,
+		co614,
+		co615,
+
+		co711,
+		co712,
+		co713,
+		co714,
+		co715,
+	]);
 
 	const handleSubmit = async (e: any) => {
 		e.preventDefault();
@@ -273,6 +411,14 @@ export default function App() {
 					co713,
 					co714,
 					co715,
+
+					po1mapco1,
+					po1mapco2,
+					po1mapco3,
+					po1mapco4,
+					po1mapco5,
+					po1mapco6,
+					po1mapco7,
 				}),
 			});
 
@@ -312,6 +458,7 @@ export default function App() {
 						<tr className='m-4'>
 							<td>
 								<Textarea
+									readOnly
 									value={po11}
 									onChange={(e) => setPo11(e.target.value)}
 									className='my-6'
@@ -319,12 +466,14 @@ export default function App() {
 							</td>
 							<td>
 								<Textarea
+									readOnly
 									value={competency11}
 									onChange={(e) => setCompetency11(e.target.value)}
 								/>
 							</td>
 							<td>
 								<Textarea
+									readOnly
 									value={indicators11}
 									onChange={(e) => setIndicators11(e.target.value)}
 								/>
@@ -332,6 +481,7 @@ export default function App() {
 							<td>
 								<Input
 									type='number'
+									readOnly
 									value={weight11}
 									onChange={(e) => setWeight11(e.target.value)}
 								/>
@@ -389,6 +539,7 @@ export default function App() {
 						<tr className='m-4'>
 							<td>
 								<Textarea
+									readOnly
 									value={po12}
 									onChange={(e) => setPo12(e.target.value)}
 									className='my-6'
@@ -396,12 +547,14 @@ export default function App() {
 							</td>
 							<td>
 								<Textarea
+									readOnly
 									value={competency12}
 									onChange={(e) => setCompetency12(e.target.value)}
 								/>
 							</td>
 							<td>
 								<Textarea
+									readOnly
 									value={indicators12}
 									onChange={(e) => setIndicators12(e.target.value)}
 								/>
@@ -409,6 +562,7 @@ export default function App() {
 							<td>
 								<Input
 									type='number'
+									readOnly
 									value={weight12}
 									onChange={(e) => setWeight12(e.target.value)}
 								/>
@@ -466,6 +620,7 @@ export default function App() {
 						<tr className='m-4'>
 							<td>
 								<Textarea
+									readOnly
 									value={po13}
 									onChange={(e) => setPo13(e.target.value)}
 									className='my-6'
@@ -473,12 +628,14 @@ export default function App() {
 							</td>
 							<td>
 								<Textarea
+									readOnly
 									value={competency13}
 									onChange={(e) => setCompetency13(e.target.value)}
 								/>
 							</td>
 							<td>
 								<Textarea
+									readOnly
 									value={indicators13}
 									onChange={(e) => setIndicators13(e.target.value)}
 								/>
@@ -486,6 +643,7 @@ export default function App() {
 							<td>
 								<Input
 									type='number'
+									readOnly
 									value={weight13}
 									onChange={(e) => setWeight13(e.target.value)}
 								/>
@@ -543,6 +701,7 @@ export default function App() {
 						<tr className='m-4'>
 							<td>
 								<Textarea
+									readOnly
 									value={po14}
 									onChange={(e) => setPo14(e.target.value)}
 									className='my-6'
@@ -550,12 +709,14 @@ export default function App() {
 							</td>
 							<td>
 								<Textarea
+									readOnly
 									value={competency14}
 									onChange={(e) => setCompetency14(e.target.value)}
 								/>
 							</td>
 							<td>
 								<Textarea
+									readOnly
 									value={indicators14}
 									onChange={(e) => setIndicators14(e.target.value)}
 								/>
@@ -563,6 +724,7 @@ export default function App() {
 							<td>
 								<Input
 									type='number'
+									readOnly
 									value={weight14}
 									onChange={(e) => setWeight14(e.target.value)}
 								/>
@@ -620,6 +782,7 @@ export default function App() {
 						<tr className='m-4'>
 							<td>
 								<Textarea
+									readOnly
 									value={po15}
 									onChange={(e) => setPo15(e.target.value)}
 									className='my-6'
@@ -627,12 +790,14 @@ export default function App() {
 							</td>
 							<td>
 								<Textarea
+									readOnly
 									value={competency15}
 									onChange={(e) => setCompetency15(e.target.value)}
 								/>
 							</td>
 							<td>
 								<Textarea
+									readOnly
 									value={indicators15}
 									onChange={(e) => setIndicators15(e.target.value)}
 								/>
@@ -641,6 +806,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={weight15}
+									readOnly
 									onChange={(e) => setWeight15(e.target.value)}
 								/>
 							</td>
@@ -694,15 +860,77 @@ export default function App() {
 								/>
 							</td>
 						</tr>
+						<tr className='m-4'>
+							<td colSpan={4}>
+								<Textarea
+									readOnly
+									value='PO1 : Mapping Level'
+									className='my-6'
+								/>
+							</td>
+
+							<td>
+								<Input
+									type='number'
+									value={po1mapco1.toString()}
+									readOnly
+									onChange={(e) => setPo1mapco1(e.target.value)}
+								/>
+							</td>
+							<td>
+								<Input
+									type='number'
+									value={po1mapco2.toString()}
+									readOnly
+									onChange={(e) => setPo1mapco2(e.target.value)}
+								/>{" "}
+							</td>
+							<td>
+								<Input
+									type='number'
+									value={po1mapco3.toString()}
+									readOnly
+									onChange={(e) => setPo1mapco3(e.target.value)}
+								/>{" "}
+							</td>
+							<td>
+								<Input
+									type='number'
+									value={po1mapco4.toString()}
+									readOnly
+									onChange={(e) => setPo1mapco4(e.target.value)}
+								/>{" "}
+							</td>
+							<td>
+								<Input
+									type='number'
+									value={po1mapco5.toString()}
+									readOnly
+									onChange={(e) => setPo1mapco5(e.target.value)}
+								/>{" "}
+							</td>
+							<td>
+								<Input
+									type='number'
+									value={po1mapco6.toString()}
+									readOnly
+									onChange={(e) => setPo1mapco6(e.target.value)}
+								/>{" "}
+							</td>
+							<td>
+								<Input
+									type='number'
+									value={po1mapco7.toString()}
+									readOnly
+									onChange={(e) => setPo1mapco7(e.target.value)}
+								/>{" "}
+							</td>
+						</tr>
 					</tbody>
 				</table>
 
 				<Button type='submit'>Submit</Button>
-
-				{/* <Button onClick={handlePushToDatabase}>Push to Database</Button> */}
 			</form>
-
-			{/* <Button onClick={handlePushToDatabase}>Push to Database</Button> */}
 		</>
 	);
 }
