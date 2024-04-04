@@ -850,7 +850,8 @@ export default function App() {
 		// }
 
 		try {
-			const res = await fetch("http://localhost:3000/api/table", {
+			// const res = await fetch("http://localhost:3000/api/table", {
+			const res = await fetch("https://copo-attainment.vercel.app/api/table", {
 				method: "POST",
 				headers: {
 					"Content-type": "application/json",
