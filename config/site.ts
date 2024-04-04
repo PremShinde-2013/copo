@@ -8,62 +8,50 @@ export const siteConfig = {
 			label: "Home",
 			href: "/",
 		},
-    {
-      label: "Docs",
-      href: "/docs",
-    },
-    {
-      label: "Pricing",
-      href: "/pricing",
-    },
-    {
-      label: "Blog",
-      href: "/blog",
-    },
-    {
-      label: "About",
-      href: "/about",
-    }
+		{
+			label: "All-Tables",
+			href: "/all-tables",
+		},
+		{
+			label: "Edit-Table",
+			href: "/edit-table",
+		},
+		{
+			label: "Create-Table",
+			href: "/create-mapping-table",
+		},
+		{
+			label: "Test-Table",
+			href: "/test-table",
+		},
 	],
 	navMenuItems: [
 		{
-			label: "Profile",
-			href: "/profile",
+			label: "Home",
+			href: "/",
 		},
 		{
-			label: "Dashboard",
-			href: "/dashboard",
+			label: "All-Tables",
+			href: "/all-tables",
 		},
 		{
-			label: "Projects",
-			href: "/projects",
+			label: "Edit-Table",
+			href: "/edit-table",
 		},
 		{
-			label: "Team",
-			href: "/team",
+			label: "Create-Table",
+			href: "/create-mapping-table",
 		},
 		{
-			label: "Calendar",
-			href: "/calendar",
-		},
-		{
-			label: "Settings",
-			href: "/settings",
-		},
-		{
-			label: "Help & Feedback",
-			href: "/help-feedback",
-		},
-		{
-			label: "Logout",
-			href: "/logout",
+			label: "Test-Table",
+			href: "/test-table",
 		},
 	],
 	links: {
-		github: "https://github.com/nextui-org/nextui",
-		twitter: "https://twitter.com/getnextui",
-		docs: "https://nextui.org",
-		discord: "https://discord.gg/9b6yyZKmH4",
-    sponsor: "https://patreon.com/jrgarciadev"
+		github: "https://github.com/PremShinde-2013/",
+		twitter: "https://github.com/PremShinde-2013/",
+		docs: "https://github.com/PremShinde-2013/",
+		discord: "https://github.com/PremShinde-2013/",
+		sponsor: "https://github.com/PremShinde-2013/",
 	},
 };

@@ -76,6 +76,11 @@ export interface TableInterface extends Document {
 	po1mapco5: number;
 	po1mapco6: number;
 	po1mapco7: number;
+
+	year: string;
+	dept: string;
+	sem: string;
+	subject: string;
 }
 
 const TableSchema = new Schema<TableInterface>({
@@ -152,6 +157,11 @@ const TableSchema = new Schema<TableInterface>({
 	po1mapco5: { type: Number, required: true },
 	po1mapco6: { type: Number, required: true },
 	po1mapco7: { type: Number, required: true },
+
+	year: { type: String, required: true },
+	dept: { type: String, required: true },
+	sem: { type: String, required: true },
+	subject: { type: String, required: true },
 });
 
 const Table =

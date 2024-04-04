@@ -10,6 +10,13 @@ import {
 	Input,
 	Button,
 	Textarea,
+	Dropdown,
+	DropdownItem,
+	DropdownMenu,
+	DropdownTrigger,
+	Avatar,
+	Select,
+	SelectItem,
 } from "@nextui-org/react";
 import axios from "axios";
 
@@ -89,10 +96,16 @@ interface TableRowData {
 	po1mapco5: number;
 	po1mapco6: number;
 	po1mapco7: number;
+
+	year: string;
+	dept: string;
+	sem: string;
+	subject: string;
 }
 
 export default function App() {
 	const router = useRouter();
+
 	const [po11, setPo11] = useState(
 		"PO 1: Engineering knowledge: Apply the knowledge of mathematics, science, engineering fundamentals, and an engineering specialisation for the solution of complex engineering problems."
 	);
@@ -196,6 +209,11 @@ export default function App() {
 	const [po1mapco5, setPo1mapco5] = useState<number | string>("");
 	const [po1mapco6, setPo1mapco6] = useState<number | string>("");
 	const [po1mapco7, setPo1mapco7] = useState<number | string>("");
+
+	const [year, setYear] = useState("");
+	const [dept, setDept] = useState("");
+	const [sem, setSem] = useState("");
+	const [subject, setSubject] = useState("");
 
 	const calculatePo1mapco1 = () => {
 		const sumCo =
@@ -419,6 +437,11 @@ export default function App() {
 					po1mapco5,
 					po1mapco6,
 					po1mapco7,
+
+					year,
+					dept,
+					sem,
+					subject,
 				}),
 			});
 
@@ -432,9 +455,96 @@ export default function App() {
 		}
 	};
 
+	// const [items, setItems] = useState([
+	// 	{ key: "FIRST", label: "First Year" },
+	// 	{ key: "SECOND", label: "Second Year" },
+	// 	{ key: "THIRD", label: "Third Year" },
+	// 	{ key: "FOURTH", label: "Fourth Year" },
+	// ]);
+
+	const years = [
+		{ key: "FIRST", label: "First Year" },
+		{ key: "SECOND", label: "Second Year" },
+		{ key: "THIRD", label: "Third Year" },
+		{ key: "FOURTH", label: "Fourth Year" },
+	];
+	const depart = [
+		{ key: "CSE", label: "Computer Science and Engineering" },
+		{ key: "ENTC", label: "Electronics and Telecommunication Engineering" },
+		{ key: "MECHANICAL", label: "Mechanical Engineering" },
+		{ key: "ELECTRICAL", label: "Electrical Engineering" },
+		{ key: "CIVIL", label: "Civil Engineering" },
+	];
+	const semester = [
+		{ key: "FIRST", label: "First Semester" },
+		{ key: "SECOND", label: "Second Semester" },
+		{ key: "THIRD", label: "Third Semester" },
+		{ key: "FOURTH", label: "Fourth Semester" },
+		{ key: "FIFTH", label: "Fifth Semester" },
+		{ key: "SIXTH", label: "Sixth Semester" },
+		{ key: "SEVENTH", label: "Seventh Semester" },
+		{ key: "EIGHTH", label: "Eighth Semester" },
+	];
+
+	const handleYearSelect = (selectedYear: any) => {
+		setYear(selectedYear);
+	};
+	const handleDepartSelect = (selectedDept: any) => {
+		setDept(selectedDept);
+	};
+	const handleSemesterSelect = (selectedSem: any) => {
+		setSem(selectedSem);
+	};
+
 	return (
 		<>
 			<form onSubmit={handleSubmit}>
+				<div className='flex gap-4 justify-center my-16'>
+					<Select
+						className='max-w-xs'
+						label='Select Year'
+						onChange={(e) => handleYearSelect(e.target.value)}
+					>
+						{years.map((year) => (
+							<SelectItem key={year.key} value={year.key}>
+								{year.label}
+							</SelectItem>
+						))}
+					</Select>
+
+					<Select
+						className='max-w-xs'
+						label='Select Department'
+						onChange={(e) => handleDepartSelect(e.target.value)}
+					>
+						{depart.map((dept) => (
+							<SelectItem key={dept.key} value={dept.key}>
+								{dept.label}
+							</SelectItem>
+						))}
+					</Select>
+
+					<Select
+						className='max-w-xs'
+						label='Select Semester'
+						onChange={(e) => handleSemesterSelect(e.target.value)}
+					>
+						{semester.map((sem) => (
+							<SelectItem key={sem.key} value={sem.key}>
+								{sem.label}
+							</SelectItem>
+						))}
+					</Select>
+
+					<Input
+						placeholder='Please Enter Subject Name'
+						className='w-auto'
+						type='text'
+						value={subject}
+						onChange={(e) => setSubject(e.target.value)}
+					/>
+				</div>
+
 				<table
 					className='  table-fixed'
 					aria-label='Example static collection table'

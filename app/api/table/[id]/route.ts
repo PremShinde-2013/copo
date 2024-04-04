@@ -1,6 +1,5 @@
 import connectDB from "@/libs/mongodb";
 import Table from "@/models/Table";
-import { Topic } from "@mui/icons-material";
 import { NextResponse } from "next/server";
 
 // export async function PUT(request: any, { params }: { params: any }) {

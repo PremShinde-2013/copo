@@ -77,6 +77,11 @@ export async function POST(request: any) {
 		po1mapco5,
 		po1mapco6,
 		po1mapco7,
+
+		year,
+		dept,
+		sem,
+		subject,
 	} = await request.json();
 	await connectDB();
 	await Table.create({
@@ -153,6 +158,11 @@ export async function POST(request: any) {
 		po1mapco5,
 		po1mapco6,
 		po1mapco7,
+
+		year,
+		dept,
+		sem,
+		subject,
 	});
 
 	return NextResponse.json({ message: "Topic Created" });
