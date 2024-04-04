@@ -311,7 +311,7 @@ const TableDetail = ({ params }: { params: { id: string } }) => {
 				table.po2mapco4, // Data for po1mapco4
 				table.po2mapco5, // Data for po1mapco5
 				table.po2mapco6, // Data for po1mapco6
-				table.po2mapco7, // Data for po1mapco7
+				table.po2mapco7,
 			],
 		]);
 		const wb = XLSX.utils.book_new();
