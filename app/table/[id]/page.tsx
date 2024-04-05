@@ -644,6 +644,138 @@ const TableDetail = ({ params }: { params: { id: string } }) => {
 				table.po4mapco6,
 				table.po4mapco7,
 			],
+			//  ***********************************  po 5      ***************************************************
+			[
+				table.po51,
+				table.competency51,
+				table.indicators51,
+				table.weight51,
+				table.co151,
+				table.co251,
+				table.co351,
+				table.co451,
+				table.co551,
+				table.co651,
+				table.co751,
+			],
+			[
+				"",
+				"",
+				table.indicators52,
+				table.weight52,
+				table.co152,
+				table.co252,
+				table.co352,
+				table.co452,
+				table.co552,
+				table.co652,
+				table.co752,
+			],
+			[
+				"",
+				table.competency52,
+				table.indicators53,
+				table.weight53,
+				table.co153,
+				table.co253,
+				table.co353,
+				table.co453,
+				table.co553,
+				table.co653,
+				table.co753,
+			],
+			[
+				"",
+				"",
+				table.indicators54,
+				table.weight54,
+				table.co154,
+				table.co254,
+				table.co354,
+				table.co454,
+				table.co554,
+				table.co654,
+				table.co754,
+			],
+			[
+				"",
+				table.competency53,
+				table.indicators55,
+				table.weight55,
+				table.co155,
+				table.co255,
+				table.co355,
+				table.co455,
+				table.co555,
+				table.co655,
+				table.co755,
+			],
+			[
+				"",
+				"",
+				table.indicators56,
+				table.weight56,
+				table.co156,
+				table.co256,
+				table.co356,
+				table.co456,
+				table.co556,
+				table.co656,
+				table.co756,
+			],
+			[
+				"PO5 :Mapping Level",
+				"",
+				"",
+				"",
+				table.po5mapco1,
+				table.po5mapco2,
+				table.po5mapco3,
+				table.po5mapco4,
+				table.po5mapco5,
+				table.po5mapco6,
+				table.po5mapco7,
+			],
+			//  ***********************************  po 6      ***************************************************
+			[
+				table.po61,
+				table.competency61,
+				table.indicators61,
+				table.weight61,
+				table.co161,
+				table.co261,
+				table.co361,
+				table.co461,
+				table.co561,
+				table.co661,
+				table.co761,
+			],
+			[
+				"",
+				table.competency62,
+				table.indicators62,
+				table.weight62,
+				table.co162,
+				table.co262,
+				table.co362,
+				table.co462,
+				table.co562,
+				table.co662,
+				table.co762,
+			],
+			[
+				"PO6 :Mapping Level",
+				"",
+				"",
+				"",
+				table.po6mapco1,
+				table.po6mapco2,
+				table.po6mapco3,
+				table.po6mapco4,
+				table.po6mapco5,
+				table.po6mapco6,
+				table.po6mapco7,
+			],
 		]);
 		const wb = XLSX.utils.book_new();
 		XLSX.utils.book_append_sheet(wb, ws, "Sheet1");
@@ -1309,6 +1441,149 @@ const TableDetail = ({ params }: { params: { id: string } }) => {
 								<td>{table.po4mapco5}</td>
 								<td>{table.po4mapco6}</td>
 								<td>{table.po4mapco7}</td>
+							</tr>
+						)}
+						{/* ************************************ PO :5  **************************************************** */}
+						{table && (
+							<tr>
+								<td rowSpan={6}>{table.po51}</td>
+								<td rowSpan={2}>{table.competency51}</td>
+								<td>{table.indicators51}</td>
+								<td>{table.weight51}</td>
+								<td>{table.co151}</td>
+								<td>{table.co251}</td>
+								<td>{table.co351}</td>
+								<td>{table.co451}</td>
+								<td>{table.co551}</td>
+								<td>{table.co651}</td>
+								<td>{table.co751}</td>
+							</tr>
+						)}
+						{table && (
+							<tr>
+								<td>{table.indicators52}</td>
+								<td>{table.weight52}</td>
+								<td>{table.co152}</td>
+								<td>{table.co252}</td>
+								<td>{table.co352}</td>
+								<td>{table.co452}</td>
+								<td>{table.co552}</td>
+								<td>{table.co652}</td>
+								<td>{table.co752}</td>
+							</tr>
+						)}
+						{table && (
+							<tr>
+								<td rowSpan={2}>{table.competency52}</td>
+								<td>{table.indicators53}</td>
+								<td>{table.weight53}</td>
+								<td>{table.co153}</td>
+								<td>{table.co253}</td>
+								<td>{table.co353}</td>
+								<td>{table.co453}</td>
+								<td>{table.co553}</td>
+								<td>{table.co653}</td>
+								<td>{table.co753}</td>
+							</tr>
+						)}
+						{table && (
+							<tr>
+								<td>{table.indicators54}</td>
+								<td>{table.weight54}</td>
+								<td>{table.co154}</td>
+								<td>{table.co254}</td>
+								<td>{table.co354}</td>
+								<td>{table.co454}</td>
+								<td>{table.co554}</td>
+								<td>{table.co654}</td>
+								<td>{table.co754}</td>
+							</tr>
+						)}
+						{table && (
+							<tr>
+								<td rowSpan={2}>{table.competency53}</td>
+								<td>{table.indicators55}</td>
+								<td>{table.weight55}</td>
+								<td>{table.co155}</td>
+								<td>{table.co255}</td>
+								<td>{table.co355}</td>
+								<td>{table.co455}</td>
+								<td>{table.co555}</td>
+								<td>{table.co655}</td>
+								<td>{table.co755}</td>
+							</tr>
+						)}
+						{table && (
+							<tr>
+								<td>{table.indicators56}</td>
+								<td>{table.weight56}</td>
+								<td>{table.co156}</td>
+								<td>{table.co256}</td>
+								<td>{table.co356}</td>
+								<td>{table.co456}</td>
+								<td>{table.co556}</td>
+								<td>{table.co656}</td>
+								<td>{table.co756}</td>
+							</tr>
+						)}
+						{table && (
+							<tr>
+								<td colSpan={4} className='h-16'>
+									PO5 :Mapping Level
+								</td>
+
+								<td>{table.po5mapco1}</td>
+								<td>{table.po5mapco2}</td>
+								<td>{table.po5mapco3}</td>
+								<td>{table.po5mapco4}</td>
+								<td>{table.po5mapco5}</td>
+								<td>{table.po5mapco6}</td>
+								<td>{table.po5mapco7}</td>
+							</tr>
+						)}
+
+						{/* ************************************ PO :5  **************************************************** */}
+						{table && (
+							<tr>
+								<td rowSpan={2}>{table.po61}</td>
+								<td>{table.competency61}</td>
+								<td>{table.indicators61}</td>
+								<td>{table.weight61}</td>
+								<td>{table.co161}</td>
+								<td>{table.co261}</td>
+								<td>{table.co361}</td>
+								<td>{table.co461}</td>
+								<td>{table.co561}</td>
+								<td>{table.co661}</td>
+								<td>{table.co761}</td>
+							</tr>
+						)}
+						{table && (
+							<tr>
+								<td>{table.competency62}</td>
+								<td>{table.indicators62}</td>
+								<td>{table.weight62}</td>
+								<td>{table.co162}</td>
+								<td>{table.co262}</td>
+								<td>{table.co362}</td>
+								<td>{table.co462}</td>
+								<td>{table.co562}</td>
+								<td>{table.co662}</td>
+								<td>{table.co762}</td>
+							</tr>
+						)}
+						{table && (
+							<tr>
+								<td colSpan={4} className='h-16'>
+									PO6 :Mapping Level
+								</td>
+								<td>{table.po6mapco1}</td>
+								<td>{table.po6mapco2}</td>
+								<td>{table.po6mapco3}</td>
+								<td>{table.po6mapco4}</td>
+								<td>{table.po6mapco5}</td>
+								<td>{table.po6mapco6}</td>
+								<td>{table.po6mapco7}</td>
 							</tr>
 						)}
 					</tbody>
