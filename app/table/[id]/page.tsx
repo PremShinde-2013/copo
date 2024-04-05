@@ -1001,6 +1001,111 @@ const TableDetail = ({ params }: { params: { id: string } }) => {
 				table.po9mapco6,
 				table.po9mapco7,
 			],
+			//  ***********************************  po : 10      ***************************************************
+			[
+				table.po101,
+				table.competency101,
+				table.indicators101,
+				table.weight101,
+				table.co1101,
+				table.co2101,
+				table.co3101,
+				table.co4101,
+				table.co5101,
+				table.co6101,
+				table.co7101,
+			],
+			[
+				"",
+				"",
+				table.indicators102,
+				table.weight102,
+				table.co1102,
+				table.co2102,
+				table.co3102,
+				table.co4102,
+				table.co5102,
+				table.co6102,
+				table.co7102,
+			],
+			[
+				"",
+				"",
+				table.indicators103,
+				table.weight103,
+				table.co1103,
+				table.co2103,
+				table.co3103,
+				table.co4103,
+				table.co5103,
+				table.co6103,
+				table.co7103,
+			],
+			[
+				"",
+				table.competency102,
+				table.indicators104,
+				table.weight104,
+				table.co1104,
+				table.co2104,
+				table.co3104,
+				table.co4104,
+				table.co5104,
+				table.co6104,
+				table.co7104,
+			],
+			[
+				"",
+				"",
+				table.indicators105,
+				table.weight105,
+				table.co1105,
+				table.co2105,
+				table.co3105,
+				table.co4105,
+				table.co5105,
+				table.co6105,
+				table.co7105,
+			],
+			[
+				"",
+				table.competency103,
+				table.indicators106,
+				table.weight106,
+				table.co1106,
+				table.co2106,
+				table.co3106,
+				table.co4106,
+				table.co5106,
+				table.co6106,
+				table.co7106,
+			],
+			[
+				"",
+				"",
+				table.indicators107,
+				table.weight107,
+				table.co1107,
+				table.co2107,
+				table.co3107,
+				table.co4107,
+				table.co5107,
+				table.co6107,
+				table.co7107,
+			],
+			[
+				"PO10 :Mapping Level",
+				"",
+				"",
+				"",
+				table.po10mapco1,
+				table.po10mapco2,
+				table.po10mapco3,
+				table.po10mapco4,
+				table.po10mapco5,
+				table.po10mapco6,
+				table.po10mapco7,
+			],
 		]);
 		const wb = XLSX.utils.book_new();
 		XLSX.utils.book_append_sheet(wb, ws, "Sheet1");
@@ -1979,6 +2084,117 @@ const TableDetail = ({ params }: { params: { id: string } }) => {
 								<td>{table.po9mapco5}</td>
 								<td>{table.po9mapco6}</td>
 								<td>{table.po9mapco7}</td>
+							</tr>
+						)}
+						{/* ************************************ PO : 10  **************************************************** */}
+						{table && (
+							<tr>
+								<td rowSpan={7}>{table.po101}</td>
+								<td rowSpan={3}>{table.competency101}</td>
+								<td>{table.indicators101}</td>
+								<td>{table.weight101}</td>
+								<td>{table.co1101}</td>
+								<td>{table.co2101}</td>
+								<td>{table.co3101}</td>
+								<td>{table.co4101}</td>
+								<td>{table.co5101}</td>
+								<td>{table.co6101}</td>
+								<td>{table.co7101}</td>
+							</tr>
+						)}
+						{table && (
+							<tr>
+								<td>{table.indicators102}</td>
+								<td>{table.weight102}</td>
+								<td>{table.co1102}</td>
+								<td>{table.co2102}</td>
+								<td>{table.co3102}</td>
+								<td>{table.co4102}</td>
+								<td>{table.co5102}</td>
+								<td>{table.co6102}</td>
+								<td>{table.co7102}</td>
+							</tr>
+						)}
+						{table && (
+							<tr>
+								<td>{table.indicators103}</td>
+								<td>{table.weight103}</td>
+								<td>{table.co1103}</td>
+								<td>{table.co2103}</td>
+								<td>{table.co3103}</td>
+								<td>{table.co4103}</td>
+								<td>{table.co5103}</td>
+								<td>{table.co6103}</td>
+								<td>{table.co7103}</td>
+							</tr>
+						)}
+						{table && (
+							<tr>
+								<td rowSpan={2}>{table.competency102}</td>
+								<td>{table.indicators104}</td>
+								<td>{table.weight104}</td>
+								<td>{table.co1104}</td>
+								<td>{table.co2104}</td>
+								<td>{table.co3104}</td>
+								<td>{table.co4104}</td>
+								<td>{table.co5104}</td>
+								<td>{table.co6104}</td>
+								<td>{table.co7104}</td>
+							</tr>
+						)}
+						{table && (
+							<tr>
+								<td>{table.indicators105}</td>
+								<td>{table.weight105}</td>
+								<td>{table.co1105}</td>
+								<td>{table.co2105}</td>
+								<td>{table.co3105}</td>
+								<td>{table.co4105}</td>
+								<td>{table.co5105}</td>
+								<td>{table.co6105}</td>
+								<td>{table.co7105}</td>
+							</tr>
+						)}
+						{table && (
+							<tr>
+								<td rowSpan={2}>{table.competency103}</td>
+								<td>{table.indicators106}</td>
+								<td>{table.weight106}</td>
+								<td>{table.co1106}</td>
+								<td>{table.co2106}</td>
+								<td>{table.co3106}</td>
+								<td>{table.co4106}</td>
+								<td>{table.co5106}</td>
+								<td>{table.co6106}</td>
+								<td>{table.co7106}</td>
+							</tr>
+						)}
+						{table && (
+							<tr>
+								<td>{table.indicators107}</td>
+								<td>{table.weight107}</td>
+								<td>{table.co1107}</td>
+								<td>{table.co2107}</td>
+								<td>{table.co3107}</td>
+								<td>{table.co4107}</td>
+								<td>{table.co5107}</td>
+								<td>{table.co6107}</td>
+								<td>{table.co7107}</td>
+							</tr>
+						)}
+						{table && (
+							<tr>
+								<td colSpan={4} className='h-16'>
+									PO10 :Mapping Level
+								</td>
+
+								<td>{table.po10mapco1}</td>
+								<td>{table.po10mapco2}</td>
+								<td>{table.po10mapco3}</td>
+								<td>{table.po10mapco4}</td>
+								<td>{table.po10mapco5}</td>
+								<td>{table.po10mapco6}</td>
+								<td>{table.po10mapco7}</td>
 							</tr>
 						)}
 					</tbody>
