@@ -499,6 +499,151 @@ const TableDetail = ({ params }: { params: { id: string } }) => {
 				table.po3mapco6,
 				table.po3mapco7,
 			],
+
+			//  ***********************************  po4      ***************************************************
+			[
+				table.po41,
+				table.competency41,
+				table.indicators41,
+				table.weight41,
+				table.co141,
+				table.co241,
+				table.co341,
+				table.co441,
+				table.co541,
+				table.co641,
+				table.co741,
+			],
+			[
+				"",
+				"",
+				table.indicators42,
+				table.weight42,
+				table.co142,
+				table.co242,
+				table.co342,
+				table.co442,
+				table.co542,
+				table.co642,
+				table.co742,
+			],
+			[
+				"",
+				"",
+				table.indicators43,
+				table.weight43,
+				table.co143,
+				table.co243,
+				table.co343,
+				table.co443,
+				table.co543,
+				table.co643,
+				table.co743,
+			],
+			[
+				"",
+				"",
+				table.indicators44,
+				table.weight44,
+				table.co144,
+				table.co244,
+				table.co344,
+				table.co444,
+				table.co544,
+				table.co644,
+				table.co744,
+			],
+			[
+				"",
+				table.competency42,
+				table.indicators45,
+				table.weight45,
+				table.co145,
+				table.co245,
+				table.co345,
+				table.co445,
+				table.co545,
+				table.co645,
+				table.co745,
+			],
+			[
+				"",
+				"",
+				table.indicators46,
+				table.weight46,
+				table.co146,
+				table.co246,
+				table.co346,
+				table.co446,
+				table.co546,
+				table.co646,
+				table.co746,
+			],
+			[
+				"",
+				table.competency43,
+				table.indicators47,
+				table.weight47,
+				table.co147,
+				table.co247,
+				table.co347,
+				table.co447,
+				table.co547,
+				table.co647,
+				table.co747,
+			],
+			[
+				"",
+				"",
+				table.indicators48,
+				table.weight48,
+				table.co148,
+				table.co248,
+				table.co348,
+				table.co448,
+				table.co548,
+				table.co648,
+				table.co748,
+			],
+			[
+				"",
+				"",
+				table.indicators49,
+				table.weight49,
+				table.co149,
+				table.co249,
+				table.co349,
+				table.co449,
+				table.co549,
+				table.co649,
+				table.co749,
+			],
+			[
+				"",
+				"",
+				table.indicators410,
+				table.weight410,
+				table.co1410,
+				table.co2410,
+				table.co3410,
+				table.co4410,
+				table.co5410,
+				table.co6410,
+				table.co7410,
+			],
+			[
+				"PO4 :Mapping Level",
+				"",
+				"",
+				"",
+				table.po4mapco1,
+				table.po4mapco2,
+				table.po4mapco3,
+				table.po4mapco4,
+				table.po4mapco5,
+				table.po4mapco6,
+				table.po4mapco7,
+			],
 		]);
 		const wb = XLSX.utils.book_new();
 		XLSX.utils.book_append_sheet(wb, ws, "Sheet1");
@@ -1013,6 +1158,157 @@ const TableDetail = ({ params }: { params: { id: string } }) => {
 								<td>{table.po3mapco5}</td>
 								<td>{table.po3mapco6}</td>
 								<td>{table.po3mapco7}</td>
+							</tr>
+						)}
+
+						{/* ************************************ PO :4  **************************************************** */}
+						{table && (
+							<tr>
+								<td rowSpan={10}>{table.po41}</td>
+								<td rowSpan={4}>{table.competency41}</td>
+								<td>{table.indicators41}</td>
+								<td>{table.weight41}</td>
+								<td>{table.co141}</td>
+								<td>{table.co241}</td>
+								<td>{table.co341}</td>
+								<td>{table.co441}</td>
+								<td>{table.co541}</td>
+								<td>{table.co641}</td>
+								<td>{table.co741}</td>
+							</tr>
+						)}
+						{table && (
+							<tr>
+								<td>{table.indicators42}</td>
+								<td>{table.weight42}</td>
+								<td>{table.co142}</td>
+								<td>{table.co242}</td>
+								<td>{table.co342}</td>
+								<td>{table.co442}</td>
+								<td>{table.co542}</td>
+								<td>{table.co642}</td>
+								<td>{table.co742}</td>
+							</tr>
+						)}
+						{table && (
+							<tr>
+								<td>{table.indicators43}</td>
+								<td>{table.weight43}</td>
+								<td>{table.co143}</td>
+								<td>{table.co243}</td>
+								<td>{table.co343}</td>
+								<td>{table.co443}</td>
+								<td>{table.co543}</td>
+								<td>{table.co643}</td>
+								<td>{table.co743}</td>
+							</tr>
+						)}
+						{table && (
+							<tr>
+								<td>{table.indicators44}</td>
+								<td>{table.weight44}</td>
+								<td>{table.co144}</td>
+								<td>{table.co244}</td>
+								<td>{table.co344}</td>
+								<td>{table.co444}</td>
+								<td>{table.co544}</td>
+								<td>{table.co644}</td>
+								<td>{table.co744}</td>
+							</tr>
+						)}
+						{table && (
+							<tr>
+								<td rowSpan={2}>{table.competency42}</td>
+								<td>{table.indicators45}</td>
+								<td>{table.weight45}</td>
+								<td>{table.co145}</td>
+								<td>{table.co245}</td>
+								<td>{table.co345}</td>
+								<td>{table.co445}</td>
+								<td>{table.co545}</td>
+								<td>{table.co645}</td>
+								<td>{table.co745}</td>
+							</tr>
+						)}
+						{table && (
+							<tr>
+								<td>{table.indicators46}</td>
+								<td>{table.weight46}</td>
+								<td>{table.co146}</td>
+								<td>{table.co246}</td>
+								<td>{table.co346}</td>
+								<td>{table.co446}</td>
+								<td>{table.co546}</td>
+								<td>{table.co646}</td>
+								<td>{table.co746}</td>
+							</tr>
+						)}
+						{table && (
+							<tr>
+								<td rowSpan={4}>{table.competency43}</td>
+								<td>{table.indicators47}</td>
+								<td>{table.weight47}</td>
+								<td>{table.co147}</td>
+								<td>{table.co247}</td>
+								<td>{table.co347}</td>
+								<td>{table.co447}</td>
+								<td>{table.co547}</td>
+								<td>{table.co647}</td>
+								<td>{table.co747}</td>
+							</tr>
+						)}
+						{table && (
+							<tr>
+								<td>{table.indicators48}</td>
+								<td>{table.weight48}</td>
+								<td>{table.co148}</td>
+								<td>{table.co248}</td>
+								<td>{table.co348}</td>
+								<td>{table.co448}</td>
+								<td>{table.co548}</td>
+								<td>{table.co648}</td>
+								<td>{table.co748}</td>
+							</tr>
+						)}
+						{table && (
+							<tr>
+								<td>{table.indicators49}</td>
+								<td>{table.weight49}</td>
+								<td>{table.co149}</td>
+								<td>{table.co249}</td>
+								<td>{table.co349}</td>
+								<td>{table.co449}</td>
+								<td>{table.co549}</td>
+								<td>{table.co649}</td>
+								<td>{table.co749}</td>
+							</tr>
+						)}
+						{table && (
+							<tr>
+								<td>{table.indicators410}</td>
+								<td>{table.weight410}</td>
+								<td>{table.co1410}</td>
+								<td>{table.co2410}</td>
+								<td>{table.co3410}</td>
+								<td>{table.co4410}</td>
+								<td>{table.co5410}</td>
+								<td>{table.co6410}</td>
+								<td>{table.co7410}</td>
+							</tr>
+						)}
+						{table && (
+							<tr>
+								<td colSpan={4} className='h-16'>
+									PO4 :Mapping Level
+								</td>
+
+								<td>{table.po4mapco1}</td>
+								<td>{table.po4mapco2}</td>
+								<td>{table.po4mapco3}</td>
+								<td>{table.po4mapco4}</td>
+								<td>{table.po4mapco5}</td>
+								<td>{table.po4mapco6}</td>
+								<td>{table.po4mapco7}</td>
 							</tr>
 						)}
 					</tbody>
