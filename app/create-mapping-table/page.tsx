@@ -439,6 +439,85 @@ interface TableRowData {
 	po4mapco5: number;
 	po4mapco6: number;
 	po4mapco7: number;
+
+	// ************************ PO:5  ***************************************
+
+	po51: string;
+
+	competency51: string;
+	competency52: string;
+	competency53: string;
+
+	indicators51: string;
+	indicators52: string;
+	indicators53: string;
+	indicators54: string;
+	indicators55: string;
+	indicators56: string;
+
+	weight51: string;
+	weight52: string;
+	weight53: string;
+	weight54: string;
+	weight55: string;
+	weight56: string;
+
+	co151: number;
+	co152: number;
+	co153: number;
+	co154: number;
+	co155: number;
+	co156: number;
+
+	co251: number;
+	co252: number;
+	co253: number;
+	co254: number;
+	co255: number;
+	co256: number;
+
+	co351: number;
+	co352: number;
+	co353: number;
+	co354: number;
+	co355: number;
+	co356: number;
+
+	co451: number;
+	co452: number;
+	co453: number;
+	co454: number;
+	co455: number;
+	co456: number;
+
+	co551: number;
+	co552: number;
+	co553: number;
+	co554: number;
+	co555: number;
+	co556: number;
+
+	co651: number;
+	co652: number;
+	co653: number;
+	co654: number;
+	co655: number;
+	co656: number;
+
+	co751: number;
+	co752: number;
+	co753: number;
+	co754: number;
+	co755: number;
+	co756: number;
+
+	po5mapco1: number;
+	po5mapco2: number;
+	po5mapco3: number;
+	po5mapco4: number;
+	po5mapco5: number;
+	po5mapco6: number;
+	po5mapco7: number;
 }
 
 export default function App() {
@@ -903,13 +982,13 @@ export default function App() {
 	const [co7312, setCo7312] = useState("");
 	const [co7313, setCo7313] = useState("");
 
-	const [po4mapco1, setPo4mapco1] = useState<number | string>("");
-	const [po4mapco2, setPo4mapco2] = useState<number | string>("");
-	const [po4mapco3, setPo4mapco3] = useState<number | string>("");
-	const [po4mapco4, setPo4mapco4] = useState<number | string>("");
-	const [po4mapco5, setPo4mapco5] = useState<number | string>("");
-	const [po4mapco6, setPo4mapco6] = useState<number | string>("");
-	const [po4mapco7, setPo4mapco7] = useState<number | string>("");
+	const [po3mapco1, setPo3mapco1] = useState<number | string>("");
+	const [po3mapco2, setPo3mapco2] = useState<number | string>("");
+	const [po3mapco3, setPo3mapco3] = useState<number | string>("");
+	const [po3mapco4, setPo3mapco4] = useState<number | string>("");
+	const [po3mapco5, setPo3mapco5] = useState<number | string>("");
+	const [po3mapco6, setPo3mapco6] = useState<number | string>("");
+	const [po3mapco7, setPo3mapco7] = useState<number | string>("");
 
 	// ******************** PO:4 ******************************
 
@@ -1046,13 +1125,112 @@ export default function App() {
 	const [co749, setCo749] = useState("");
 	const [co7410, setCo7410] = useState("");
 
-	const [po3mapco1, setPo3mapco1] = useState<number | string>("");
-	const [po3mapco2, setPo3mapco2] = useState<number | string>("");
-	const [po3mapco3, setPo3mapco3] = useState<number | string>("");
-	const [po3mapco4, setPo3mapco4] = useState<number | string>("");
-	const [po3mapco5, setPo3mapco5] = useState<number | string>("");
-	const [po3mapco6, setPo3mapco6] = useState<number | string>("");
-	const [po3mapco7, setPo3mapco7] = useState<number | string>("");
+	const [po4mapco1, setPo4mapco1] = useState<number | string>("");
+	const [po4mapco2, setPo4mapco2] = useState<number | string>("");
+	const [po4mapco3, setPo4mapco3] = useState<number | string>("");
+	const [po4mapco4, setPo4mapco4] = useState<number | string>("");
+	const [po4mapco5, setPo4mapco5] = useState<number | string>("");
+	const [po4mapco6, setPo4mapco6] = useState<number | string>("");
+	const [po4mapco7, setPo4mapco7] = useState<number | string>("");
+
+	// ******************** PO:5 ******************************
+
+	const [po51, setPo51] = useState(
+		"PO 5: Engineering knowledge: Apply the knowledge of mathematics, science, engineering fundamentals, and an engineering specialisation for the solution of complex engineering problems."
+	);
+
+	const [competency51, setCompetency51] = useState(
+		"1.1  Demonstrate competence in mathematical modelling"
+	);
+	const [competency52, setCompetency52] = useState(
+		"1.1  Demonstrate competence in mathematical modelling"
+	);
+	const [competency53, setCompetency53] = useState(
+		"1.2 Demonstrate competence in basic sciences"
+	);
+
+	const [indicators51, setIndicators51] = useState(
+		"1.1.1      Apply mathematical techniques such as calculus, linear algebra, and statistics to solve problems"
+	);
+	const [indicators52, setIndicators52] = useState(
+		"1.1.2      Apply advanced mathematical techniques to model and solve mechanical engineering problems"
+	);
+	const [indicators53, setIndicators53] = useState(
+		"1.2.1  Apply laws of natural science to an engineering problem"
+	);
+	const [indicators54, setIndicators54] = useState(
+		"1.3.1  Apply fundamental engineering concepts to solve engineering problems"
+	);
+	const [indicators55, setIndicators55] = useState(
+		"1.4.1  Apply Mechanical engineering concepts to solve engineering problems."
+	);
+	const [indicators56, setIndicators56] = useState(
+		"1.4.1  Apply Mechanical engineering concepts to solve engineering problems."
+	);
+
+	const [weight51, setWeight51] = useState("0.8");
+	const [weight52, setWeight52] = useState("0.8");
+	const [weight53, setWeight53] = useState("0.8");
+	const [weight54, setWeight54] = useState("0.8");
+	const [weight55, setWeight55] = useState("0.8");
+	const [weight56, setWeight56] = useState("0.8");
+
+	const [co151, setCo151] = useState("");
+	const [co152, setCo152] = useState("");
+	const [co153, setCo153] = useState("");
+	const [co154, setCo154] = useState("");
+	const [co155, setCo155] = useState("");
+	const [co156, setCo156] = useState("");
+
+	const [co251, setCo251] = useState("");
+	const [co252, setCo252] = useState("");
+	const [co253, setCo253] = useState("");
+	const [co254, setCo254] = useState("");
+	const [co255, setCo255] = useState("");
+	const [co256, setCo256] = useState("");
+
+	const [co351, setCo351] = useState("");
+	const [co352, setCo352] = useState("");
+	const [co353, setCo353] = useState("");
+	const [co354, setCo354] = useState("");
+	const [co355, setCo355] = useState("");
+	const [co356, setCo356] = useState("");
+
+	const [co451, setCo451] = useState("");
+	const [co452, setCo452] = useState("");
+	const [co453, setCo453] = useState("");
+	const [co454, setCo454] = useState("");
+	const [co455, setCo455] = useState("");
+	const [co456, setCo456] = useState("");
+
+	const [co551, setCo551] = useState("");
+	const [co552, setCo552] = useState("");
+	const [co553, setCo553] = useState("");
+	const [co554, setCo554] = useState("");
+	const [co555, setCo555] = useState("");
+	const [co556, setCo556] = useState("");
+
+	const [co651, setCo651] = useState("");
+	const [co652, setCo652] = useState("");
+	const [co653, setCo653] = useState("");
+	const [co654, setCo654] = useState("");
+	const [co655, setCo655] = useState("");
+	const [co656, setCo656] = useState("");
+
+	const [co751, setCo751] = useState("");
+	const [co752, setCo752] = useState("");
+	const [co753, setCo753] = useState("");
+	const [co754, setCo754] = useState("");
+	const [co755, setCo755] = useState("");
+	const [co756, setCo756] = useState("");
+
+	const [po5mapco1, setPo5mapco1] = useState<number | string>("");
+	const [po5mapco2, setPo5mapco2] = useState<number | string>("");
+	const [po5mapco3, setPo5mapco3] = useState<number | string>("");
+	const [po5mapco4, setPo5mapco4] = useState<number | string>("");
+	const [po5mapco5, setPo5mapco5] = useState<number | string>("");
+	const [po5mapco6, setPo5mapco6] = useState<number | string>("");
+	const [po5mapco7, setPo5mapco7] = useState<number | string>("");
 
 	const calculatePo1mapco1 = () => {
 		const sumCo =
@@ -1379,7 +1557,7 @@ export default function App() {
 		const calculatedValue = Math.round((sumCo * 0.08) / 0.33);
 		setPo3mapco7(calculatedValue);
 	};
-	//  *************************************************** PO: 3    **********************************************
+	//  *************************************************** PO: 4    **********************************************
 	const calculatePo4mapco1 = () => {
 		const sumCo =
 			parseInt(co141) +
@@ -1492,6 +1670,91 @@ export default function App() {
 		const calculatedValue = Math.round((sumCo * 0.1) / 0.33);
 		setPo4mapco7(calculatedValue);
 	};
+	//  *************************************************** PO: 5    **********************************************
+	const calculatePo5mapco1 = () => {
+		const sumCo =
+			parseInt(co151) +
+			parseInt(co152) +
+			parseInt(co153) +
+			parseInt(co154) +
+			parseInt(co155) +
+			parseInt(co156);
+
+		const calculatedValue = Math.round((sumCo * 0.17) / 0.33);
+		setPo5mapco1(calculatedValue);
+	};
+	const calculatePo5mapco2 = () => {
+		const sumCo =
+			parseInt(co251) +
+			parseInt(co252) +
+			parseInt(co253) +
+			parseInt(co254) +
+			parseInt(co255) +
+			parseInt(co256);
+
+		const calculatedValue = Math.round((sumCo * 0.17) / 0.33);
+		setPo5mapco2(calculatedValue);
+	};
+	const calculatePo5mapco3 = () => {
+		const sumCo =
+			parseInt(co351) +
+			parseInt(co352) +
+			parseInt(co353) +
+			parseInt(co354) +
+			parseInt(co355) +
+			parseInt(co356);
+
+		const calculatedValue = Math.round((sumCo * 0.17) / 0.33);
+		setPo5mapco3(calculatedValue);
+	};
+	const calculatePo5mapco4 = () => {
+		const sumCo =
+			parseInt(co451) +
+			parseInt(co452) +
+			parseInt(co453) +
+			parseInt(co454) +
+			parseInt(co455) +
+			parseInt(co456);
+
+		const calculatedValue = Math.round((sumCo * 0.17) / 0.33);
+		setPo5mapco4(calculatedValue);
+	};
+	const calculatePo5mapco5 = () => {
+		const sumCo =
+			parseInt(co551) +
+			parseInt(co552) +
+			parseInt(co553) +
+			parseInt(co554) +
+			parseInt(co555) +
+			parseInt(co556);
+
+		const calculatedValue = Math.round((sumCo * 0.17) / 0.33);
+		setPo5mapco5(calculatedValue);
+	};
+	const calculatePo5mapco6 = () => {
+		const sumCo =
+			parseInt(co651) +
+			parseInt(co652) +
+			parseInt(co653) +
+			parseInt(co654) +
+			parseInt(co655) +
+			parseInt(co656);
+
+		const calculatedValue = Math.round((sumCo * 0.17) / 0.33);
+		setPo5mapco6(calculatedValue);
+	};
+	const calculatePo5mapco7 = () => {
+		const sumCo =
+			parseInt(co751) +
+			parseInt(co752) +
+			parseInt(co753) +
+			parseInt(co754) +
+			parseInt(co755) +
+			parseInt(co756);
+
+		const calculatedValue = Math.round((sumCo * 0.17) / 0.33);
+		setPo5mapco7(calculatedValue);
+	};
 
 	// Effect to call calculatePo1mapco1 whenever any of the co variables change
 	useEffect(() => {
@@ -1526,6 +1789,14 @@ export default function App() {
 		calculatePo4mapco5();
 		calculatePo4mapco6();
 		calculatePo4mapco7();
+		//  PO: 5
+		calculatePo5mapco1();
+		calculatePo5mapco2();
+		calculatePo5mapco3();
+		calculatePo5mapco4();
+		calculatePo5mapco5();
+		calculatePo5mapco6();
+		calculatePo5mapco7();
 	}, [
 		co111,
 		co112,
@@ -1843,6 +2114,57 @@ export default function App() {
 		co748,
 		co749,
 		co7410,
+
+		// ************************ PO:5  ***************************************
+
+		co151,
+		co152,
+		co153,
+		co154,
+		co155,
+		co156,
+
+		co251,
+		co252,
+		co253,
+		co254,
+		co255,
+		co256,
+
+		co351,
+		co352,
+		co353,
+		co354,
+		co355,
+		co356,
+
+		co451,
+		co452,
+		co453,
+		co454,
+		co455,
+		co456,
+
+		co551,
+		co552,
+		co553,
+		co554,
+		co555,
+		co556,
+
+		co651,
+		co652,
+		co653,
+		co654,
+		co655,
+		co656,
+
+		co751,
+		co752,
+		co753,
+		co754,
+		co755,
+		co756,
 	]);
 
 	const handleSubmit = async (e: any) => {
@@ -2352,6 +2674,85 @@ export default function App() {
 					po4mapco5,
 					po4mapco6,
 					po4mapco7,
+
+					// ************************ PO:5  ***************************************
+
+					po51,
+
+					competency51,
+					competency52,
+					competency53,
+
+					indicators51,
+					indicators52,
+					indicators53,
+					indicators54,
+					indicators55,
+					indicators56,
+
+					weight51,
+					weight52,
+					weight53,
+					weight54,
+					weight55,
+					weight56,
+
+					co151,
+					co152,
+					co153,
+					co154,
+					co155,
+					co156,
+
+					co251,
+					co252,
+					co253,
+					co254,
+					co255,
+					co256,
+
+					co351,
+					co352,
+					co353,
+					co354,
+					co355,
+					co356,
+
+					co451,
+					co452,
+					co453,
+					co454,
+					co455,
+					co456,
+
+					co551,
+					co552,
+					co553,
+					co554,
+					co555,
+					co556,
+
+					co651,
+					co652,
+					co653,
+					co654,
+					co655,
+					co656,
+
+					co751,
+					co752,
+					co753,
+					co754,
+					co755,
+					co756,
+
+					po5mapco1,
+					po5mapco2,
+					po5mapco3,
+					po5mapco4,
+					po5mapco5,
+					po5mapco6,
+					po5mapco7,
 				}),
 			});
 
@@ -5622,6 +6023,499 @@ export default function App() {
 									value={po4mapco7.toString()}
 									readOnly
 									onChange={(e) => setPo4mapco7(e.target.value)}
+								/>{" "}
+							</td>
+						</tr>
+						{/* **************************************       PO:5        ****************************************************/}
+
+						<tr className='m-4'>
+							<td rowSpan={6}>
+								<Textarea
+									readOnly
+									value={po51}
+									onChange={(e) => setPo51(e.target.value)}
+									className='my-6'
+								/>
+							</td>
+							<td rowSpan={2}>
+								<Textarea
+									readOnly
+									value={competency51}
+									onChange={(e) => setCompetency51(e.target.value)}
+								/>
+							</td>
+							<td>
+								<Textarea
+									readOnly
+									value={indicators51}
+									onChange={(e) => setIndicators51(e.target.value)}
+								/>
+							</td>
+							<td>
+								<Input
+									type='number'
+									readOnly
+									value={weight51}
+									onChange={(e) => setWeight51(e.target.value)}
+								/>
+							</td>
+							<td>
+								<Input
+									type='number'
+									value={co151}
+									onChange={(e) => setCo151(e.target.value)}
+								/>
+							</td>
+							<td>
+								<Input
+									type='number'
+									value={co251}
+									onChange={(e) => setCo251(e.target.value)}
+								/>
+							</td>
+							<td>
+								<Input
+									type='number'
+									value={co351}
+									onChange={(e) => setCo351(e.target.value)}
+								/>
+							</td>
+							<td>
+								<Input
+									type='number'
+									value={co451}
+									onChange={(e) => setCo451(e.target.value)}
+								/>
+							</td>
+							<td>
+								<Input
+									type='number'
+									value={co551}
+									onChange={(e) => setCo551(e.target.value)}
+								/>
+							</td>
+							<td>
+								<Input
+									type='number'
+									value={co651}
+									onChange={(e) => setCo651(e.target.value)}
+								/>
+							</td>
+							<td>
+								<Input
+									type='number'
+									value={co751}
+									onChange={(e) => setCo751(e.target.value)}
+								/>
+							</td>
+						</tr>
+						<tr className='m-4'>
+							<td>
+								<Textarea
+									readOnly
+									value={indicators52}
+									onChange={(e) => setIndicators52(e.target.value)}
+								/>
+							</td>
+							<td>
+								<Input
+									type='number'
+									readOnly
+									value={weight52}
+									onChange={(e) => setWeight52(e.target.value)}
+								/>
+							</td>
+							<td>
+								<Input
+									type='number'
+									value={co152}
+									onChange={(e) => setCo152(e.target.value)}
+								/>
+							</td>
+							<td>
+								<Input
+									type='number'
+									value={co252}
+									onChange={(e) => setCo252(e.target.value)}
+								/>
+							</td>
+							<td>
+								<Input
+									type='number'
+									value={co352}
+									onChange={(e) => setCo352(e.target.value)}
+								/>
+							</td>
+							<td>
+								<Input
+									type='number'
+									value={co452}
+									onChange={(e) => setCo452(e.target.value)}
+								/>
+							</td>
+							<td>
+								<Input
+									type='number'
+									value={co552}
+									onChange={(e) => setCo552(e.target.value)}
+								/>
+							</td>
+							<td>
+								<Input
+									type='number'
+									value={co652}
+									onChange={(e) => setCo652(e.target.value)}
+								/>
+							</td>
+							<td>
+								<Input
+									type='number'
+									value={co752}
+									onChange={(e) => setCo752(e.target.value)}
+								/>
+							</td>
+						</tr>
+						<tr className='m-4'>
+							<td rowSpan={2}>
+								<Textarea
+									readOnly
+									value={competency52}
+									onChange={(e) => setCompetency52(e.target.value)}
+								/>
+							</td>
+							<td>
+								<Textarea
+									readOnly
+									value={indicators53}
+									onChange={(e) => setIndicators53(e.target.value)}
+								/>
+							</td>
+							<td>
+								<Input
+									type='number'
+									readOnly
+									value={weight53}
+									onChange={(e) => setWeight53(e.target.value)}
+								/>
+							</td>
+							<td>
+								<Input
+									type='number'
+									value={co153}
+									onChange={(e) => setCo153(e.target.value)}
+								/>
+							</td>
+							<td>
+								<Input
+									type='number'
+									value={co253}
+									onChange={(e) => setCo253(e.target.value)}
+								/>
+							</td>
+							<td>
+								<Input
+									type='number'
+									value={co353}
+									onChange={(e) => setCo353(e.target.value)}
+								/>
+							</td>
+							<td>
+								<Input
+									type='number'
+									value={co453}
+									onChange={(e) => setCo453(e.target.value)}
+								/>
+							</td>
+							<td>
+								<Input
+									type='number'
+									value={co553}
+									onChange={(e) => setCo553(e.target.value)}
+								/>
+							</td>
+							<td>
+								<Input
+									type='number'
+									value={co653}
+									onChange={(e) => setCo653(e.target.value)}
+								/>
+							</td>
+							<td>
+								<Input
+									type='number'
+									value={co753}
+									onChange={(e) => setCo753(e.target.value)}
+								/>
+							</td>
+						</tr>
+						<tr className='m-4'>
+							<td>
+								<Textarea
+									readOnly
+									value={indicators54}
+									onChange={(e) => setIndicators54(e.target.value)}
+								/>
+							</td>
+							<td>
+								<Input
+									type='number'
+									readOnly
+									value={weight54}
+									onChange={(e) => setWeight54(e.target.value)}
+								/>
+							</td>
+							<td>
+								<Input
+									type='number'
+									value={co154}
+									onChange={(e) => setCo154(e.target.value)}
+								/>
+							</td>
+							<td>
+								<Input
+									type='number'
+									value={co254}
+									onChange={(e) => setCo254(e.target.value)}
+								/>
+							</td>
+							<td>
+								<Input
+									type='number'
+									value={co354}
+									onChange={(e) => setCo354(e.target.value)}
+								/>
+							</td>
+							<td>
+								<Input
+									type='number'
+									value={co454}
+									onChange={(e) => setCo454(e.target.value)}
+								/>
+							</td>
+							<td>
+								<Input
+									type='number'
+									value={co554}
+									onChange={(e) => setCo554(e.target.value)}
+								/>
+							</td>
+							<td>
+								<Input
+									type='number'
+									value={co654}
+									onChange={(e) => setCo654(e.target.value)}
+								/>
+							</td>
+							<td>
+								<Input
+									type='number'
+									value={co754}
+									onChange={(e) => setCo754(e.target.value)}
+								/>
+							</td>
+						</tr>
+						<tr className='m-4'>
+							<td rowSpan={2}>
+								<Textarea
+									readOnly
+									value={competency53}
+									onChange={(e) => setCompetency53(e.target.value)}
+								/>
+							</td>
+							<td>
+								<Textarea
+									readOnly
+									value={indicators55}
+									onChange={(e) => setIndicators55(e.target.value)}
+								/>
+							</td>
+							<td>
+								<Input
+									type='number'
+									value={weight55}
+									readOnly
+									onChange={(e) => setWeight55(e.target.value)}
+								/>
+							</td>
+							<td>
+								<Input
+									type='number'
+									value={co155}
+									onChange={(e) => setCo155(e.target.value)}
+								/>
+							</td>
+							<td>
+								<Input
+									type='number'
+									value={co255}
+									onChange={(e) => setCo255(e.target.value)}
+								/>
+							</td>
+							<td>
+								<Input
+									type='number'
+									value={co355}
+									onChange={(e) => setCo355(e.target.value)}
+								/>
+							</td>
+							<td>
+								<Input
+									type='number'
+									value={co455}
+									onChange={(e) => setCo455(e.target.value)}
+								/>
+							</td>
+							<td>
+								<Input
+									type='number'
+									value={co555}
+									onChange={(e) => setCo555(e.target.value)}
+								/>
+							</td>
+							<td>
+								<Input
+									type='number'
+									value={co655}
+									onChange={(e) => setCo655(e.target.value)}
+								/>
+							</td>
+							<td>
+								<Input
+									type='number'
+									value={co755}
+									onChange={(e) => setCo755(e.target.value)}
+								/>
+							</td>
+						</tr>
+						<tr className='m-4'>
+							<td>
+								<Textarea
+									readOnly
+									value={indicators56}
+									onChange={(e) => setIndicators56(e.target.value)}
+								/>
+							</td>
+							<td>
+								<Input
+									type='number'
+									value={weight56}
+									readOnly
+									onChange={(e) => setWeight56(e.target.value)}
+								/>
+							</td>
+							<td>
+								<Input
+									type='number'
+									value={co156}
+									onChange={(e) => setCo156(e.target.value)}
+								/>
+							</td>
+							<td>
+								<Input
+									type='number'
+									value={co256}
+									onChange={(e) => setCo256(e.target.value)}
+								/>
+							</td>
+							<td>
+								<Input
+									type='number'
+									value={co356}
+									onChange={(e) => setCo356(e.target.value)}
+								/>
+							</td>
+							<td>
+								<Input
+									type='number'
+									value={co456}
+									onChange={(e) => setCo456(e.target.value)}
+								/>
+							</td>
+							<td>
+								<Input
+									type='number'
+									value={co556}
+									onChange={(e) => setCo556(e.target.value)}
+								/>
+							</td>
+							<td>
+								<Input
+									type='number'
+									value={co656}
+									onChange={(e) => setCo656(e.target.value)}
+								/>
+							</td>
+							<td>
+								<Input
+									type='number'
+									value={co756}
+									onChange={(e) => setCo756(e.target.value)}
+								/>
+							</td>
+						</tr>
+						<tr className='m-4'>
+							<td colSpan={4}>
+								<Textarea
+									readOnly
+									value='PO5 : Mapping Level'
+									className='my-6'
+								/>
+							</td>
+
+							<td>
+								<Input
+									type='number'
+									value={po5mapco1.toString()}
+									readOnly
+									onChange={(e) => setPo5mapco1(e.target.value)}
+								/>
+							</td>
+							<td>
+								<Input
+									type='number'
+									value={po5mapco2.toString()}
+									readOnly
+									onChange={(e) => setPo5mapco2(e.target.value)}
+								/>{" "}
+							</td>
+							<td>
+								<Input
+									type='number'
+									value={po5mapco3.toString()}
+									readOnly
+									onChange={(e) => setPo5mapco3(e.target.value)}
+								/>{" "}
+							</td>
+							<td>
+								<Input
+									type='number'
+									value={po5mapco4.toString()}
+									readOnly
+									onChange={(e) => setPo5mapco4(e.target.value)}
+								/>{" "}
+							</td>
+							<td>
+								<Input
+									type='number'
+									value={po5mapco5.toString()}
+									readOnly
+									onChange={(e) => setPo5mapco5(e.target.value)}
+								/>{" "}
+							</td>
+							<td>
+								<Input
+									type='number'
+									value={po5mapco6.toString()}
+									readOnly
+									onChange={(e) => setPo5mapco6(e.target.value)}
+								/>{" "}
+							</td>
+							<td>
+								<Input
+									type='number'
+									value={po5mapco7.toString()}
+									readOnly
+									onChange={(e) => setPo5mapco7(e.target.value)}
 								/>{" "}
 							</td>
 						</tr>

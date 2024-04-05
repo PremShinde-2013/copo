@@ -483,6 +483,85 @@ export async function POST(request: any) {
 		po4mapco5,
 		po4mapco6,
 		po4mapco7,
+
+		// ************************ PO:5  ***************************************
+
+		po51,
+
+		competency51,
+		competency52,
+		competency53,
+
+		indicators51,
+		indicators52,
+		indicators53,
+		indicators54,
+		indicators55,
+		indicators56,
+
+		weight51,
+		weight52,
+		weight53,
+		weight54,
+		weight55,
+		weight56,
+
+		co151,
+		co152,
+		co153,
+		co154,
+		co155,
+		co156,
+
+		co251,
+		co252,
+		co253,
+		co254,
+		co255,
+		co256,
+
+		co351,
+		co352,
+		co353,
+		co354,
+		co355,
+		co356,
+
+		co451,
+		co452,
+		co453,
+		co454,
+		co455,
+		co456,
+
+		co551,
+		co552,
+		co553,
+		co554,
+		co555,
+		co556,
+
+		co651,
+		co652,
+		co653,
+		co654,
+		co655,
+		co656,
+
+		co751,
+		co752,
+		co753,
+		co754,
+		co755,
+		co756,
+
+		po5mapco1,
+		po5mapco2,
+		po5mapco3,
+		po5mapco4,
+		po5mapco5,
+		po5mapco6,
+		po5mapco7,
 	} = await request.json();
 	await connectDB();
 	await Table.create({
@@ -964,6 +1043,85 @@ export async function POST(request: any) {
 		po4mapco5,
 		po4mapco6,
 		po4mapco7,
+
+		// ************************ PO:5  ***************************************
+
+		po51,
+
+		competency51,
+		competency52,
+		competency53,
+
+		indicators51,
+		indicators52,
+		indicators53,
+		indicators54,
+		indicators55,
+		indicators56,
+
+		weight51,
+		weight52,
+		weight53,
+		weight54,
+		weight55,
+		weight56,
+
+		co151,
+		co152,
+		co153,
+		co154,
+		co155,
+		co156,
+
+		co251,
+		co252,
+		co253,
+		co254,
+		co255,
+		co256,
+
+		co351,
+		co352,
+		co353,
+		co354,
+		co355,
+		co356,
+
+		co451,
+		co452,
+		co453,
+		co454,
+		co455,
+		co456,
+
+		co551,
+		co552,
+		co553,
+		co554,
+		co555,
+		co556,
+
+		co651,
+		co652,
+		co653,
+		co654,
+		co655,
+		co656,
+
+		co751,
+		co752,
+		co753,
+		co754,
+		co755,
+		co756,
+
+		po5mapco1,
+		po5mapco2,
+		po5mapco3,
+		po5mapco4,
+		po5mapco5,
+		po5mapco6,
+		po5mapco7,
 	});
 
 	return NextResponse.json({ message: "Topic Created" });
