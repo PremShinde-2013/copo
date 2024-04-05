@@ -665,6 +665,56 @@ export interface TableInterface extends Document {
 	po7mapco5: number;
 	po7mapco6: number;
 	po7mapco7: number;
+	// ************************ PO:8  ***************************************
+
+	po81: string;
+
+	competency81: string;
+	competency82: string;
+
+	indicators81: string;
+	indicators82: string;
+	indicators83: string;
+
+	weight81: string;
+	weight82: string;
+	weight83: string;
+
+	co181: number;
+	co182: number;
+	co183: number;
+
+	co281: number;
+	co282: number;
+	co283: number;
+
+	co381: number;
+	co382: number;
+	co383: number;
+
+	co481: number;
+	co482: number;
+	co483: number;
+
+	co581: number;
+	co582: number;
+	co583: number;
+
+	co681: number;
+	co682: number;
+	co683: number;
+
+	co781: number;
+	co782: number;
+	co783: number;
+
+	po8mapco1: number;
+	po8mapco2: number;
+	po8mapco3: number;
+	po8mapco4: number;
+	po8mapco5: number;
+	po8mapco6: number;
+	po8mapco7: number;
 }
 
 const TableSchema = new Schema<TableInterface>({
@@ -1268,6 +1318,117 @@ const TableSchema = new Schema<TableInterface>({
 	po6mapco5: { type: Number },
 	po6mapco6: { type: Number },
 	po6mapco7: { type: Number },
+
+	// ************************ PO:7  ***************************************
+
+	po71: { type: String },
+
+	competency71: { type: String },
+	competency72: { type: String },
+
+	indicators71: { type: String },
+	indicators72: { type: String },
+	indicators73: { type: String },
+	indicators74: { type: String },
+
+	weight71: { type: String },
+	weight72: { type: String },
+	weight73: { type: String },
+	weight74: { type: String },
+
+	co171: { type: Number },
+	co172: { type: Number },
+	co173: { type: Number },
+	co174: { type: Number },
+
+	co271: { type: Number },
+	co272: { type: Number },
+	co273: { type: Number },
+	co274: { type: Number },
+
+	co371: { type: Number },
+	co372: { type: Number },
+	co373: { type: Number },
+	co374: { type: Number },
+
+	co471: { type: Number },
+	co472: { type: Number },
+	co473: { type: Number },
+	co474: { type: Number },
+
+	co571: { type: Number },
+	co572: { type: Number },
+	co573: { type: Number },
+	co574: { type: Number },
+
+	co671: { type: Number },
+	co672: { type: Number },
+	co673: { type: Number },
+	co674: { type: Number },
+
+	co771: { type: Number },
+	co772: { type: Number },
+	co773: { type: Number },
+	co774: { type: Number },
+
+	po7mapco1: { type: Number },
+	po7mapco2: { type: Number },
+	po7mapco3: { type: Number },
+	po7mapco4: { type: Number },
+	po7mapco5: { type: Number },
+	po7mapco6: { type: Number },
+	po7mapco7: { type: Number },
+
+	// ************************ PO:8  ***************************************
+
+	po81: { type: String },
+
+	competency81: { type: String },
+	competency82: { type: String },
+
+	indicators81: { type: String },
+	indicators82: { type: String },
+	indicators83: { type: String },
+
+	weight81: { type: String },
+	weight82: { type: String },
+	weight83: { type: String },
+
+	co181: { type: Number },
+	co182: { type: Number },
+	co183: { type: Number },
+
+	co281: { type: Number },
+	co282: { type: Number },
+	co283: { type: Number },
+
+	co381: { type: Number },
+	co382: { type: Number },
+	co383: { type: Number },
+
+	co481: { type: Number },
+	co482: { type: Number },
+	co483: { type: Number },
+
+	co581: { type: Number },
+	co582: { type: Number },
+	co583: { type: Number },
+
+	co681: { type: Number },
+	co682: { type: Number },
+	co683: { type: Number },
+
+	co781: { type: Number },
+	co782: { type: Number },
+	co783: { type: Number },
+
+	po8mapco1: { type: Number },
+	po8mapco2: { type: Number },
+	po8mapco3: { type: Number },
+	po8mapco4: { type: Number },
+	po8mapco5: { type: Number },
+	po8mapco6: { type: Number },
+	po8mapco7: { type: Number },
 });
 
 const Table =

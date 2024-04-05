@@ -776,6 +776,72 @@ const TableDetail = ({ params }: { params: { id: string } }) => {
 				table.po6mapco6,
 				table.po6mapco7,
 			],
+			//  ***********************************  po 7      ***************************************************
+			[
+				table.po71,
+				table.competency71,
+				table.indicators71,
+				table.weight71,
+				table.co171,
+				table.co271,
+				table.co371,
+				table.co471,
+				table.co571,
+				table.co671,
+				table.co771,
+			],
+			[
+				"",
+				"",
+				table.indicators72,
+				table.weight72,
+				table.co172,
+				table.co272,
+				table.co372,
+				table.co472,
+				table.co572,
+				table.co672,
+				table.co772,
+			],
+			[
+				"",
+				table.competency72,
+				table.indicators73,
+				table.weight73,
+				table.co173,
+				table.co273,
+				table.co373,
+				table.co473,
+				table.co573,
+				table.co673,
+				table.co773,
+			],
+			[
+				"",
+				"",
+				table.indicators74,
+				table.weight74,
+				table.co174,
+				table.co274,
+				table.co374,
+				table.co474,
+				table.co574,
+				table.co674,
+				table.co774,
+			],
+			[
+				"PO7 :Mapping Level",
+				"",
+				"",
+				"",
+				table.po7mapco1,
+				table.po7mapco2,
+				table.po7mapco3,
+				table.po7mapco4,
+				table.po7mapco5,
+				table.po7mapco6,
+				table.po7mapco7,
+			],
 		]);
 		const wb = XLSX.utils.book_new();
 		XLSX.utils.book_append_sheet(wb, ws, "Sheet1");
@@ -1542,7 +1608,7 @@ const TableDetail = ({ params }: { params: { id: string } }) => {
 							</tr>
 						)}
 
-						{/* ************************************ PO :5  **************************************************** */}
+						{/* ************************************ PO :6  **************************************************** */}
 						{table && (
 							<tr>
 								<td rowSpan={2}>{table.po61}</td>
@@ -1584,6 +1650,77 @@ const TableDetail = ({ params }: { params: { id: string } }) => {
 								<td>{table.po6mapco5}</td>
 								<td>{table.po6mapco6}</td>
 								<td>{table.po6mapco7}</td>
+							</tr>
+						)}
+						{/* ************************************ PO :7  **************************************************** */}
+						{table && (
+							<tr>
+								<td rowSpan={4}>{table.po71}</td>
+								<td rowSpan={2}>{table.competency71}</td>
+								<td>{table.indicators71}</td>
+								<td>{table.weight71}</td>
+								<td>{table.co171}</td>
+								<td>{table.co271}</td>
+								<td>{table.co371}</td>
+								<td>{table.co471}</td>
+								<td>{table.co571}</td>
+								<td>{table.co671}</td>
+								<td>{table.co771}</td>
+							</tr>
+						)}
+						{table && (
+							<tr>
+								<td>{table.indicators72}</td>
+								<td>{table.weight72}</td>
+								<td>{table.co172}</td>
+								<td>{table.co272}</td>
+								<td>{table.co372}</td>
+								<td>{table.co472}</td>
+								<td>{table.co572}</td>
+								<td>{table.co672}</td>
+								<td>{table.co772}</td>
+							</tr>
+						)}
+						{table && (
+							<tr>
+								<td rowSpan={2}>{table.competency72}</td>
+								<td>{table.indicators73}</td>
+								<td>{table.weight73}</td>
+								<td>{table.co173}</td>
+								<td>{table.co273}</td>
+								<td>{table.co373}</td>
+								<td>{table.co473}</td>
+								<td>{table.co573}</td>
+								<td>{table.co673}</td>
+								<td>{table.co773}</td>
+							</tr>
+						)}
+						{table && (
+							<tr>
+								<td>{table.indicators74}</td>
+								<td>{table.weight74}</td>
+								<td>{table.co174}</td>
+								<td>{table.co274}</td>
+								<td>{table.co374}</td>
+								<td>{table.co474}</td>
+								<td>{table.co574}</td>
+								<td>{table.co674}</td>
+								<td>{table.co774}</td>
+							</tr>
+						)}
+						{table && (
+							<tr>
+								<td colSpan={4} className='h-16'>
+									PO7 :Mapping Level
+								</td>
+
+								<td>{table.po7mapco1}</td>
+								<td>{table.po7mapco2}</td>
+								<td>{table.po7mapco3}</td>
+								<td>{table.po7mapco4}</td>
+								<td>{table.po7mapco5}</td>
+								<td>{table.po7mapco6}</td>
+								<td>{table.po7mapco7}</td>
 							</tr>
 						)}
 					</tbody>

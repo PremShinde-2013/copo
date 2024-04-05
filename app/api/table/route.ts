@@ -604,6 +604,117 @@ export async function POST(request: any) {
 		po6mapco5,
 		po6mapco6,
 		po6mapco7,
+
+		// ************************ PO:7  ***************************************
+
+		po71,
+
+		competency71,
+		competency72,
+
+		indicators71,
+		indicators72,
+		indicators73,
+		indicators74,
+
+		weight71,
+		weight72,
+		weight73,
+		weight74,
+
+		co171,
+		co172,
+		co173,
+		co174,
+
+		co271,
+		co272,
+		co273,
+		co274,
+
+		co371,
+		co372,
+		co373,
+		co374,
+
+		co471,
+		co472,
+		co473,
+		co474,
+
+		co571,
+		co572,
+		co573,
+		co574,
+
+		co671,
+		co672,
+		co673,
+		co674,
+
+		co771,
+		co772,
+		co773,
+		co774,
+
+		po7mapco1,
+		po7mapco2,
+		po7mapco3,
+		po7mapco4,
+		po7mapco5,
+		po7mapco6,
+		po7mapco7,
+
+		// ************************ PO:8  ***************************************
+
+		po81,
+
+		competency81,
+		competency82,
+
+		indicators81,
+		indicators82,
+		indicators83,
+
+		weight81,
+		weight82,
+		weight83,
+
+		co181,
+		co182,
+		co183,
+
+		co281,
+		co282,
+		co283,
+
+		co381,
+		co382,
+		co383,
+
+		co481,
+		co482,
+		co483,
+
+		co581,
+		co582,
+		co583,
+
+		co681,
+		co682,
+		co683,
+
+		co781,
+		co782,
+		co783,
+
+		po8mapco1,
+		po8mapco2,
+		po8mapco3,
+		po8mapco4,
+		po8mapco5,
+		po8mapco6,
+		po8mapco7,
 	} = await request.json();
 	await connectDB();
 	await Table.create({
@@ -1206,6 +1317,117 @@ export async function POST(request: any) {
 		po6mapco5,
 		po6mapco6,
 		po6mapco7,
+
+		// ************************ PO:7  ***************************************
+
+		po71,
+
+		competency71,
+		competency72,
+
+		indicators71,
+		indicators72,
+		indicators73,
+		indicators74,
+
+		weight71,
+		weight72,
+		weight73,
+		weight74,
+
+		co171,
+		co172,
+		co173,
+		co174,
+
+		co271,
+		co272,
+		co273,
+		co274,
+
+		co371,
+		co372,
+		co373,
+		co374,
+
+		co471,
+		co472,
+		co473,
+		co474,
+
+		co571,
+		co572,
+		co573,
+		co574,
+
+		co671,
+		co672,
+		co673,
+		co674,
+
+		co771,
+		co772,
+		co773,
+		co774,
+
+		po7mapco1,
+		po7mapco2,
+		po7mapco3,
+		po7mapco4,
+		po7mapco5,
+		po7mapco6,
+		po7mapco7,
+
+		// ************************ PO:8  ***************************************
+
+		po81,
+
+		competency81,
+		competency82,
+
+		indicators81,
+		indicators82,
+		indicators83,
+
+		weight81,
+		weight82,
+		weight83,
+
+		co181,
+		co182,
+		co183,
+
+		co281,
+		co282,
+		co283,
+
+		co381,
+		co382,
+		co383,
+
+		co481,
+		co482,
+		co483,
+
+		co581,
+		co582,
+		co583,
+
+		co681,
+		co682,
+		co683,
+
+		co781,
+		co782,
+		co783,
+
+		po8mapco1,
+		po8mapco2,
+		po8mapco3,
+		po8mapco4,
+		po8mapco5,
+		po8mapco6,
+		po8mapco7,
 	});
 
 	return NextResponse.json({ message: "Topic Created" });
