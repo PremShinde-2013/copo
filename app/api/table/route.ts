@@ -1040,6 +1040,75 @@ export async function POST(request: any) {
 		po12mapco5,
 		po12mapco6,
 		po12mapco7,
+
+		// ******************************* PSO:1 *****************************
+
+		pso11,
+
+		psocompetency11,
+		psocompetency12,
+
+		psoindicators11,
+		psoindicators12,
+		psoindicators13,
+		psoindicators14,
+		psoindicators15,
+
+		psoweight11,
+		psoweight12,
+		psoweight13,
+		psoweight14,
+		psoweight15,
+
+		psoco111,
+		psoco112,
+		psoco113,
+		psoco114,
+		psoco115,
+
+		psoco211,
+		psoco212,
+		psoco213,
+		psoco214,
+		psoco215,
+
+		psoco311,
+		psoco312,
+		psoco313,
+		psoco314,
+		psoco315,
+
+		psoco411,
+		psoco412,
+		psoco413,
+		psoco414,
+		psoco415,
+
+		psoco511,
+		psoco512,
+		psoco513,
+		psoco514,
+		psoco515,
+
+		psoco611,
+		psoco612,
+		psoco613,
+		psoco614,
+		psoco615,
+
+		psoco711,
+		psoco712,
+		psoco713,
+		psoco714,
+		psoco715,
+
+		pso1mapco1,
+		pso1mapco2,
+		pso1mapco3,
+		pso1mapco4,
+		pso1mapco5,
+		pso1mapco6,
+		pso1mapco7,
 	} = await request.json();
 	await connectDB();
 	await Table.create({
@@ -2078,6 +2147,75 @@ export async function POST(request: any) {
 		po12mapco5,
 		po12mapco6,
 		po12mapco7,
+
+		// ******************************* PSO:1 *****************************
+
+		pso11,
+
+		psocompetency11,
+		psocompetency12,
+
+		psoindicators11,
+		psoindicators12,
+		psoindicators13,
+		psoindicators14,
+		psoindicators15,
+
+		psoweight11,
+		psoweight12,
+		psoweight13,
+		psoweight14,
+		psoweight15,
+
+		psoco111,
+		psoco112,
+		psoco113,
+		psoco114,
+		psoco115,
+
+		psoco211,
+		psoco212,
+		psoco213,
+		psoco214,
+		psoco215,
+
+		psoco311,
+		psoco312,
+		psoco313,
+		psoco314,
+		psoco315,
+
+		psoco411,
+		psoco412,
+		psoco413,
+		psoco414,
+		psoco415,
+
+		psoco511,
+		psoco512,
+		psoco513,
+		psoco514,
+		psoco515,
+
+		psoco611,
+		psoco612,
+		psoco613,
+		psoco614,
+		psoco615,
+
+		psoco711,
+		psoco712,
+		psoco713,
+		psoco714,
+		psoco715,
+
+		pso1mapco1,
+		pso1mapco2,
+		pso1mapco3,
+		pso1mapco4,
+		pso1mapco5,
+		pso1mapco6,
+		pso1mapco7,
 	});
 
 	return NextResponse.json({ message: "Topic Created" });
