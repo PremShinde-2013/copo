@@ -961,6 +961,85 @@ export async function POST(request: any) {
 		po11mapco5,
 		po11mapco6,
 		po11mapco7,
+
+		// ************************ PO: 12  ***************************************
+
+		po121,
+
+		competency121,
+		competency122,
+		competency123,
+
+		indicators121,
+		indicators122,
+		indicators123,
+		indicators124,
+		indicators125,
+		indicators126,
+
+		weight121,
+		weight122,
+		weight123,
+		weight124,
+		weight125,
+		weight126,
+
+		co1121,
+		co1122,
+		co1123,
+		co1124,
+		co1125,
+		co1126,
+
+		co2121,
+		co2122,
+		co2123,
+		co2124,
+		co2125,
+		co2126,
+
+		co3121,
+		co3122,
+		co3123,
+		co3124,
+		co3125,
+		co3126,
+
+		co4121,
+		co4122,
+		co4123,
+		co4124,
+		co4125,
+		co4126,
+
+		co5121,
+		co5122,
+		co5123,
+		co5124,
+		co5125,
+		co5126,
+
+		co6121,
+		co6122,
+		co6123,
+		co6124,
+		co6125,
+		co6126,
+
+		co7121,
+		co7122,
+		co7123,
+		co7124,
+		co7125,
+		co7126,
+
+		po12mapco1,
+		po12mapco2,
+		po12mapco3,
+		po12mapco4,
+		po12mapco5,
+		po12mapco6,
+		po12mapco7,
 	} = await request.json();
 	await connectDB();
 	await Table.create({
@@ -1920,6 +1999,85 @@ export async function POST(request: any) {
 		po11mapco5,
 		po11mapco6,
 		po11mapco7,
+
+		// ************************ PO: 12  ***************************************
+
+		po121,
+
+		competency121,
+		competency122,
+		competency123,
+
+		indicators121,
+		indicators122,
+		indicators123,
+		indicators124,
+		indicators125,
+		indicators126,
+
+		weight121,
+		weight122,
+		weight123,
+		weight124,
+		weight125,
+		weight126,
+
+		co1121,
+		co1122,
+		co1123,
+		co1124,
+		co1125,
+		co1126,
+
+		co2121,
+		co2122,
+		co2123,
+		co2124,
+		co2125,
+		co2126,
+
+		co3121,
+		co3122,
+		co3123,
+		co3124,
+		co3125,
+		co3126,
+
+		co4121,
+		co4122,
+		co4123,
+		co4124,
+		co4125,
+		co4126,
+
+		co5121,
+		co5122,
+		co5123,
+		co5124,
+		co5125,
+		co5126,
+
+		co6121,
+		co6122,
+		co6123,
+		co6124,
+		co6125,
+		co6126,
+
+		co7121,
+		co7122,
+		co7123,
+		co7124,
+		co7125,
+		co7126,
+
+		po12mapco1,
+		po12mapco2,
+		po12mapco3,
+		po12mapco4,
+		po12mapco5,
+		po12mapco6,
+		po12mapco7,
 	});
 
 	return NextResponse.json({ message: "Topic Created" });

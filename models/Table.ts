@@ -892,7 +892,7 @@ export interface TableInterface extends Document {
 	po10mapco6: number;
 	po10mapco7: number;
 
-	// ************************ PO: 10  ***************************************
+	// ************************ PO: 11  ***************************************
 
 	po111: string;
 
@@ -961,6 +961,85 @@ export interface TableInterface extends Document {
 	po11mapco5: number;
 	po11mapco6: number;
 	po11mapco7: number;
+
+	// ************************ PO: 12  ***************************************
+
+	po121: string;
+
+	competency121: string;
+	competency122: string;
+	competency123: string;
+
+	indicators121: string;
+	indicators122: string;
+	indicators123: string;
+	indicators124: string;
+	indicators125: string;
+	indicators126: string;
+
+	weight121: string;
+	weight122: string;
+	weight123: string;
+	weight124: string;
+	weight125: string;
+	weight126: string;
+
+	co1121: number;
+	co1122: number;
+	co1123: number;
+	co1124: number;
+	co1125: number;
+	co1126: number;
+
+	co2121: number;
+	co2122: number;
+	co2123: number;
+	co2124: number;
+	co2125: number;
+	co2126: number;
+
+	co3121: number;
+	co3122: number;
+	co3123: number;
+	co3124: number;
+	co3125: number;
+	co3126: number;
+
+	co4121: number;
+	co4122: number;
+	co4123: number;
+	co4124: number;
+	co4125: number;
+	co4126: number;
+
+	co5121: number;
+	co5122: number;
+	co5123: number;
+	co5124: number;
+	co5125: number;
+	co5126: number;
+
+	co6121: number;
+	co6122: number;
+	co6123: number;
+	co6124: number;
+	co6125: number;
+	co6126: number;
+
+	co7121: number;
+	co7122: number;
+	co7123: number;
+	co7124: number;
+	co7125: number;
+	co7126: number;
+
+	po12mapco1: number;
+	po12mapco2: number;
+	po12mapco3: number;
+	po12mapco4: number;
+	po12mapco5: number;
+	po12mapco6: number;
+	po12mapco7: number;
 }
 
 const TableSchema = new Schema<TableInterface>({
@@ -1921,6 +2000,85 @@ const TableSchema = new Schema<TableInterface>({
 	po11mapco5: { type: Number },
 	po11mapco6: { type: Number },
 	po11mapco7: { type: Number },
+
+	// ************************ PO: 12  ***************************************
+
+	po121: { type: String },
+
+	competency121: { type: String },
+	competency122: { type: String },
+	competency123: { type: String },
+
+	indicators121: { type: String },
+	indicators122: { type: String },
+	indicators123: { type: String },
+	indicators124: { type: String },
+	indicators125: { type: String },
+	indicators126: { type: String },
+
+	weight121: { type: String },
+	weight122: { type: String },
+	weight123: { type: String },
+	weight124: { type: String },
+	weight125: { type: String },
+	weight126: { type: String },
+
+	co1121: { type: Number },
+	co1122: { type: Number },
+	co1123: { type: Number },
+	co1124: { type: Number },
+	co1125: { type: Number },
+	co1126: { type: Number },
+
+	co2121: { type: Number },
+	co2122: { type: Number },
+	co2123: { type: Number },
+	co2124: { type: Number },
+	co2125: { type: Number },
+	co2126: { type: Number },
+
+	co3121: { type: Number },
+	co3122: { type: Number },
+	co3123: { type: Number },
+	co3124: { type: Number },
+	co3125: { type: Number },
+	co3126: { type: Number },
+
+	co4121: { type: Number },
+	co4122: { type: Number },
+	co4123: { type: Number },
+	co4124: { type: Number },
+	co4125: { type: Number },
+	co4126: { type: Number },
+
+	co5121: { type: Number },
+	co5122: { type: Number },
+	co5123: { type: Number },
+	co5124: { type: Number },
+	co5125: { type: Number },
+	co5126: { type: Number },
+
+	co6121: { type: Number },
+	co6122: { type: Number },
+	co6123: { type: Number },
+	co6124: { type: Number },
+	co6125: { type: Number },
+	co6126: { type: Number },
+
+	co7121: { type: Number },
+	co7122: { type: Number },
+	co7123: { type: Number },
+	co7124: { type: Number },
+	co7125: { type: Number },
+	co7126: { type: Number },
+
+	po12mapco1: { type: Number },
+	po12mapco2: { type: Number },
+	po12mapco3: { type: Number },
+	po12mapco4: { type: Number },
+	po12mapco5: { type: Number },
+	po12mapco6: { type: Number },
+	po12mapco7: { type: Number },
 });
 
 const Table =
