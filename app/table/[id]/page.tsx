@@ -842,6 +842,59 @@ const TableDetail = ({ params }: { params: { id: string } }) => {
 				table.po7mapco6,
 				table.po7mapco7,
 			],
+			//  ***********************************  po 8      ***************************************************
+			[
+				table.po81,
+				table.competency81,
+				table.indicators81,
+				table.weight81,
+				table.co181,
+				table.co281,
+				table.co381,
+				table.co481,
+				table.co581,
+				table.co681,
+				table.co781,
+			],
+			[
+				"",
+				table.competency82,
+				table.indicators82,
+				table.weight82,
+				table.co182,
+				table.co282,
+				table.co382,
+				table.co482,
+				table.co582,
+				table.co682,
+				table.co782,
+			],
+			[
+				"",
+				"",
+				table.indicators83,
+				table.weight83,
+				table.co183,
+				table.co283,
+				table.co383,
+				table.co483,
+				table.co583,
+				table.co683,
+				table.co783,
+			],
+			[
+				"PO8 :Mapping Level",
+				"",
+				"",
+				"",
+				table.po8mapco1,
+				table.po8mapco2,
+				table.po8mapco3,
+				table.po8mapco4,
+				table.po8mapco5,
+				table.po8mapco6,
+				table.po8mapco7,
+			],
 		]);
 		const wb = XLSX.utils.book_new();
 		XLSX.utils.book_append_sheet(wb, ws, "Sheet1");
@@ -1652,75 +1705,62 @@ const TableDetail = ({ params }: { params: { id: string } }) => {
 								<td>{table.po6mapco7}</td>
 							</tr>
 						)}
-						{/* ************************************ PO :7  **************************************************** */}
+						{/* ************************************ PO :8  **************************************************** */}
 						{table && (
 							<tr>
-								<td rowSpan={4}>{table.po71}</td>
-								<td rowSpan={2}>{table.competency71}</td>
-								<td>{table.indicators71}</td>
-								<td>{table.weight71}</td>
-								<td>{table.co171}</td>
-								<td>{table.co271}</td>
-								<td>{table.co371}</td>
-								<td>{table.co471}</td>
-								<td>{table.co571}</td>
-								<td>{table.co671}</td>
-								<td>{table.co771}</td>
+								<td rowSpan={4}>{table.po81}</td>
+								<td>{table.competency81}</td>
+								<td>{table.indicators81}</td>
+								<td>{table.weight81}</td>
+								<td>{table.co181}</td>
+								<td>{table.co281}</td>
+								<td>{table.co381}</td>
+								<td>{table.co481}</td>
+								<td>{table.co581}</td>
+								<td>{table.co681}</td>
+								<td>{table.co781}</td>
 							</tr>
 						)}
 						{table && (
 							<tr>
-								<td>{table.indicators72}</td>
-								<td>{table.weight72}</td>
-								<td>{table.co172}</td>
-								<td>{table.co272}</td>
-								<td>{table.co372}</td>
-								<td>{table.co472}</td>
-								<td>{table.co572}</td>
-								<td>{table.co672}</td>
-								<td>{table.co772}</td>
+								<td rowSpan={2}>{table.competency82}</td>
+								<td>{table.indicators82}</td>
+								<td>{table.weight82}</td>
+								<td>{table.co182}</td>
+								<td>{table.co282}</td>
+								<td>{table.co382}</td>
+								<td>{table.co482}</td>
+								<td>{table.co582}</td>
+								<td>{table.co682}</td>
+								<td>{table.co782}</td>
 							</tr>
 						)}
 						{table && (
 							<tr>
-								<td rowSpan={2}>{table.competency72}</td>
-								<td>{table.indicators73}</td>
-								<td>{table.weight73}</td>
-								<td>{table.co173}</td>
-								<td>{table.co273}</td>
-								<td>{table.co373}</td>
-								<td>{table.co473}</td>
-								<td>{table.co573}</td>
-								<td>{table.co673}</td>
-								<td>{table.co773}</td>
-							</tr>
-						)}
-						{table && (
-							<tr>
-								<td>{table.indicators74}</td>
-								<td>{table.weight74}</td>
-								<td>{table.co174}</td>
-								<td>{table.co274}</td>
-								<td>{table.co374}</td>
-								<td>{table.co474}</td>
-								<td>{table.co574}</td>
-								<td>{table.co674}</td>
-								<td>{table.co774}</td>
+								<td>{table.indicators83}</td>
+								<td>{table.weight83}</td>
+								<td>{table.co183}</td>
+								<td>{table.co283}</td>
+								<td>{table.co383}</td>
+								<td>{table.co483}</td>
+								<td>{table.co583}</td>
+								<td>{table.co683}</td>
+								<td>{table.co783}</td>
 							</tr>
 						)}
 						{table && (
 							<tr>
 								<td colSpan={4} className='h-16'>
-									PO7 :Mapping Level
+									PO8 :Mapping Level
 								</td>
 
-								<td>{table.po7mapco1}</td>
-								<td>{table.po7mapco2}</td>
-								<td>{table.po7mapco3}</td>
-								<td>{table.po7mapco4}</td>
-								<td>{table.po7mapco5}</td>
-								<td>{table.po7mapco6}</td>
-								<td>{table.po7mapco7}</td>
+								<td>{table.po8mapco1}</td>
+								<td>{table.po8mapco2}</td>
+								<td>{table.po8mapco3}</td>
+								<td>{table.po8mapco4}</td>
+								<td>{table.po8mapco5}</td>
+								<td>{table.po8mapco6}</td>
+								<td>{table.po8mapco7}</td>
 							</tr>
 						)}
 					</tbody>
