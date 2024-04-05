@@ -1106,6 +1106,86 @@ const TableDetail = ({ params }: { params: { id: string } }) => {
 				table.po10mapco6,
 				table.po10mapco7,
 			],
+			//  ***********************************  po : 11      ***************************************************
+			[
+				table.po111,
+				table.competency111,
+				table.indicators111,
+				table.weight111,
+				table.co1111,
+				table.co2111,
+				table.co3111,
+				table.co4111,
+				table.co5111,
+				table.co6111,
+				table.co7111,
+			],
+			[
+				"",
+				"",
+				table.indicators112,
+				table.weight112,
+				table.co1112,
+				table.co2112,
+				table.co3112,
+				table.co4112,
+				table.co5112,
+				table.co6112,
+				table.co7112,
+			],
+			[
+				"",
+				table.competency112,
+				table.indicators113,
+				table.weight113,
+				table.co1113,
+				table.co2113,
+				table.co3113,
+				table.co4113,
+				table.co5113,
+				table.co6113,
+				table.co7113,
+			],
+			[
+				"",
+				table.competency113,
+				table.indicators114,
+				table.weight114,
+				table.co1114,
+				table.co2114,
+				table.co3114,
+				table.co4114,
+				table.co5114,
+				table.co6114,
+				table.co7114,
+			],
+			[
+				"",
+				"",
+				table.indicators115,
+				table.weight115,
+				table.co1115,
+				table.co2115,
+				table.co3115,
+				table.co4115,
+				table.co5115,
+				table.co6115,
+				table.co7115,
+			],
+
+			[
+				"PO11 :Mapping Level",
+				"",
+				"",
+				"",
+				table.po11mapco1,
+				table.po11mapco2,
+				table.po11mapco3,
+				table.po11mapco4,
+				table.po11mapco5,
+				table.po11mapco6,
+				table.po11mapco7,
+			],
 		]);
 		const wb = XLSX.utils.book_new();
 		XLSX.utils.book_append_sheet(wb, ws, "Sheet1");
@@ -2195,6 +2275,91 @@ const TableDetail = ({ params }: { params: { id: string } }) => {
 								<td>{table.po10mapco5}</td>
 								<td>{table.po10mapco6}</td>
 								<td>{table.po10mapco7}</td>
+							</tr>
+						)}
+						{/* ************************************ PO : 11  **************************************************** */}
+						{table && (
+							<tr>
+								<td rowSpan={5}>{table.po111}</td>
+								<td rowSpan={2}>{table.competency111}</td>
+								<td>{table.indicators111}</td>
+								<td>{table.weight111}</td>
+								<td>{table.co1111}</td>
+								<td>{table.co2111}</td>
+								<td>{table.co3111}</td>
+								<td>{table.co4111}</td>
+								<td>{table.co5111}</td>
+								<td>{table.co6111}</td>
+								<td>{table.co7111}</td>
+							</tr>
+						)}
+						{table && (
+							<tr>
+								<td>{table.indicators112}</td>
+								<td>{table.weight112}</td>
+								<td>{table.co1112}</td>
+								<td>{table.co2112}</td>
+								<td>{table.co3112}</td>
+								<td>{table.co4112}</td>
+								<td>{table.co5112}</td>
+								<td>{table.co6112}</td>
+								<td>{table.co7112}</td>
+							</tr>
+						)}
+						{table && (
+							<tr>
+								<td>{table.competency112}</td>
+								<td>{table.indicators113}</td>
+								<td>{table.weight113}</td>
+								<td>{table.co1113}</td>
+								<td>{table.co2113}</td>
+								<td>{table.co3113}</td>
+								<td>{table.co4113}</td>
+								<td>{table.co5113}</td>
+								<td>{table.co6113}</td>
+								<td>{table.co7113}</td>
+							</tr>
+						)}
+						{table && (
+							<tr>
+								<td rowSpan={2}>{table.competency113}</td>
+								<td>{table.indicators114}</td>
+								<td>{table.weight114}</td>
+								<td>{table.co1114}</td>
+								<td>{table.co2114}</td>
+								<td>{table.co3114}</td>
+								<td>{table.co4114}</td>
+								<td>{table.co5114}</td>
+								<td>{table.co6114}</td>
+								<td>{table.co7114}</td>
+							</tr>
+						)}
+						{table && (
+							<tr>
+								<td>{table.indicators115}</td>
+								<td>{table.weight115}</td>
+								<td>{table.co1115}</td>
+								<td>{table.co2115}</td>
+								<td>{table.co3115}</td>
+								<td>{table.co4115}</td>
+								<td>{table.co5115}</td>
+								<td>{table.co6115}</td>
+								<td>{table.co7115}</td>
+							</tr>
+						)}
+						{table && (
+							<tr>
+								<td colSpan={4} className='h-16'>
+									PO11 :Mapping Level
+								</td>
+
+								<td>{table.po11mapco1}</td>
+								<td>{table.po11mapco2}</td>
+								<td>{table.po11mapco3}</td>
+								<td>{table.po11mapco4}</td>
+								<td>{table.po11mapco5}</td>
+								<td>{table.po11mapco6}</td>
+								<td>{table.po11mapco7}</td>
 							</tr>
 						)}
 					</tbody>

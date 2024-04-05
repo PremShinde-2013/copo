@@ -891,6 +891,76 @@ export async function POST(request: any) {
 		po10mapco5,
 		po10mapco6,
 		po10mapco7,
+
+		// ************************ PO: 10  ***************************************
+
+		po111,
+
+		competency111,
+		competency112,
+		competency113,
+
+		indicators111,
+		indicators112,
+		indicators113,
+		indicators114,
+		indicators115,
+
+		weight111,
+		weight112,
+		weight113,
+		weight114,
+		weight115,
+
+		co1111,
+		co1112,
+		co1113,
+		co1114,
+		co1115,
+
+		co2111,
+		co2112,
+		co2113,
+		co2114,
+		co2115,
+
+		co3111,
+		co3112,
+		co3113,
+		co3114,
+		co3115,
+
+		co4111,
+		co4112,
+		co4113,
+		co4114,
+		co4115,
+
+		co5111,
+		co5112,
+		co5113,
+		co5114,
+		co5115,
+
+		co6111,
+		co6112,
+		co6113,
+		co6114,
+		co6115,
+
+		co7111,
+		co7112,
+		co7113,
+		co7114,
+		co7115,
+
+		po11mapco1,
+		po11mapco2,
+		po11mapco3,
+		po11mapco4,
+		po11mapco5,
+		po11mapco6,
+		po11mapco7,
 	} = await request.json();
 	await connectDB();
 	await Table.create({
@@ -1780,6 +1850,76 @@ export async function POST(request: any) {
 		po10mapco5,
 		po10mapco6,
 		po10mapco7,
+
+		// ************************ PO: 10  ***************************************
+
+		po111,
+
+		competency111,
+		competency112,
+		competency113,
+
+		indicators111,
+		indicators112,
+		indicators113,
+		indicators114,
+		indicators115,
+
+		weight111,
+		weight112,
+		weight113,
+		weight114,
+		weight115,
+
+		co1111,
+		co1112,
+		co1113,
+		co1114,
+		co1115,
+
+		co2111,
+		co2112,
+		co2113,
+		co2114,
+		co2115,
+
+		co3111,
+		co3112,
+		co3113,
+		co3114,
+		co3115,
+
+		co4111,
+		co4112,
+		co4113,
+		co4114,
+		co4115,
+
+		co5111,
+		co5112,
+		co5113,
+		co5114,
+		co5115,
+
+		co6111,
+		co6112,
+		co6113,
+		co6114,
+		co6115,
+
+		co7111,
+		co7112,
+		co7113,
+		co7114,
+		co7115,
+
+		po11mapco1,
+		po11mapco2,
+		po11mapco3,
+		po11mapco4,
+		po11mapco5,
+		po11mapco6,
+		po11mapco7,
 	});
 
 	return NextResponse.json({ message: "Topic Created" });
