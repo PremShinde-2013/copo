@@ -130,6 +130,8 @@ const TableDetail = ({ params }: { params: { id: string } }) => {
 				table.po1mapco6, // Data for po1mapco6
 				table.po1mapco7, // Data for po1mapco7
 			],
+
+			// ***************************************     PO 2  **********************************************
 			[
 				table.po21,
 				table.competency21,
@@ -305,13 +307,197 @@ const TableDetail = ({ params }: { params: { id: string } }) => {
 				"", // Empty cell for Competency
 				"", // Empty cell for Indicators
 				"", // Empty cell for Weight
-				table.po2mapco1, // Data for po1mapco1
-				table.po2mapco2, // Data for po1mapco2
-				table.po2mapco3, // Data for po1mapco3
-				table.po2mapco4, // Data for po1mapco4
-				table.po2mapco5, // Data for po1mapco5
-				table.po2mapco6, // Data for po1mapco6
+				table.po2mapco1,
+				table.po2mapco2,
+				table.po2mapco3,
+				table.po2mapco4,
+				table.po2mapco5,
+				table.po2mapco6,
 				table.po2mapco7,
+			],
+
+			//  ***********************************  po3      ***************************************************
+			[
+				table.po31,
+				table.competency31,
+				table.indicators31,
+				table.weight31,
+				table.co131,
+				table.co231,
+				table.co331,
+				table.co431,
+				table.co531,
+				table.co631,
+				table.co731,
+			],
+			[
+				"",
+				"",
+				table.indicators32,
+				table.weight32,
+				table.co132,
+				table.co232,
+				table.co332,
+				table.co432,
+				table.co532,
+				table.co632,
+				table.co732,
+			],
+			[
+				"",
+				"",
+				table.indicators33,
+				table.weight33,
+				table.co133,
+				table.co233,
+				table.co333,
+				table.co433,
+				table.co533,
+				table.co633,
+				table.co733,
+			],
+			[
+				"",
+				"",
+				table.indicators34,
+				table.weight34,
+				table.co134,
+				table.co234,
+				table.co334,
+				table.co434,
+				table.co534,
+				table.co634,
+				table.co734,
+			],
+			[
+				"",
+				"",
+				table.indicators35,
+				table.weight35,
+				table.co135,
+				table.co235,
+				table.co335,
+				table.co435,
+				table.co535,
+				table.co635,
+				table.co735,
+			],
+			[
+				"",
+				"",
+				table.indicators36,
+				table.weight36,
+				table.co136,
+				table.co236,
+				table.co336,
+				table.co436,
+				table.co536,
+				table.co636,
+				table.co736,
+			],
+			[
+				"",
+				table.competency32,
+				table.indicators37,
+				table.weight37,
+				table.co137,
+				table.co237,
+				table.co337,
+				table.co437,
+				table.co537,
+				table.co637,
+				table.co737,
+			],
+			[
+				"",
+				"",
+				table.indicators38,
+				table.weight38,
+				table.co138,
+				table.co238,
+				table.co338,
+				table.co438,
+				table.co538,
+				table.co638,
+				table.co738,
+			],
+			[
+				"",
+				"",
+				table.indicators39,
+				table.weight39,
+				table.co139,
+				table.co239,
+				table.co339,
+				table.co439,
+				table.co539,
+				table.co639,
+				table.co739,
+			],
+			[
+				"",
+				table.competency33,
+				table.indicators310,
+				table.weight310,
+				table.co1310,
+				table.co2310,
+				table.co3310,
+				table.co4310,
+				table.co5310,
+				table.co6310,
+				table.co7310,
+			],
+			[
+				"",
+				"",
+				table.indicators311,
+				table.weight311,
+				table.co1311,
+				table.co2311,
+				table.co3311,
+				table.co4311,
+				table.co5311,
+				table.co6311,
+				table.co7311,
+			],
+			[
+				"",
+				table.competency33,
+				table.indicators312,
+				table.weight312,
+				table.co1312,
+				table.co2312,
+				table.co3312,
+				table.co4312,
+				table.co5312,
+				table.co6312,
+				table.co7312,
+			],
+			[
+				"",
+				"",
+				table.indicators313,
+				table.weight313,
+				table.co1313,
+				table.co2313,
+				table.co3313,
+				table.co4313,
+				table.co5313,
+				table.co6313,
+				table.co7313,
+			],
+			[
+				"PO3 :Mapping Level",
+				"",
+				"",
+				"",
+				table.po3mapco1,
+				table.po3mapco2,
+				table.po3mapco3,
+				table.po3mapco4,
+				table.po3mapco5,
+				table.po3mapco6,
+				table.po3mapco7,
 			],
 		]);
 		const wb = XLSX.utils.book_new();
@@ -442,6 +628,8 @@ const TableDetail = ({ params }: { params: { id: string } }) => {
 								<td>{table.po1mapco7}</td>
 							</tr>
 						)}
+
+						{/* ************************************ PO2 **************************************************** */}
 						{table && (
 							<tr>
 								<td rowSpan={13}>{table.po21}</td>
@@ -622,7 +810,7 @@ const TableDetail = ({ params }: { params: { id: string } }) => {
 						{table && (
 							<tr>
 								<td colSpan={4} className='h-16'>
-									PO1 :Mapping Level
+									PO2 :Mapping Level
 								</td>
 
 								<td>{table.po2mapco1}</td>
@@ -632,6 +820,199 @@ const TableDetail = ({ params }: { params: { id: string } }) => {
 								<td>{table.po2mapco5}</td>
 								<td>{table.po2mapco6}</td>
 								<td>{table.po2mapco7}</td>
+							</tr>
+						)}
+
+						{/* ************************************ PO :3  **************************************************** */}
+						{table && (
+							<tr>
+								<td rowSpan={13}>{table.po31}</td>
+								<td rowSpan={6}>{table.competency31}</td>
+								<td>{table.indicators31}</td>
+								<td>{table.weight31}</td>
+								<td>{table.co131}</td>
+								<td>{table.co231}</td>
+								<td>{table.co331}</td>
+								<td>{table.co431}</td>
+								<td>{table.co531}</td>
+								<td>{table.co631}</td>
+								<td>{table.co731}</td>
+							</tr>
+						)}
+						{table && (
+							<tr>
+								<td>{table.indicators32}</td>
+								<td>{table.weight32}</td>
+								<td>{table.co132}</td>
+								<td>{table.co232}</td>
+								<td>{table.co332}</td>
+								<td>{table.co432}</td>
+								<td>{table.co532}</td>
+								<td>{table.co632}</td>
+								<td>{table.co732}</td>
+							</tr>
+						)}
+						{table && (
+							<tr>
+								<td>{table.indicators33}</td>
+								<td>{table.weight33}</td>
+								<td>{table.co133}</td>
+								<td>{table.co233}</td>
+								<td>{table.co333}</td>
+								<td>{table.co433}</td>
+								<td>{table.co533}</td>
+								<td>{table.co633}</td>
+								<td>{table.co733}</td>
+							</tr>
+						)}
+						{table && (
+							<tr>
+								<td>{table.indicators34}</td>
+								<td>{table.weight34}</td>
+								<td>{table.co134}</td>
+								<td>{table.co234}</td>
+								<td>{table.co334}</td>
+								<td>{table.co434}</td>
+								<td>{table.co534}</td>
+								<td>{table.co634}</td>
+								<td>{table.co734}</td>
+							</tr>
+						)}
+						{table && (
+							<tr>
+								<td>{table.indicators35}</td>
+								<td>{table.weight35}</td>
+								<td>{table.co135}</td>
+								<td>{table.co235}</td>
+								<td>{table.co335}</td>
+								<td>{table.co435}</td>
+								<td>{table.co535}</td>
+								<td>{table.co635}</td>
+								<td>{table.co735}</td>
+							</tr>
+						)}
+						{table && (
+							<tr>
+								<td>{table.indicators36}</td>
+								<td>{table.weight36}</td>
+								<td>{table.co136}</td>
+								<td>{table.co236}</td>
+								<td>{table.co336}</td>
+								<td>{table.co436}</td>
+								<td>{table.co536}</td>
+								<td>{table.co636}</td>
+								<td>{table.co736}</td>
+							</tr>
+						)}
+						{table && (
+							<tr>
+								<td rowSpan={3}>{table.competency32}</td>
+
+								<td>{table.indicators37}</td>
+								<td>{table.weight37}</td>
+								<td>{table.co137}</td>
+								<td>{table.co237}</td>
+								<td>{table.co337}</td>
+								<td>{table.co437}</td>
+								<td>{table.co537}</td>
+								<td>{table.co637}</td>
+								<td>{table.co737}</td>
+							</tr>
+						)}
+						{table && (
+							<tr>
+								<td>{table.indicators38}</td>
+								<td>{table.weight38}</td>
+								<td>{table.co138}</td>
+								<td>{table.co238}</td>
+								<td>{table.co338}</td>
+								<td>{table.co438}</td>
+								<td>{table.co538}</td>
+								<td>{table.co638}</td>
+								<td>{table.co738}</td>
+							</tr>
+						)}
+						{table && (
+							<tr>
+								<td>{table.indicators39}</td>
+								<td>{table.weight39}</td>
+								<td>{table.co139}</td>
+								<td>{table.co239}</td>
+								<td>{table.co339}</td>
+								<td>{table.co439}</td>
+								<td>{table.co539}</td>
+								<td>{table.co639}</td>
+								<td>{table.co739}</td>
+							</tr>
+						)}
+						{table && (
+							<tr>
+								<td rowSpan={4}>{table.competency33}</td>
+
+								<td>{table.indicators310}</td>
+								<td>{table.weight310}</td>
+								<td>{table.co1310}</td>
+								<td>{table.co2310}</td>
+								<td>{table.co3310}</td>
+								<td>{table.co4310}</td>
+								<td>{table.co5310}</td>
+								<td>{table.co6310}</td>
+								<td>{table.co7310}</td>
+							</tr>
+						)}
+						{table && (
+							<tr>
+								<td>{table.indicators311}</td>
+								<td>{table.weight311}</td>
+								<td>{table.co1311}</td>
+								<td>{table.co2311}</td>
+								<td>{table.co3311}</td>
+								<td>{table.co4311}</td>
+								<td>{table.co5311}</td>
+								<td>{table.co6311}</td>
+								<td>{table.co7311}</td>
+							</tr>
+						)}
+						{table && (
+							<tr>
+								<td>{table.indicators312}</td>
+								<td>{table.weight312}</td>
+								<td>{table.co1312}</td>
+								<td>{table.co2312}</td>
+								<td>{table.co3312}</td>
+								<td>{table.co4312}</td>
+								<td>{table.co5312}</td>
+								<td>{table.co6312}</td>
+								<td>{table.co7312}</td>
+							</tr>
+						)}
+						{table && (
+							<tr>
+								<td>{table.indicators313}</td>
+								<td>{table.weight313}</td>
+								<td>{table.co1313}</td>
+								<td>{table.co2313}</td>
+								<td>{table.co3313}</td>
+								<td>{table.co4313}</td>
+								<td>{table.co5313}</td>
+								<td>{table.co6313}</td>
+								<td>{table.co7313}</td>
+							</tr>
+						)}
+
+						{table && (
+							<tr>
+								<td colSpan={4} className='h-16'>
+									PO3 :Mapping Level
+								</td>
+
+								<td>{table.po3mapco1}</td>
+								<td>{table.po3mapco2}</td>
+								<td>{table.po3mapco3}</td>
+								<td>{table.po3mapco4}</td>
+								<td>{table.po3mapco5}</td>
+								<td>{table.po3mapco6}</td>
+								<td>{table.po3mapco7}</td>
 							</tr>
 						)}
 					</tbody>
