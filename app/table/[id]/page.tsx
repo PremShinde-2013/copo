@@ -1186,6 +1186,99 @@ const TableDetail = ({ params }: { params: { id: string } }) => {
 				table.po11mapco6,
 				table.po11mapco7,
 			],
+			//  ***********************************  po : 12      ***************************************************
+			[
+				table.po121,
+				table.competency121,
+				table.indicators121,
+				table.weight121,
+				table.co1121,
+				table.co2121,
+				table.co3121,
+				table.co4121,
+				table.co5121,
+				table.co6121,
+				table.co7121,
+			],
+			[
+				"",
+				"",
+				table.indicators122,
+				table.weight122,
+				table.co1122,
+				table.co2122,
+				table.co3122,
+				table.co4122,
+				table.co5122,
+				table.co6122,
+				table.co7122,
+			],
+			[
+				"",
+				table.competency122,
+				table.indicators123,
+				table.weight123,
+				table.co1123,
+				table.co2123,
+				table.co3123,
+				table.co4123,
+				table.co5123,
+				table.co6123,
+				table.co7123,
+			],
+			[
+				"",
+				"",
+				table.indicators124,
+				table.weight124,
+				table.co1124,
+				table.co2124,
+				table.co3124,
+				table.co4124,
+				table.co5124,
+				table.co6124,
+				table.co7124,
+			],
+			[
+				"",
+				table.competency123,
+				table.indicators125,
+				table.weight125,
+				table.co1125,
+				table.co2125,
+				table.co3125,
+				table.co4125,
+				table.co5125,
+				table.co6125,
+				table.co7125,
+			],
+			[
+				"",
+				"",
+				table.indicators126,
+				table.weight126,
+				table.co1126,
+				table.co2126,
+				table.co3126,
+				table.co4126,
+				table.co5126,
+				table.co6126,
+				table.co7126,
+			],
+
+			[
+				"PO12 :Mapping Level",
+				"",
+				"",
+				"",
+				table.po12mapco1,
+				table.po12mapco2,
+				table.po12mapco3,
+				table.po12mapco4,
+				table.po12mapco5,
+				table.po12mapco6,
+				table.po12mapco7,
+			],
 		]);
 		const wb = XLSX.utils.book_new();
 		XLSX.utils.book_append_sheet(wb, ws, "Sheet1");
@@ -2360,6 +2453,106 @@ const TableDetail = ({ params }: { params: { id: string } }) => {
 								<td>{table.po11mapco5}</td>
 								<td>{table.po11mapco6}</td>
 								<td>{table.po11mapco7}</td>
+							</tr>
+						)}
+						{/* ************************************ PO : 12  **************************************************** */}
+						{table && (
+							<tr>
+								<td rowSpan={6}>{table.po121}</td>
+								<td rowSpan={2}>{table.competency121}</td>
+								<td>{table.indicators121}</td>
+								<td>{table.weight121}</td>
+								<td>{table.co1121}</td>
+								<td>{table.co2121}</td>
+								<td>{table.co3121}</td>
+								<td>{table.co4121}</td>
+								<td>{table.co5121}</td>
+								<td>{table.co6121}</td>
+								<td>{table.co7121}</td>
+							</tr>
+						)}
+						{table && (
+							<tr>
+								<td>{table.indicators122}</td>
+								<td>{table.weight122}</td>
+								<td>{table.co1122}</td>
+								<td>{table.co2122}</td>
+								<td>{table.co3122}</td>
+								<td>{table.co4122}</td>
+								<td>{table.co5122}</td>
+								<td>{table.co6122}</td>
+								<td>{table.co7122}</td>
+							</tr>
+						)}
+						{table && (
+							<tr>
+								<td rowSpan={2}>{table.competency122}</td>
+
+								<td>{table.indicators123}</td>
+								<td>{table.weight123}</td>
+								<td>{table.co1123}</td>
+								<td>{table.co2123}</td>
+								<td>{table.co3123}</td>
+								<td>{table.co4123}</td>
+								<td>{table.co5123}</td>
+								<td>{table.co6123}</td>
+								<td>{table.co7123}</td>
+							</tr>
+						)}
+						{table && (
+							<tr>
+								<td>{table.indicators124}</td>
+								<td>{table.weight124}</td>
+								<td>{table.co1124}</td>
+								<td>{table.co2124}</td>
+								<td>{table.co3124}</td>
+								<td>{table.co4124}</td>
+								<td>{table.co5124}</td>
+								<td>{table.co6124}</td>
+								<td>{table.co7124}</td>
+							</tr>
+						)}
+						{table && (
+							<tr>
+								<td rowSpan={2}>{table.competency123}</td>
+								<td>{table.indicators125}</td>
+								<td>{table.weight125}</td>
+								<td>{table.co1125}</td>
+								<td>{table.co2125}</td>
+								<td>{table.co3125}</td>
+								<td>{table.co4125}</td>
+								<td>{table.co5125}</td>
+								<td>{table.co6125}</td>
+								<td>{table.co7125}</td>
+							</tr>
+						)}
+						{table && (
+							<tr>
+								<td>{table.indicators126}</td>
+								<td>{table.weight126}</td>
+								<td>{table.co1126}</td>
+								<td>{table.co2126}</td>
+								<td>{table.co3126}</td>
+								<td>{table.co4126}</td>
+								<td>{table.co5126}</td>
+								<td>{table.co6126}</td>
+								<td>{table.co7126}</td>
+							</tr>
+						)}
+
+						{table && (
+							<tr>
+								<td colSpan={4} className='h-16'>
+									PO12 :Mapping Level
+								</td>
+
+								<td>{table.po12mapco1}</td>
+								<td>{table.po12mapco2}</td>
+								<td>{table.po12mapco3}</td>
+								<td>{table.po12mapco4}</td>
+								<td>{table.po12mapco5}</td>
+								<td>{table.po12mapco6}</td>
+								<td>{table.po12mapco7}</td>
 							</tr>
 						)}
 					</tbody>
