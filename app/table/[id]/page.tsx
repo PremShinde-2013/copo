@@ -1362,6 +1362,76 @@ const TableDetail = ({ params }: { params: { id: string } }) => {
 				table.pso1mapco6, // Data for po1mapco6
 				table.pso1mapco7, // Data for po1mapco7
 			],
+
+			//  ***************************    PSO : 2  *****************************************
+
+			[
+				table.pso21,
+				table.psocompetency21,
+				table.psoindicators21,
+				table.psoweight21,
+				table.psoco121,
+				table.psoco221,
+				table.psoco321,
+				table.psoco421,
+				table.psoco521,
+				table.psoco621,
+				table.psoco721,
+			],
+			[
+				"",
+				"",
+				table.psoindicators22,
+				table.psoweight22,
+				table.psoco122,
+				table.psoco222,
+				table.psoco322,
+				table.psoco422,
+				table.psoco522,
+				table.psoco622,
+				table.psoco722,
+			],
+			[
+				"",
+				table.psocompetency22,
+				table.psoindicators23,
+				table.psoweight23,
+				table.psoco123,
+				table.psoco223,
+				table.psoco323,
+				table.psoco423,
+				table.psoco523,
+				table.psoco623,
+				table.psoco723,
+			],
+			[
+				"",
+				"",
+				table.psoindicators24,
+				table.psoweight24,
+				table.psoco124,
+				table.psoco224,
+				table.psoco324,
+				table.psoco424,
+				table.psoco524,
+				table.psoco624,
+				table.psoco724,
+			],
+
+			[
+				// Data for the special row
+				"PSO 2 :Mapping Level", // Label for the special row
+				"", // Empty cell for Competency
+				"", // Empty cell for Indicators
+				"", // Empty cell for Weight
+				table.pso2mapco1, // Data for po1mapco1
+				table.pso2mapco2, // Data for po1mapco2
+				table.pso2mapco3, // Data for po1mapco3
+				table.pso2mapco4, // Data for po1mapco4
+				table.pso2mapco5, // Data for po1mapco5
+				table.pso2mapco6, // Data for po1mapco6
+				table.pso2mapco7, // Data for po1mapco7
+			],
 		]);
 		const wb = XLSX.utils.book_new();
 		XLSX.utils.book_append_sheet(wb, ws, "Sheet1");
@@ -2723,6 +2793,80 @@ const TableDetail = ({ params }: { params: { id: string } }) => {
 								<td>{table.pso1mapco5}</td>
 								<td>{table.pso1mapco6}</td>
 								<td>{table.pso1mapco7}</td>
+							</tr>
+						)}
+						{/* *******************************   PSO : 1 **************************** */}
+
+						{table && (
+							<tr>
+								<td rowSpan={4}>{table.pso21}</td>
+								<td rowSpan={2}>{table.psocompetency21}</td>
+								<td>{table.psoindicators21}</td>
+								<td>{table.psoweight21}</td>
+								<td>{table.psoco121}</td>
+								<td>{table.psoco221}</td>
+								<td>{table.psoco321}</td>
+								<td>{table.psoco421}</td>
+								<td>{table.psoco521}</td>
+								<td>{table.psoco621}</td>
+								<td>{table.psoco721}</td>
+							</tr>
+						)}
+
+						{table && (
+							<tr>
+								<td>{table.psoindicators22}</td>
+								<td>{table.psoweight22}</td>
+								<td>{table.psoco122}</td>
+								<td>{table.psoco222}</td>
+								<td>{table.psoco322}</td>
+								<td>{table.psoco422}</td>
+								<td>{table.psoco522}</td>
+								<td>{table.psoco622}</td>
+								<td>{table.psoco722}</td>
+							</tr>
+						)}
+						{table && (
+							<tr>
+								<td rowSpan={2}>{table.psocompetency12}</td>
+								<td>{table.psoindicators23}</td>
+								<td>{table.psoweight23}</td>
+								<td>{table.psoco123}</td>
+								<td>{table.psoco223}</td>
+								<td>{table.psoco323}</td>
+								<td>{table.psoco423}</td>
+								<td>{table.psoco523}</td>
+								<td>{table.psoco623}</td>
+								<td>{table.psoco723}</td>
+							</tr>
+						)}
+						{table && (
+							<tr>
+								<td>{table.psoindicators24}</td>
+								<td>{table.psoweight24}</td>
+								<td>{table.psoco124}</td>
+								<td>{table.psoco224}</td>
+								<td>{table.psoco324}</td>
+								<td>{table.psoco424}</td>
+								<td>{table.psoco524}</td>
+								<td>{table.psoco624}</td>
+								<td>{table.psoco724}</td>
+							</tr>
+						)}
+
+						{table && (
+							<tr>
+								<td colSpan={4} className='h-16'>
+									PSO 2 :Mapping Level
+								</td>
+
+								<td>{table.pso2mapco1}</td>
+								<td>{table.pso2mapco2}</td>
+								<td>{table.pso2mapco3}</td>
+								<td>{table.pso2mapco4}</td>
+								<td>{table.pso2mapco5}</td>
+								<td>{table.pso2mapco6}</td>
+								<td>{table.pso2mapco7}</td>
 							</tr>
 						)}
 					</tbody>

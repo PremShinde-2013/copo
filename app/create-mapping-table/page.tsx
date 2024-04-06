@@ -1065,6 +1065,66 @@ interface TableRowData {
 	pso1mapco5: number;
 	pso1mapco6: number;
 	pso1mapco7: number;
+
+	// ******************************* PSO:2 *****************************
+
+	pso21: string;
+
+	psocompetency21: string;
+	psocompetency22: string;
+
+	psoindicators21: string;
+	psoindicators22: string;
+	psoindicators23: string;
+	psoindicators24: string;
+
+	psoweight21: number;
+	psoweight22: number;
+	psoweight23: number;
+	psoweight24: number;
+
+	psoco121: number;
+	psoco122: number;
+	psoco123: number;
+	psoco124: number;
+
+	psoco221: number;
+	psoco222: number;
+	psoco223: number;
+	psoco224: number;
+
+	psoco321: number;
+	psoco322: number;
+	psoco323: number;
+	psoco324: number;
+
+	psoco421: number;
+	psoco422: number;
+	psoco423: number;
+	psoco424: number;
+
+	psoco521: number;
+	psoco522: number;
+	psoco523: number;
+	psoco524: number;
+
+	psoco621: number;
+	psoco622: number;
+	psoco623: number;
+	psoco624: number;
+
+	psoco721: number;
+	psoco722: number;
+	psoco723: number;
+	psoco724: number;
+
+	pso2mapco1: number;
+	pso2mapco2: number;
+	pso2mapco3: number;
+	pso2mapco4: number;
+	pso2mapco5: number;
+	pso2mapco6: number;
+	pso2mapco7: number;
 }
 
 export default function App() {
@@ -2460,6 +2520,80 @@ export default function App() {
 	const [pso1mapco6, setPso1mapco6] = useState<number | string>("");
 	const [pso1mapco7, setPso1mapco7] = useState<number | string>("");
 
+	//   **************************************   PSO : 1 ************************************************
+
+	const [pso21, setPso21] = useState(
+		"PO 1: Engineering knowledge: Apply the knowledge of mathematics, science, engineering fundamentals, and an engineering specialisation for the solution of complex engineering problems."
+	);
+
+	const [psocompetency21, setPsocompetency21] = useState(
+		"1.1  Demonstrate competence in mathematical modelling"
+	);
+	const [psocompetency22, setPsocompetency22] = useState(
+		"1.1  Demonstrate competence in mathematical modelling"
+	);
+
+	const [psoindicators21, setPsoindicators21] = useState(
+		"1.1.1      Apply mathematical techniques such as calculus, linear algebra, and statistics to solve problems"
+	);
+	const [psoindicators22, setPsoindicators22] = useState(
+		"1.1.2      Apply advanced mathematical techniques to model and solve mechanical engineering problems"
+	);
+	const [psoindicators23, setPsoindicators23] = useState(
+		"1.2.1  Apply laws of natural science to an engineering problem"
+	);
+	const [psoindicators24, setPsoindicators24] = useState(
+		"1.3.1  Apply fundamental engineering concepts to solve engineering problems"
+	);
+
+	const [psoweight21, setPsoweight21] = useState("0.2");
+	const [psoweight22, setPsoweight22] = useState("0.2");
+	const [psoweight23, setPsoweight23] = useState("0.2");
+	const [psoweight24, setPsoweight24] = useState("0.2");
+
+	const [psoco121, setPsoco121] = useState("");
+	const [psoco122, setPsoco122] = useState("");
+	const [psoco123, setPsoco123] = useState("");
+	const [psoco124, setPsoco124] = useState("");
+
+	const [psoco221, setPsoco221] = useState("");
+	const [psoco222, setPsoco222] = useState("");
+	const [psoco223, setPsoco223] = useState("");
+	const [psoco224, setPsoco224] = useState("");
+
+	const [psoco321, setPsoco321] = useState("");
+	const [psoco322, setPsoco322] = useState("");
+	const [psoco323, setPsoco323] = useState("");
+	const [psoco324, setPsoco324] = useState("");
+
+	const [psoco421, setPsoco421] = useState("");
+	const [psoco422, setPsoco422] = useState("");
+	const [psoco423, setPsoco423] = useState("");
+	const [psoco424, setPsoco424] = useState("");
+
+	const [psoco521, setPsoco521] = useState("");
+	const [psoco522, setPsoco522] = useState("");
+	const [psoco523, setPsoco523] = useState("");
+	const [psoco524, setPsoco524] = useState("");
+
+	const [psoco621, setPsoco621] = useState("");
+	const [psoco622, setPsoco622] = useState("");
+	const [psoco623, setPsoco623] = useState("");
+	const [psoco624, setPsoco624] = useState("");
+
+	const [psoco721, setPsoco721] = useState("");
+	const [psoco722, setPsoco722] = useState("");
+	const [psoco723, setPsoco723] = useState("");
+	const [psoco724, setPsoco724] = useState("");
+
+	const [pso2mapco1, setPso2mapco1] = useState<number | string>("");
+	const [pso2mapco2, setPso2mapco2] = useState<number | string>("");
+	const [pso2mapco3, setPso2mapco3] = useState<number | string>("");
+	const [pso2mapco4, setPso2mapco4] = useState<number | string>("");
+	const [pso2mapco5, setPso2mapco5] = useState<number | string>("");
+	const [pso2mapco6, setPso2mapco6] = useState<number | string>("");
+	const [pso2mapco7, setPso2mapco7] = useState<number | string>("");
+
 	const calculatePo1mapco1 = () => {
 		const sumCo =
 			parseInt(co111) +
@@ -3469,7 +3603,7 @@ export default function App() {
 		setPo12mapco7(calculatedValue);
 	};
 
-	//   *********************************        pso :1   *****************************************
+	//   *********************************        pso : 1   *****************************************
 
 	const calculatePso1mapco1 = () => {
 		const sumCo =
@@ -3540,6 +3674,72 @@ export default function App() {
 			parseInt(psoco715);
 		const calculatedValue = Math.round((sumCo * 0.2) / 0.33);
 		setPso1mapco7(calculatedValue);
+	};
+
+	//   *********************************        pso : 2   *****************************************
+
+	const calculatePso2mapco1 = () => {
+		const sumCo =
+			parseInt(psoco121) +
+			parseInt(psoco122) +
+			parseInt(psoco123) +
+			parseInt(psoco124);
+		const calculatedValue = Math.round((sumCo * 0.25) / 0.33);
+		setPso2mapco1(calculatedValue);
+	};
+	const calculatePso2mapco2 = () => {
+		const sumCo =
+			parseInt(psoco221) +
+			parseInt(psoco222) +
+			parseInt(psoco223) +
+			parseInt(psoco224);
+		const calculatedValue = Math.round((sumCo * 0.25) / 0.33);
+		setPso2mapco2(calculatedValue);
+	};
+	const calculatePso2mapco3 = () => {
+		const sumCo =
+			parseInt(psoco321) +
+			parseInt(psoco322) +
+			parseInt(psoco323) +
+			parseInt(psoco324);
+		const calculatedValue = Math.round((sumCo * 0.25) / 0.33);
+		setPso2mapco3(calculatedValue);
+	};
+	const calculatePso2mapco4 = () => {
+		const sumCo =
+			parseInt(psoco421) +
+			parseInt(psoco422) +
+			parseInt(psoco423) +
+			parseInt(psoco424);
+		const calculatedValue = Math.round((sumCo * 0.25) / 0.33);
+		setPso2mapco4(calculatedValue);
+	};
+	const calculatePso2mapco5 = () => {
+		const sumCo =
+			parseInt(psoco521) +
+			parseInt(psoco522) +
+			parseInt(psoco523) +
+			parseInt(psoco524);
+		const calculatedValue = Math.round((sumCo * 0.25) / 0.33);
+		setPso2mapco5(calculatedValue);
+	};
+	const calculatePso2mapco6 = () => {
+		const sumCo =
+			parseInt(psoco621) +
+			parseInt(psoco622) +
+			parseInt(psoco623) +
+			parseInt(psoco624);
+		const calculatedValue = Math.round((sumCo * 0.25) / 0.33);
+		setPso2mapco6(calculatedValue);
+	};
+	const calculatePso2mapco7 = () => {
+		const sumCo =
+			parseInt(psoco721) +
+			parseInt(psoco722) +
+			parseInt(psoco723) +
+			parseInt(psoco724);
+		const calculatedValue = Math.round((sumCo * 0.25) / 0.33);
+		setPso2mapco7(calculatedValue);
 	};
 
 	useEffect(() => {
@@ -3647,6 +3847,14 @@ export default function App() {
 		calculatePso1mapco5();
 		calculatePso1mapco6();
 		calculatePso1mapco7();
+		//  PSO: 1
+		calculatePso2mapco1();
+		calculatePso2mapco2();
+		calculatePso2mapco3();
+		calculatePso2mapco4();
+		calculatePso2mapco5();
+		calculatePso2mapco6();
+		calculatePso2mapco7();
 	}, [
 		co111,
 		co112,
@@ -4360,6 +4568,43 @@ export default function App() {
 		psoco713,
 		psoco714,
 		psoco715,
+
+		// ******************************* PSO:2 *****************************
+
+		psoco121,
+		psoco122,
+		psoco123,
+		psoco124,
+
+		psoco221,
+		psoco222,
+		psoco223,
+		psoco224,
+
+		psoco321,
+		psoco322,
+		psoco323,
+		psoco324,
+
+		psoco421,
+		psoco422,
+		psoco423,
+		psoco424,
+
+		psoco521,
+		psoco522,
+		psoco523,
+		psoco524,
+
+		psoco621,
+		psoco622,
+		psoco623,
+		psoco624,
+
+		psoco721,
+		psoco722,
+		psoco723,
+		psoco724,
 	]);
 
 	const handleSubmit = async (e: any) => {
@@ -5495,6 +5740,66 @@ export default function App() {
 					pso1mapco5,
 					pso1mapco6,
 					pso1mapco7,
+
+					// ******************************* PSO:2 *****************************
+
+					pso21,
+
+					psocompetency21,
+					psocompetency22,
+
+					psoindicators21,
+					psoindicators22,
+					psoindicators23,
+					psoindicators24,
+
+					psoweight21,
+					psoweight22,
+					psoweight23,
+					psoweight24,
+
+					psoco121,
+					psoco122,
+					psoco123,
+					psoco124,
+
+					psoco221,
+					psoco222,
+					psoco223,
+					psoco224,
+
+					psoco321,
+					psoco322,
+					psoco323,
+					psoco324,
+
+					psoco421,
+					psoco422,
+					psoco423,
+					psoco424,
+
+					psoco521,
+					psoco522,
+					psoco523,
+					psoco524,
+
+					psoco621,
+					psoco622,
+					psoco623,
+					psoco624,
+
+					psoco721,
+					psoco722,
+					psoco723,
+					psoco724,
+
+					pso2mapco1,
+					pso2mapco2,
+					pso2mapco3,
+					pso2mapco4,
+					pso2mapco5,
+					pso2mapco6,
+					pso2mapco7,
 				}),
 			});
 
@@ -12594,6 +12899,363 @@ export default function App() {
 									value={pso1mapco7.toString()}
 									readOnly
 									onChange={(e) => setPso1mapco7(e.target.value)}
+								/>{" "}
+							</td>
+						</tr>
+
+						{/* ************************************  PSO : 2       ************************************ */}
+
+						<tr className='m-4'>
+							<td rowSpan={4}>
+								<Textarea
+									readOnly
+									value={pso21}
+									onChange={(e) => setPso21(e.target.value)}
+									className='my-6'
+								/>
+							</td>
+							<td rowSpan={2}>
+								<Textarea
+									readOnly
+									value={psocompetency21}
+									onChange={(e) => setPsocompetency21(e.target.value)}
+								/>
+							</td>
+							<td>
+								<Textarea
+									readOnly
+									value={psoindicators21}
+									onChange={(e) => setPsoindicators21(e.target.value)}
+								/>
+							</td>
+							<td>
+								<Input
+									type='number'
+									readOnly
+									value={psoweight21}
+									onChange={(e) => setPsoweight21(e.target.value)}
+								/>
+							</td>
+							<td>
+								<Input
+									type='number'
+									value={psoco121}
+									onChange={(e) => setPsoco121(e.target.value)}
+								/>
+							</td>
+							<td>
+								<Input
+									type='number'
+									value={psoco221}
+									onChange={(e) => setPsoco221(e.target.value)}
+								/>
+							</td>
+							<td>
+								<Input
+									type='number'
+									value={psoco321}
+									onChange={(e) => setPsoco321(e.target.value)}
+								/>
+							</td>
+							<td>
+								<Input
+									type='number'
+									value={psoco421}
+									onChange={(e) => setPsoco421(e.target.value)}
+								/>
+							</td>
+							<td>
+								<Input
+									type='number'
+									value={psoco521}
+									onChange={(e) => setPsoco521(e.target.value)}
+								/>
+							</td>
+							<td>
+								<Input
+									type='number'
+									value={psoco621}
+									onChange={(e) => setPsoco621(e.target.value)}
+								/>
+							</td>
+							<td>
+								<Input
+									type='number'
+									value={psoco721}
+									onChange={(e) => setPsoco721(e.target.value)}
+								/>
+							</td>
+						</tr>
+						<tr className='m-4'>
+							<td>
+								<Textarea
+									readOnly
+									value={psoindicators22}
+									onChange={(e) => setPsoindicators22(e.target.value)}
+								/>
+							</td>
+							<td>
+								<Input
+									type='number'
+									readOnly
+									value={psoweight22}
+									onChange={(e) => setPsoweight22(e.target.value)}
+								/>
+							</td>
+							<td>
+								<Input
+									type='number'
+									value={psoco122}
+									onChange={(e) => setPsoco122(e.target.value)}
+								/>
+							</td>
+							<td>
+								<Input
+									type='number'
+									value={psoco222}
+									onChange={(e) => setPsoco222(e.target.value)}
+								/>
+							</td>
+							<td>
+								<Input
+									type='number'
+									value={psoco322}
+									onChange={(e) => setPsoco322(e.target.value)}
+								/>
+							</td>
+							<td>
+								<Input
+									type='number'
+									value={psoco422}
+									onChange={(e) => setPsoco422(e.target.value)}
+								/>
+							</td>
+							<td>
+								<Input
+									type='number'
+									value={psoco522}
+									onChange={(e) => setPsoco522(e.target.value)}
+								/>
+							</td>
+							<td>
+								<Input
+									type='number'
+									value={psoco622}
+									onChange={(e) => setPsoco622(e.target.value)}
+								/>
+							</td>
+							<td>
+								<Input
+									type='number'
+									value={psoco722}
+									onChange={(e) => setPsoco722(e.target.value)}
+								/>
+							</td>
+						</tr>
+
+						<tr className='m-4'>
+							<td rowSpan={2}>
+								<Textarea
+									readOnly
+									value={psocompetency22}
+									onChange={(e) => setPsocompetency22(e.target.value)}
+								/>
+							</td>
+							<td>
+								<Textarea
+									readOnly
+									value={psoindicators23}
+									onChange={(e) => setPsoindicators23(e.target.value)}
+								/>
+							</td>
+							<td>
+								<Input
+									type='number'
+									readOnly
+									value={psoweight23}
+									onChange={(e) => setPsoweight23(e.target.value)}
+								/>
+							</td>
+							<td>
+								<Input
+									type='number'
+									value={psoco123}
+									onChange={(e) => setPsoco123(e.target.value)}
+								/>
+							</td>
+							<td>
+								<Input
+									type='number'
+									value={psoco223}
+									onChange={(e) => setPsoco223(e.target.value)}
+								/>
+							</td>
+							<td>
+								<Input
+									type='number'
+									value={psoco323}
+									onChange={(e) => setPsoco323(e.target.value)}
+								/>
+							</td>
+							<td>
+								<Input
+									type='number'
+									value={psoco423}
+									onChange={(e) => setPsoco423(e.target.value)}
+								/>
+							</td>
+							<td>
+								<Input
+									type='number'
+									value={psoco523}
+									onChange={(e) => setPsoco523(e.target.value)}
+								/>
+							</td>
+							<td>
+								<Input
+									type='number'
+									value={psoco623}
+									onChange={(e) => setPsoco623(e.target.value)}
+								/>
+							</td>
+							<td>
+								<Input
+									type='number'
+									value={psoco723}
+									onChange={(e) => setPsoco723(e.target.value)}
+								/>
+							</td>
+						</tr>
+						<tr className='m-4'>
+							<td>
+								<Textarea
+									readOnly
+									value={psoindicators24}
+									onChange={(e) => setPsoindicators24(e.target.value)}
+								/>
+							</td>
+							<td>
+								<Input
+									type='number'
+									readOnly
+									value={psoweight24}
+									onChange={(e) => setPsoweight24(e.target.value)}
+								/>
+							</td>
+							<td>
+								<Input
+									type='number'
+									value={psoco124}
+									onChange={(e) => setPsoco124(e.target.value)}
+								/>
+							</td>
+							<td>
+								<Input
+									type='number'
+									value={psoco224}
+									onChange={(e) => setPsoco224(e.target.value)}
+								/>
+							</td>
+							<td>
+								<Input
+									type='number'
+									value={psoco324}
+									onChange={(e) => setPsoco324(e.target.value)}
+								/>
+							</td>
+							<td>
+								<Input
+									type='number'
+									value={psoco424}
+									onChange={(e) => setPsoco424(e.target.value)}
+								/>
+							</td>
+							<td>
+								<Input
+									type='number'
+									value={psoco524}
+									onChange={(e) => setPsoco524(e.target.value)}
+								/>
+							</td>
+							<td>
+								<Input
+									type='number'
+									value={psoco624}
+									onChange={(e) => setPsoco624(e.target.value)}
+								/>
+							</td>
+							<td>
+								<Input
+									type='number'
+									value={psoco724}
+									onChange={(e) => setPsoco724(e.target.value)}
+								/>
+							</td>
+						</tr>
+
+						<tr className='m-4'>
+							<td colSpan={4}>
+								<Textarea
+									readOnly
+									value='PSO 2 : Mapping Level'
+									className='my-6'
+								/>
+							</td>
+
+							<td>
+								<Input
+									type='number'
+									value={pso2mapco1.toString()}
+									readOnly
+									onChange={(e) => setPso2mapco1(e.target.value)}
+								/>
+							</td>
+							<td>
+								<Input
+									type='number'
+									value={pso2mapco2.toString()}
+									readOnly
+									onChange={(e) => setPso2mapco2(e.target.value)}
+								/>{" "}
+							</td>
+							<td>
+								<Input
+									type='number'
+									value={pso2mapco3.toString()}
+									readOnly
+									onChange={(e) => setPso2mapco3(e.target.value)}
+								/>{" "}
+							</td>
+							<td>
+								<Input
+									type='number'
+									value={pso2mapco4.toString()}
+									readOnly
+									onChange={(e) => setPso2mapco4(e.target.value)}
+								/>{" "}
+							</td>
+							<td>
+								<Input
+									type='number'
+									value={pso2mapco5.toString()}
+									readOnly
+									onChange={(e) => setPso2mapco5(e.target.value)}
+								/>{" "}
+							</td>
+							<td>
+								<Input
+									type='number'
+									value={pso2mapco6.toString()}
+									readOnly
+									onChange={(e) => setPso2mapco6(e.target.value)}
+								/>{" "}
+							</td>
+							<td>
+								<Input
+									type='number'
+									value={pso2mapco7.toString()}
+									readOnly
+									onChange={(e) => setPso2mapco7(e.target.value)}
 								/>{" "}
 							</td>
 						</tr>
