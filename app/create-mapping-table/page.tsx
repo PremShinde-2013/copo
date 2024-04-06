@@ -18,9 +18,9 @@ import {
 	Select,
 	SelectItem,
 } from "@nextui-org/react";
-import axios from "axios";
 
 import { useRouter } from "next/navigation";
+import toast from "react-hot-toast";
 
 interface TableRowData {
 	po11: string;
@@ -1302,60 +1302,60 @@ export default function App() {
 	// ******************** PO:2 ******************************
 
 	const [po21, setPo21] = useState(
-		"PO 1: Engineering knowledge: Apply the knowledge of mathematics, science, engineering fundamentals, and an engineering specialisation for the solution of complex engineering problems."
+		"PO 2: Problem analysis: Identify, formulate, research literature, and analyse complex engineering problems reaching"
 	);
 
 	const [competency21, setCompetency21] = useState(
-		"1.1  Demonstrate competence in mathematical modelling"
+		"2.1  Demonstrate an ability to identify and formulate complex engineering problem"
 	);
 	const [competency22, setCompetency22] = useState(
-		"1.1  Demonstrate competence in mathematical modelling"
+		"2.2 Demonstrate an ability to formulate a solution plan and methodology for an engineering problem"
 	);
 	const [competency23, setCompetency23] = useState(
-		"1.2 Demonstrate competence in basic sciences"
+		"2.3 Demonstrate an ability to formulate and interpret a model"
 	);
 	const [competency24, setCompetency24] = useState(
-		"1.3 Demonstrate competence in engineering fundamentals"
+		"2.4 Demonstrate an ability to execute a solution process and analyze results"
 	);
 
 	const [indicators21, setIndicators21] = useState(
-		"1.1.1      Apply mathematical techniques such as calculus, linear algebra, and statistics to solve problems"
+		"2.1.1      Articulate problem statements and identify objectives"
 	);
 	const [indicators22, setIndicators22] = useState(
-		"1.1.2      Apply advanced mathematical techniques to model and solve mechanical engineering problems"
+		"2.1.2      Identify engineering systems, variables, and parameters to solve the problems"
 	);
 	const [indicators23, setIndicators23] = useState(
-		"1.2.1  Apply laws of natural science to an engineering problem"
+		"2.1.3      Identify the mathematical, engineering and other relevant knowledge that applies to a given problem"
 	);
 	const [indicators24, setIndicators24] = useState(
-		"1.3.1  Apply fundamental engineering concepts to solve engineering problems"
+		"2.2.1      Reframe complex problems into interconnected sub-problems"
 	);
 	const [indicators25, setIndicators25] = useState(
-		"1.4.1  Apply Mechanical engineering concepts to solve engineering problems."
+		"2.2.2      Identify, assemble and evaluate information and resources."
 	);
 	const [indicators26, setIndicators26] = useState(
-		"1.4.1  Apply Mechanical engineering concepts to solve engineering problems."
+		"2.2.3      Identify existing processes/solution methods for solving the problem, including forming justified approximations and assumptions"
 	);
 	const [indicators27, setIndicators27] = useState(
-		"1.4.1  Apply Mechanical engineering concepts to solve engineering problems."
+		"2.2.4      Compare and contrast alternative solution processes to select the best process."
 	);
 	const [indicators28, setIndicators28] = useState(
-		"1.4.1  Apply Mechanical engineering concepts to solve engineering problems."
+		"2.3.1      Combine scientific principles and engineering concepts to formulate model/s (mathematical or otherwise) of a system/process that is appropriate in terms of applicability and required accuracy."
 	);
 	const [indicators29, setIndicators29] = useState(
-		"1.4.1  Apply Mechanical engineering concepts to solve engineering problems."
+		"2.3.2      Identify assumptions (mathematical and physical) necessary to allow modeling of a system at the level of accuracy required."
 	);
 	const [indicators210, setIndicators210] = useState(
-		"1.4.1  Apply Mechanical engineering concepts to solve engineering problems."
+		"2.4.1      Apply engineering mathematics and computations to solve mathematical models"
 	);
 	const [indicators211, setIndicators211] = useState(
-		"1.4.1  Apply Mechanical engineering concepts to solve engineering problems."
+		"2.4.2      Produce and validate results through skilful use of contemporary engineering tools and models"
 	);
 	const [indicators212, setIndicators212] = useState(
-		"1.4.1  Apply Mechanical engineering concepts to solve engineering problems."
+		"2.4.3      Identify sources of error in the solution process, and limitations of the solution."
 	);
 	const [indicators213, setIndicators213] = useState(
-		"1.4.1  Apply Mechanical engineering concepts to solve engineering problems."
+		"2.4.4      Extract desired understanding and conclusions consistent with objectives and limitations of the analysis"
 	);
 
 	const [weight21, setWeight21] = useState("0.8");
@@ -1481,60 +1481,60 @@ export default function App() {
 	// ******************** PO:3 ******************************
 
 	const [po31, setPo31] = useState(
-		"PO 3: Engineering knowledge: Apply the knowledge of mathematics, science, engineering fundamentals, and an engineering specialisation for the solution of complex engineering problems."
+		"PO 3: Design/Development of Solutions: Design solutions for complex engineering problems and design system components or processes that meet the specified needs with appropriate consideration for public health and safety, and cultural, societal, and environmental considerations."
 	);
 
 	const [competency31, setCompetency31] = useState(
-		"1.1  Demonstrate competence in mathematical modelling"
+		"3.1           Demonstrate an ability to define a complex/ open-ended problem in engineering terms"
 	);
 	const [competency32, setCompetency32] = useState(
-		"1.1  Demonstrate competence in mathematical modelling"
+		"3.2 Demonstrate an ability to generate a diverse set of alternative design solutions"
 	);
 	const [competency33, setCompetency33] = useState(
-		"1.2 Demonstrate competence in basic sciences"
+		"3.3 Demonstrate ability to select optimal design scheme for further development"
 	);
 	const [competency34, setCompetency34] = useState(
-		"1.3 Demonstrate competence in engineering fundamentals"
+		"3.4 Demonstrate an ability to advance an engineering design to defined end state"
 	);
 
 	const [indicators31, setIndicators31] = useState(
-		"1.1.1      Apply mathematical techniques such as calculus, linear algebra, and statistics to solve problems"
+		"3.1.1      Recognize that need analysis is key to good problem definition"
 	);
 	const [indicators32, setIndicators32] = useState(
-		"1.1.2      Apply advanced mathematical techniques to model and solve mechanical engineering problems"
+		"3.1.2      Elicit and document, engineering requirements from stakeholders"
 	);
 	const [indicators33, setIndicators33] = useState(
-		"1.2.1  Apply laws of natural science to an engineering problem"
+		"3.1.3      Synthesize engineering requirements from a review of the state-of-the-art"
 	);
 	const [indicators34, setIndicators34] = useState(
-		"1.3.1  Apply fundamental engineering concepts to solve engineering problems"
+		"3.1.4      Extract engineering requirements from relevant engineering Codes and Standards such as ASME, ASTM, BIS, ISO and ASHRAE."
 	);
 	const [indicators35, setIndicators35] = useState(
-		"1.4.1  Apply Mechanical engineering concepts to solve engineering problems."
+		"3.1.5      Explore and synthesize engineering requirements considering health, safety risks, environmental, cultural and societal issues"
 	);
 	const [indicators36, setIndicators36] = useState(
-		"1.4.1  Apply Mechanical engineering concepts to solve engineering problems."
+		"3.1.6      Determine design objectives, functional requirements and arrive at specifications"
 	);
 	const [indicators37, setIndicators37] = useState(
-		"1.4.1  Apply Mechanical engineering concepts to solve engineering problems."
+		"3.2.1      Apply formal idea generation tools to develop multiple engineering design solutions3.2.1      Apply formal idea generation tools to develop multiple engineering design solutions"
 	);
 	const [indicators38, setIndicators38] = useState(
-		"1.4.1  Apply Mechanical engineering concepts to solve engineering problems."
+		"3.2.2      Build models/prototypes to develop a diverse set of design solutions"
 	);
 	const [indicators39, setIndicators39] = useState(
-		"1.4.1  Apply Mechanical engineering concepts to solve engineering problems."
+		"3.2.3      Identify suitable criteria for the evaluation of alternate design solutions"
 	);
 	const [indicators310, setIndicators310] = useState(
-		"1.4.1  Apply Mechanical engineering concepts to solve engineering problems."
+		"3.3.1      Apply formal decision-making tools to select optimal engineering design solutions for further development"
 	);
 	const [indicators311, setIndicators311] = useState(
-		"1.4.1  Apply Mechanical engineering concepts to solve engineering problems."
+		"3.3.2      Consult with domain experts and stakeholders to select candidate engineering design solution for further development"
 	);
 	const [indicators312, setIndicators312] = useState(
-		"1.4.1  Apply Mechanical engineering concepts to solve engineering problems."
+		"3.4.1      Refine a conceptual design into a detailed design within the existing constraints (of the resources)"
 	);
 	const [indicators313, setIndicators313] = useState(
-		"1.4.1  Apply Mechanical engineering concepts to solve engineering problems."
+		"3.4.2      Generate information through appropriate tests to improve or revise the design"
 	);
 
 	const [weight31, setWeight31] = useState("0.8");
@@ -1660,60 +1660,60 @@ export default function App() {
 	// ******************** PO:4 ******************************
 
 	const [po41, setPo41] = useState(
-		"PO 3: Engineering knowledge: Apply the knowledge of mathematics, science, engineering fundamentals, and an engineering specialisation for the solution of complex engineering problems."
+		"PO 4: Conduct investigations of complex problems: Use research-based knowledge and research methods including design of experiments, analysis and interpretation of data, and synthesis of the information to provide valid conclusions."
 	);
 
 	const [competency41, setCompetency41] = useState(
-		"1.1  Demonstrate competence in mathematical modelling"
+		"4.1           Demonstrate an ability to conduct investigations of technical issues consistent with their level of knowledge and understanding"
 	);
 	const [competency42, setCompetency42] = useState(
-		"1.1  Demonstrate competence in mathematical modelling"
+		"4.2 Demonstrate an ability to design experiments to solve open-ended problems"
 	);
 	const [competency43, setCompetency43] = useState(
-		"1.2 Demonstrate competence in basic sciences"
+		"4.3 Demonstrate an ability to analyze data and reach a valid conclusion"
 	);
 
 	const [indicators41, setIndicators41] = useState(
-		"1.1.1      Apply mathematical techniques such as calculus, linear algebra, and statistics to solve problems"
+		"4.1.1      Define a problem, its scope and importance for purposes of investigation"
 	);
 	const [indicators42, setIndicators42] = useState(
-		"1.1.2      Apply advanced mathematical techniques to model and solve mechanical engineering problems"
+		"4.1.2      Examine the relevant methods, tools and techniques of experiment design, system calibration, data acquisition, analysis and presentation"
 	);
 	const [indicators43, setIndicators43] = useState(
-		"1.2.1  Apply laws of natural science to an engineering problem"
+		"4.1.3      Apply appropriate instrumentation and/or software tools to make measurements of physical quantities"
 	);
 	const [indicators44, setIndicators44] = useState(
-		"1.3.1  Apply fundamental engineering concepts to solve engineering problems"
+		"4.1.4      Establish a relationship between measured data and underlying physical principles."
 	);
 	const [indicators45, setIndicators45] = useState(
-		"1.4.1  Apply Mechanical engineering concepts to solve engineering problems."
+		"4.2.1      Design and develop an experimental approach, specify appropriate equipment and procedures"
 	);
 	const [indicators46, setIndicators46] = useState(
-		"1.4.1  Apply Mechanical engineering concepts to solve engineering problems."
+		"4.2.2      Understand the importance of the statistical design of experiments and choose an appropriate experimental design plan based on the study objectives"
 	);
 	const [indicators47, setIndicators47] = useState(
-		"1.4.1  Apply Mechanical engineering concepts to solve engineering problems."
+		"4.3.1      Use appropriate procedures, tools and techniques to conduct experiments and collect data"
 	);
 	const [indicators48, setIndicators48] = useState(
-		"1.4.1  Apply Mechanical engineering concepts to solve engineering problems."
+		"4.3.2      Analyze data for trends and correlations, stating possible errors and limitations"
 	);
 	const [indicators49, setIndicators49] = useState(
-		"1.4.1  Apply Mechanical engineering concepts to solve engineering problems."
+		"4.3.3      Represent data (in tabular and/or graphical forms) so as to facilitate analysis and explanation of the data, and drawing of conclusions"
 	);
 	const [indicators410, setIndicators410] = useState(
-		"1.4.1  Apply Mechanical engineering concepts to solve engineering problems."
+		"4.3.4      Synthesize information and knowledge about the problem from the raw data to reach appropriate conclusions"
 	);
 
-	const [weight41, setWeight41] = useState("0.8");
-	const [weight42, setWeight42] = useState("0.8");
-	const [weight43, setWeight43] = useState("0.8");
-	const [weight44, setWeight44] = useState("0.8");
-	const [weight45, setWeight45] = useState("0.8");
-	const [weight46, setWeight46] = useState("0.8");
-	const [weight47, setWeight47] = useState("0.8");
-	const [weight48, setWeight48] = useState("0.8");
-	const [weight49, setWeight49] = useState("0.8");
-	const [weight410, setWeight410] = useState("0.8");
+	const [weight41, setWeight41] = useState("0.1");
+	const [weight42, setWeight42] = useState("0.1");
+	const [weight43, setWeight43] = useState("0.1");
+	const [weight44, setWeight44] = useState("0.1");
+	const [weight45, setWeight45] = useState("0.1");
+	const [weight46, setWeight46] = useState("0.1");
+	const [weight47, setWeight47] = useState("0.1");
+	const [weight48, setWeight48] = useState("0.1");
+	const [weight49, setWeight49] = useState("0.1");
+	const [weight410, setWeight410] = useState("0.1");
 
 	const [co141, setCo141] = useState("");
 	const [co142, setCo142] = useState("");
@@ -1803,44 +1803,44 @@ export default function App() {
 	// ******************** PO:5 ******************************
 
 	const [po51, setPo51] = useState(
-		"PO 5: Engineering knowledge: Apply the knowledge of mathematics, science, engineering fundamentals, and an engineering specialisation for the solution of complex engineering problems."
+		"PO 5: Modern tool usage: Create, select, and apply appropriate techniques, resources, and modern engineering and IT tools including prediction and modelling to complex engineering activities with an understanding of the limitations."
 	);
 
 	const [competency51, setCompetency51] = useState(
-		"1.1  Demonstrate competence in mathematical modelling"
+		"5.1           Demonstrate an ability to identify/ create modern engineering tools, techniques and resources"
 	);
 	const [competency52, setCompetency52] = useState(
-		"1.1  Demonstrate competence in mathematical modelling"
+		"5.2 Demonstrate an ability to select and apply discipline-specific tools, techniques and resources"
 	);
 	const [competency53, setCompetency53] = useState(
-		"1.2 Demonstrate competence in basic sciences"
+		"5.3 Demonstrate an ability to evaluate the suitability and limitations of tools used to solve an engineering problem"
 	);
 
 	const [indicators51, setIndicators51] = useState(
-		"1.1.1      Apply mathematical techniques such as calculus, linear algebra, and statistics to solve problems"
+		"5.1.1      Identify modern engineering tools such as computer-aided drafting, modeling and analysis; techniques and resources for engineering activities"
 	);
 	const [indicators52, setIndicators52] = useState(
-		"1.1.2      Apply advanced mathematical techniques to model and solve mechanical engineering problems"
+		"5.1.2      Create/adapt/modify/extend tools and techniques to solve engineering problems"
 	);
 	const [indicators53, setIndicators53] = useState(
-		"1.2.1  Apply laws of natural science to an engineering problem"
+		"5.2.1      Identify the strengths and limitations of tools for (i) acquiring information, (ii) modeling and simulating, (iii) monitoring system performance, and (iv) creating engineering designs."
 	);
 	const [indicators54, setIndicators54] = useState(
-		"1.3.1  Apply fundamental engineering concepts to solve engineering problems"
+		"5.2.2      Demonstrate proficiency in using discipline-specific tools"
 	);
 	const [indicators55, setIndicators55] = useState(
-		"1.4.1  Apply Mechanical engineering concepts to solve engineering problems."
+		"5.3.1      Discuss limitations and validate tools, techniques and resources"
 	);
 	const [indicators56, setIndicators56] = useState(
-		"1.4.1  Apply Mechanical engineering concepts to solve engineering problems."
+		"5.3.2      Verify the credibility of results from tool use with reference to the accuracy and limitations, and the assumptions inherent in their use."
 	);
 
-	const [weight51, setWeight51] = useState("0.8");
-	const [weight52, setWeight52] = useState("0.8");
-	const [weight53, setWeight53] = useState("0.8");
-	const [weight54, setWeight54] = useState("0.8");
-	const [weight55, setWeight55] = useState("0.8");
-	const [weight56, setWeight56] = useState("0.8");
+	const [weight51, setWeight51] = useState("0.17");
+	const [weight52, setWeight52] = useState("0.17");
+	const [weight53, setWeight53] = useState("0.17");
+	const [weight54, setWeight54] = useState("0.17");
+	const [weight55, setWeight55] = useState("0.17");
+	const [weight56, setWeight56] = useState("0.17");
 
 	const [co151, setCo151] = useState("");
 	const [co152, setCo152] = useState("");
@@ -1902,21 +1902,21 @@ export default function App() {
 	// ******************** PO:6 ******************************
 
 	const [po61, setPo61] = useState(
-		"PO 5: Engineering knowledge: Apply the knowledge of mathematics, science, engineering fundamentals, and an engineering specialisation for the solution of complex engineering problems."
+		"PO 6: The engineer and society: Apply reasoning informed by the contextual knowledge to assess societal, health, safety, legal, and cultural issues and the consequent responsibilities relevant to the professional engineering practice."
 	);
 
 	const [competency61, setCompetency61] = useState(
-		"1.1  Demonstrate competence in mathematical modelling"
+		"6.1           Demonstrate an ability to describe engineering roles in a broader context, e.g. pertaining to the environment, health, safety, legal and public welfare"
 	);
 	const [competency62, setCompetency62] = useState(
-		"1.1  Demonstrate competence in mathematical modelling"
+		"6.2  Demonstrate an understanding of professional engineering regulations, legislation and standards"
 	);
 
 	const [indicators61, setIndicators61] = useState(
-		"1.1.1      Apply mathematical techniques such as calculus, linear algebra, and statistics to solve problems"
+		"6.1.1      Identify and describe various engineering roles; particularly as pertains to protection of the public and public interest at the global, regional and local level"
 	);
 	const [indicators62, setIndicators62] = useState(
-		"1.1.2      Apply advanced mathematical techniques to model and solve mechanical engineering problems"
+		"6.2.1 Interpret legislation, regulations, codes, and standards relevant to your discipline and explain its contribution to the protection of the public"
 	);
 
 	const [weight61, setWeight61] = useState("0.5");
@@ -1954,33 +1954,33 @@ export default function App() {
 	// ******************** PO:7 ******************************
 
 	const [po71, setPo71] = useState(
-		"PO 5: Engineering knowledge: Apply the knowledge of mathematics, science, engineering fundamentals, and an engineering specialisation for the solution of complex engineering problems."
+		"PO 7: Environment and sustainability: Understand the impact of the professional engineering solutions in societal and environmental contexts, and demonstrate the knowledge of, and the need for sustainable development."
 	);
 
 	const [competency71, setCompetency71] = useState(
-		"1.1  Demonstrate competence in mathematical modelling"
+		"7.1           Demonstrate an understanding of the impact of engineering and industrial practices on social, environmental and in economic contexts"
 	);
 	const [competency72, setCompetency72] = useState(
-		"1.1  Demonstrate competence in mathematical modelling"
+		"7.2 Demonstrate an ability to apply principles of sustainable design and development"
 	);
 
 	const [indicators71, setIndicators71] = useState(
-		"1.1.1      Apply mathematical techniques such as calculus, linear algebra, and statistics to solve problems"
+		"7.1.1      Identify risks/impacts in the life-cycle of an engineering product or activity"
 	);
 	const [indicators72, setIndicators72] = useState(
-		"1.1.2      Apply advanced mathematical techniques to model and solve mechanical engineering problems"
+		"7.1.2      Understand the relationship between the technical, socio-economic and environmental dimensions of sustainability"
 	);
 	const [indicators73, setIndicators73] = useState(
-		"1.2.1  Apply laws of natural science to an engineering problem"
+		"7.2.1      Describe management techniques for sustainable development"
 	);
 	const [indicators74, setIndicators74] = useState(
-		"1.3.1  Apply fundamental engineering concepts to solve engineering problems"
+		"7.2.2      Apply principles of preventive engineering and sustainable development to an engineering activity or product relevant to the discipline"
 	);
 
-	const [weight71, setWeight71] = useState("0.8");
-	const [weight72, setWeight72] = useState("0.8");
-	const [weight73, setWeight73] = useState("0.8");
-	const [weight74, setWeight74] = useState("0.8");
+	const [weight71, setWeight71] = useState("0.25");
+	const [weight72, setWeight72] = useState("0.25");
+	const [weight73, setWeight73] = useState("0.25");
+	const [weight74, setWeight74] = useState("0.25");
 
 	const [co171, setCo171] = useState("");
 	const [co172, setCo172] = useState("");
@@ -2028,29 +2028,29 @@ export default function App() {
 	// ******************** PO:8 ******************************
 
 	const [po81, setPo81] = useState(
-		"PO 5: Engineering knowledge: Apply the knowledge of mathematics, science, engineering fundamentals, and an engineering specialisation for the solution of complex engineering problems."
+		"PO 8: Ethics: Apply ethical principles and commit to professional ethics and responsibilities and norms of the engineering practice."
 	);
 
 	const [competency81, setCompetency81] = useState(
-		"1.1  Demonstrate competence in mathematical modelling"
+		"8.1           Demonstrate an ability to recognize ethical dilemmas"
 	);
 	const [competency82, setCompetency82] = useState(
-		"1.1  Demonstrate competence in mathematical modelling"
+		"8.2 Demonstrate an ability to apply the Code of Ethics"
 	);
 
 	const [indicators81, setIndicators81] = useState(
-		"1.1.1      Apply mathematical techniques such as calculus, linear algebra, and statistics to solve problems"
+		"8.1.1      Identify situations of unethical professional conduct and propose ethical alternatives"
 	);
 	const [indicators82, setIndicators82] = useState(
-		"1.1.2      Apply advanced mathematical techniques to model and solve mechanical engineering problems"
+		"8.2.1      Identify tenets of the ASME professional code of ethics"
 	);
 	const [indicators83, setIndicators83] = useState(
-		"1.2.1  Apply laws of natural science to an engineering problem"
+		"8.2.2      Examine and apply moral & ethical principles to known case studies"
 	);
 
-	const [weight81, setWeight81] = useState("0.8");
-	const [weight82, setWeight82] = useState("0.8");
-	const [weight83, setWeight83] = useState("0.8");
+	const [weight81, setWeight81] = useState("0.33");
+	const [weight82, setWeight82] = useState("0.33");
+	const [weight83, setWeight83] = useState("0.33");
 
 	const [co181, setCo181] = useState("");
 	const [co182, setCo182] = useState("");
@@ -2091,48 +2091,48 @@ export default function App() {
 	// ******************** PO:9 ******************************
 
 	const [po91, setPo91] = useState(
-		"PO 9: Engineering knowledge: Apply the knowledge of mathematics, science, engineering fundamentals, and an engineering specialisation for the solution of complex engineering problems."
+		"PO 9: Individual and team work: Function effectively as an individual, and as a member or leader in diverse teams, and in multidisciplinary settings."
 	);
 
 	const [competency91, setCompetency91] = useState(
-		"1.1  Demonstrate competence in mathematical modelling"
+		"9.1           Demonstrate an ability to form a team and define a role for each member"
 	);
 	const [competency92, setCompetency92] = useState(
-		"1.1  Demonstrate competence in mathematical modelling"
+		"9.2 Demonstrate effective individual and team operations--communication, problem-solving, conflict resolution and leadership skills"
 	);
 	const [competency93, setCompetency93] = useState(
-		"1.2 Demonstrate competence in basic sciences"
+		"9.3 Demonstrate success in a team-based project"
 	);
 
 	const [indicators91, setIndicators91] = useState(
-		"1.1.1      Apply mathematical techniques such as calculus, linear algebra, and statistics to solve problems"
+		"9.1.1      Recognize a variety of working and learning preferences; appreciate the value of diversity on a team"
 	);
 	const [indicators92, setIndicators92] = useState(
-		"1.1.2      Apply advanced mathematical techniques to model and solve mechanical engineering problems"
+		"9.1.2      Implement the norms of practice (e.g. rules, roles, charters, agendas, etc.) of effective team work, to accomplish a goal."
 	);
 	const [indicators93, setIndicators93] = useState(
-		"1.2.1  Apply laws of natural science to an engineering problem"
+		"9.2.1      Demonstrate effective communication, problem-solving, conflict resolution and leadership skills"
 	);
 	const [indicators94, setIndicators94] = useState(
-		"1.3.1  Apply fundamental engineering concepts to solve engineering problems"
+		"9.2.2      Treat other team members respectfully"
 	);
 	const [indicators95, setIndicators95] = useState(
-		"1.4.1  Apply Mechanical engineering concepts to solve engineering problems."
+		"9.2.3      Listen to other members"
 	);
 	const [indicators96, setIndicators96] = useState(
-		"1.4.1  Apply Mechanical engineering concepts to solve engineering problems."
+		"9.2.4      Maintain composure in difficult situations"
 	);
 	const [indicators97, setIndicators97] = useState(
-		"1.4.1  Apply Mechanical engineering concepts to solve engineering problems."
+		"9.3.1 Present results as a team, with smooth integration of contributions from all individual efforts"
 	);
 
-	const [weight91, setWeight91] = useState("0.8");
-	const [weight92, setWeight92] = useState("0.8");
-	const [weight93, setWeight93] = useState("0.8");
-	const [weight94, setWeight94] = useState("0.8");
-	const [weight95, setWeight95] = useState("0.8");
-	const [weight96, setWeight96] = useState("0.8");
-	const [weight97, setWeight97] = useState("0.8");
+	const [weight91, setWeight91] = useState("0.14");
+	const [weight92, setWeight92] = useState("0.14");
+	const [weight93, setWeight93] = useState("0.14");
+	const [weight94, setWeight94] = useState("0.14");
+	const [weight95, setWeight95] = useState("0.14");
+	const [weight96, setWeight96] = useState("0.14");
+	const [weight97, setWeight97] = useState("0.14");
 
 	const [co191, setCo191] = useState("");
 	const [co192, setCo192] = useState("");
@@ -2201,48 +2201,48 @@ export default function App() {
 	// ******************** PO:10 ******************************
 
 	const [po101, setPo101] = useState(
-		"PO 9: Engineering knowledge: Apply the knowledge of mathematics, science, engineering fundamentals, and an engineering specialisation for the solution of complex engineering problems."
+		"PO 10: Communication: Communicate effectively on complex engineering activities with the engineering community and with the society at large, such as being able to comprehend and write effective reports and design documentation, make effective presentations, and give and receive clear instructions"
 	);
 
 	const [competency101, setCompetency101] = useState(
-		"1.1  Demonstrate competence in mathematical modelling"
+		"10.1        Demonstrate an ability to comprehend technical literature and document project work"
 	);
 	const [competency102, setCompetency102] = useState(
-		"1.1  Demonstrate competence in mathematical modelling"
+		"10.2 Demonstrate competence in listening, speaking, and presentation"
 	);
 	const [competency103, setCompetency103] = useState(
-		"1.2 Demonstrate competence in basic sciences"
+		"10.3 Demonstrate the ability to integrate different modes of communication"
 	);
 
 	const [indicators101, setIndicators101] = useState(
-		"1.1.1      Apply mathematical techniques such as calculus, linear algebra, and statistics to solve problems"
+		"10.1.1   Read, understand and interpret technical and non-technical information"
 	);
 	const [indicators102, setIndicators102] = useState(
-		"1.1.2      Apply advanced mathematical techniques to model and solve mechanical engineering problems"
+		"10.1.2   Produce clear, well-constructed, and well-supported written engineering documents"
 	);
 	const [indicators103, setIndicators103] = useState(
-		"1.2.1  Apply laws of natural science to an engineering problem"
+		"10.1.3   Create flow in a document or presentation - a logical progression of ideas so that the main point is clear"
 	);
 	const [indicators104, setIndicators104] = useState(
-		"1.3.1  Apply fundamental engineering concepts to solve engineering problems"
+		"10.2.1   Listen to and comprehend information, instructions, and viewpoints of others"
 	);
 	const [indicators105, setIndicators105] = useState(
-		"1.4.1  Apply Mechanical engineering concepts to solve engineering problems."
+		"10.2.2   Deliver effective oral presentations to technical and non-technical audiences"
 	);
 	const [indicators106, setIndicators106] = useState(
-		"1.4.1  Apply Mechanical engineering concepts to solve engineering problems."
+		"10.3.1   Create engineering-standard figures, reports and drawings to complement writing and presentations"
 	);
 	const [indicators107, setIndicators107] = useState(
-		"1.4.1  Apply Mechanical engineering concepts to solve engineering problems."
+		"10.3.2   Use a variety of media effectively to convey a message in a document or a presentation"
 	);
 
-	const [weight101, setWeight101] = useState("0.8");
-	const [weight102, setWeight102] = useState("0.8");
-	const [weight103, setWeight103] = useState("0.8");
-	const [weight104, setWeight104] = useState("0.8");
-	const [weight105, setWeight105] = useState("0.8");
-	const [weight106, setWeight106] = useState("0.8");
-	const [weight107, setWeight107] = useState("0.8");
+	const [weight101, setWeight101] = useState("0.14");
+	const [weight102, setWeight102] = useState("0.14");
+	const [weight103, setWeight103] = useState("0.14");
+	const [weight104, setWeight104] = useState("0.14");
+	const [weight105, setWeight105] = useState("0.14");
+	const [weight106, setWeight106] = useState("0.14");
+	const [weight107, setWeight107] = useState("0.14");
 
 	const [co1101, setCo1101] = useState("");
 	const [co1102, setCo1102] = useState("");
@@ -2311,40 +2311,40 @@ export default function App() {
 	// ******************** PO:11 ******************************
 
 	const [po111, setPo111] = useState(
-		"PO 11: Engineering knowledge: Apply the knowledge of mathematics, science, engineering fundamentals, and an engineering specialisation for the solution of complex engineering problems."
+		"PO 11: Project management and finance: Demonstrate knowledge and understanding of the engineering and management principles and apply these to one’s work, as a member and leader in a team, to manage projects and in multidisciplinary environments."
 	);
 
 	const [competency111, setCompetency111] = useState(
-		"1.1  Demonstrate competence in mathematical modelling"
+		"11.1        Demonstrate an ability to evaluate the economic and financial performance of an engineering activity"
 	);
 	const [competency112, setCompetency112] = useState(
-		"1.1  Demonstrate competence in mathematical modelling"
+		"11.2 Demonstrate an ability to compare and contrast the costs/benefits of alternate proposals for an engineering activity"
 	);
 	const [competency113, setCompetency113] = useState(
-		"1.2 Demonstrate competence in basic sciences"
+		"11.3 Demonstrate an ability to plan/manage an engineering activity within time and budget constraints"
 	);
 
 	const [indicators111, setIndicators111] = useState(
-		"1.1.1      Apply mathematical techniques such as calculus, linear algebra, and statistics to solve problems"
+		"11.1.1   Describe various economic and financial costs/benefits of an engineering activity"
 	);
 	const [indicators112, setIndicators112] = useState(
-		"1.1.2      Apply advanced mathematical techniques to model and solve mechanical engineering problems"
+		"11.1.2   Analyze different forms of financial statements to evaluate the financial status of an engineering project"
 	);
 	const [indicators113, setIndicators113] = useState(
-		"1.2.1  Apply laws of natural science to an engineering problem"
+		"11.2.1 Analyze and select the most appropriate proposal based on economic and financial considerations."
 	);
 	const [indicators114, setIndicators114] = useState(
-		"1.3.1  Apply fundamental engineering concepts to solve engineering problems"
+		"11.3.1   Identify the tasks required to complete an engineering activity, and the resources required to complete the tasks."
 	);
 	const [indicators115, setIndicators115] = useState(
-		"1.4.1  Apply Mechanical engineering concepts to solve engineering problems."
+		"11.3.2   Use project management tools to schedule an engineering project, so it is completed on time and on budget."
 	);
 
-	const [weight111, setWeight111] = useState("0.8");
-	const [weight112, setWeight112] = useState("0.8");
-	const [weight113, setWeight113] = useState("0.8");
-	const [weight114, setWeight114] = useState("0.8");
-	const [weight115, setWeight115] = useState("0.8");
+	const [weight111, setWeight111] = useState("0.2");
+	const [weight112, setWeight112] = useState("0.2");
+	const [weight113, setWeight113] = useState("0.2");
+	const [weight114, setWeight114] = useState("0.2");
+	const [weight115, setWeight115] = useState("0.2");
 
 	const [co1111, setCo1111] = useState("");
 	const [co1112, setCo1112] = useState("");
@@ -2399,44 +2399,44 @@ export default function App() {
 	// ******************** PO:12 ******************************
 
 	const [po121, setPo121] = useState(
-		"PO 12: Engineering knowledge: Apply the knowledge of mathematics, science, engineering fundamentals, and an engineering specialisation for the solution of complex engineering problems."
+		"PO 12: Life-long learning: Recognise the need for, and have the preparation and ability to engage in independent and life-long learning in the broadest context of technological change."
 	);
 
 	const [competency121, setCompetency121] = useState(
-		"1.1  Demonstrate competence in mathematical modelling"
+		"12.1        Demonstrate an ability to identify gaps in knowledge and a strategy to close these gaps"
 	);
 	const [competency122, setCompetency122] = useState(
-		"1.1  Demonstrate competence in mathematical modelling"
+		"12.2 Demonstrate an ability to identify changing trends in engineering knowledge and practice"
 	);
 	const [competency123, setCompetency123] = useState(
-		"1.2 Demonstrate competence in basic sciences"
+		"12.3 Demonstrate an ability to identify and access sources for new information"
 	);
 
 	const [indicators121, setIndicators121] = useState(
-		"1.1.1      Apply mathematical techniques such as calculus, linear algebra, and statistics to solve problems"
+		"12.1.1   Describe the rationale for the requirement for continuing professional development"
 	);
 	const [indicators122, setIndicators122] = useState(
-		"1.1.2      Apply advanced mathematical techniques to model and solve mechanical engineering problems"
+		"12.1.2   Identify deficiencies or gaps in knowledge and demonstrate an ability to source information to close this gap"
 	);
 	const [indicators123, setIndicators123] = useState(
-		"1.2.1  Apply laws of natural science to an engineering problem"
+		"12.2.1   Identify historic points of technological advance in engineering that required practitioners to seek education in order to stay current"
 	);
 	const [indicators124, setIndicators124] = useState(
-		"1.3.1  Apply fundamental engineering concepts to solve engineering problems"
+		"12.2.2   Recognize the need and be able to clearly explain why it is vitally important to keep current regarding new developments in your field"
 	);
 	const [indicators125, setIndicators125] = useState(
-		"1.4.1  Apply Mechanical engineering concepts to solve engineering problems."
+		"12.3.1   Source and comprehend technical literature and other credible sources of information"
 	);
 	const [indicators126, setIndicators126] = useState(
-		"1.4.1  Apply Mechanical engineering concepts to solve engineering problems."
+		"12.3.2   Analyze sourced technical and popular information for feasibility, viability, sustainability, etc."
 	);
 
-	const [weight121, setWeight121] = useState("0.8");
-	const [weight122, setWeight122] = useState("0.8");
-	const [weight123, setWeight123] = useState("0.8");
-	const [weight124, setWeight124] = useState("0.8");
-	const [weight125, setWeight125] = useState("0.8");
-	const [weight126, setWeight126] = useState("0.8");
+	const [weight121, setWeight121] = useState("0.17");
+	const [weight122, setWeight122] = useState("0.17");
+	const [weight123, setWeight123] = useState("0.17");
+	const [weight124, setWeight124] = useState("0.17");
+	const [weight125, setWeight125] = useState("0.17");
+	const [weight126, setWeight126] = useState("0.17");
 
 	const [co1121, setCo1121] = useState("");
 	const [co1122, setCo1122] = useState("");
@@ -2498,30 +2498,30 @@ export default function App() {
 	//   **************************************   PSO : 1 ************************************************
 
 	const [pso11, setPso11] = useState(
-		"PO 1: Engineering knowledge: Apply the knowledge of mathematics, science, engineering fundamentals, and an engineering specialisation for the solution of complex engineering problems."
+		"PSO 1: Able to become expert in product design, thermal engineering and manufacturing systems by applying mechanical engineering principles."
 	);
 
 	const [psocompetency11, setPsocompetency11] = useState(
-		"1.1  Demonstrate competence in mathematical modelling"
+		"1.1 Expertise in courses and concepts in product design, thermal engineering and manufacturing systems."
 	);
 	const [psocompetency12, setPsocompetency12] = useState(
-		"1.1  Demonstrate competence in mathematical modelling"
+		"1.2 Apply mechanical Engineering principles studied during the graduation."
 	);
 
 	const [psoindicators11, setPsoindicators11] = useState(
-		"1.1.1      Apply mathematical techniques such as calculus, linear algebra, and statistics to solve problems"
+		"1.1.1 Identify course concepts in product design, thermal engineering and manufacturing systems and other relevant knowledge that applied for the given problem / system design."
 	);
 	const [psoindicators12, setPsoindicators12] = useState(
-		"1.1.2      Apply advanced mathematical techniques to model and solve mechanical engineering problems"
+		"1.1.2 Extract desired understanding and conclusions consistent with the objectives and analysis of the system / model solution.  "
 	);
 	const [psoindicators13, setPsoindicators13] = useState(
-		"1.2.1  Apply laws of natural science to an engineering problem"
+		"1.2.1 Identify engineering systems, variables, and parameters to solve the problems."
 	);
 	const [psoindicators14, setPsoindicators14] = useState(
-		"1.3.1  Apply fundamental engineering concepts to solve engineering problems"
+		"1.2.2 Combine engineering concepts to formulate model/s (mathematical or otherwise) of a system/process that is appropriate in terms of applicability and required accuracy."
 	);
 	const [psoindicators15, setPsoindicators15] = useState(
-		"1.4.1  Apply Mechanical engineering concepts to solve engineering problems."
+		"1.2.3 Produce and validate results through skilful use of contemporary engineering tools and models"
 	);
 
 	const [psoweight11, setPsoweight11] = useState("0.2");
@@ -2583,33 +2583,33 @@ export default function App() {
 	//   **************************************   PSO : 2 ************************************************
 
 	const [pso21, setPso21] = useState(
-		"PO 1: Engineering knowledge: Apply the knowledge of mathematics, science, engineering fundamentals, and an engineering specialisation for the solution of complex engineering problems."
+		"PSO 2: Build an ability to conduct experiments and simulate the real-life situations involved in engineering using computational techniques and instrumentation for working in research and industrial environments. "
 	);
 
 	const [psocompetency21, setPsocompetency21] = useState(
-		"1.1  Demonstrate competence in mathematical modelling"
+		"2.1  Demonstrate the ability of conduct experiments using computational techniques and instrumentation for research."
 	);
 	const [psocompetency22, setPsocompetency22] = useState(
-		"1.1  Demonstrate competence in mathematical modelling"
+		"2.2 Demonstrate an ability to simulate the real life situations in industrial environment."
 	);
 
 	const [psoindicators21, setPsoindicators21] = useState(
-		"1.1.1      Apply mathematical techniques such as calculus, linear algebra, and statistics to solve problems"
+		"2.1.1      Define a problem based on real life situation, its scope and importance for purposes of investigation"
 	);
 	const [psoindicators22, setPsoindicators22] = useState(
-		"1.1.2      Apply advanced mathematical techniques to model and solve mechanical engineering problems"
+		"2.1.2      Examine the relevant methods, tools and computational techniques of experiment design, system calibration, data acquisition, analysis and presentation"
 	);
 	const [psoindicators23, setPsoindicators23] = useState(
-		"1.2.1  Apply laws of natural science to an engineering problem"
+		"2.2.1     Apply appropriate instrumentation and/or software tools to make measurements of physical quantities in industrial environment."
 	);
 	const [psoindicators24, setPsoindicators24] = useState(
-		"1.3.1  Apply fundamental engineering concepts to solve engineering problems"
+		"2.2.2     Establish a relationship between measured data and underlying physical principles."
 	);
 
-	const [psoweight21, setPsoweight21] = useState("0.2");
-	const [psoweight22, setPsoweight22] = useState("0.2");
-	const [psoweight23, setPsoweight23] = useState("0.2");
-	const [psoweight24, setPsoweight24] = useState("0.2");
+	const [psoweight21, setPsoweight21] = useState("0.25");
+	const [psoweight22, setPsoweight22] = useState("0.25");
+	const [psoweight23, setPsoweight23] = useState("0.25");
+	const [psoweight24, setPsoweight24] = useState("0.25");
 
 	const [psoco121, setPsoco121] = useState("");
 	const [psoco122, setPsoco122] = useState("");
@@ -2657,33 +2657,33 @@ export default function App() {
 	//   **************************************   PSO : 3 ************************************************
 
 	const [pso31, setPso31] = useState(
-		"PO 1: Engineering knowledge: Apply the knowledge of mathematics, science, engineering fundamentals, and an engineering specialisation for the solution of complex engineering problems."
+		"PSO 3: Attain expertise in traditional and cutting-edge technologies, such as, Additive Manufacturing, Robotics, Automation and Smart Systems, Industrial Internet of Things (IIoT) etc. for analysing and solving practical problems of industry and society."
 	);
 
 	const [psocompetency31, setPsocompetency31] = useState(
-		"1.1  Demonstrate competence in mathematical modelling"
+		"3.1 Demonstrate an ability to identify changing trends in Mechanical Engineering knowledge and practice "
 	);
 	const [psocompetency32, setPsocompetency32] = useState(
-		"1.1  Demonstrate competence in mathematical modelling"
+		"3.2 Demonstrate an ability to identify and access sources for new information "
 	);
 
 	const [psoindicators31, setPsoindicators31] = useState(
-		"1.1.1      Apply mathematical techniques such as calculus, linear algebra, and statistics to solve problems"
+		"3.1.1  Identify the strengths and limitations of traditional and cutting edge technologies for (i) acquiring information, (ii) modeling and simulating, (iii) monitoring system performance, and (iv) creating engineering designs."
 	);
 	const [psoindicators32, setPsoindicators32] = useState(
-		"1.1.2      Apply advanced mathematical techniques to model and solve mechanical engineering problems"
+		"3.1.2 Discuss limitations and validate tools, techniques and resources."
 	);
 	const [psoindicators33, setPsoindicators33] = useState(
-		"1.2.1  Apply laws of natural science to an engineering problem"
+		"3.2.1 Identify historic points of technological advance in mechanical engineering that required practitioners to seek education in order to stay in tune with current trends."
 	);
 	const [psoindicators34, setPsoindicators34] = useState(
-		"1.3.1  Apply fundamental engineering concepts to solve engineering problems"
+		"3.2.2  Recognize the need and be able to clearly explain why it is vitally important to keep current regarding new developments in mechanical engineering."
 	);
 
-	const [psoweight31, setPsoweight31] = useState("0.2");
-	const [psoweight32, setPsoweight32] = useState("0.2");
-	const [psoweight33, setPsoweight33] = useState("0.2");
-	const [psoweight34, setPsoweight34] = useState("0.2");
+	const [psoweight31, setPsoweight31] = useState("0.25");
+	const [psoweight32, setPsoweight32] = useState("0.25");
+	const [psoweight33, setPsoweight33] = useState("0.25");
+	const [psoweight34, setPsoweight34] = useState("0.25");
 
 	const [psoco131, setPsoco131] = useState("");
 	const [psoco132, setPsoco132] = useState("");
@@ -6108,12 +6108,14 @@ export default function App() {
 			});
 
 			if (res.ok) {
-				router.push("/");
+				toast.success("Mapping Table Created Successfully ");
 			} else {
 				throw new Error("Failed to create table");
+				toast.error("Failed to create table");
 			}
 		} catch (error) {
 			console.log(error);
+			toast.error("Failed to create table");
 		}
 	};
 
@@ -6158,7 +6160,11 @@ export default function App() {
 					<Select
 						className='max-w-xs'
 						label='Select Year'
-						onChange={(e) => handleYearSelect(e.target.value)}
+						onChange={(e) =>
+							handleYearSelect(
+								String(Math.min(Math.max(Number(e.target.value), 0), 1))
+							)
+						}
 					>
 						{years.map((year) => (
 							<SelectItem key={year.key} value={year.key}>
@@ -6170,7 +6176,11 @@ export default function App() {
 					<Select
 						className='max-w-xs'
 						label='Select Department'
-						onChange={(e) => handleDepartSelect(e.target.value)}
+						onChange={(e) =>
+							handleDepartSelect(
+								String(Math.min(Math.max(Number(e.target.value), 0), 1))
+							)
+						}
 					>
 						{depart.map((dept) => (
 							<SelectItem key={dept.key} value={dept.key}>
@@ -6182,7 +6192,11 @@ export default function App() {
 					<Select
 						className='max-w-xs'
 						label='Select Semester'
-						onChange={(e) => handleSemesterSelect(e.target.value)}
+						onChange={(e) =>
+							handleSemesterSelect(
+								String(Math.min(Math.max(Number(e.target.value), 0), 1))
+							)
+						}
 					>
 						{semester.map((sem) => (
 							<SelectItem key={sem.key} value={sem.key}>
@@ -6196,7 +6210,11 @@ export default function App() {
 						className='w-auto'
 						type='text'
 						value={subject}
-						onChange={(e) => setSubject(e.target.value)}
+						onChange={(e) =>
+							setSubject(
+								String(Math.min(Math.max(Number(e.target.value), 0), 1))
+							)
+						}
 					/>
 				</div>
 
@@ -6225,7 +6243,11 @@ export default function App() {
 								<Textarea
 									readOnly
 									value={po11}
-									onChange={(e) => setPo11(e.target.value)}
+									onChange={(e) =>
+										setPo11(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 									className='my-6'
 								/>
 							</td>
@@ -6233,14 +6255,22 @@ export default function App() {
 								<Textarea
 									readOnly
 									value={competency11}
-									onChange={(e) => setCompetency11(e.target.value)}
+									onChange={(e) =>
+										setCompetency11(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Textarea
 									readOnly
 									value={indicators11}
-									onChange={(e) => setIndicators11(e.target.value)}
+									onChange={(e) =>
+										setIndicators11(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
@@ -6248,56 +6278,90 @@ export default function App() {
 									type='number'
 									readOnly
 									value={weight11}
-									onChange={(e) => setWeight11(e.target.value)}
+									onChange={(e) =>
+										setWeight11(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
+									min={0}
+									max={1}
 									type='number'
 									value={co111}
-									onChange={(e) => setCo111(e.target.value)}
+									onChange={(e) =>
+										setCo111(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co211}
-									onChange={(e) => setCo211(e.target.value)}
+									onChange={(e) =>
+										setCo211(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co311}
-									onChange={(e) => setCo311(e.target.value)}
+									onChange={(e) =>
+										setCo311(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co411}
-									onChange={(e) => setCo411(e.target.value)}
+									onChange={(e) =>
+										setCo411(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co511}
-									onChange={(e) => setCo511(e.target.value)}
+									onChange={(e) =>
+										setCo511(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co611}
-									onChange={(e) => setCo611(e.target.value)}
+									onChange={(e) =>
+										setCo611(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co711}
-									onChange={(e) => setCo711(e.target.value)}
+									onChange={(e) =>
+										setCo711(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 						</tr>
@@ -6306,7 +6370,11 @@ export default function App() {
 								<Textarea
 									readOnly
 									value={po12}
-									onChange={(e) => setPo12(e.target.value)}
+									onChange={(e) =>
+										setPo12(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 									className='my-6'
 								/>
 							</td>
@@ -6314,14 +6382,22 @@ export default function App() {
 								<Textarea
 									readOnly
 									value={competency12}
-									onChange={(e) => setCompetency12(e.target.value)}
+									onChange={(e) =>
+										setCompetency12(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Textarea
 									readOnly
 									value={indicators12}
-									onChange={(e) => setIndicators12(e.target.value)}
+									onChange={(e) =>
+										setIndicators12(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
@@ -6329,56 +6405,88 @@ export default function App() {
 									type='number'
 									readOnly
 									value={weight12}
-									onChange={(e) => setWeight12(e.target.value)}
+									onChange={(e) =>
+										setWeight12(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co112}
-									onChange={(e) => setCo112(e.target.value)}
+									onChange={(e) =>
+										setCo112(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co212}
-									onChange={(e) => setCo212(e.target.value)}
+									onChange={(e) =>
+										setCo212(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co312}
-									onChange={(e) => setCo312(e.target.value)}
+									onChange={(e) =>
+										setCo312(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co412}
-									onChange={(e) => setCo412(e.target.value)}
+									onChange={(e) =>
+										setCo412(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co512}
-									onChange={(e) => setCo512(e.target.value)}
+									onChange={(e) =>
+										setCo512(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co612}
-									onChange={(e) => setCo612(e.target.value)}
+									onChange={(e) =>
+										setCo612(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co712}
-									onChange={(e) => setCo712(e.target.value)}
+									onChange={(e) =>
+										setCo712(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 						</tr>
@@ -6387,7 +6495,11 @@ export default function App() {
 								<Textarea
 									readOnly
 									value={po13}
-									onChange={(e) => setPo13(e.target.value)}
+									onChange={(e) =>
+										setPo13(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 									className='my-6'
 								/>
 							</td>
@@ -6395,14 +6507,22 @@ export default function App() {
 								<Textarea
 									readOnly
 									value={competency13}
-									onChange={(e) => setCompetency13(e.target.value)}
+									onChange={(e) =>
+										setCompetency13(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Textarea
 									readOnly
 									value={indicators13}
-									onChange={(e) => setIndicators13(e.target.value)}
+									onChange={(e) =>
+										setIndicators13(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
@@ -6410,56 +6530,88 @@ export default function App() {
 									type='number'
 									readOnly
 									value={weight13}
-									onChange={(e) => setWeight13(e.target.value)}
+									onChange={(e) =>
+										setWeight13(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co113}
-									onChange={(e) => setCo113(e.target.value)}
+									onChange={(e) =>
+										setCo113(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co213}
-									onChange={(e) => setCo213(e.target.value)}
+									onChange={(e) =>
+										setCo213(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co313}
-									onChange={(e) => setCo313(e.target.value)}
+									onChange={(e) =>
+										setCo313(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co413}
-									onChange={(e) => setCo413(e.target.value)}
+									onChange={(e) =>
+										setCo413(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co513}
-									onChange={(e) => setCo513(e.target.value)}
+									onChange={(e) =>
+										setCo513(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co613}
-									onChange={(e) => setCo613(e.target.value)}
+									onChange={(e) =>
+										setCo613(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co713}
-									onChange={(e) => setCo713(e.target.value)}
+									onChange={(e) =>
+										setCo713(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 						</tr>
@@ -6468,7 +6620,11 @@ export default function App() {
 								<Textarea
 									readOnly
 									value={po14}
-									onChange={(e) => setPo14(e.target.value)}
+									onChange={(e) =>
+										setPo14(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 									className='my-6'
 								/>
 							</td>
@@ -6476,14 +6632,22 @@ export default function App() {
 								<Textarea
 									readOnly
 									value={competency14}
-									onChange={(e) => setCompetency14(e.target.value)}
+									onChange={(e) =>
+										setCompetency14(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Textarea
 									readOnly
 									value={indicators14}
-									onChange={(e) => setIndicators14(e.target.value)}
+									onChange={(e) =>
+										setIndicators14(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
@@ -6491,56 +6655,88 @@ export default function App() {
 									type='number'
 									readOnly
 									value={weight14}
-									onChange={(e) => setWeight14(e.target.value)}
+									onChange={(e) =>
+										setWeight14(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co114}
-									onChange={(e) => setCo114(e.target.value)}
+									onChange={(e) =>
+										setCo114(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co214}
-									onChange={(e) => setCo214(e.target.value)}
+									onChange={(e) =>
+										setCo214(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co314}
-									onChange={(e) => setCo314(e.target.value)}
+									onChange={(e) =>
+										setCo314(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co414}
-									onChange={(e) => setCo414(e.target.value)}
+									onChange={(e) =>
+										setCo414(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co514}
-									onChange={(e) => setCo514(e.target.value)}
+									onChange={(e) =>
+										setCo514(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co614}
-									onChange={(e) => setCo614(e.target.value)}
+									onChange={(e) =>
+										setCo614(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co714}
-									onChange={(e) => setCo714(e.target.value)}
+									onChange={(e) =>
+										setCo714(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 						</tr>
@@ -6549,7 +6745,11 @@ export default function App() {
 								<Textarea
 									readOnly
 									value={po15}
-									onChange={(e) => setPo15(e.target.value)}
+									onChange={(e) =>
+										setPo15(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 									className='my-6'
 								/>
 							</td>
@@ -6557,14 +6757,22 @@ export default function App() {
 								<Textarea
 									readOnly
 									value={competency15}
-									onChange={(e) => setCompetency15(e.target.value)}
+									onChange={(e) =>
+										setCompetency15(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Textarea
 									readOnly
 									value={indicators15}
-									onChange={(e) => setIndicators15(e.target.value)}
+									onChange={(e) =>
+										setIndicators15(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
@@ -6572,56 +6780,88 @@ export default function App() {
 									type='number'
 									value={weight15}
 									readOnly
-									onChange={(e) => setWeight15(e.target.value)}
+									onChange={(e) =>
+										setWeight15(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co115}
-									onChange={(e) => setCo115(e.target.value)}
+									onChange={(e) =>
+										setCo115(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co215}
-									onChange={(e) => setCo215(e.target.value)}
+									onChange={(e) =>
+										setCo215(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co315}
-									onChange={(e) => setCo315(e.target.value)}
+									onChange={(e) =>
+										setCo315(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co415}
-									onChange={(e) => setCo415(e.target.value)}
+									onChange={(e) =>
+										setCo415(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co515}
-									onChange={(e) => setCo515(e.target.value)}
+									onChange={(e) =>
+										setCo515(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co615}
-									onChange={(e) => setCo615(e.target.value)}
+									onChange={(e) =>
+										setCo615(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co715}
-									onChange={(e) => setCo715(e.target.value)}
+									onChange={(e) =>
+										setCo715(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 						</tr>
@@ -6639,7 +6879,11 @@ export default function App() {
 									type='number'
 									value={po1mapco1.toString()}
 									readOnly
-									onChange={(e) => setPo1mapco1(e.target.value)}
+									onChange={(e) =>
+										setPo1mapco1(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
@@ -6647,7 +6891,11 @@ export default function App() {
 									type='number'
 									value={po1mapco2.toString()}
 									readOnly
-									onChange={(e) => setPo1mapco2(e.target.value)}
+									onChange={(e) =>
+										setPo1mapco2(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>{" "}
 							</td>
 							<td>
@@ -6655,7 +6903,11 @@ export default function App() {
 									type='number'
 									value={po1mapco3.toString()}
 									readOnly
-									onChange={(e) => setPo1mapco3(e.target.value)}
+									onChange={(e) =>
+										setPo1mapco3(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>{" "}
 							</td>
 							<td>
@@ -6663,7 +6915,11 @@ export default function App() {
 									type='number'
 									value={po1mapco4.toString()}
 									readOnly
-									onChange={(e) => setPo1mapco4(e.target.value)}
+									onChange={(e) =>
+										setPo1mapco4(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>{" "}
 							</td>
 							<td>
@@ -6671,7 +6927,11 @@ export default function App() {
 									type='number'
 									value={po1mapco5.toString()}
 									readOnly
-									onChange={(e) => setPo1mapco5(e.target.value)}
+									onChange={(e) =>
+										setPo1mapco5(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>{" "}
 							</td>
 							<td>
@@ -6679,7 +6939,11 @@ export default function App() {
 									type='number'
 									value={po1mapco6.toString()}
 									readOnly
-									onChange={(e) => setPo1mapco6(e.target.value)}
+									onChange={(e) =>
+										setPo1mapco6(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>{" "}
 							</td>
 							<td>
@@ -6687,7 +6951,11 @@ export default function App() {
 									type='number'
 									value={po1mapco7.toString()}
 									readOnly
-									onChange={(e) => setPo1mapco7(e.target.value)}
+									onChange={(e) =>
+										setPo1mapco7(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>{" "}
 							</td>
 						</tr>
@@ -6699,7 +6967,11 @@ export default function App() {
 								<Textarea
 									readOnly
 									value={po21}
-									onChange={(e) => setPo21(e.target.value)}
+									onChange={(e) =>
+										setPo21(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 									className='my-6'
 								/>
 							</td>
@@ -6707,14 +6979,22 @@ export default function App() {
 								<Textarea
 									readOnly
 									value={competency21}
-									onChange={(e) => setCompetency21(e.target.value)}
+									onChange={(e) =>
+										setCompetency21(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Textarea
 									readOnly
 									value={indicators21}
-									onChange={(e) => setIndicators21(e.target.value)}
+									onChange={(e) =>
+										setIndicators21(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
@@ -6722,56 +7002,88 @@ export default function App() {
 									type='number'
 									readOnly
 									value={weight21}
-									onChange={(e) => setWeight21(e.target.value)}
+									onChange={(e) =>
+										setWeight21(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co121}
-									onChange={(e) => setCo121(e.target.value)}
+									onChange={(e) =>
+										setCo121(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co221}
-									onChange={(e) => setCo221(e.target.value)}
+									onChange={(e) =>
+										setCo221(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co321}
-									onChange={(e) => setCo321(e.target.value)}
+									onChange={(e) =>
+										setCo321(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co421}
-									onChange={(e) => setCo421(e.target.value)}
+									onChange={(e) =>
+										setCo421(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co521}
-									onChange={(e) => setCo521(e.target.value)}
+									onChange={(e) =>
+										setCo521(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co621}
-									onChange={(e) => setCo621(e.target.value)}
+									onChange={(e) =>
+										setCo621(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co721}
-									onChange={(e) => setCo721(e.target.value)}
+									onChange={(e) =>
+										setCo721(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 						</tr>
@@ -6780,7 +7092,11 @@ export default function App() {
 								<Textarea
 									readOnly
 									value={indicators22}
-									onChange={(e) => setIndicators22(e.target.value)}
+									onChange={(e) =>
+										setIndicators22(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
@@ -6788,56 +7104,88 @@ export default function App() {
 									type='number'
 									readOnly
 									value={weight22}
-									onChange={(e) => setWeight22(e.target.value)}
+									onChange={(e) =>
+										setWeight22(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co122}
-									onChange={(e) => setCo122(e.target.value)}
+									onChange={(e) =>
+										setCo122(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co222}
-									onChange={(e) => setCo222(e.target.value)}
+									onChange={(e) =>
+										setCo222(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co322}
-									onChange={(e) => setCo322(e.target.value)}
+									onChange={(e) =>
+										setCo322(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co422}
-									onChange={(e) => setCo422(e.target.value)}
+									onChange={(e) =>
+										setCo422(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co522}
-									onChange={(e) => setCo522(e.target.value)}
+									onChange={(e) =>
+										setCo522(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co622}
-									onChange={(e) => setCo622(e.target.value)}
+									onChange={(e) =>
+										setCo622(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co722}
-									onChange={(e) => setCo722(e.target.value)}
+									onChange={(e) =>
+										setCo722(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 						</tr>
@@ -6846,7 +7194,11 @@ export default function App() {
 								<Textarea
 									readOnly
 									value={indicators23}
-									onChange={(e) => setIndicators23(e.target.value)}
+									onChange={(e) =>
+										setIndicators23(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
@@ -6854,56 +7206,88 @@ export default function App() {
 									type='number'
 									readOnly
 									value={weight23}
-									onChange={(e) => setWeight23(e.target.value)}
+									onChange={(e) =>
+										setWeight23(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co123}
-									onChange={(e) => setCo123(e.target.value)}
+									onChange={(e) =>
+										setCo123(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co223}
-									onChange={(e) => setCo223(e.target.value)}
+									onChange={(e) =>
+										setCo223(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co323}
-									onChange={(e) => setCo323(e.target.value)}
+									onChange={(e) =>
+										setCo323(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co423}
-									onChange={(e) => setCo423(e.target.value)}
+									onChange={(e) =>
+										setCo423(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co523}
-									onChange={(e) => setCo523(e.target.value)}
+									onChange={(e) =>
+										setCo523(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co623}
-									onChange={(e) => setCo623(e.target.value)}
+									onChange={(e) =>
+										setCo623(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co723}
-									onChange={(e) => setCo723(e.target.value)}
+									onChange={(e) =>
+										setCo723(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 						</tr>
@@ -6912,14 +7296,22 @@ export default function App() {
 								<Textarea
 									readOnly
 									value={competency22}
-									onChange={(e) => setCompetency22(e.target.value)}
+									onChange={(e) =>
+										setCompetency22(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Textarea
 									readOnly
 									value={indicators24}
-									onChange={(e) => setIndicators24(e.target.value)}
+									onChange={(e) =>
+										setIndicators24(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
@@ -6927,56 +7319,88 @@ export default function App() {
 									type='number'
 									readOnly
 									value={weight24}
-									onChange={(e) => setWeight24(e.target.value)}
+									onChange={(e) =>
+										setWeight24(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co124}
-									onChange={(e) => setCo124(e.target.value)}
+									onChange={(e) =>
+										setCo124(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co224}
-									onChange={(e) => setCo224(e.target.value)}
+									onChange={(e) =>
+										setCo224(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co324}
-									onChange={(e) => setCo324(e.target.value)}
+									onChange={(e) =>
+										setCo324(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co424}
-									onChange={(e) => setCo424(e.target.value)}
+									onChange={(e) =>
+										setCo424(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co524}
-									onChange={(e) => setCo524(e.target.value)}
+									onChange={(e) =>
+										setCo524(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co624}
-									onChange={(e) => setCo624(e.target.value)}
+									onChange={(e) =>
+										setCo624(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co724}
-									onChange={(e) => setCo724(e.target.value)}
+									onChange={(e) =>
+										setCo724(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 						</tr>
@@ -6985,7 +7409,11 @@ export default function App() {
 								<Textarea
 									readOnly
 									value={indicators25}
-									onChange={(e) => setIndicators25(e.target.value)}
+									onChange={(e) =>
+										setIndicators25(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
@@ -6993,56 +7421,88 @@ export default function App() {
 									type='number'
 									value={weight25}
 									readOnly
-									onChange={(e) => setWeight25(e.target.value)}
+									onChange={(e) =>
+										setWeight25(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co125}
-									onChange={(e) => setCo125(e.target.value)}
+									onChange={(e) =>
+										setCo125(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co225}
-									onChange={(e) => setCo225(e.target.value)}
+									onChange={(e) =>
+										setCo225(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co325}
-									onChange={(e) => setCo325(e.target.value)}
+									onChange={(e) =>
+										setCo325(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co425}
-									onChange={(e) => setCo425(e.target.value)}
+									onChange={(e) =>
+										setCo425(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co525}
-									onChange={(e) => setCo525(e.target.value)}
+									onChange={(e) =>
+										setCo525(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co625}
-									onChange={(e) => setCo625(e.target.value)}
+									onChange={(e) =>
+										setCo625(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co725}
-									onChange={(e) => setCo725(e.target.value)}
+									onChange={(e) =>
+										setCo725(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 						</tr>
@@ -7051,7 +7511,11 @@ export default function App() {
 								<Textarea
 									readOnly
 									value={indicators26}
-									onChange={(e) => setIndicators26(e.target.value)}
+									onChange={(e) =>
+										setIndicators26(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
@@ -7059,56 +7523,88 @@ export default function App() {
 									type='number'
 									value={weight26}
 									readOnly
-									onChange={(e) => setWeight26(e.target.value)}
+									onChange={(e) =>
+										setWeight26(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co126}
-									onChange={(e) => setCo126(e.target.value)}
+									onChange={(e) =>
+										setCo126(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co226}
-									onChange={(e) => setCo226(e.target.value)}
+									onChange={(e) =>
+										setCo226(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co326}
-									onChange={(e) => setCo326(e.target.value)}
+									onChange={(e) =>
+										setCo326(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co426}
-									onChange={(e) => setCo426(e.target.value)}
+									onChange={(e) =>
+										setCo426(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co526}
-									onChange={(e) => setCo526(e.target.value)}
+									onChange={(e) =>
+										setCo526(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co626}
-									onChange={(e) => setCo626(e.target.value)}
+									onChange={(e) =>
+										setCo626(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co726}
-									onChange={(e) => setCo726(e.target.value)}
+									onChange={(e) =>
+										setCo726(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 						</tr>
@@ -7117,7 +7613,11 @@ export default function App() {
 								<Textarea
 									readOnly
 									value={indicators27}
-									onChange={(e) => setIndicators27(e.target.value)}
+									onChange={(e) =>
+										setIndicators27(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
@@ -7125,56 +7625,88 @@ export default function App() {
 									type='number'
 									value={weight27}
 									readOnly
-									onChange={(e) => setWeight27(e.target.value)}
+									onChange={(e) =>
+										setWeight27(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co127}
-									onChange={(e) => setCo127(e.target.value)}
+									onChange={(e) =>
+										setCo127(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co227}
-									onChange={(e) => setCo227(e.target.value)}
+									onChange={(e) =>
+										setCo227(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co327}
-									onChange={(e) => setCo327(e.target.value)}
+									onChange={(e) =>
+										setCo327(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co427}
-									onChange={(e) => setCo427(e.target.value)}
+									onChange={(e) =>
+										setCo427(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co527}
-									onChange={(e) => setCo527(e.target.value)}
+									onChange={(e) =>
+										setCo527(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co627}
-									onChange={(e) => setCo627(e.target.value)}
+									onChange={(e) =>
+										setCo627(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co727}
-									onChange={(e) => setCo727(e.target.value)}
+									onChange={(e) =>
+										setCo727(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 						</tr>
@@ -7183,14 +7715,22 @@ export default function App() {
 								<Textarea
 									readOnly
 									value={competency23}
-									onChange={(e) => setCompetency23(e.target.value)}
+									onChange={(e) =>
+										setCompetency23(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Textarea
 									readOnly
 									value={indicators28}
-									onChange={(e) => setIndicators28(e.target.value)}
+									onChange={(e) =>
+										setIndicators28(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
@@ -7198,56 +7738,88 @@ export default function App() {
 									type='number'
 									value={weight28}
 									readOnly
-									onChange={(e) => setWeight28(e.target.value)}
+									onChange={(e) =>
+										setWeight28(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co128}
-									onChange={(e) => setCo128(e.target.value)}
+									onChange={(e) =>
+										setCo128(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co228}
-									onChange={(e) => setCo228(e.target.value)}
+									onChange={(e) =>
+										setCo228(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co328}
-									onChange={(e) => setCo328(e.target.value)}
+									onChange={(e) =>
+										setCo328(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co428}
-									onChange={(e) => setCo428(e.target.value)}
+									onChange={(e) =>
+										setCo428(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co528}
-									onChange={(e) => setCo528(e.target.value)}
+									onChange={(e) =>
+										setCo528(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co628}
-									onChange={(e) => setCo628(e.target.value)}
+									onChange={(e) =>
+										setCo628(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co728}
-									onChange={(e) => setCo728(e.target.value)}
+									onChange={(e) =>
+										setCo728(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 						</tr>
@@ -7256,7 +7828,11 @@ export default function App() {
 								<Textarea
 									readOnly
 									value={indicators29}
-									onChange={(e) => setIndicators29(e.target.value)}
+									onChange={(e) =>
+										setIndicators29(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
@@ -7264,56 +7840,88 @@ export default function App() {
 									type='number'
 									value={weight29}
 									readOnly
-									onChange={(e) => setWeight29(e.target.value)}
+									onChange={(e) =>
+										setWeight29(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co129}
-									onChange={(e) => setCo129(e.target.value)}
+									onChange={(e) =>
+										setCo129(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co229}
-									onChange={(e) => setCo229(e.target.value)}
+									onChange={(e) =>
+										setCo229(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co329}
-									onChange={(e) => setCo329(e.target.value)}
+									onChange={(e) =>
+										setCo329(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co429}
-									onChange={(e) => setCo429(e.target.value)}
+									onChange={(e) =>
+										setCo429(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co529}
-									onChange={(e) => setCo529(e.target.value)}
+									onChange={(e) =>
+										setCo529(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co629}
-									onChange={(e) => setCo629(e.target.value)}
+									onChange={(e) =>
+										setCo629(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co729}
-									onChange={(e) => setCo729(e.target.value)}
+									onChange={(e) =>
+										setCo729(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 						</tr>
@@ -7322,14 +7930,22 @@ export default function App() {
 								<Textarea
 									readOnly
 									value={competency24}
-									onChange={(e) => setCompetency24(e.target.value)}
+									onChange={(e) =>
+										setCompetency24(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Textarea
 									readOnly
 									value={indicators210}
-									onChange={(e) => setIndicators210(e.target.value)}
+									onChange={(e) =>
+										setIndicators210(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
@@ -7337,56 +7953,88 @@ export default function App() {
 									type='number'
 									value={weight210}
 									readOnly
-									onChange={(e) => setWeight210(e.target.value)}
+									onChange={(e) =>
+										setWeight210(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co1210}
-									onChange={(e) => setCo1210(e.target.value)}
+									onChange={(e) =>
+										setCo1210(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co2210}
-									onChange={(e) => setCo2210(e.target.value)}
+									onChange={(e) =>
+										setCo2210(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co3210}
-									onChange={(e) => setCo3210(e.target.value)}
+									onChange={(e) =>
+										setCo3210(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co4210}
-									onChange={(e) => setCo4210(e.target.value)}
+									onChange={(e) =>
+										setCo4210(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co5210}
-									onChange={(e) => setCo5210(e.target.value)}
+									onChange={(e) =>
+										setCo5210(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co6210}
-									onChange={(e) => setCo6210(e.target.value)}
+									onChange={(e) =>
+										setCo6210(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co7210}
-									onChange={(e) => setCo7210(e.target.value)}
+									onChange={(e) =>
+										setCo7210(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 						</tr>
@@ -7395,7 +8043,11 @@ export default function App() {
 								<Textarea
 									readOnly
 									value={indicators211}
-									onChange={(e) => setIndicators211(e.target.value)}
+									onChange={(e) =>
+										setIndicators211(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
@@ -7403,56 +8055,88 @@ export default function App() {
 									type='number'
 									value={weight211}
 									readOnly
-									onChange={(e) => setWeight211(e.target.value)}
+									onChange={(e) =>
+										setWeight211(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co1211}
-									onChange={(e) => setCo1211(e.target.value)}
+									onChange={(e) =>
+										setCo1211(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co2211}
-									onChange={(e) => setCo2211(e.target.value)}
+									onChange={(e) =>
+										setCo2211(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co3211}
-									onChange={(e) => setCo3211(e.target.value)}
+									onChange={(e) =>
+										setCo3211(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co4211}
-									onChange={(e) => setCo4211(e.target.value)}
+									onChange={(e) =>
+										setCo4211(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co5211}
-									onChange={(e) => setCo5211(e.target.value)}
+									onChange={(e) =>
+										setCo5211(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co6211}
-									onChange={(e) => setCo6211(e.target.value)}
+									onChange={(e) =>
+										setCo6211(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co7211}
-									onChange={(e) => setCo7211(e.target.value)}
+									onChange={(e) =>
+										setCo7211(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 						</tr>
@@ -7461,7 +8145,11 @@ export default function App() {
 								<Textarea
 									readOnly
 									value={indicators212}
-									onChange={(e) => setIndicators212(e.target.value)}
+									onChange={(e) =>
+										setIndicators212(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
@@ -7469,56 +8157,88 @@ export default function App() {
 									type='number'
 									value={weight212}
 									readOnly
-									onChange={(e) => setWeight212(e.target.value)}
+									onChange={(e) =>
+										setWeight212(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co1212}
-									onChange={(e) => setCo1212(e.target.value)}
+									onChange={(e) =>
+										setCo1212(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co2212}
-									onChange={(e) => setCo2212(e.target.value)}
+									onChange={(e) =>
+										setCo2212(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co3212}
-									onChange={(e) => setCo3212(e.target.value)}
+									onChange={(e) =>
+										setCo3212(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co4212}
-									onChange={(e) => setCo4212(e.target.value)}
+									onChange={(e) =>
+										setCo4212(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co5212}
-									onChange={(e) => setCo5212(e.target.value)}
+									onChange={(e) =>
+										setCo5212(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co6212}
-									onChange={(e) => setCo6212(e.target.value)}
+									onChange={(e) =>
+										setCo6212(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co7212}
-									onChange={(e) => setCo7212(e.target.value)}
+									onChange={(e) =>
+										setCo7212(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 						</tr>
@@ -7527,7 +8247,11 @@ export default function App() {
 								<Textarea
 									readOnly
 									value={indicators213}
-									onChange={(e) => setIndicators213(e.target.value)}
+									onChange={(e) =>
+										setIndicators213(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
@@ -7535,56 +8259,88 @@ export default function App() {
 									type='number'
 									value={weight213}
 									readOnly
-									onChange={(e) => setWeight213(e.target.value)}
+									onChange={(e) =>
+										setWeight213(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co1213}
-									onChange={(e) => setCo1213(e.target.value)}
+									onChange={(e) =>
+										setCo1213(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co2213}
-									onChange={(e) => setCo2213(e.target.value)}
+									onChange={(e) =>
+										setCo2213(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co3213}
-									onChange={(e) => setCo3213(e.target.value)}
+									onChange={(e) =>
+										setCo3213(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co4213}
-									onChange={(e) => setCo4213(e.target.value)}
+									onChange={(e) =>
+										setCo4213(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co5213}
-									onChange={(e) => setCo5213(e.target.value)}
+									onChange={(e) =>
+										setCo5213(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co6213}
-									onChange={(e) => setCo6213(e.target.value)}
+									onChange={(e) =>
+										setCo6213(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co7213}
-									onChange={(e) => setCo7213(e.target.value)}
+									onChange={(e) =>
+										setCo7213(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 						</tr>
@@ -7602,7 +8358,11 @@ export default function App() {
 									type='number'
 									value={po2mapco1.toString()}
 									readOnly
-									onChange={(e) => setPo2mapco1(e.target.value)}
+									onChange={(e) =>
+										setPo2mapco1(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
@@ -7610,7 +8370,11 @@ export default function App() {
 									type='number'
 									value={po2mapco2.toString()}
 									readOnly
-									onChange={(e) => setPo2mapco2(e.target.value)}
+									onChange={(e) =>
+										setPo2mapco2(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>{" "}
 							</td>
 							<td>
@@ -7618,7 +8382,11 @@ export default function App() {
 									type='number'
 									value={po2mapco3.toString()}
 									readOnly
-									onChange={(e) => setPo2mapco3(e.target.value)}
+									onChange={(e) =>
+										setPo2mapco3(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>{" "}
 							</td>
 							<td>
@@ -7626,7 +8394,11 @@ export default function App() {
 									type='number'
 									value={po2mapco4.toString()}
 									readOnly
-									onChange={(e) => setPo2mapco4(e.target.value)}
+									onChange={(e) =>
+										setPo2mapco4(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>{" "}
 							</td>
 							<td>
@@ -7634,7 +8406,11 @@ export default function App() {
 									type='number'
 									value={po2mapco5.toString()}
 									readOnly
-									onChange={(e) => setPo2mapco5(e.target.value)}
+									onChange={(e) =>
+										setPo2mapco5(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>{" "}
 							</td>
 							<td>
@@ -7642,7 +8418,11 @@ export default function App() {
 									type='number'
 									value={po2mapco6.toString()}
 									readOnly
-									onChange={(e) => setPo2mapco6(e.target.value)}
+									onChange={(e) =>
+										setPo2mapco6(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>{" "}
 							</td>
 							<td>
@@ -7650,7 +8430,11 @@ export default function App() {
 									type='number'
 									value={po2mapco7.toString()}
 									readOnly
-									onChange={(e) => setPo2mapco7(e.target.value)}
+									onChange={(e) =>
+										setPo2mapco7(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>{" "}
 							</td>
 						</tr>
@@ -7662,7 +8446,11 @@ export default function App() {
 								<Textarea
 									readOnly
 									value={po31}
-									onChange={(e) => setPo31(e.target.value)}
+									onChange={(e) =>
+										setPo31(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 									className='my-6'
 								/>
 							</td>
@@ -7670,14 +8458,22 @@ export default function App() {
 								<Textarea
 									readOnly
 									value={competency31}
-									onChange={(e) => setCompetency31(e.target.value)}
+									onChange={(e) =>
+										setCompetency31(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Textarea
 									readOnly
 									value={indicators31}
-									onChange={(e) => setIndicators31(e.target.value)}
+									onChange={(e) =>
+										setIndicators31(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
@@ -7685,56 +8481,88 @@ export default function App() {
 									type='number'
 									readOnly
 									value={weight31}
-									onChange={(e) => setWeight31(e.target.value)}
+									onChange={(e) =>
+										setWeight31(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co131}
-									onChange={(e) => setCo131(e.target.value)}
+									onChange={(e) =>
+										setCo131(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co231}
-									onChange={(e) => setCo231(e.target.value)}
+									onChange={(e) =>
+										setCo231(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co331}
-									onChange={(e) => setCo331(e.target.value)}
+									onChange={(e) =>
+										setCo331(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co431}
-									onChange={(e) => setCo431(e.target.value)}
+									onChange={(e) =>
+										setCo431(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co531}
-									onChange={(e) => setCo531(e.target.value)}
+									onChange={(e) =>
+										setCo531(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co631}
-									onChange={(e) => setCo631(e.target.value)}
+									onChange={(e) =>
+										setCo631(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co731}
-									onChange={(e) => setCo731(e.target.value)}
+									onChange={(e) =>
+										setCo731(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 						</tr>
@@ -7743,7 +8571,11 @@ export default function App() {
 								<Textarea
 									readOnly
 									value={indicators32}
-									onChange={(e) => setIndicators32(e.target.value)}
+									onChange={(e) =>
+										setIndicators32(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
@@ -7751,56 +8583,88 @@ export default function App() {
 									type='number'
 									readOnly
 									value={weight32}
-									onChange={(e) => setWeight32(e.target.value)}
+									onChange={(e) =>
+										setWeight32(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co132}
-									onChange={(e) => setCo132(e.target.value)}
+									onChange={(e) =>
+										setCo132(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co232}
-									onChange={(e) => setCo232(e.target.value)}
+									onChange={(e) =>
+										setCo232(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co332}
-									onChange={(e) => setCo332(e.target.value)}
+									onChange={(e) =>
+										setCo332(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co432}
-									onChange={(e) => setCo432(e.target.value)}
+									onChange={(e) =>
+										setCo432(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co532}
-									onChange={(e) => setCo532(e.target.value)}
+									onChange={(e) =>
+										setCo532(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co632}
-									onChange={(e) => setCo632(e.target.value)}
+									onChange={(e) =>
+										setCo632(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co732}
-									onChange={(e) => setCo732(e.target.value)}
+									onChange={(e) =>
+										setCo732(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 						</tr>
@@ -7809,7 +8673,11 @@ export default function App() {
 								<Textarea
 									readOnly
 									value={indicators33}
-									onChange={(e) => setIndicators33(e.target.value)}
+									onChange={(e) =>
+										setIndicators33(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
@@ -7817,56 +8685,88 @@ export default function App() {
 									type='number'
 									readOnly
 									value={weight33}
-									onChange={(e) => setWeight33(e.target.value)}
+									onChange={(e) =>
+										setWeight33(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co133}
-									onChange={(e) => setCo133(e.target.value)}
+									onChange={(e) =>
+										setCo133(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co233}
-									onChange={(e) => setCo233(e.target.value)}
+									onChange={(e) =>
+										setCo233(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co333}
-									onChange={(e) => setCo333(e.target.value)}
+									onChange={(e) =>
+										setCo333(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co433}
-									onChange={(e) => setCo433(e.target.value)}
+									onChange={(e) =>
+										setCo433(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co533}
-									onChange={(e) => setCo533(e.target.value)}
+									onChange={(e) =>
+										setCo533(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co633}
-									onChange={(e) => setCo633(e.target.value)}
+									onChange={(e) =>
+										setCo633(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co733}
-									onChange={(e) => setCo733(e.target.value)}
+									onChange={(e) =>
+										setCo733(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 						</tr>
@@ -7875,7 +8775,11 @@ export default function App() {
 								<Textarea
 									readOnly
 									value={indicators34}
-									onChange={(e) => setIndicators34(e.target.value)}
+									onChange={(e) =>
+										setIndicators34(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
@@ -7883,56 +8787,88 @@ export default function App() {
 									type='number'
 									readOnly
 									value={weight34}
-									onChange={(e) => setWeight34(e.target.value)}
+									onChange={(e) =>
+										setWeight34(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co134}
-									onChange={(e) => setCo134(e.target.value)}
+									onChange={(e) =>
+										setCo134(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co234}
-									onChange={(e) => setCo234(e.target.value)}
+									onChange={(e) =>
+										setCo234(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co334}
-									onChange={(e) => setCo334(e.target.value)}
+									onChange={(e) =>
+										setCo334(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co434}
-									onChange={(e) => setCo434(e.target.value)}
+									onChange={(e) =>
+										setCo434(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co534}
-									onChange={(e) => setCo534(e.target.value)}
+									onChange={(e) =>
+										setCo534(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co634}
-									onChange={(e) => setCo634(e.target.value)}
+									onChange={(e) =>
+										setCo634(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co734}
-									onChange={(e) => setCo734(e.target.value)}
+									onChange={(e) =>
+										setCo734(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 						</tr>
@@ -7941,7 +8877,11 @@ export default function App() {
 								<Textarea
 									readOnly
 									value={indicators35}
-									onChange={(e) => setIndicators35(e.target.value)}
+									onChange={(e) =>
+										setIndicators35(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
@@ -7949,56 +8889,88 @@ export default function App() {
 									type='number'
 									value={weight35}
 									readOnly
-									onChange={(e) => setWeight35(e.target.value)}
+									onChange={(e) =>
+										setWeight35(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co135}
-									onChange={(e) => setCo135(e.target.value)}
+									onChange={(e) =>
+										setCo135(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co235}
-									onChange={(e) => setCo235(e.target.value)}
+									onChange={(e) =>
+										setCo235(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co335}
-									onChange={(e) => setCo335(e.target.value)}
+									onChange={(e) =>
+										setCo335(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co435}
-									onChange={(e) => setCo435(e.target.value)}
+									onChange={(e) =>
+										setCo435(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co535}
-									onChange={(e) => setCo535(e.target.value)}
+									onChange={(e) =>
+										setCo535(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co635}
-									onChange={(e) => setCo635(e.target.value)}
+									onChange={(e) =>
+										setCo635(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co735}
-									onChange={(e) => setCo735(e.target.value)}
+									onChange={(e) =>
+										setCo735(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 						</tr>
@@ -8007,7 +8979,11 @@ export default function App() {
 								<Textarea
 									readOnly
 									value={indicators36}
-									onChange={(e) => setIndicators36(e.target.value)}
+									onChange={(e) =>
+										setIndicators36(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
@@ -8015,56 +8991,88 @@ export default function App() {
 									type='number'
 									value={weight36}
 									readOnly
-									onChange={(e) => setWeight36(e.target.value)}
+									onChange={(e) =>
+										setWeight36(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co136}
-									onChange={(e) => setCo136(e.target.value)}
+									onChange={(e) =>
+										setCo136(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co236}
-									onChange={(e) => setCo236(e.target.value)}
+									onChange={(e) =>
+										setCo236(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co336}
-									onChange={(e) => setCo336(e.target.value)}
+									onChange={(e) =>
+										setCo336(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co436}
-									onChange={(e) => setCo436(e.target.value)}
+									onChange={(e) =>
+										setCo436(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co536}
-									onChange={(e) => setCo536(e.target.value)}
+									onChange={(e) =>
+										setCo536(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co636}
-									onChange={(e) => setCo636(e.target.value)}
+									onChange={(e) =>
+										setCo636(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co736}
-									onChange={(e) => setCo736(e.target.value)}
+									onChange={(e) =>
+										setCo736(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 						</tr>
@@ -8073,7 +9081,11 @@ export default function App() {
 								<Textarea
 									readOnly
 									value={competency32}
-									onChange={(e) => setCompetency32(e.target.value)}
+									onChange={(e) =>
+										setCompetency32(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 
@@ -8081,7 +9093,11 @@ export default function App() {
 								<Textarea
 									readOnly
 									value={indicators37}
-									onChange={(e) => setIndicators37(e.target.value)}
+									onChange={(e) =>
+										setIndicators37(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
@@ -8089,56 +9105,88 @@ export default function App() {
 									type='number'
 									value={weight37}
 									readOnly
-									onChange={(e) => setWeight37(e.target.value)}
+									onChange={(e) =>
+										setWeight37(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co137}
-									onChange={(e) => setCo137(e.target.value)}
+									onChange={(e) =>
+										setCo137(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co237}
-									onChange={(e) => setCo237(e.target.value)}
+									onChange={(e) =>
+										setCo237(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co337}
-									onChange={(e) => setCo337(e.target.value)}
+									onChange={(e) =>
+										setCo337(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co437}
-									onChange={(e) => setCo437(e.target.value)}
+									onChange={(e) =>
+										setCo437(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co537}
-									onChange={(e) => setCo537(e.target.value)}
+									onChange={(e) =>
+										setCo537(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co637}
-									onChange={(e) => setCo637(e.target.value)}
+									onChange={(e) =>
+										setCo637(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co737}
-									onChange={(e) => setCo737(e.target.value)}
+									onChange={(e) =>
+										setCo737(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 						</tr>
@@ -8147,7 +9195,11 @@ export default function App() {
 								<Textarea
 									readOnly
 									value={indicators38}
-									onChange={(e) => setIndicators38(e.target.value)}
+									onChange={(e) =>
+										setIndicators38(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
@@ -8155,56 +9207,88 @@ export default function App() {
 									type='number'
 									value={weight38}
 									readOnly
-									onChange={(e) => setWeight38(e.target.value)}
+									onChange={(e) =>
+										setWeight38(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co138}
-									onChange={(e) => setCo138(e.target.value)}
+									onChange={(e) =>
+										setCo138(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co238}
-									onChange={(e) => setCo238(e.target.value)}
+									onChange={(e) =>
+										setCo238(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co338}
-									onChange={(e) => setCo338(e.target.value)}
+									onChange={(e) =>
+										setCo338(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co438}
-									onChange={(e) => setCo438(e.target.value)}
+									onChange={(e) =>
+										setCo438(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co538}
-									onChange={(e) => setCo538(e.target.value)}
+									onChange={(e) =>
+										setCo538(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co638}
-									onChange={(e) => setCo638(e.target.value)}
+									onChange={(e) =>
+										setCo638(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co738}
-									onChange={(e) => setCo738(e.target.value)}
+									onChange={(e) =>
+										setCo738(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 						</tr>
@@ -8213,7 +9297,11 @@ export default function App() {
 								<Textarea
 									readOnly
 									value={indicators39}
-									onChange={(e) => setIndicators39(e.target.value)}
+									onChange={(e) =>
+										setIndicators39(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
@@ -8221,56 +9309,88 @@ export default function App() {
 									type='number'
 									value={weight39}
 									readOnly
-									onChange={(e) => setWeight39(e.target.value)}
+									onChange={(e) =>
+										setWeight39(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co139}
-									onChange={(e) => setCo139(e.target.value)}
+									onChange={(e) =>
+										setCo139(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co239}
-									onChange={(e) => setCo239(e.target.value)}
+									onChange={(e) =>
+										setCo239(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co339}
-									onChange={(e) => setCo339(e.target.value)}
+									onChange={(e) =>
+										setCo339(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co439}
-									onChange={(e) => setCo439(e.target.value)}
+									onChange={(e) =>
+										setCo439(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co539}
-									onChange={(e) => setCo539(e.target.value)}
+									onChange={(e) =>
+										setCo539(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co639}
-									onChange={(e) => setCo639(e.target.value)}
+									onChange={(e) =>
+										setCo639(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co739}
-									onChange={(e) => setCo739(e.target.value)}
+									onChange={(e) =>
+										setCo739(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 						</tr>
@@ -8279,14 +9399,22 @@ export default function App() {
 								<Textarea
 									readOnly
 									value={competency33}
-									onChange={(e) => setCompetency33(e.target.value)}
+									onChange={(e) =>
+										setCompetency33(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Textarea
 									readOnly
 									value={indicators310}
-									onChange={(e) => setIndicators310(e.target.value)}
+									onChange={(e) =>
+										setIndicators310(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
@@ -8294,56 +9422,88 @@ export default function App() {
 									type='number'
 									value={weight310}
 									readOnly
-									onChange={(e) => setWeight310(e.target.value)}
+									onChange={(e) =>
+										setWeight310(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co1310}
-									onChange={(e) => setCo1310(e.target.value)}
+									onChange={(e) =>
+										setCo1310(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co2310}
-									onChange={(e) => setCo2310(e.target.value)}
+									onChange={(e) =>
+										setCo2310(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co3310}
-									onChange={(e) => setCo3310(e.target.value)}
+									onChange={(e) =>
+										setCo3310(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co4310}
-									onChange={(e) => setCo4310(e.target.value)}
+									onChange={(e) =>
+										setCo4310(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co5310}
-									onChange={(e) => setCo5310(e.target.value)}
+									onChange={(e) =>
+										setCo5310(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co6310}
-									onChange={(e) => setCo6310(e.target.value)}
+									onChange={(e) =>
+										setCo6310(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co7310}
-									onChange={(e) => setCo7310(e.target.value)}
+									onChange={(e) =>
+										setCo7310(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 						</tr>
@@ -8352,7 +9512,11 @@ export default function App() {
 								<Textarea
 									readOnly
 									value={indicators311}
-									onChange={(e) => setIndicators311(e.target.value)}
+									onChange={(e) =>
+										setIndicators311(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
@@ -8360,56 +9524,88 @@ export default function App() {
 									type='number'
 									value={weight311}
 									readOnly
-									onChange={(e) => setWeight311(e.target.value)}
+									onChange={(e) =>
+										setWeight311(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co1311}
-									onChange={(e) => setCo1311(e.target.value)}
+									onChange={(e) =>
+										setCo1311(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co2311}
-									onChange={(e) => setCo2311(e.target.value)}
+									onChange={(e) =>
+										setCo2311(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co3311}
-									onChange={(e) => setCo3311(e.target.value)}
+									onChange={(e) =>
+										setCo3311(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co4311}
-									onChange={(e) => setCo4311(e.target.value)}
+									onChange={(e) =>
+										setCo4311(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co5311}
-									onChange={(e) => setCo5311(e.target.value)}
+									onChange={(e) =>
+										setCo5311(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co6311}
-									onChange={(e) => setCo6311(e.target.value)}
+									onChange={(e) =>
+										setCo6311(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co7311}
-									onChange={(e) => setCo7311(e.target.value)}
+									onChange={(e) =>
+										setCo7311(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 						</tr>
@@ -8418,14 +9614,22 @@ export default function App() {
 								<Textarea
 									readOnly
 									value={competency34}
-									onChange={(e) => setCompetency34(e.target.value)}
+									onChange={(e) =>
+										setCompetency34(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Textarea
 									readOnly
 									value={indicators312}
-									onChange={(e) => setIndicators312(e.target.value)}
+									onChange={(e) =>
+										setIndicators312(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
@@ -8433,56 +9637,88 @@ export default function App() {
 									type='number'
 									value={weight312}
 									readOnly
-									onChange={(e) => setWeight312(e.target.value)}
+									onChange={(e) =>
+										setWeight312(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co1312}
-									onChange={(e) => setCo1312(e.target.value)}
+									onChange={(e) =>
+										setCo1312(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co2312}
-									onChange={(e) => setCo2312(e.target.value)}
+									onChange={(e) =>
+										setCo2312(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co3312}
-									onChange={(e) => setCo3312(e.target.value)}
+									onChange={(e) =>
+										setCo3312(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co4312}
-									onChange={(e) => setCo4312(e.target.value)}
+									onChange={(e) =>
+										setCo4312(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co5312}
-									onChange={(e) => setCo5312(e.target.value)}
+									onChange={(e) =>
+										setCo5312(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co6312}
-									onChange={(e) => setCo6312(e.target.value)}
+									onChange={(e) =>
+										setCo6312(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co7312}
-									onChange={(e) => setCo7312(e.target.value)}
+									onChange={(e) =>
+										setCo7312(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 						</tr>
@@ -8491,7 +9727,11 @@ export default function App() {
 								<Textarea
 									readOnly
 									value={indicators313}
-									onChange={(e) => setIndicators313(e.target.value)}
+									onChange={(e) =>
+										setIndicators313(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
@@ -8499,56 +9739,88 @@ export default function App() {
 									type='number'
 									value={weight313}
 									readOnly
-									onChange={(e) => setWeight313(e.target.value)}
+									onChange={(e) =>
+										setWeight313(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co1313}
-									onChange={(e) => setCo1313(e.target.value)}
+									onChange={(e) =>
+										setCo1313(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co2313}
-									onChange={(e) => setCo2313(e.target.value)}
+									onChange={(e) =>
+										setCo2313(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co3313}
-									onChange={(e) => setCo3313(e.target.value)}
+									onChange={(e) =>
+										setCo3313(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co4313}
-									onChange={(e) => setCo4313(e.target.value)}
+									onChange={(e) =>
+										setCo4313(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co5313}
-									onChange={(e) => setCo5313(e.target.value)}
+									onChange={(e) =>
+										setCo5313(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co6313}
-									onChange={(e) => setCo6313(e.target.value)}
+									onChange={(e) =>
+										setCo6313(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co7313}
-									onChange={(e) => setCo7313(e.target.value)}
+									onChange={(e) =>
+										setCo7313(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 						</tr>
@@ -8566,7 +9838,11 @@ export default function App() {
 									type='number'
 									value={po3mapco1.toString()}
 									readOnly
-									onChange={(e) => setPo3mapco1(e.target.value)}
+									onChange={(e) =>
+										setPo3mapco1(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
@@ -8574,7 +9850,11 @@ export default function App() {
 									type='number'
 									value={po3mapco2.toString()}
 									readOnly
-									onChange={(e) => setPo3mapco2(e.target.value)}
+									onChange={(e) =>
+										setPo3mapco2(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>{" "}
 							</td>
 							<td>
@@ -8582,7 +9862,11 @@ export default function App() {
 									type='number'
 									value={po3mapco3.toString()}
 									readOnly
-									onChange={(e) => setPo3mapco3(e.target.value)}
+									onChange={(e) =>
+										setPo3mapco3(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>{" "}
 							</td>
 							<td>
@@ -8590,7 +9874,11 @@ export default function App() {
 									type='number'
 									value={po3mapco4.toString()}
 									readOnly
-									onChange={(e) => setPo3mapco4(e.target.value)}
+									onChange={(e) =>
+										setPo3mapco4(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>{" "}
 							</td>
 							<td>
@@ -8598,7 +9886,11 @@ export default function App() {
 									type='number'
 									value={po3mapco5.toString()}
 									readOnly
-									onChange={(e) => setPo3mapco5(e.target.value)}
+									onChange={(e) =>
+										setPo3mapco5(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>{" "}
 							</td>
 							<td>
@@ -8606,7 +9898,11 @@ export default function App() {
 									type='number'
 									value={po3mapco6.toString()}
 									readOnly
-									onChange={(e) => setPo3mapco6(e.target.value)}
+									onChange={(e) =>
+										setPo3mapco6(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>{" "}
 							</td>
 							<td>
@@ -8614,7 +9910,11 @@ export default function App() {
 									type='number'
 									value={po3mapco7.toString()}
 									readOnly
-									onChange={(e) => setPo3mapco7(e.target.value)}
+									onChange={(e) =>
+										setPo3mapco7(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>{" "}
 							</td>
 						</tr>
@@ -8625,7 +9925,11 @@ export default function App() {
 								<Textarea
 									readOnly
 									value={po41}
-									onChange={(e) => setPo41(e.target.value)}
+									onChange={(e) =>
+										setPo41(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 									className='my-6'
 								/>
 							</td>
@@ -8633,14 +9937,22 @@ export default function App() {
 								<Textarea
 									readOnly
 									value={competency41}
-									onChange={(e) => setCompetency41(e.target.value)}
+									onChange={(e) =>
+										setCompetency41(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Textarea
 									readOnly
 									value={indicators41}
-									onChange={(e) => setIndicators41(e.target.value)}
+									onChange={(e) =>
+										setIndicators41(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
@@ -8648,56 +9960,88 @@ export default function App() {
 									type='number'
 									readOnly
 									value={weight41}
-									onChange={(e) => setWeight41(e.target.value)}
+									onChange={(e) =>
+										setWeight41(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co141}
-									onChange={(e) => setCo141(e.target.value)}
+									onChange={(e) =>
+										setCo141(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co241}
-									onChange={(e) => setCo241(e.target.value)}
+									onChange={(e) =>
+										setCo241(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co341}
-									onChange={(e) => setCo341(e.target.value)}
+									onChange={(e) =>
+										setCo341(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co441}
-									onChange={(e) => setCo441(e.target.value)}
+									onChange={(e) =>
+										setCo441(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co541}
-									onChange={(e) => setCo541(e.target.value)}
+									onChange={(e) =>
+										setCo541(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co641}
-									onChange={(e) => setCo641(e.target.value)}
+									onChange={(e) =>
+										setCo641(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co741}
-									onChange={(e) => setCo741(e.target.value)}
+									onChange={(e) =>
+										setCo741(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 						</tr>
@@ -8706,7 +10050,11 @@ export default function App() {
 								<Textarea
 									readOnly
 									value={indicators42}
-									onChange={(e) => setIndicators42(e.target.value)}
+									onChange={(e) =>
+										setIndicators42(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
@@ -8714,56 +10062,88 @@ export default function App() {
 									type='number'
 									readOnly
 									value={weight42}
-									onChange={(e) => setWeight42(e.target.value)}
+									onChange={(e) =>
+										setWeight42(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co142}
-									onChange={(e) => setCo142(e.target.value)}
+									onChange={(e) =>
+										setCo142(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co242}
-									onChange={(e) => setCo242(e.target.value)}
+									onChange={(e) =>
+										setCo242(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co342}
-									onChange={(e) => setCo342(e.target.value)}
+									onChange={(e) =>
+										setCo342(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co442}
-									onChange={(e) => setCo442(e.target.value)}
+									onChange={(e) =>
+										setCo442(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co542}
-									onChange={(e) => setCo542(e.target.value)}
+									onChange={(e) =>
+										setCo542(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co642}
-									onChange={(e) => setCo642(e.target.value)}
+									onChange={(e) =>
+										setCo642(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co742}
-									onChange={(e) => setCo742(e.target.value)}
+									onChange={(e) =>
+										setCo742(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 						</tr>
@@ -8772,7 +10152,11 @@ export default function App() {
 								<Textarea
 									readOnly
 									value={indicators43}
-									onChange={(e) => setIndicators43(e.target.value)}
+									onChange={(e) =>
+										setIndicators43(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
@@ -8780,56 +10164,88 @@ export default function App() {
 									type='number'
 									readOnly
 									value={weight43}
-									onChange={(e) => setWeight43(e.target.value)}
+									onChange={(e) =>
+										setWeight43(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co143}
-									onChange={(e) => setCo143(e.target.value)}
+									onChange={(e) =>
+										setCo143(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co243}
-									onChange={(e) => setCo243(e.target.value)}
+									onChange={(e) =>
+										setCo243(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co343}
-									onChange={(e) => setCo343(e.target.value)}
+									onChange={(e) =>
+										setCo343(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co443}
-									onChange={(e) => setCo443(e.target.value)}
+									onChange={(e) =>
+										setCo443(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co543}
-									onChange={(e) => setCo543(e.target.value)}
+									onChange={(e) =>
+										setCo543(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co643}
-									onChange={(e) => setCo643(e.target.value)}
+									onChange={(e) =>
+										setCo643(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co743}
-									onChange={(e) => setCo743(e.target.value)}
+									onChange={(e) =>
+										setCo743(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 						</tr>
@@ -8838,7 +10254,11 @@ export default function App() {
 								<Textarea
 									readOnly
 									value={indicators44}
-									onChange={(e) => setIndicators44(e.target.value)}
+									onChange={(e) =>
+										setIndicators44(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
@@ -8846,56 +10266,88 @@ export default function App() {
 									type='number'
 									readOnly
 									value={weight44}
-									onChange={(e) => setWeight44(e.target.value)}
+									onChange={(e) =>
+										setWeight44(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co144}
-									onChange={(e) => setCo144(e.target.value)}
+									onChange={(e) =>
+										setCo144(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co244}
-									onChange={(e) => setCo244(e.target.value)}
+									onChange={(e) =>
+										setCo244(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co344}
-									onChange={(e) => setCo344(e.target.value)}
+									onChange={(e) =>
+										setCo344(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co444}
-									onChange={(e) => setCo444(e.target.value)}
+									onChange={(e) =>
+										setCo444(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co544}
-									onChange={(e) => setCo544(e.target.value)}
+									onChange={(e) =>
+										setCo544(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co644}
-									onChange={(e) => setCo644(e.target.value)}
+									onChange={(e) =>
+										setCo644(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co744}
-									onChange={(e) => setCo744(e.target.value)}
+									onChange={(e) =>
+										setCo744(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 						</tr>
@@ -8904,14 +10356,22 @@ export default function App() {
 								<Textarea
 									readOnly
 									value={competency42}
-									onChange={(e) => setCompetency42(e.target.value)}
+									onChange={(e) =>
+										setCompetency42(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Textarea
 									readOnly
 									value={indicators45}
-									onChange={(e) => setIndicators45(e.target.value)}
+									onChange={(e) =>
+										setIndicators45(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
@@ -8919,56 +10379,88 @@ export default function App() {
 									type='number'
 									value={weight45}
 									readOnly
-									onChange={(e) => setWeight45(e.target.value)}
+									onChange={(e) =>
+										setWeight45(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co145}
-									onChange={(e) => setCo145(e.target.value)}
+									onChange={(e) =>
+										setCo145(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co245}
-									onChange={(e) => setCo245(e.target.value)}
+									onChange={(e) =>
+										setCo245(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co345}
-									onChange={(e) => setCo345(e.target.value)}
+									onChange={(e) =>
+										setCo345(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co445}
-									onChange={(e) => setCo445(e.target.value)}
+									onChange={(e) =>
+										setCo445(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co545}
-									onChange={(e) => setCo545(e.target.value)}
+									onChange={(e) =>
+										setCo545(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co645}
-									onChange={(e) => setCo645(e.target.value)}
+									onChange={(e) =>
+										setCo645(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co745}
-									onChange={(e) => setCo745(e.target.value)}
+									onChange={(e) =>
+										setCo745(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 						</tr>
@@ -8977,7 +10469,11 @@ export default function App() {
 								<Textarea
 									readOnly
 									value={indicators46}
-									onChange={(e) => setIndicators46(e.target.value)}
+									onChange={(e) =>
+										setIndicators46(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
@@ -8985,56 +10481,88 @@ export default function App() {
 									type='number'
 									value={weight46}
 									readOnly
-									onChange={(e) => setWeight46(e.target.value)}
+									onChange={(e) =>
+										setWeight46(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co146}
-									onChange={(e) => setCo146(e.target.value)}
+									onChange={(e) =>
+										setCo146(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co246}
-									onChange={(e) => setCo246(e.target.value)}
+									onChange={(e) =>
+										setCo246(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co346}
-									onChange={(e) => setCo346(e.target.value)}
+									onChange={(e) =>
+										setCo346(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co446}
-									onChange={(e) => setCo446(e.target.value)}
+									onChange={(e) =>
+										setCo446(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co546}
-									onChange={(e) => setCo546(e.target.value)}
+									onChange={(e) =>
+										setCo546(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co646}
-									onChange={(e) => setCo646(e.target.value)}
+									onChange={(e) =>
+										setCo646(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co746}
-									onChange={(e) => setCo746(e.target.value)}
+									onChange={(e) =>
+										setCo746(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 						</tr>
@@ -9043,7 +10571,11 @@ export default function App() {
 								<Textarea
 									readOnly
 									value={competency43}
-									onChange={(e) => setCompetency43(e.target.value)}
+									onChange={(e) =>
+										setCompetency43(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 
@@ -9051,7 +10583,11 @@ export default function App() {
 								<Textarea
 									readOnly
 									value={indicators47}
-									onChange={(e) => setIndicators47(e.target.value)}
+									onChange={(e) =>
+										setIndicators47(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
@@ -9059,56 +10595,88 @@ export default function App() {
 									type='number'
 									value={weight47}
 									readOnly
-									onChange={(e) => setWeight47(e.target.value)}
+									onChange={(e) =>
+										setWeight47(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co147}
-									onChange={(e) => setCo147(e.target.value)}
+									onChange={(e) =>
+										setCo147(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co247}
-									onChange={(e) => setCo247(e.target.value)}
+									onChange={(e) =>
+										setCo247(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co347}
-									onChange={(e) => setCo347(e.target.value)}
+									onChange={(e) =>
+										setCo347(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co447}
-									onChange={(e) => setCo447(e.target.value)}
+									onChange={(e) =>
+										setCo447(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co547}
-									onChange={(e) => setCo547(e.target.value)}
+									onChange={(e) =>
+										setCo547(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co647}
-									onChange={(e) => setCo647(e.target.value)}
+									onChange={(e) =>
+										setCo647(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co747}
-									onChange={(e) => setCo747(e.target.value)}
+									onChange={(e) =>
+										setCo747(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 						</tr>
@@ -9117,7 +10685,11 @@ export default function App() {
 								<Textarea
 									readOnly
 									value={indicators48}
-									onChange={(e) => setIndicators48(e.target.value)}
+									onChange={(e) =>
+										setIndicators48(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
@@ -9125,56 +10697,88 @@ export default function App() {
 									type='number'
 									value={weight48}
 									readOnly
-									onChange={(e) => setWeight48(e.target.value)}
+									onChange={(e) =>
+										setWeight48(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co148}
-									onChange={(e) => setCo148(e.target.value)}
+									onChange={(e) =>
+										setCo148(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co248}
-									onChange={(e) => setCo248(e.target.value)}
+									onChange={(e) =>
+										setCo248(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co348}
-									onChange={(e) => setCo348(e.target.value)}
+									onChange={(e) =>
+										setCo348(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co448}
-									onChange={(e) => setCo448(e.target.value)}
+									onChange={(e) =>
+										setCo448(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co548}
-									onChange={(e) => setCo548(e.target.value)}
+									onChange={(e) =>
+										setCo548(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co648}
-									onChange={(e) => setCo648(e.target.value)}
+									onChange={(e) =>
+										setCo648(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co748}
-									onChange={(e) => setCo748(e.target.value)}
+									onChange={(e) =>
+										setCo748(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 						</tr>
@@ -9183,7 +10787,11 @@ export default function App() {
 								<Textarea
 									readOnly
 									value={indicators49}
-									onChange={(e) => setIndicators49(e.target.value)}
+									onChange={(e) =>
+										setIndicators49(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
@@ -9191,56 +10799,88 @@ export default function App() {
 									type='number'
 									value={weight49}
 									readOnly
-									onChange={(e) => setWeight49(e.target.value)}
+									onChange={(e) =>
+										setWeight49(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co149}
-									onChange={(e) => setCo149(e.target.value)}
+									onChange={(e) =>
+										setCo149(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co249}
-									onChange={(e) => setCo249(e.target.value)}
+									onChange={(e) =>
+										setCo249(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co349}
-									onChange={(e) => setCo349(e.target.value)}
+									onChange={(e) =>
+										setCo349(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co449}
-									onChange={(e) => setCo449(e.target.value)}
+									onChange={(e) =>
+										setCo449(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co549}
-									onChange={(e) => setCo549(e.target.value)}
+									onChange={(e) =>
+										setCo549(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co649}
-									onChange={(e) => setCo649(e.target.value)}
+									onChange={(e) =>
+										setCo649(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co749}
-									onChange={(e) => setCo749(e.target.value)}
+									onChange={(e) =>
+										setCo749(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 						</tr>
@@ -9249,7 +10889,11 @@ export default function App() {
 								<Textarea
 									readOnly
 									value={indicators410}
-									onChange={(e) => setIndicators410(e.target.value)}
+									onChange={(e) =>
+										setIndicators410(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
@@ -9257,56 +10901,88 @@ export default function App() {
 									type='number'
 									value={weight410}
 									readOnly
-									onChange={(e) => setWeight410(e.target.value)}
+									onChange={(e) =>
+										setWeight410(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co1410}
-									onChange={(e) => setCo1410(e.target.value)}
+									onChange={(e) =>
+										setCo1410(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co2410}
-									onChange={(e) => setCo2410(e.target.value)}
+									onChange={(e) =>
+										setCo2410(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co3410}
-									onChange={(e) => setCo3410(e.target.value)}
+									onChange={(e) =>
+										setCo3410(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co4410}
-									onChange={(e) => setCo4410(e.target.value)}
+									onChange={(e) =>
+										setCo4410(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co5410}
-									onChange={(e) => setCo5410(e.target.value)}
+									onChange={(e) =>
+										setCo5410(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co6410}
-									onChange={(e) => setCo6410(e.target.value)}
+									onChange={(e) =>
+										setCo6410(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co7410}
-									onChange={(e) => setCo7410(e.target.value)}
+									onChange={(e) =>
+										setCo7410(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 						</tr>
@@ -9325,7 +11001,11 @@ export default function App() {
 									type='number'
 									value={po4mapco1.toString()}
 									readOnly
-									onChange={(e) => setPo4mapco1(e.target.value)}
+									onChange={(e) =>
+										setPo4mapco1(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
@@ -9333,7 +11013,11 @@ export default function App() {
 									type='number'
 									value={po4mapco2.toString()}
 									readOnly
-									onChange={(e) => setPo4mapco2(e.target.value)}
+									onChange={(e) =>
+										setPo4mapco2(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>{" "}
 							</td>
 							<td>
@@ -9341,7 +11025,11 @@ export default function App() {
 									type='number'
 									value={po4mapco3.toString()}
 									readOnly
-									onChange={(e) => setPo4mapco3(e.target.value)}
+									onChange={(e) =>
+										setPo4mapco3(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>{" "}
 							</td>
 							<td>
@@ -9349,7 +11037,11 @@ export default function App() {
 									type='number'
 									value={po4mapco4.toString()}
 									readOnly
-									onChange={(e) => setPo4mapco4(e.target.value)}
+									onChange={(e) =>
+										setPo4mapco4(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>{" "}
 							</td>
 							<td>
@@ -9357,7 +11049,11 @@ export default function App() {
 									type='number'
 									value={po4mapco5.toString()}
 									readOnly
-									onChange={(e) => setPo4mapco5(e.target.value)}
+									onChange={(e) =>
+										setPo4mapco5(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>{" "}
 							</td>
 							<td>
@@ -9365,7 +11061,11 @@ export default function App() {
 									type='number'
 									value={po4mapco6.toString()}
 									readOnly
-									onChange={(e) => setPo4mapco6(e.target.value)}
+									onChange={(e) =>
+										setPo4mapco6(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>{" "}
 							</td>
 							<td>
@@ -9373,7 +11073,11 @@ export default function App() {
 									type='number'
 									value={po4mapco7.toString()}
 									readOnly
-									onChange={(e) => setPo4mapco7(e.target.value)}
+									onChange={(e) =>
+										setPo4mapco7(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>{" "}
 							</td>
 						</tr>
@@ -9384,7 +11088,11 @@ export default function App() {
 								<Textarea
 									readOnly
 									value={po51}
-									onChange={(e) => setPo51(e.target.value)}
+									onChange={(e) =>
+										setPo51(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 									className='my-6'
 								/>
 							</td>
@@ -9392,14 +11100,22 @@ export default function App() {
 								<Textarea
 									readOnly
 									value={competency51}
-									onChange={(e) => setCompetency51(e.target.value)}
+									onChange={(e) =>
+										setCompetency51(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Textarea
 									readOnly
 									value={indicators51}
-									onChange={(e) => setIndicators51(e.target.value)}
+									onChange={(e) =>
+										setIndicators51(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
@@ -9407,56 +11123,88 @@ export default function App() {
 									type='number'
 									readOnly
 									value={weight51}
-									onChange={(e) => setWeight51(e.target.value)}
+									onChange={(e) =>
+										setWeight51(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co151}
-									onChange={(e) => setCo151(e.target.value)}
+									onChange={(e) =>
+										setCo151(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co251}
-									onChange={(e) => setCo251(e.target.value)}
+									onChange={(e) =>
+										setCo251(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co351}
-									onChange={(e) => setCo351(e.target.value)}
+									onChange={(e) =>
+										setCo351(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co451}
-									onChange={(e) => setCo451(e.target.value)}
+									onChange={(e) =>
+										setCo451(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co551}
-									onChange={(e) => setCo551(e.target.value)}
+									onChange={(e) =>
+										setCo551(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co651}
-									onChange={(e) => setCo651(e.target.value)}
+									onChange={(e) =>
+										setCo651(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co751}
-									onChange={(e) => setCo751(e.target.value)}
+									onChange={(e) =>
+										setCo751(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 						</tr>
@@ -9465,7 +11213,11 @@ export default function App() {
 								<Textarea
 									readOnly
 									value={indicators52}
-									onChange={(e) => setIndicators52(e.target.value)}
+									onChange={(e) =>
+										setIndicators52(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
@@ -9473,56 +11225,88 @@ export default function App() {
 									type='number'
 									readOnly
 									value={weight52}
-									onChange={(e) => setWeight52(e.target.value)}
+									onChange={(e) =>
+										setWeight52(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co152}
-									onChange={(e) => setCo152(e.target.value)}
+									onChange={(e) =>
+										setCo152(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co252}
-									onChange={(e) => setCo252(e.target.value)}
+									onChange={(e) =>
+										setCo252(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co352}
-									onChange={(e) => setCo352(e.target.value)}
+									onChange={(e) =>
+										setCo352(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co452}
-									onChange={(e) => setCo452(e.target.value)}
+									onChange={(e) =>
+										setCo452(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co552}
-									onChange={(e) => setCo552(e.target.value)}
+									onChange={(e) =>
+										setCo552(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co652}
-									onChange={(e) => setCo652(e.target.value)}
+									onChange={(e) =>
+										setCo652(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co752}
-									onChange={(e) => setCo752(e.target.value)}
+									onChange={(e) =>
+										setCo752(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 						</tr>
@@ -9531,14 +11315,22 @@ export default function App() {
 								<Textarea
 									readOnly
 									value={competency52}
-									onChange={(e) => setCompetency52(e.target.value)}
+									onChange={(e) =>
+										setCompetency52(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Textarea
 									readOnly
 									value={indicators53}
-									onChange={(e) => setIndicators53(e.target.value)}
+									onChange={(e) =>
+										setIndicators53(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
@@ -9546,56 +11338,88 @@ export default function App() {
 									type='number'
 									readOnly
 									value={weight53}
-									onChange={(e) => setWeight53(e.target.value)}
+									onChange={(e) =>
+										setWeight53(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co153}
-									onChange={(e) => setCo153(e.target.value)}
+									onChange={(e) =>
+										setCo153(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co253}
-									onChange={(e) => setCo253(e.target.value)}
+									onChange={(e) =>
+										setCo253(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co353}
-									onChange={(e) => setCo353(e.target.value)}
+									onChange={(e) =>
+										setCo353(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co453}
-									onChange={(e) => setCo453(e.target.value)}
+									onChange={(e) =>
+										setCo453(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co553}
-									onChange={(e) => setCo553(e.target.value)}
+									onChange={(e) =>
+										setCo553(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co653}
-									onChange={(e) => setCo653(e.target.value)}
+									onChange={(e) =>
+										setCo653(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co753}
-									onChange={(e) => setCo753(e.target.value)}
+									onChange={(e) =>
+										setCo753(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 						</tr>
@@ -9604,7 +11428,11 @@ export default function App() {
 								<Textarea
 									readOnly
 									value={indicators54}
-									onChange={(e) => setIndicators54(e.target.value)}
+									onChange={(e) =>
+										setIndicators54(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
@@ -9612,56 +11440,88 @@ export default function App() {
 									type='number'
 									readOnly
 									value={weight54}
-									onChange={(e) => setWeight54(e.target.value)}
+									onChange={(e) =>
+										setWeight54(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co154}
-									onChange={(e) => setCo154(e.target.value)}
+									onChange={(e) =>
+										setCo154(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co254}
-									onChange={(e) => setCo254(e.target.value)}
+									onChange={(e) =>
+										setCo254(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co354}
-									onChange={(e) => setCo354(e.target.value)}
+									onChange={(e) =>
+										setCo354(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co454}
-									onChange={(e) => setCo454(e.target.value)}
+									onChange={(e) =>
+										setCo454(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co554}
-									onChange={(e) => setCo554(e.target.value)}
+									onChange={(e) =>
+										setCo554(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co654}
-									onChange={(e) => setCo654(e.target.value)}
+									onChange={(e) =>
+										setCo654(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co754}
-									onChange={(e) => setCo754(e.target.value)}
+									onChange={(e) =>
+										setCo754(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 						</tr>
@@ -9670,14 +11530,22 @@ export default function App() {
 								<Textarea
 									readOnly
 									value={competency53}
-									onChange={(e) => setCompetency53(e.target.value)}
+									onChange={(e) =>
+										setCompetency53(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Textarea
 									readOnly
 									value={indicators55}
-									onChange={(e) => setIndicators55(e.target.value)}
+									onChange={(e) =>
+										setIndicators55(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
@@ -9685,56 +11553,88 @@ export default function App() {
 									type='number'
 									value={weight55}
 									readOnly
-									onChange={(e) => setWeight55(e.target.value)}
+									onChange={(e) =>
+										setWeight55(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co155}
-									onChange={(e) => setCo155(e.target.value)}
+									onChange={(e) =>
+										setCo155(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co255}
-									onChange={(e) => setCo255(e.target.value)}
+									onChange={(e) =>
+										setCo255(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co355}
-									onChange={(e) => setCo355(e.target.value)}
+									onChange={(e) =>
+										setCo355(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co455}
-									onChange={(e) => setCo455(e.target.value)}
+									onChange={(e) =>
+										setCo455(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co555}
-									onChange={(e) => setCo555(e.target.value)}
+									onChange={(e) =>
+										setCo555(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co655}
-									onChange={(e) => setCo655(e.target.value)}
+									onChange={(e) =>
+										setCo655(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co755}
-									onChange={(e) => setCo755(e.target.value)}
+									onChange={(e) =>
+										setCo755(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 						</tr>
@@ -9743,7 +11643,11 @@ export default function App() {
 								<Textarea
 									readOnly
 									value={indicators56}
-									onChange={(e) => setIndicators56(e.target.value)}
+									onChange={(e) =>
+										setIndicators56(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
@@ -9751,56 +11655,88 @@ export default function App() {
 									type='number'
 									value={weight56}
 									readOnly
-									onChange={(e) => setWeight56(e.target.value)}
+									onChange={(e) =>
+										setWeight56(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co156}
-									onChange={(e) => setCo156(e.target.value)}
+									onChange={(e) =>
+										setCo156(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co256}
-									onChange={(e) => setCo256(e.target.value)}
+									onChange={(e) =>
+										setCo256(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co356}
-									onChange={(e) => setCo356(e.target.value)}
+									onChange={(e) =>
+										setCo356(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co456}
-									onChange={(e) => setCo456(e.target.value)}
+									onChange={(e) =>
+										setCo456(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co556}
-									onChange={(e) => setCo556(e.target.value)}
+									onChange={(e) =>
+										setCo556(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co656}
-									onChange={(e) => setCo656(e.target.value)}
+									onChange={(e) =>
+										setCo656(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co756}
-									onChange={(e) => setCo756(e.target.value)}
+									onChange={(e) =>
+										setCo756(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 						</tr>
@@ -9818,7 +11754,11 @@ export default function App() {
 									type='number'
 									value={po5mapco1.toString()}
 									readOnly
-									onChange={(e) => setPo5mapco1(e.target.value)}
+									onChange={(e) =>
+										setPo5mapco1(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
@@ -9826,7 +11766,11 @@ export default function App() {
 									type='number'
 									value={po5mapco2.toString()}
 									readOnly
-									onChange={(e) => setPo5mapco2(e.target.value)}
+									onChange={(e) =>
+										setPo5mapco2(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>{" "}
 							</td>
 							<td>
@@ -9834,7 +11778,11 @@ export default function App() {
 									type='number'
 									value={po5mapco3.toString()}
 									readOnly
-									onChange={(e) => setPo5mapco3(e.target.value)}
+									onChange={(e) =>
+										setPo5mapco3(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>{" "}
 							</td>
 							<td>
@@ -9842,7 +11790,11 @@ export default function App() {
 									type='number'
 									value={po5mapco4.toString()}
 									readOnly
-									onChange={(e) => setPo5mapco4(e.target.value)}
+									onChange={(e) =>
+										setPo5mapco4(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>{" "}
 							</td>
 							<td>
@@ -9850,7 +11802,11 @@ export default function App() {
 									type='number'
 									value={po5mapco5.toString()}
 									readOnly
-									onChange={(e) => setPo5mapco5(e.target.value)}
+									onChange={(e) =>
+										setPo5mapco5(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>{" "}
 							</td>
 							<td>
@@ -9858,7 +11814,11 @@ export default function App() {
 									type='number'
 									value={po5mapco6.toString()}
 									readOnly
-									onChange={(e) => setPo5mapco6(e.target.value)}
+									onChange={(e) =>
+										setPo5mapco6(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>{" "}
 							</td>
 							<td>
@@ -9866,7 +11826,11 @@ export default function App() {
 									type='number'
 									value={po5mapco7.toString()}
 									readOnly
-									onChange={(e) => setPo5mapco7(e.target.value)}
+									onChange={(e) =>
+										setPo5mapco7(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>{" "}
 							</td>
 						</tr>
@@ -9877,7 +11841,11 @@ export default function App() {
 								<Textarea
 									readOnly
 									value={po61}
-									onChange={(e) => setPo61(e.target.value)}
+									onChange={(e) =>
+										setPo61(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 									className='my-6'
 								/>
 							</td>
@@ -9885,14 +11853,22 @@ export default function App() {
 								<Textarea
 									readOnly
 									value={competency61}
-									onChange={(e) => setCompetency61(e.target.value)}
+									onChange={(e) =>
+										setCompetency61(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Textarea
 									readOnly
 									value={indicators61}
-									onChange={(e) => setIndicators61(e.target.value)}
+									onChange={(e) =>
+										setIndicators61(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
@@ -9900,56 +11876,88 @@ export default function App() {
 									type='number'
 									readOnly
 									value={weight61}
-									onChange={(e) => setWeight61(e.target.value)}
+									onChange={(e) =>
+										setWeight61(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co161}
-									onChange={(e) => setCo161(e.target.value)}
+									onChange={(e) =>
+										setCo161(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co261}
-									onChange={(e) => setCo261(e.target.value)}
+									onChange={(e) =>
+										setCo261(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co361}
-									onChange={(e) => setCo361(e.target.value)}
+									onChange={(e) =>
+										setCo361(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co461}
-									onChange={(e) => setCo461(e.target.value)}
+									onChange={(e) =>
+										setCo461(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co561}
-									onChange={(e) => setCo561(e.target.value)}
+									onChange={(e) =>
+										setCo561(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co661}
-									onChange={(e) => setCo661(e.target.value)}
+									onChange={(e) =>
+										setCo661(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co761}
-									onChange={(e) => setCo761(e.target.value)}
+									onChange={(e) =>
+										setCo761(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 						</tr>
@@ -9958,14 +11966,22 @@ export default function App() {
 								<Textarea
 									readOnly
 									value={competency62}
-									onChange={(e) => setCompetency62(e.target.value)}
+									onChange={(e) =>
+										setCompetency62(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Textarea
 									readOnly
 									value={indicators62}
-									onChange={(e) => setIndicators62(e.target.value)}
+									onChange={(e) =>
+										setIndicators62(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
@@ -9973,56 +11989,88 @@ export default function App() {
 									type='number'
 									readOnly
 									value={weight62}
-									onChange={(e) => setWeight62(e.target.value)}
+									onChange={(e) =>
+										setWeight62(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co162}
-									onChange={(e) => setCo162(e.target.value)}
+									onChange={(e) =>
+										setCo162(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co262}
-									onChange={(e) => setCo262(e.target.value)}
+									onChange={(e) =>
+										setCo262(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co362}
-									onChange={(e) => setCo362(e.target.value)}
+									onChange={(e) =>
+										setCo362(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co462}
-									onChange={(e) => setCo462(e.target.value)}
+									onChange={(e) =>
+										setCo462(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co562}
-									onChange={(e) => setCo562(e.target.value)}
+									onChange={(e) =>
+										setCo562(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co662}
-									onChange={(e) => setCo662(e.target.value)}
+									onChange={(e) =>
+										setCo662(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co762}
-									onChange={(e) => setCo762(e.target.value)}
+									onChange={(e) =>
+										setCo762(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 						</tr>
@@ -10041,7 +12089,11 @@ export default function App() {
 									type='number'
 									value={po6mapco1.toString()}
 									readOnly
-									onChange={(e) => setPo6mapco1(e.target.value)}
+									onChange={(e) =>
+										setPo6mapco1(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
@@ -10049,7 +12101,11 @@ export default function App() {
 									type='number'
 									value={po6mapco2.toString()}
 									readOnly
-									onChange={(e) => setPo6mapco2(e.target.value)}
+									onChange={(e) =>
+										setPo6mapco2(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>{" "}
 							</td>
 							<td>
@@ -10057,7 +12113,11 @@ export default function App() {
 									type='number'
 									value={po6mapco3.toString()}
 									readOnly
-									onChange={(e) => setPo6mapco3(e.target.value)}
+									onChange={(e) =>
+										setPo6mapco3(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>{" "}
 							</td>
 							<td>
@@ -10065,7 +12125,11 @@ export default function App() {
 									type='number'
 									value={po6mapco4.toString()}
 									readOnly
-									onChange={(e) => setPo6mapco4(e.target.value)}
+									onChange={(e) =>
+										setPo6mapco4(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>{" "}
 							</td>
 							<td>
@@ -10073,7 +12137,11 @@ export default function App() {
 									type='number'
 									value={po6mapco5.toString()}
 									readOnly
-									onChange={(e) => setPo6mapco5(e.target.value)}
+									onChange={(e) =>
+										setPo6mapco5(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>{" "}
 							</td>
 							<td>
@@ -10081,7 +12149,11 @@ export default function App() {
 									type='number'
 									value={po6mapco6.toString()}
 									readOnly
-									onChange={(e) => setPo6mapco6(e.target.value)}
+									onChange={(e) =>
+										setPo6mapco6(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>{" "}
 							</td>
 							<td>
@@ -10089,7 +12161,11 @@ export default function App() {
 									type='number'
 									value={po6mapco7.toString()}
 									readOnly
-									onChange={(e) => setPo6mapco7(e.target.value)}
+									onChange={(e) =>
+										setPo6mapco7(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>{" "}
 							</td>
 						</tr>
@@ -10101,7 +12177,11 @@ export default function App() {
 								<Textarea
 									readOnly
 									value={po71}
-									onChange={(e) => setPo71(e.target.value)}
+									onChange={(e) =>
+										setPo71(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 									className='my-6'
 								/>
 							</td>
@@ -10109,14 +12189,22 @@ export default function App() {
 								<Textarea
 									readOnly
 									value={competency71}
-									onChange={(e) => setCompetency71(e.target.value)}
+									onChange={(e) =>
+										setCompetency71(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Textarea
 									readOnly
 									value={indicators71}
-									onChange={(e) => setIndicators71(e.target.value)}
+									onChange={(e) =>
+										setIndicators71(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
@@ -10124,56 +12212,88 @@ export default function App() {
 									type='number'
 									readOnly
 									value={weight71}
-									onChange={(e) => setWeight71(e.target.value)}
+									onChange={(e) =>
+										setWeight71(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co171}
-									onChange={(e) => setCo171(e.target.value)}
+									onChange={(e) =>
+										setCo171(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co271}
-									onChange={(e) => setCo271(e.target.value)}
+									onChange={(e) =>
+										setCo271(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co371}
-									onChange={(e) => setCo371(e.target.value)}
+									onChange={(e) =>
+										setCo371(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co471}
-									onChange={(e) => setCo471(e.target.value)}
+									onChange={(e) =>
+										setCo471(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co571}
-									onChange={(e) => setCo571(e.target.value)}
+									onChange={(e) =>
+										setCo571(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co671}
-									onChange={(e) => setCo671(e.target.value)}
+									onChange={(e) =>
+										setCo671(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co771}
-									onChange={(e) => setCo771(e.target.value)}
+									onChange={(e) =>
+										setCo771(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 						</tr>
@@ -10182,7 +12302,11 @@ export default function App() {
 								<Textarea
 									readOnly
 									value={indicators72}
-									onChange={(e) => setIndicators72(e.target.value)}
+									onChange={(e) =>
+										setIndicators72(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
@@ -10190,56 +12314,88 @@ export default function App() {
 									type='number'
 									readOnly
 									value={weight72}
-									onChange={(e) => setWeight72(e.target.value)}
+									onChange={(e) =>
+										setWeight72(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co172}
-									onChange={(e) => setCo172(e.target.value)}
+									onChange={(e) =>
+										setCo172(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co272}
-									onChange={(e) => setCo272(e.target.value)}
+									onChange={(e) =>
+										setCo272(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co372}
-									onChange={(e) => setCo372(e.target.value)}
+									onChange={(e) =>
+										setCo372(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co472}
-									onChange={(e) => setCo472(e.target.value)}
+									onChange={(e) =>
+										setCo472(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co572}
-									onChange={(e) => setCo572(e.target.value)}
+									onChange={(e) =>
+										setCo572(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co672}
-									onChange={(e) => setCo672(e.target.value)}
+									onChange={(e) =>
+										setCo672(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co772}
-									onChange={(e) => setCo772(e.target.value)}
+									onChange={(e) =>
+										setCo772(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 						</tr>
@@ -10248,14 +12404,22 @@ export default function App() {
 								<Textarea
 									readOnly
 									value={competency72}
-									onChange={(e) => setCompetency72(e.target.value)}
+									onChange={(e) =>
+										setCompetency72(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Textarea
 									readOnly
 									value={indicators73}
-									onChange={(e) => setIndicators73(e.target.value)}
+									onChange={(e) =>
+										setIndicators73(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
@@ -10263,56 +12427,88 @@ export default function App() {
 									type='number'
 									readOnly
 									value={weight73}
-									onChange={(e) => setWeight73(e.target.value)}
+									onChange={(e) =>
+										setWeight73(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co173}
-									onChange={(e) => setCo173(e.target.value)}
+									onChange={(e) =>
+										setCo173(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co273}
-									onChange={(e) => setCo273(e.target.value)}
+									onChange={(e) =>
+										setCo273(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co373}
-									onChange={(e) => setCo373(e.target.value)}
+									onChange={(e) =>
+										setCo373(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co473}
-									onChange={(e) => setCo473(e.target.value)}
+									onChange={(e) =>
+										setCo473(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co573}
-									onChange={(e) => setCo573(e.target.value)}
+									onChange={(e) =>
+										setCo573(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co673}
-									onChange={(e) => setCo673(e.target.value)}
+									onChange={(e) =>
+										setCo673(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co773}
-									onChange={(e) => setCo773(e.target.value)}
+									onChange={(e) =>
+										setCo773(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 						</tr>
@@ -10321,7 +12517,11 @@ export default function App() {
 								<Textarea
 									readOnly
 									value={indicators74}
-									onChange={(e) => setIndicators74(e.target.value)}
+									onChange={(e) =>
+										setIndicators74(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
@@ -10329,56 +12529,88 @@ export default function App() {
 									type='number'
 									readOnly
 									value={weight74}
-									onChange={(e) => setWeight74(e.target.value)}
+									onChange={(e) =>
+										setWeight74(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co174}
-									onChange={(e) => setCo174(e.target.value)}
+									onChange={(e) =>
+										setCo174(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co274}
-									onChange={(e) => setCo274(e.target.value)}
+									onChange={(e) =>
+										setCo274(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co374}
-									onChange={(e) => setCo374(e.target.value)}
+									onChange={(e) =>
+										setCo374(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co474}
-									onChange={(e) => setCo474(e.target.value)}
+									onChange={(e) =>
+										setCo474(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co574}
-									onChange={(e) => setCo574(e.target.value)}
+									onChange={(e) =>
+										setCo574(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co674}
-									onChange={(e) => setCo674(e.target.value)}
+									onChange={(e) =>
+										setCo674(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co774}
-									onChange={(e) => setCo774(e.target.value)}
+									onChange={(e) =>
+										setCo774(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 						</tr>
@@ -10397,7 +12629,11 @@ export default function App() {
 									type='number'
 									value={po7mapco1.toString()}
 									readOnly
-									onChange={(e) => setPo7mapco1(e.target.value)}
+									onChange={(e) =>
+										setPo7mapco1(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
@@ -10405,7 +12641,11 @@ export default function App() {
 									type='number'
 									value={po7mapco2.toString()}
 									readOnly
-									onChange={(e) => setPo7mapco2(e.target.value)}
+									onChange={(e) =>
+										setPo7mapco2(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>{" "}
 							</td>
 							<td>
@@ -10413,7 +12653,11 @@ export default function App() {
 									type='number'
 									value={po7mapco3.toString()}
 									readOnly
-									onChange={(e) => setPo7mapco3(e.target.value)}
+									onChange={(e) =>
+										setPo7mapco3(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>{" "}
 							</td>
 							<td>
@@ -10421,7 +12665,11 @@ export default function App() {
 									type='number'
 									value={po7mapco4.toString()}
 									readOnly
-									onChange={(e) => setPo7mapco4(e.target.value)}
+									onChange={(e) =>
+										setPo7mapco4(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>{" "}
 							</td>
 							<td>
@@ -10429,7 +12677,11 @@ export default function App() {
 									type='number'
 									value={po7mapco5.toString()}
 									readOnly
-									onChange={(e) => setPo7mapco5(e.target.value)}
+									onChange={(e) =>
+										setPo7mapco5(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>{" "}
 							</td>
 							<td>
@@ -10437,7 +12689,11 @@ export default function App() {
 									type='number'
 									value={po7mapco6.toString()}
 									readOnly
-									onChange={(e) => setPo7mapco6(e.target.value)}
+									onChange={(e) =>
+										setPo7mapco6(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>{" "}
 							</td>
 							<td>
@@ -10445,7 +12701,11 @@ export default function App() {
 									type='number'
 									value={po7mapco7.toString()}
 									readOnly
-									onChange={(e) => setPo7mapco7(e.target.value)}
+									onChange={(e) =>
+										setPo7mapco7(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>{" "}
 							</td>
 						</tr>
@@ -10456,7 +12716,11 @@ export default function App() {
 								<Textarea
 									readOnly
 									value={po81}
-									onChange={(e) => setPo81(e.target.value)}
+									onChange={(e) =>
+										setPo81(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 									className='my-6'
 								/>
 							</td>
@@ -10464,14 +12728,22 @@ export default function App() {
 								<Textarea
 									readOnly
 									value={competency81}
-									onChange={(e) => setCompetency81(e.target.value)}
+									onChange={(e) =>
+										setCompetency81(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Textarea
 									readOnly
 									value={indicators81}
-									onChange={(e) => setIndicators81(e.target.value)}
+									onChange={(e) =>
+										setIndicators81(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
@@ -10479,56 +12751,88 @@ export default function App() {
 									type='number'
 									readOnly
 									value={weight81}
-									onChange={(e) => setWeight81(e.target.value)}
+									onChange={(e) =>
+										setWeight81(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co181}
-									onChange={(e) => setCo181(e.target.value)}
+									onChange={(e) =>
+										setCo181(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co281}
-									onChange={(e) => setCo281(e.target.value)}
+									onChange={(e) =>
+										setCo281(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co381}
-									onChange={(e) => setCo381(e.target.value)}
+									onChange={(e) =>
+										setCo381(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co481}
-									onChange={(e) => setCo481(e.target.value)}
+									onChange={(e) =>
+										setCo481(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co581}
-									onChange={(e) => setCo581(e.target.value)}
+									onChange={(e) =>
+										setCo581(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co681}
-									onChange={(e) => setCo681(e.target.value)}
+									onChange={(e) =>
+										setCo681(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co781}
-									onChange={(e) => setCo781(e.target.value)}
+									onChange={(e) =>
+										setCo781(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 						</tr>
@@ -10537,14 +12841,22 @@ export default function App() {
 								<Textarea
 									readOnly
 									value={competency82}
-									onChange={(e) => setCompetency82(e.target.value)}
+									onChange={(e) =>
+										setCompetency82(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Textarea
 									readOnly
 									value={indicators82}
-									onChange={(e) => setIndicators82(e.target.value)}
+									onChange={(e) =>
+										setIndicators82(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
@@ -10552,56 +12864,88 @@ export default function App() {
 									type='number'
 									readOnly
 									value={weight82}
-									onChange={(e) => setWeight82(e.target.value)}
+									onChange={(e) =>
+										setWeight82(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co182}
-									onChange={(e) => setCo182(e.target.value)}
+									onChange={(e) =>
+										setCo182(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co282}
-									onChange={(e) => setCo282(e.target.value)}
+									onChange={(e) =>
+										setCo282(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co382}
-									onChange={(e) => setCo382(e.target.value)}
+									onChange={(e) =>
+										setCo382(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co482}
-									onChange={(e) => setCo482(e.target.value)}
+									onChange={(e) =>
+										setCo482(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co582}
-									onChange={(e) => setCo582(e.target.value)}
+									onChange={(e) =>
+										setCo582(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co682}
-									onChange={(e) => setCo682(e.target.value)}
+									onChange={(e) =>
+										setCo682(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co782}
-									onChange={(e) => setCo782(e.target.value)}
+									onChange={(e) =>
+										setCo782(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 						</tr>
@@ -10610,7 +12954,11 @@ export default function App() {
 								<Textarea
 									readOnly
 									value={indicators83}
-									onChange={(e) => setIndicators83(e.target.value)}
+									onChange={(e) =>
+										setIndicators83(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
@@ -10618,56 +12966,88 @@ export default function App() {
 									type='number'
 									readOnly
 									value={weight83}
-									onChange={(e) => setWeight83(e.target.value)}
+									onChange={(e) =>
+										setWeight83(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co183}
-									onChange={(e) => setCo183(e.target.value)}
+									onChange={(e) =>
+										setCo183(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co283}
-									onChange={(e) => setCo283(e.target.value)}
+									onChange={(e) =>
+										setCo283(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co383}
-									onChange={(e) => setCo383(e.target.value)}
+									onChange={(e) =>
+										setCo383(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co483}
-									onChange={(e) => setCo483(e.target.value)}
+									onChange={(e) =>
+										setCo483(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co583}
-									onChange={(e) => setCo583(e.target.value)}
+									onChange={(e) =>
+										setCo583(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co683}
-									onChange={(e) => setCo683(e.target.value)}
+									onChange={(e) =>
+										setCo683(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co783}
-									onChange={(e) => setCo783(e.target.value)}
+									onChange={(e) =>
+										setCo783(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 						</tr>
@@ -10685,7 +13065,11 @@ export default function App() {
 									type='number'
 									value={po8mapco1.toString()}
 									readOnly
-									onChange={(e) => setPo8mapco1(e.target.value)}
+									onChange={(e) =>
+										setPo8mapco1(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
@@ -10693,7 +13077,11 @@ export default function App() {
 									type='number'
 									value={po8mapco2.toString()}
 									readOnly
-									onChange={(e) => setPo8mapco2(e.target.value)}
+									onChange={(e) =>
+										setPo8mapco2(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>{" "}
 							</td>
 							<td>
@@ -10701,7 +13089,11 @@ export default function App() {
 									type='number'
 									value={po8mapco3.toString()}
 									readOnly
-									onChange={(e) => setPo8mapco3(e.target.value)}
+									onChange={(e) =>
+										setPo8mapco3(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>{" "}
 							</td>
 							<td>
@@ -10709,7 +13101,11 @@ export default function App() {
 									type='number'
 									value={po8mapco4.toString()}
 									readOnly
-									onChange={(e) => setPo8mapco4(e.target.value)}
+									onChange={(e) =>
+										setPo8mapco4(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>{" "}
 							</td>
 							<td>
@@ -10717,7 +13113,11 @@ export default function App() {
 									type='number'
 									value={po8mapco5.toString()}
 									readOnly
-									onChange={(e) => setPo8mapco5(e.target.value)}
+									onChange={(e) =>
+										setPo8mapco5(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>{" "}
 							</td>
 							<td>
@@ -10725,7 +13125,11 @@ export default function App() {
 									type='number'
 									value={po8mapco6.toString()}
 									readOnly
-									onChange={(e) => setPo8mapco6(e.target.value)}
+									onChange={(e) =>
+										setPo8mapco6(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>{" "}
 							</td>
 							<td>
@@ -10733,7 +13137,11 @@ export default function App() {
 									type='number'
 									value={po8mapco7.toString()}
 									readOnly
-									onChange={(e) => setPo8mapco7(e.target.value)}
+									onChange={(e) =>
+										setPo8mapco7(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>{" "}
 							</td>
 						</tr>
@@ -10745,7 +13153,11 @@ export default function App() {
 								<Textarea
 									readOnly
 									value={po91}
-									onChange={(e) => setPo91(e.target.value)}
+									onChange={(e) =>
+										setPo91(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 									className='my-6'
 								/>
 							</td>
@@ -10753,14 +13165,22 @@ export default function App() {
 								<Textarea
 									readOnly
 									value={competency91}
-									onChange={(e) => setCompetency91(e.target.value)}
+									onChange={(e) =>
+										setCompetency91(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Textarea
 									readOnly
 									value={indicators91}
-									onChange={(e) => setIndicators91(e.target.value)}
+									onChange={(e) =>
+										setIndicators91(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
@@ -10768,56 +13188,88 @@ export default function App() {
 									type='number'
 									readOnly
 									value={weight91}
-									onChange={(e) => setWeight91(e.target.value)}
+									onChange={(e) =>
+										setWeight91(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co191}
-									onChange={(e) => setCo191(e.target.value)}
+									onChange={(e) =>
+										setCo191(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co291}
-									onChange={(e) => setCo291(e.target.value)}
+									onChange={(e) =>
+										setCo291(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co391}
-									onChange={(e) => setCo391(e.target.value)}
+									onChange={(e) =>
+										setCo391(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co491}
-									onChange={(e) => setCo491(e.target.value)}
+									onChange={(e) =>
+										setCo491(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co591}
-									onChange={(e) => setCo591(e.target.value)}
+									onChange={(e) =>
+										setCo591(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co691}
-									onChange={(e) => setCo691(e.target.value)}
+									onChange={(e) =>
+										setCo691(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co791}
-									onChange={(e) => setCo791(e.target.value)}
+									onChange={(e) =>
+										setCo791(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 						</tr>
@@ -10826,7 +13278,11 @@ export default function App() {
 								<Textarea
 									readOnly
 									value={indicators92}
-									onChange={(e) => setIndicators92(e.target.value)}
+									onChange={(e) =>
+										setIndicators92(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
@@ -10834,56 +13290,88 @@ export default function App() {
 									type='number'
 									readOnly
 									value={weight92}
-									onChange={(e) => setWeight92(e.target.value)}
+									onChange={(e) =>
+										setWeight92(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co192}
-									onChange={(e) => setCo192(e.target.value)}
+									onChange={(e) =>
+										setCo192(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co292}
-									onChange={(e) => setCo292(e.target.value)}
+									onChange={(e) =>
+										setCo292(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co392}
-									onChange={(e) => setCo392(e.target.value)}
+									onChange={(e) =>
+										setCo392(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co492}
-									onChange={(e) => setCo492(e.target.value)}
+									onChange={(e) =>
+										setCo492(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co592}
-									onChange={(e) => setCo592(e.target.value)}
+									onChange={(e) =>
+										setCo592(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co692}
-									onChange={(e) => setCo692(e.target.value)}
+									onChange={(e) =>
+										setCo692(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co792}
-									onChange={(e) => setCo792(e.target.value)}
+									onChange={(e) =>
+										setCo792(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 						</tr>
@@ -10892,14 +13380,22 @@ export default function App() {
 								<Textarea
 									readOnly
 									value={competency92}
-									onChange={(e) => setCompetency92(e.target.value)}
+									onChange={(e) =>
+										setCompetency92(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Textarea
 									readOnly
 									value={indicators93}
-									onChange={(e) => setIndicators93(e.target.value)}
+									onChange={(e) =>
+										setIndicators93(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
@@ -10907,56 +13403,88 @@ export default function App() {
 									type='number'
 									readOnly
 									value={weight93}
-									onChange={(e) => setWeight93(e.target.value)}
+									onChange={(e) =>
+										setWeight93(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co193}
-									onChange={(e) => setCo193(e.target.value)}
+									onChange={(e) =>
+										setCo193(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co293}
-									onChange={(e) => setCo293(e.target.value)}
+									onChange={(e) =>
+										setCo293(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co393}
-									onChange={(e) => setCo393(e.target.value)}
+									onChange={(e) =>
+										setCo393(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co493}
-									onChange={(e) => setCo493(e.target.value)}
+									onChange={(e) =>
+										setCo493(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co593}
-									onChange={(e) => setCo593(e.target.value)}
+									onChange={(e) =>
+										setCo593(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co693}
-									onChange={(e) => setCo693(e.target.value)}
+									onChange={(e) =>
+										setCo693(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co793}
-									onChange={(e) => setCo793(e.target.value)}
+									onChange={(e) =>
+										setCo793(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 						</tr>
@@ -10965,7 +13493,11 @@ export default function App() {
 								<Textarea
 									readOnly
 									value={indicators94}
-									onChange={(e) => setIndicators94(e.target.value)}
+									onChange={(e) =>
+										setIndicators94(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
@@ -10973,56 +13505,88 @@ export default function App() {
 									type='number'
 									readOnly
 									value={weight94}
-									onChange={(e) => setWeight94(e.target.value)}
+									onChange={(e) =>
+										setWeight94(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co194}
-									onChange={(e) => setCo194(e.target.value)}
+									onChange={(e) =>
+										setCo194(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co294}
-									onChange={(e) => setCo294(e.target.value)}
+									onChange={(e) =>
+										setCo294(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co394}
-									onChange={(e) => setCo394(e.target.value)}
+									onChange={(e) =>
+										setCo394(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co494}
-									onChange={(e) => setCo494(e.target.value)}
+									onChange={(e) =>
+										setCo494(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co594}
-									onChange={(e) => setCo594(e.target.value)}
+									onChange={(e) =>
+										setCo594(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co694}
-									onChange={(e) => setCo694(e.target.value)}
+									onChange={(e) =>
+										setCo694(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co794}
-									onChange={(e) => setCo794(e.target.value)}
+									onChange={(e) =>
+										setCo794(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 						</tr>
@@ -11031,7 +13595,11 @@ export default function App() {
 								<Textarea
 									readOnly
 									value={indicators95}
-									onChange={(e) => setIndicators95(e.target.value)}
+									onChange={(e) =>
+										setIndicators95(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
@@ -11039,56 +13607,88 @@ export default function App() {
 									type='number'
 									value={weight95}
 									readOnly
-									onChange={(e) => setWeight95(e.target.value)}
+									onChange={(e) =>
+										setWeight95(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co195}
-									onChange={(e) => setCo195(e.target.value)}
+									onChange={(e) =>
+										setCo195(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co295}
-									onChange={(e) => setCo295(e.target.value)}
+									onChange={(e) =>
+										setCo295(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co395}
-									onChange={(e) => setCo395(e.target.value)}
+									onChange={(e) =>
+										setCo395(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co495}
-									onChange={(e) => setCo495(e.target.value)}
+									onChange={(e) =>
+										setCo495(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co595}
-									onChange={(e) => setCo595(e.target.value)}
+									onChange={(e) =>
+										setCo595(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co695}
-									onChange={(e) => setCo695(e.target.value)}
+									onChange={(e) =>
+										setCo695(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co795}
-									onChange={(e) => setCo795(e.target.value)}
+									onChange={(e) =>
+										setCo795(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 						</tr>
@@ -11097,7 +13697,11 @@ export default function App() {
 								<Textarea
 									readOnly
 									value={indicators96}
-									onChange={(e) => setIndicators96(e.target.value)}
+									onChange={(e) =>
+										setIndicators96(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
@@ -11105,56 +13709,88 @@ export default function App() {
 									type='number'
 									value={weight96}
 									readOnly
-									onChange={(e) => setWeight96(e.target.value)}
+									onChange={(e) =>
+										setWeight96(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co196}
-									onChange={(e) => setCo196(e.target.value)}
+									onChange={(e) =>
+										setCo196(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co296}
-									onChange={(e) => setCo296(e.target.value)}
+									onChange={(e) =>
+										setCo296(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co396}
-									onChange={(e) => setCo396(e.target.value)}
+									onChange={(e) =>
+										setCo396(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co496}
-									onChange={(e) => setCo496(e.target.value)}
+									onChange={(e) =>
+										setCo496(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co596}
-									onChange={(e) => setCo596(e.target.value)}
+									onChange={(e) =>
+										setCo596(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co696}
-									onChange={(e) => setCo696(e.target.value)}
+									onChange={(e) =>
+										setCo696(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co796}
-									onChange={(e) => setCo796(e.target.value)}
+									onChange={(e) =>
+										setCo796(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 						</tr>
@@ -11163,7 +13799,11 @@ export default function App() {
 								<Textarea
 									readOnly
 									value={competency93}
-									onChange={(e) => setCompetency93(e.target.value)}
+									onChange={(e) =>
+										setCompetency93(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 
@@ -11171,7 +13811,11 @@ export default function App() {
 								<Textarea
 									readOnly
 									value={indicators97}
-									onChange={(e) => setIndicators97(e.target.value)}
+									onChange={(e) =>
+										setIndicators97(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
@@ -11179,56 +13823,88 @@ export default function App() {
 									type='number'
 									value={weight97}
 									readOnly
-									onChange={(e) => setWeight97(e.target.value)}
+									onChange={(e) =>
+										setWeight97(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co197}
-									onChange={(e) => setCo197(e.target.value)}
+									onChange={(e) =>
+										setCo197(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co297}
-									onChange={(e) => setCo297(e.target.value)}
+									onChange={(e) =>
+										setCo297(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co397}
-									onChange={(e) => setCo397(e.target.value)}
+									onChange={(e) =>
+										setCo397(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co497}
-									onChange={(e) => setCo497(e.target.value)}
+									onChange={(e) =>
+										setCo497(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co597}
-									onChange={(e) => setCo597(e.target.value)}
+									onChange={(e) =>
+										setCo597(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co697}
-									onChange={(e) => setCo697(e.target.value)}
+									onChange={(e) =>
+										setCo697(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co797}
-									onChange={(e) => setCo797(e.target.value)}
+									onChange={(e) =>
+										setCo797(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 						</tr>
@@ -11247,7 +13923,11 @@ export default function App() {
 									type='number'
 									value={po9mapco1.toString()}
 									readOnly
-									onChange={(e) => setPo9mapco1(e.target.value)}
+									onChange={(e) =>
+										setPo9mapco1(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
@@ -11255,7 +13935,11 @@ export default function App() {
 									type='number'
 									value={po9mapco2.toString()}
 									readOnly
-									onChange={(e) => setPo9mapco2(e.target.value)}
+									onChange={(e) =>
+										setPo9mapco2(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>{" "}
 							</td>
 							<td>
@@ -11263,7 +13947,11 @@ export default function App() {
 									type='number'
 									value={po9mapco3.toString()}
 									readOnly
-									onChange={(e) => setPo9mapco3(e.target.value)}
+									onChange={(e) =>
+										setPo9mapco3(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>{" "}
 							</td>
 							<td>
@@ -11271,7 +13959,11 @@ export default function App() {
 									type='number'
 									value={po9mapco4.toString()}
 									readOnly
-									onChange={(e) => setPo9mapco4(e.target.value)}
+									onChange={(e) =>
+										setPo9mapco4(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>{" "}
 							</td>
 							<td>
@@ -11279,7 +13971,11 @@ export default function App() {
 									type='number'
 									value={po9mapco5.toString()}
 									readOnly
-									onChange={(e) => setPo9mapco5(e.target.value)}
+									onChange={(e) =>
+										setPo9mapco5(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>{" "}
 							</td>
 							<td>
@@ -11287,7 +13983,11 @@ export default function App() {
 									type='number'
 									value={po9mapco6.toString()}
 									readOnly
-									onChange={(e) => setPo9mapco6(e.target.value)}
+									onChange={(e) =>
+										setPo9mapco6(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>{" "}
 							</td>
 							<td>
@@ -11295,7 +13995,11 @@ export default function App() {
 									type='number'
 									value={po9mapco7.toString()}
 									readOnly
-									onChange={(e) => setPo9mapco7(e.target.value)}
+									onChange={(e) =>
+										setPo9mapco7(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>{" "}
 							</td>
 						</tr>
@@ -11307,7 +14011,11 @@ export default function App() {
 								<Textarea
 									readOnly
 									value={po101}
-									onChange={(e) => setPo101(e.target.value)}
+									onChange={(e) =>
+										setPo101(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 									className='my-6'
 								/>
 							</td>
@@ -11315,14 +14023,22 @@ export default function App() {
 								<Textarea
 									readOnly
 									value={competency101}
-									onChange={(e) => setCompetency101(e.target.value)}
+									onChange={(e) =>
+										setCompetency101(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Textarea
 									readOnly
 									value={indicators101}
-									onChange={(e) => setIndicators101(e.target.value)}
+									onChange={(e) =>
+										setIndicators101(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
@@ -11330,56 +14046,88 @@ export default function App() {
 									type='number'
 									readOnly
 									value={weight101}
-									onChange={(e) => setWeight101(e.target.value)}
+									onChange={(e) =>
+										setWeight101(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co1101}
-									onChange={(e) => setCo1101(e.target.value)}
+									onChange={(e) =>
+										setCo1101(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co2101}
-									onChange={(e) => setCo2101(e.target.value)}
+									onChange={(e) =>
+										setCo2101(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co3101}
-									onChange={(e) => setCo3101(e.target.value)}
+									onChange={(e) =>
+										setCo3101(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co4101}
-									onChange={(e) => setCo4101(e.target.value)}
+									onChange={(e) =>
+										setCo4101(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co5101}
-									onChange={(e) => setCo5101(e.target.value)}
+									onChange={(e) =>
+										setCo5101(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co6101}
-									onChange={(e) => setCo6101(e.target.value)}
+									onChange={(e) =>
+										setCo6101(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co7101}
-									onChange={(e) => setCo7101(e.target.value)}
+									onChange={(e) =>
+										setCo7101(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 						</tr>
@@ -11388,7 +14136,11 @@ export default function App() {
 								<Textarea
 									readOnly
 									value={indicators102}
-									onChange={(e) => setIndicators102(e.target.value)}
+									onChange={(e) =>
+										setIndicators102(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
@@ -11396,56 +14148,88 @@ export default function App() {
 									type='number'
 									readOnly
 									value={weight102}
-									onChange={(e) => setWeight102(e.target.value)}
+									onChange={(e) =>
+										setWeight102(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co1102}
-									onChange={(e) => setCo1102(e.target.value)}
+									onChange={(e) =>
+										setCo1102(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co2102}
-									onChange={(e) => setCo2102(e.target.value)}
+									onChange={(e) =>
+										setCo2102(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co3102}
-									onChange={(e) => setCo3102(e.target.value)}
+									onChange={(e) =>
+										setCo3102(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co4102}
-									onChange={(e) => setCo4102(e.target.value)}
+									onChange={(e) =>
+										setCo4102(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co5102}
-									onChange={(e) => setCo5102(e.target.value)}
+									onChange={(e) =>
+										setCo5102(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co6102}
-									onChange={(e) => setCo6102(e.target.value)}
+									onChange={(e) =>
+										setCo6102(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co7102}
-									onChange={(e) => setCo7102(e.target.value)}
+									onChange={(e) =>
+										setCo7102(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 						</tr>
@@ -11454,7 +14238,11 @@ export default function App() {
 								<Textarea
 									readOnly
 									value={indicators103}
-									onChange={(e) => setIndicators103(e.target.value)}
+									onChange={(e) =>
+										setIndicators103(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
@@ -11462,56 +14250,88 @@ export default function App() {
 									type='number'
 									readOnly
 									value={weight103}
-									onChange={(e) => setWeight103(e.target.value)}
+									onChange={(e) =>
+										setWeight103(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co1103}
-									onChange={(e) => setCo1103(e.target.value)}
+									onChange={(e) =>
+										setCo1103(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co2103}
-									onChange={(e) => setCo2103(e.target.value)}
+									onChange={(e) =>
+										setCo2103(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co3103}
-									onChange={(e) => setCo3103(e.target.value)}
+									onChange={(e) =>
+										setCo3103(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co4103}
-									onChange={(e) => setCo4103(e.target.value)}
+									onChange={(e) =>
+										setCo4103(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co5103}
-									onChange={(e) => setCo5103(e.target.value)}
+									onChange={(e) =>
+										setCo5103(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co6103}
-									onChange={(e) => setCo6103(e.target.value)}
+									onChange={(e) =>
+										setCo6103(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co7103}
-									onChange={(e) => setCo7103(e.target.value)}
+									onChange={(e) =>
+										setCo7103(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 						</tr>
@@ -11520,14 +14340,22 @@ export default function App() {
 								<Textarea
 									readOnly
 									value={competency102}
-									onChange={(e) => setCompetency102(e.target.value)}
+									onChange={(e) =>
+										setCompetency102(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Textarea
 									readOnly
 									value={indicators104}
-									onChange={(e) => setIndicators104(e.target.value)}
+									onChange={(e) =>
+										setIndicators104(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
@@ -11535,56 +14363,88 @@ export default function App() {
 									type='number'
 									readOnly
 									value={weight104}
-									onChange={(e) => setWeight104(e.target.value)}
+									onChange={(e) =>
+										setWeight104(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co1104}
-									onChange={(e) => setCo1104(e.target.value)}
+									onChange={(e) =>
+										setCo1104(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co2104}
-									onChange={(e) => setCo2104(e.target.value)}
+									onChange={(e) =>
+										setCo2104(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co3104}
-									onChange={(e) => setCo3104(e.target.value)}
+									onChange={(e) =>
+										setCo3104(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co4104}
-									onChange={(e) => setCo4104(e.target.value)}
+									onChange={(e) =>
+										setCo4104(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co5104}
-									onChange={(e) => setCo5104(e.target.value)}
+									onChange={(e) =>
+										setCo5104(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co6104}
-									onChange={(e) => setCo6104(e.target.value)}
+									onChange={(e) =>
+										setCo6104(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co7104}
-									onChange={(e) => setCo7104(e.target.value)}
+									onChange={(e) =>
+										setCo7104(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 						</tr>
@@ -11593,7 +14453,11 @@ export default function App() {
 								<Textarea
 									readOnly
 									value={indicators105}
-									onChange={(e) => setIndicators105(e.target.value)}
+									onChange={(e) =>
+										setIndicators105(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
@@ -11601,56 +14465,88 @@ export default function App() {
 									type='number'
 									value={weight105}
 									readOnly
-									onChange={(e) => setWeight105(e.target.value)}
+									onChange={(e) =>
+										setWeight105(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co1105}
-									onChange={(e) => setCo1105(e.target.value)}
+									onChange={(e) =>
+										setCo1105(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co2105}
-									onChange={(e) => setCo2105(e.target.value)}
+									onChange={(e) =>
+										setCo2105(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co3105}
-									onChange={(e) => setCo3105(e.target.value)}
+									onChange={(e) =>
+										setCo3105(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co4105}
-									onChange={(e) => setCo4105(e.target.value)}
+									onChange={(e) =>
+										setCo4105(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co5105}
-									onChange={(e) => setCo5105(e.target.value)}
+									onChange={(e) =>
+										setCo5105(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co6105}
-									onChange={(e) => setCo6105(e.target.value)}
+									onChange={(e) =>
+										setCo6105(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co7105}
-									onChange={(e) => setCo7105(e.target.value)}
+									onChange={(e) =>
+										setCo7105(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 						</tr>
@@ -11659,14 +14555,22 @@ export default function App() {
 								<Textarea
 									readOnly
 									value={competency103}
-									onChange={(e) => setCompetency103(e.target.value)}
+									onChange={(e) =>
+										setCompetency103(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Textarea
 									readOnly
 									value={indicators106}
-									onChange={(e) => setIndicators106(e.target.value)}
+									onChange={(e) =>
+										setIndicators106(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
@@ -11674,56 +14578,88 @@ export default function App() {
 									type='number'
 									value={weight106}
 									readOnly
-									onChange={(e) => setWeight106(e.target.value)}
+									onChange={(e) =>
+										setWeight106(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co1106}
-									onChange={(e) => setCo1106(e.target.value)}
+									onChange={(e) =>
+										setCo1106(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co2106}
-									onChange={(e) => setCo2106(e.target.value)}
+									onChange={(e) =>
+										setCo2106(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co3106}
-									onChange={(e) => setCo3106(e.target.value)}
+									onChange={(e) =>
+										setCo3106(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co4106}
-									onChange={(e) => setCo4106(e.target.value)}
+									onChange={(e) =>
+										setCo4106(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co5106}
-									onChange={(e) => setCo5106(e.target.value)}
+									onChange={(e) =>
+										setCo5106(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co6106}
-									onChange={(e) => setCo6106(e.target.value)}
+									onChange={(e) =>
+										setCo6106(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co7106}
-									onChange={(e) => setCo7106(e.target.value)}
+									onChange={(e) =>
+										setCo7106(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 						</tr>
@@ -11732,7 +14668,11 @@ export default function App() {
 								<Textarea
 									readOnly
 									value={indicators107}
-									onChange={(e) => setIndicators107(e.target.value)}
+									onChange={(e) =>
+										setIndicators107(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
@@ -11740,56 +14680,88 @@ export default function App() {
 									type='number'
 									value={weight107}
 									readOnly
-									onChange={(e) => setWeight107(e.target.value)}
+									onChange={(e) =>
+										setWeight107(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co1107}
-									onChange={(e) => setCo1107(e.target.value)}
+									onChange={(e) =>
+										setCo1107(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co2107}
-									onChange={(e) => setCo2107(e.target.value)}
+									onChange={(e) =>
+										setCo2107(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co3107}
-									onChange={(e) => setCo3107(e.target.value)}
+									onChange={(e) =>
+										setCo3107(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co4107}
-									onChange={(e) => setCo4107(e.target.value)}
+									onChange={(e) =>
+										setCo4107(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co5107}
-									onChange={(e) => setCo5107(e.target.value)}
+									onChange={(e) =>
+										setCo5107(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co6107}
-									onChange={(e) => setCo6107(e.target.value)}
+									onChange={(e) =>
+										setCo6107(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co7107}
-									onChange={(e) => setCo7107(e.target.value)}
+									onChange={(e) =>
+										setCo7107(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 						</tr>
@@ -11808,7 +14780,11 @@ export default function App() {
 									type='number'
 									value={po10mapco1.toString()}
 									readOnly
-									onChange={(e) => setPo10mapco1(e.target.value)}
+									onChange={(e) =>
+										setPo10mapco1(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
@@ -11816,7 +14792,11 @@ export default function App() {
 									type='number'
 									value={po10mapco2.toString()}
 									readOnly
-									onChange={(e) => setPo10mapco2(e.target.value)}
+									onChange={(e) =>
+										setPo10mapco2(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>{" "}
 							</td>
 							<td>
@@ -11824,7 +14804,11 @@ export default function App() {
 									type='number'
 									value={po10mapco3.toString()}
 									readOnly
-									onChange={(e) => setPo10mapco3(e.target.value)}
+									onChange={(e) =>
+										setPo10mapco3(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>{" "}
 							</td>
 							<td>
@@ -11832,7 +14816,11 @@ export default function App() {
 									type='number'
 									value={po10mapco4.toString()}
 									readOnly
-									onChange={(e) => setPo10mapco4(e.target.value)}
+									onChange={(e) =>
+										setPo10mapco4(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>{" "}
 							</td>
 							<td>
@@ -11840,7 +14828,11 @@ export default function App() {
 									type='number'
 									value={po10mapco5.toString()}
 									readOnly
-									onChange={(e) => setPo10mapco5(e.target.value)}
+									onChange={(e) =>
+										setPo10mapco5(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>{" "}
 							</td>
 							<td>
@@ -11848,7 +14840,11 @@ export default function App() {
 									type='number'
 									value={po10mapco6.toString()}
 									readOnly
-									onChange={(e) => setPo10mapco6(e.target.value)}
+									onChange={(e) =>
+										setPo10mapco6(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>{" "}
 							</td>
 							<td>
@@ -11856,7 +14852,11 @@ export default function App() {
 									type='number'
 									value={po10mapco7.toString()}
 									readOnly
-									onChange={(e) => setPo10mapco7(e.target.value)}
+									onChange={(e) =>
+										setPo10mapco7(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>{" "}
 							</td>
 						</tr>
@@ -11868,7 +14868,11 @@ export default function App() {
 								<Textarea
 									readOnly
 									value={po111}
-									onChange={(e) => setPo111(e.target.value)}
+									onChange={(e) =>
+										setPo111(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 									className='my-6'
 								/>
 							</td>
@@ -11876,14 +14880,22 @@ export default function App() {
 								<Textarea
 									readOnly
 									value={competency111}
-									onChange={(e) => setCompetency111(e.target.value)}
+									onChange={(e) =>
+										setCompetency111(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Textarea
 									readOnly
 									value={indicators111}
-									onChange={(e) => setIndicators111(e.target.value)}
+									onChange={(e) =>
+										setIndicators111(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
@@ -11891,56 +14903,88 @@ export default function App() {
 									type='number'
 									readOnly
 									value={weight111}
-									onChange={(e) => setWeight111(e.target.value)}
+									onChange={(e) =>
+										setWeight111(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co1111}
-									onChange={(e) => setCo1111(e.target.value)}
+									onChange={(e) =>
+										setCo1111(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co2111}
-									onChange={(e) => setCo2111(e.target.value)}
+									onChange={(e) =>
+										setCo2111(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co3111}
-									onChange={(e) => setCo3111(e.target.value)}
+									onChange={(e) =>
+										setCo3111(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co4111}
-									onChange={(e) => setCo4111(e.target.value)}
+									onChange={(e) =>
+										setCo4111(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co5111}
-									onChange={(e) => setCo5111(e.target.value)}
+									onChange={(e) =>
+										setCo5111(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co6111}
-									onChange={(e) => setCo6111(e.target.value)}
+									onChange={(e) =>
+										setCo6111(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co7111}
-									onChange={(e) => setCo7111(e.target.value)}
+									onChange={(e) =>
+										setCo7111(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 						</tr>
@@ -11949,7 +14993,11 @@ export default function App() {
 								<Textarea
 									readOnly
 									value={indicators112}
-									onChange={(e) => setIndicators112(e.target.value)}
+									onChange={(e) =>
+										setIndicators112(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
@@ -11957,56 +15005,88 @@ export default function App() {
 									type='number'
 									readOnly
 									value={weight112}
-									onChange={(e) => setWeight112(e.target.value)}
+									onChange={(e) =>
+										setWeight112(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co1112}
-									onChange={(e) => setCo1112(e.target.value)}
+									onChange={(e) =>
+										setCo1112(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co2112}
-									onChange={(e) => setCo2112(e.target.value)}
+									onChange={(e) =>
+										setCo2112(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co3112}
-									onChange={(e) => setCo3112(e.target.value)}
+									onChange={(e) =>
+										setCo3112(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co4112}
-									onChange={(e) => setCo4112(e.target.value)}
+									onChange={(e) =>
+										setCo4112(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co5112}
-									onChange={(e) => setCo5112(e.target.value)}
+									onChange={(e) =>
+										setCo5112(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co6112}
-									onChange={(e) => setCo6112(e.target.value)}
+									onChange={(e) =>
+										setCo6112(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co7112}
-									onChange={(e) => setCo7112(e.target.value)}
+									onChange={(e) =>
+										setCo7112(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 						</tr>
@@ -12015,14 +15095,22 @@ export default function App() {
 								<Textarea
 									readOnly
 									value={competency112}
-									onChange={(e) => setCompetency112(e.target.value)}
+									onChange={(e) =>
+										setCompetency112(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Textarea
 									readOnly
 									value={indicators113}
-									onChange={(e) => setIndicators113(e.target.value)}
+									onChange={(e) =>
+										setIndicators113(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
@@ -12030,56 +15118,88 @@ export default function App() {
 									type='number'
 									readOnly
 									value={weight113}
-									onChange={(e) => setWeight113(e.target.value)}
+									onChange={(e) =>
+										setWeight113(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co1113}
-									onChange={(e) => setCo1113(e.target.value)}
+									onChange={(e) =>
+										setCo1113(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co2113}
-									onChange={(e) => setCo2113(e.target.value)}
+									onChange={(e) =>
+										setCo2113(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co3113}
-									onChange={(e) => setCo3113(e.target.value)}
+									onChange={(e) =>
+										setCo3113(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co4113}
-									onChange={(e) => setCo4113(e.target.value)}
+									onChange={(e) =>
+										setCo4113(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co5113}
-									onChange={(e) => setCo5113(e.target.value)}
+									onChange={(e) =>
+										setCo5113(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co6113}
-									onChange={(e) => setCo6113(e.target.value)}
+									onChange={(e) =>
+										setCo6113(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co7113}
-									onChange={(e) => setCo7113(e.target.value)}
+									onChange={(e) =>
+										setCo7113(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 						</tr>
@@ -12088,14 +15208,22 @@ export default function App() {
 								<Textarea
 									readOnly
 									value={competency113}
-									onChange={(e) => setCompetency113(e.target.value)}
+									onChange={(e) =>
+										setCompetency113(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Textarea
 									readOnly
 									value={indicators114}
-									onChange={(e) => setIndicators114(e.target.value)}
+									onChange={(e) =>
+										setIndicators114(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
@@ -12103,56 +15231,88 @@ export default function App() {
 									type='number'
 									readOnly
 									value={weight114}
-									onChange={(e) => setWeight114(e.target.value)}
+									onChange={(e) =>
+										setWeight114(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co1114}
-									onChange={(e) => setCo1114(e.target.value)}
+									onChange={(e) =>
+										setCo1114(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co2114}
-									onChange={(e) => setCo2114(e.target.value)}
+									onChange={(e) =>
+										setCo2114(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co3114}
-									onChange={(e) => setCo3114(e.target.value)}
+									onChange={(e) =>
+										setCo3114(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co4114}
-									onChange={(e) => setCo4114(e.target.value)}
+									onChange={(e) =>
+										setCo4114(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co5114}
-									onChange={(e) => setCo5114(e.target.value)}
+									onChange={(e) =>
+										setCo5114(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co6114}
-									onChange={(e) => setCo6114(e.target.value)}
+									onChange={(e) =>
+										setCo6114(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co7114}
-									onChange={(e) => setCo7114(e.target.value)}
+									onChange={(e) =>
+										setCo7114(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 						</tr>
@@ -12161,7 +15321,11 @@ export default function App() {
 								<Textarea
 									readOnly
 									value={indicators115}
-									onChange={(e) => setIndicators115(e.target.value)}
+									onChange={(e) =>
+										setIndicators115(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
@@ -12169,56 +15333,88 @@ export default function App() {
 									type='number'
 									value={weight115}
 									readOnly
-									onChange={(e) => setWeight115(e.target.value)}
+									onChange={(e) =>
+										setWeight115(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co1115}
-									onChange={(e) => setCo1115(e.target.value)}
+									onChange={(e) =>
+										setCo1115(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co2115}
-									onChange={(e) => setCo2115(e.target.value)}
+									onChange={(e) =>
+										setCo2115(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co3115}
-									onChange={(e) => setCo3115(e.target.value)}
+									onChange={(e) =>
+										setCo3115(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co4115}
-									onChange={(e) => setCo4115(e.target.value)}
+									onChange={(e) =>
+										setCo4115(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co5115}
-									onChange={(e) => setCo5115(e.target.value)}
+									onChange={(e) =>
+										setCo5115(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co6115}
-									onChange={(e) => setCo6115(e.target.value)}
+									onChange={(e) =>
+										setCo6115(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co7115}
-									onChange={(e) => setCo7115(e.target.value)}
+									onChange={(e) =>
+										setCo7115(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 						</tr>
@@ -12237,7 +15433,11 @@ export default function App() {
 									type='number'
 									value={po11mapco1.toString()}
 									readOnly
-									onChange={(e) => setPo11mapco1(e.target.value)}
+									onChange={(e) =>
+										setPo11mapco1(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
@@ -12245,7 +15445,11 @@ export default function App() {
 									type='number'
 									value={po11mapco2.toString()}
 									readOnly
-									onChange={(e) => setPo11mapco2(e.target.value)}
+									onChange={(e) =>
+										setPo11mapco2(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>{" "}
 							</td>
 							<td>
@@ -12253,7 +15457,11 @@ export default function App() {
 									type='number'
 									value={po11mapco3.toString()}
 									readOnly
-									onChange={(e) => setPo11mapco3(e.target.value)}
+									onChange={(e) =>
+										setPo11mapco3(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>{" "}
 							</td>
 							<td>
@@ -12261,7 +15469,11 @@ export default function App() {
 									type='number'
 									value={po11mapco4.toString()}
 									readOnly
-									onChange={(e) => setPo11mapco4(e.target.value)}
+									onChange={(e) =>
+										setPo11mapco4(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>{" "}
 							</td>
 							<td>
@@ -12269,7 +15481,11 @@ export default function App() {
 									type='number'
 									value={po11mapco5.toString()}
 									readOnly
-									onChange={(e) => setPo11mapco5(e.target.value)}
+									onChange={(e) =>
+										setPo11mapco5(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>{" "}
 							</td>
 							<td>
@@ -12277,7 +15493,11 @@ export default function App() {
 									type='number'
 									value={po11mapco6.toString()}
 									readOnly
-									onChange={(e) => setPo11mapco6(e.target.value)}
+									onChange={(e) =>
+										setPo11mapco6(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>{" "}
 							</td>
 							<td>
@@ -12285,7 +15505,11 @@ export default function App() {
 									type='number'
 									value={po11mapco7.toString()}
 									readOnly
-									onChange={(e) => setPo11mapco7(e.target.value)}
+									onChange={(e) =>
+										setPo11mapco7(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>{" "}
 							</td>
 						</tr>
@@ -12297,7 +15521,11 @@ export default function App() {
 								<Textarea
 									readOnly
 									value={po121}
-									onChange={(e) => setPo121(e.target.value)}
+									onChange={(e) =>
+										setPo121(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 									className='my-6'
 								/>
 							</td>
@@ -12305,14 +15533,22 @@ export default function App() {
 								<Textarea
 									readOnly
 									value={competency121}
-									onChange={(e) => setCompetency121(e.target.value)}
+									onChange={(e) =>
+										setCompetency121(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Textarea
 									readOnly
 									value={indicators121}
-									onChange={(e) => setIndicators121(e.target.value)}
+									onChange={(e) =>
+										setIndicators121(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
@@ -12320,56 +15556,88 @@ export default function App() {
 									type='number'
 									readOnly
 									value={weight121}
-									onChange={(e) => setWeight121(e.target.value)}
+									onChange={(e) =>
+										setWeight121(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co1121}
-									onChange={(e) => setCo1121(e.target.value)}
+									onChange={(e) =>
+										setCo1121(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co2121}
-									onChange={(e) => setCo2121(e.target.value)}
+									onChange={(e) =>
+										setCo2121(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co3121}
-									onChange={(e) => setCo3121(e.target.value)}
+									onChange={(e) =>
+										setCo3121(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co4121}
-									onChange={(e) => setCo4121(e.target.value)}
+									onChange={(e) =>
+										setCo4121(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co5121}
-									onChange={(e) => setCo5121(e.target.value)}
+									onChange={(e) =>
+										setCo5121(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co6121}
-									onChange={(e) => setCo6121(e.target.value)}
+									onChange={(e) =>
+										setCo6121(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co7121}
-									onChange={(e) => setCo7121(e.target.value)}
+									onChange={(e) =>
+										setCo7121(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 						</tr>
@@ -12378,7 +15646,11 @@ export default function App() {
 								<Textarea
 									readOnly
 									value={indicators122}
-									onChange={(e) => setIndicators122(e.target.value)}
+									onChange={(e) =>
+										setIndicators122(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
@@ -12386,56 +15658,88 @@ export default function App() {
 									type='number'
 									readOnly
 									value={weight122}
-									onChange={(e) => setWeight122(e.target.value)}
+									onChange={(e) =>
+										setWeight122(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co1122}
-									onChange={(e) => setCo1122(e.target.value)}
+									onChange={(e) =>
+										setCo1122(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co2122}
-									onChange={(e) => setCo2122(e.target.value)}
+									onChange={(e) =>
+										setCo2122(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co3122}
-									onChange={(e) => setCo3122(e.target.value)}
+									onChange={(e) =>
+										setCo3122(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co4122}
-									onChange={(e) => setCo4122(e.target.value)}
+									onChange={(e) =>
+										setCo4122(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co5122}
-									onChange={(e) => setCo5122(e.target.value)}
+									onChange={(e) =>
+										setCo5122(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co6122}
-									onChange={(e) => setCo6122(e.target.value)}
+									onChange={(e) =>
+										setCo6122(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co7122}
-									onChange={(e) => setCo7122(e.target.value)}
+									onChange={(e) =>
+										setCo7122(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 						</tr>
@@ -12444,14 +15748,22 @@ export default function App() {
 								<Textarea
 									readOnly
 									value={competency122}
-									onChange={(e) => setCompetency122(e.target.value)}
+									onChange={(e) =>
+										setCompetency122(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Textarea
 									readOnly
 									value={indicators123}
-									onChange={(e) => setIndicators123(e.target.value)}
+									onChange={(e) =>
+										setIndicators123(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
@@ -12459,56 +15771,88 @@ export default function App() {
 									type='number'
 									readOnly
 									value={weight123}
-									onChange={(e) => setWeight123(e.target.value)}
+									onChange={(e) =>
+										setWeight123(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co1123}
-									onChange={(e) => setCo1123(e.target.value)}
+									onChange={(e) =>
+										setCo1123(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co2123}
-									onChange={(e) => setCo2123(e.target.value)}
+									onChange={(e) =>
+										setCo2123(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co3123}
-									onChange={(e) => setCo3123(e.target.value)}
+									onChange={(e) =>
+										setCo3123(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co4123}
-									onChange={(e) => setCo4123(e.target.value)}
+									onChange={(e) =>
+										setCo4123(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co5123}
-									onChange={(e) => setCo5123(e.target.value)}
+									onChange={(e) =>
+										setCo5123(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co6123}
-									onChange={(e) => setCo6123(e.target.value)}
+									onChange={(e) =>
+										setCo6123(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co7123}
-									onChange={(e) => setCo7123(e.target.value)}
+									onChange={(e) =>
+										setCo7123(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 						</tr>
@@ -12517,7 +15861,11 @@ export default function App() {
 								<Textarea
 									readOnly
 									value={indicators124}
-									onChange={(e) => setIndicators124(e.target.value)}
+									onChange={(e) =>
+										setIndicators124(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
@@ -12525,56 +15873,88 @@ export default function App() {
 									type='number'
 									readOnly
 									value={weight124}
-									onChange={(e) => setWeight124(e.target.value)}
+									onChange={(e) =>
+										setWeight124(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co1124}
-									onChange={(e) => setCo1124(e.target.value)}
+									onChange={(e) =>
+										setCo1124(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co2124}
-									onChange={(e) => setCo2124(e.target.value)}
+									onChange={(e) =>
+										setCo2124(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co3124}
-									onChange={(e) => setCo3124(e.target.value)}
+									onChange={(e) =>
+										setCo3124(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co4124}
-									onChange={(e) => setCo4124(e.target.value)}
+									onChange={(e) =>
+										setCo4124(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co5124}
-									onChange={(e) => setCo5124(e.target.value)}
+									onChange={(e) =>
+										setCo5124(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co6124}
-									onChange={(e) => setCo6124(e.target.value)}
+									onChange={(e) =>
+										setCo6124(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co7124}
-									onChange={(e) => setCo7124(e.target.value)}
+									onChange={(e) =>
+										setCo7124(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 						</tr>
@@ -12583,14 +15963,22 @@ export default function App() {
 								<Textarea
 									readOnly
 									value={competency123}
-									onChange={(e) => setCompetency123(e.target.value)}
+									onChange={(e) =>
+										setCompetency123(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Textarea
 									readOnly
 									value={indicators125}
-									onChange={(e) => setIndicators125(e.target.value)}
+									onChange={(e) =>
+										setIndicators125(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
@@ -12598,56 +15986,88 @@ export default function App() {
 									type='number'
 									value={weight125}
 									readOnly
-									onChange={(e) => setWeight125(e.target.value)}
+									onChange={(e) =>
+										setWeight125(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co1125}
-									onChange={(e) => setCo1125(e.target.value)}
+									onChange={(e) =>
+										setCo1125(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co2125}
-									onChange={(e) => setCo2125(e.target.value)}
+									onChange={(e) =>
+										setCo2125(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co3125}
-									onChange={(e) => setCo3125(e.target.value)}
+									onChange={(e) =>
+										setCo3125(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co4125}
-									onChange={(e) => setCo4125(e.target.value)}
+									onChange={(e) =>
+										setCo4125(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co5125}
-									onChange={(e) => setCo5125(e.target.value)}
+									onChange={(e) =>
+										setCo5125(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co6125}
-									onChange={(e) => setCo6125(e.target.value)}
+									onChange={(e) =>
+										setCo6125(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co7125}
-									onChange={(e) => setCo7125(e.target.value)}
+									onChange={(e) =>
+										setCo7125(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 						</tr>
@@ -12656,7 +16076,11 @@ export default function App() {
 								<Textarea
 									readOnly
 									value={indicators126}
-									onChange={(e) => setIndicators126(e.target.value)}
+									onChange={(e) =>
+										setIndicators126(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
@@ -12664,56 +16088,88 @@ export default function App() {
 									type='number'
 									value={weight126}
 									readOnly
-									onChange={(e) => setWeight126(e.target.value)}
+									onChange={(e) =>
+										setWeight126(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co1126}
-									onChange={(e) => setCo1126(e.target.value)}
+									onChange={(e) =>
+										setCo1126(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co2126}
-									onChange={(e) => setCo2126(e.target.value)}
+									onChange={(e) =>
+										setCo2126(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co3126}
-									onChange={(e) => setCo3126(e.target.value)}
+									onChange={(e) =>
+										setCo3126(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co4126}
-									onChange={(e) => setCo4126(e.target.value)}
+									onChange={(e) =>
+										setCo4126(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co5126}
-									onChange={(e) => setCo5126(e.target.value)}
+									onChange={(e) =>
+										setCo5126(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co6126}
-									onChange={(e) => setCo6126(e.target.value)}
+									onChange={(e) =>
+										setCo6126(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={co7126}
-									onChange={(e) => setCo7126(e.target.value)}
+									onChange={(e) =>
+										setCo7126(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 						</tr>
@@ -12732,7 +16188,11 @@ export default function App() {
 									type='number'
 									value={po12mapco1.toString()}
 									readOnly
-									onChange={(e) => setPo12mapco1(e.target.value)}
+									onChange={(e) =>
+										setPo12mapco1(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
@@ -12740,7 +16200,11 @@ export default function App() {
 									type='number'
 									value={po12mapco2.toString()}
 									readOnly
-									onChange={(e) => setPo12mapco2(e.target.value)}
+									onChange={(e) =>
+										setPo12mapco2(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>{" "}
 							</td>
 							<td>
@@ -12748,7 +16212,11 @@ export default function App() {
 									type='number'
 									value={po12mapco3.toString()}
 									readOnly
-									onChange={(e) => setPo12mapco3(e.target.value)}
+									onChange={(e) =>
+										setPo12mapco3(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>{" "}
 							</td>
 							<td>
@@ -12756,7 +16224,11 @@ export default function App() {
 									type='number'
 									value={po12mapco4.toString()}
 									readOnly
-									onChange={(e) => setPo12mapco4(e.target.value)}
+									onChange={(e) =>
+										setPo12mapco4(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>{" "}
 							</td>
 							<td>
@@ -12764,7 +16236,11 @@ export default function App() {
 									type='number'
 									value={po12mapco5.toString()}
 									readOnly
-									onChange={(e) => setPo12mapco5(e.target.value)}
+									onChange={(e) =>
+										setPo12mapco5(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>{" "}
 							</td>
 							<td>
@@ -12772,7 +16248,11 @@ export default function App() {
 									type='number'
 									value={po12mapco6.toString()}
 									readOnly
-									onChange={(e) => setPo12mapco6(e.target.value)}
+									onChange={(e) =>
+										setPo12mapco6(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>{" "}
 							</td>
 							<td>
@@ -12780,7 +16260,11 @@ export default function App() {
 									type='number'
 									value={po12mapco7.toString()}
 									readOnly
-									onChange={(e) => setPo12mapco7(e.target.value)}
+									onChange={(e) =>
+										setPo12mapco7(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>{" "}
 							</td>
 						</tr>
@@ -12792,7 +16276,11 @@ export default function App() {
 								<Textarea
 									readOnly
 									value={pso11}
-									onChange={(e) => setPso11(e.target.value)}
+									onChange={(e) =>
+										setPso11(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 									className='my-6'
 								/>
 							</td>
@@ -12800,14 +16288,22 @@ export default function App() {
 								<Textarea
 									readOnly
 									value={psocompetency11}
-									onChange={(e) => setPsocompetency11(e.target.value)}
+									onChange={(e) =>
+										setPsocompetency11(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Textarea
 									readOnly
 									value={psoindicators11}
-									onChange={(e) => setPsoindicators11(e.target.value)}
+									onChange={(e) =>
+										setPsoindicators11(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
@@ -12815,56 +16311,88 @@ export default function App() {
 									type='number'
 									readOnly
 									value={psoweight11}
-									onChange={(e) => setPsoweight11(e.target.value)}
+									onChange={(e) =>
+										setPsoweight11(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={psoco111}
-									onChange={(e) => setPsoco111(e.target.value)}
+									onChange={(e) =>
+										setPsoco111(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={psoco211}
-									onChange={(e) => setPsoco211(e.target.value)}
+									onChange={(e) =>
+										setPsoco211(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={psoco311}
-									onChange={(e) => setPsoco311(e.target.value)}
+									onChange={(e) =>
+										setPsoco311(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={psoco411}
-									onChange={(e) => setPsoco411(e.target.value)}
+									onChange={(e) =>
+										setPsoco411(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={psoco511}
-									onChange={(e) => setPsoco511(e.target.value)}
+									onChange={(e) =>
+										setPsoco511(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={psoco611}
-									onChange={(e) => setPsoco611(e.target.value)}
+									onChange={(e) =>
+										setPsoco611(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={psoco711}
-									onChange={(e) => setPsoco711(e.target.value)}
+									onChange={(e) =>
+										setPsoco711(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 						</tr>
@@ -12873,7 +16401,11 @@ export default function App() {
 								<Textarea
 									readOnly
 									value={psoindicators12}
-									onChange={(e) => setPsoindicators12(e.target.value)}
+									onChange={(e) =>
+										setPsoindicators12(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
@@ -12881,56 +16413,88 @@ export default function App() {
 									type='number'
 									readOnly
 									value={psoweight12}
-									onChange={(e) => setPsoweight12(e.target.value)}
+									onChange={(e) =>
+										setPsoweight12(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={psoco112}
-									onChange={(e) => setPsoco112(e.target.value)}
+									onChange={(e) =>
+										setPsoco112(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={psoco212}
-									onChange={(e) => setPsoco212(e.target.value)}
+									onChange={(e) =>
+										setPsoco212(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={psoco312}
-									onChange={(e) => setPsoco312(e.target.value)}
+									onChange={(e) =>
+										setPsoco312(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={psoco412}
-									onChange={(e) => setPsoco412(e.target.value)}
+									onChange={(e) =>
+										setPsoco412(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={psoco512}
-									onChange={(e) => setPsoco512(e.target.value)}
+									onChange={(e) =>
+										setPsoco512(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={psoco612}
-									onChange={(e) => setPsoco612(e.target.value)}
+									onChange={(e) =>
+										setPsoco612(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={psoco712}
-									onChange={(e) => setPsoco712(e.target.value)}
+									onChange={(e) =>
+										setPsoco712(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 						</tr>
@@ -12940,14 +16504,22 @@ export default function App() {
 								<Textarea
 									readOnly
 									value={psocompetency12}
-									onChange={(e) => setPsocompetency12(e.target.value)}
+									onChange={(e) =>
+										setPsocompetency12(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Textarea
 									readOnly
 									value={psoindicators13}
-									onChange={(e) => setPsoindicators13(e.target.value)}
+									onChange={(e) =>
+										setPsoindicators13(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
@@ -12955,56 +16527,88 @@ export default function App() {
 									type='number'
 									readOnly
 									value={psoweight13}
-									onChange={(e) => setPsoweight13(e.target.value)}
+									onChange={(e) =>
+										setPsoweight13(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={psoco113}
-									onChange={(e) => setPsoco113(e.target.value)}
+									onChange={(e) =>
+										setPsoco113(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={psoco213}
-									onChange={(e) => setPsoco213(e.target.value)}
+									onChange={(e) =>
+										setPsoco213(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={psoco313}
-									onChange={(e) => setPsoco313(e.target.value)}
+									onChange={(e) =>
+										setPsoco313(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={psoco413}
-									onChange={(e) => setPsoco413(e.target.value)}
+									onChange={(e) =>
+										setPsoco413(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={psoco513}
-									onChange={(e) => setPsoco513(e.target.value)}
+									onChange={(e) =>
+										setPsoco513(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={psoco613}
-									onChange={(e) => setPsoco613(e.target.value)}
+									onChange={(e) =>
+										setPsoco613(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={psoco713}
-									onChange={(e) => setPsoco713(e.target.value)}
+									onChange={(e) =>
+										setPsoco713(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 						</tr>
@@ -13013,7 +16617,11 @@ export default function App() {
 								<Textarea
 									readOnly
 									value={psoindicators14}
-									onChange={(e) => setPsoindicators14(e.target.value)}
+									onChange={(e) =>
+										setPsoindicators14(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
@@ -13021,56 +16629,88 @@ export default function App() {
 									type='number'
 									readOnly
 									value={psoweight14}
-									onChange={(e) => setPsoweight14(e.target.value)}
+									onChange={(e) =>
+										setPsoweight14(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={psoco114}
-									onChange={(e) => setPsoco114(e.target.value)}
+									onChange={(e) =>
+										setPsoco114(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={psoco214}
-									onChange={(e) => setPsoco214(e.target.value)}
+									onChange={(e) =>
+										setPsoco214(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={psoco314}
-									onChange={(e) => setPsoco314(e.target.value)}
+									onChange={(e) =>
+										setPsoco314(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={psoco414}
-									onChange={(e) => setPsoco414(e.target.value)}
+									onChange={(e) =>
+										setPsoco414(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={psoco514}
-									onChange={(e) => setPsoco514(e.target.value)}
+									onChange={(e) =>
+										setPsoco514(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={psoco614}
-									onChange={(e) => setPsoco614(e.target.value)}
+									onChange={(e) =>
+										setPsoco614(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={psoco714}
-									onChange={(e) => setPsoco714(e.target.value)}
+									onChange={(e) =>
+										setPsoco714(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 						</tr>
@@ -13079,7 +16719,11 @@ export default function App() {
 								<Textarea
 									readOnly
 									value={psoindicators15}
-									onChange={(e) => setPsoindicators15(e.target.value)}
+									onChange={(e) =>
+										setPsoindicators15(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
@@ -13087,56 +16731,88 @@ export default function App() {
 									type='number'
 									value={psoweight15}
 									readOnly
-									onChange={(e) => setPsoweight15(e.target.value)}
+									onChange={(e) =>
+										setPsoweight15(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={psoco115}
-									onChange={(e) => setPsoco115(e.target.value)}
+									onChange={(e) =>
+										setPsoco115(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={psoco215}
-									onChange={(e) => setPsoco215(e.target.value)}
+									onChange={(e) =>
+										setPsoco215(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={psoco315}
-									onChange={(e) => setPsoco315(e.target.value)}
+									onChange={(e) =>
+										setPsoco315(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={psoco415}
-									onChange={(e) => setPsoco415(e.target.value)}
+									onChange={(e) =>
+										setPsoco415(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={psoco515}
-									onChange={(e) => setPsoco515(e.target.value)}
+									onChange={(e) =>
+										setPsoco515(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={psoco615}
-									onChange={(e) => setPsoco615(e.target.value)}
+									onChange={(e) =>
+										setPsoco615(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={psoco715}
-									onChange={(e) => setPsoco715(e.target.value)}
+									onChange={(e) =>
+										setPsoco715(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 						</tr>
@@ -13154,7 +16830,11 @@ export default function App() {
 									type='number'
 									value={pso1mapco1.toString()}
 									readOnly
-									onChange={(e) => setPso1mapco1(e.target.value)}
+									onChange={(e) =>
+										setPso1mapco1(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
@@ -13162,7 +16842,11 @@ export default function App() {
 									type='number'
 									value={pso1mapco2.toString()}
 									readOnly
-									onChange={(e) => setPso1mapco2(e.target.value)}
+									onChange={(e) =>
+										setPso1mapco2(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>{" "}
 							</td>
 							<td>
@@ -13170,7 +16854,11 @@ export default function App() {
 									type='number'
 									value={pso1mapco3.toString()}
 									readOnly
-									onChange={(e) => setPso1mapco3(e.target.value)}
+									onChange={(e) =>
+										setPso1mapco3(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>{" "}
 							</td>
 							<td>
@@ -13178,7 +16866,11 @@ export default function App() {
 									type='number'
 									value={pso1mapco4.toString()}
 									readOnly
-									onChange={(e) => setPso1mapco4(e.target.value)}
+									onChange={(e) =>
+										setPso1mapco4(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>{" "}
 							</td>
 							<td>
@@ -13186,7 +16878,11 @@ export default function App() {
 									type='number'
 									value={pso1mapco5.toString()}
 									readOnly
-									onChange={(e) => setPso1mapco5(e.target.value)}
+									onChange={(e) =>
+										setPso1mapco5(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>{" "}
 							</td>
 							<td>
@@ -13194,7 +16890,11 @@ export default function App() {
 									type='number'
 									value={pso1mapco6.toString()}
 									readOnly
-									onChange={(e) => setPso1mapco6(e.target.value)}
+									onChange={(e) =>
+										setPso1mapco6(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>{" "}
 							</td>
 							<td>
@@ -13202,7 +16902,11 @@ export default function App() {
 									type='number'
 									value={pso1mapco7.toString()}
 									readOnly
-									onChange={(e) => setPso1mapco7(e.target.value)}
+									onChange={(e) =>
+										setPso1mapco7(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>{" "}
 							</td>
 						</tr>
@@ -13214,7 +16918,11 @@ export default function App() {
 								<Textarea
 									readOnly
 									value={pso21}
-									onChange={(e) => setPso21(e.target.value)}
+									onChange={(e) =>
+										setPso21(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 									className='my-6'
 								/>
 							</td>
@@ -13222,14 +16930,22 @@ export default function App() {
 								<Textarea
 									readOnly
 									value={psocompetency21}
-									onChange={(e) => setPsocompetency21(e.target.value)}
+									onChange={(e) =>
+										setPsocompetency21(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Textarea
 									readOnly
 									value={psoindicators21}
-									onChange={(e) => setPsoindicators21(e.target.value)}
+									onChange={(e) =>
+										setPsoindicators21(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
@@ -13237,56 +16953,88 @@ export default function App() {
 									type='number'
 									readOnly
 									value={psoweight21}
-									onChange={(e) => setPsoweight21(e.target.value)}
+									onChange={(e) =>
+										setPsoweight21(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={psoco121}
-									onChange={(e) => setPsoco121(e.target.value)}
+									onChange={(e) =>
+										setPsoco121(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={psoco221}
-									onChange={(e) => setPsoco221(e.target.value)}
+									onChange={(e) =>
+										setPsoco221(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={psoco321}
-									onChange={(e) => setPsoco321(e.target.value)}
+									onChange={(e) =>
+										setPsoco321(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={psoco421}
-									onChange={(e) => setPsoco421(e.target.value)}
+									onChange={(e) =>
+										setPsoco421(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={psoco521}
-									onChange={(e) => setPsoco521(e.target.value)}
+									onChange={(e) =>
+										setPsoco521(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={psoco621}
-									onChange={(e) => setPsoco621(e.target.value)}
+									onChange={(e) =>
+										setPsoco621(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={psoco721}
-									onChange={(e) => setPsoco721(e.target.value)}
+									onChange={(e) =>
+										setPsoco721(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 						</tr>
@@ -13295,7 +17043,11 @@ export default function App() {
 								<Textarea
 									readOnly
 									value={psoindicators22}
-									onChange={(e) => setPsoindicators22(e.target.value)}
+									onChange={(e) =>
+										setPsoindicators22(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
@@ -13303,56 +17055,88 @@ export default function App() {
 									type='number'
 									readOnly
 									value={psoweight22}
-									onChange={(e) => setPsoweight22(e.target.value)}
+									onChange={(e) =>
+										setPsoweight22(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={psoco122}
-									onChange={(e) => setPsoco122(e.target.value)}
+									onChange={(e) =>
+										setPsoco122(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={psoco222}
-									onChange={(e) => setPsoco222(e.target.value)}
+									onChange={(e) =>
+										setPsoco222(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={psoco322}
-									onChange={(e) => setPsoco322(e.target.value)}
+									onChange={(e) =>
+										setPsoco322(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={psoco422}
-									onChange={(e) => setPsoco422(e.target.value)}
+									onChange={(e) =>
+										setPsoco422(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={psoco522}
-									onChange={(e) => setPsoco522(e.target.value)}
+									onChange={(e) =>
+										setPsoco522(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={psoco622}
-									onChange={(e) => setPsoco622(e.target.value)}
+									onChange={(e) =>
+										setPsoco622(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={psoco722}
-									onChange={(e) => setPsoco722(e.target.value)}
+									onChange={(e) =>
+										setPsoco722(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 						</tr>
@@ -13362,14 +17146,22 @@ export default function App() {
 								<Textarea
 									readOnly
 									value={psocompetency22}
-									onChange={(e) => setPsocompetency22(e.target.value)}
+									onChange={(e) =>
+										setPsocompetency22(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Textarea
 									readOnly
 									value={psoindicators23}
-									onChange={(e) => setPsoindicators23(e.target.value)}
+									onChange={(e) =>
+										setPsoindicators23(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
@@ -13377,56 +17169,88 @@ export default function App() {
 									type='number'
 									readOnly
 									value={psoweight23}
-									onChange={(e) => setPsoweight23(e.target.value)}
+									onChange={(e) =>
+										setPsoweight23(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={psoco123}
-									onChange={(e) => setPsoco123(e.target.value)}
+									onChange={(e) =>
+										setPsoco123(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={psoco223}
-									onChange={(e) => setPsoco223(e.target.value)}
+									onChange={(e) =>
+										setPsoco223(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={psoco323}
-									onChange={(e) => setPsoco323(e.target.value)}
+									onChange={(e) =>
+										setPsoco323(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={psoco423}
-									onChange={(e) => setPsoco423(e.target.value)}
+									onChange={(e) =>
+										setPsoco423(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={psoco523}
-									onChange={(e) => setPsoco523(e.target.value)}
+									onChange={(e) =>
+										setPsoco523(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={psoco623}
-									onChange={(e) => setPsoco623(e.target.value)}
+									onChange={(e) =>
+										setPsoco623(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={psoco723}
-									onChange={(e) => setPsoco723(e.target.value)}
+									onChange={(e) =>
+										setPsoco723(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 						</tr>
@@ -13435,7 +17259,11 @@ export default function App() {
 								<Textarea
 									readOnly
 									value={psoindicators24}
-									onChange={(e) => setPsoindicators24(e.target.value)}
+									onChange={(e) =>
+										setPsoindicators24(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
@@ -13443,56 +17271,88 @@ export default function App() {
 									type='number'
 									readOnly
 									value={psoweight24}
-									onChange={(e) => setPsoweight24(e.target.value)}
+									onChange={(e) =>
+										setPsoweight24(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={psoco124}
-									onChange={(e) => setPsoco124(e.target.value)}
+									onChange={(e) =>
+										setPsoco124(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={psoco224}
-									onChange={(e) => setPsoco224(e.target.value)}
+									onChange={(e) =>
+										setPsoco224(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={psoco324}
-									onChange={(e) => setPsoco324(e.target.value)}
+									onChange={(e) =>
+										setPsoco324(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={psoco424}
-									onChange={(e) => setPsoco424(e.target.value)}
+									onChange={(e) =>
+										setPsoco424(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={psoco524}
-									onChange={(e) => setPsoco524(e.target.value)}
+									onChange={(e) =>
+										setPsoco524(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={psoco624}
-									onChange={(e) => setPsoco624(e.target.value)}
+									onChange={(e) =>
+										setPsoco624(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={psoco724}
-									onChange={(e) => setPsoco724(e.target.value)}
+									onChange={(e) =>
+										setPsoco724(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 						</tr>
@@ -13511,7 +17371,11 @@ export default function App() {
 									type='number'
 									value={pso2mapco1.toString()}
 									readOnly
-									onChange={(e) => setPso2mapco1(e.target.value)}
+									onChange={(e) =>
+										setPso2mapco1(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
@@ -13519,7 +17383,11 @@ export default function App() {
 									type='number'
 									value={pso2mapco2.toString()}
 									readOnly
-									onChange={(e) => setPso2mapco2(e.target.value)}
+									onChange={(e) =>
+										setPso2mapco2(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>{" "}
 							</td>
 							<td>
@@ -13527,7 +17395,11 @@ export default function App() {
 									type='number'
 									value={pso2mapco3.toString()}
 									readOnly
-									onChange={(e) => setPso2mapco3(e.target.value)}
+									onChange={(e) =>
+										setPso2mapco3(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>{" "}
 							</td>
 							<td>
@@ -13535,7 +17407,11 @@ export default function App() {
 									type='number'
 									value={pso2mapco4.toString()}
 									readOnly
-									onChange={(e) => setPso2mapco4(e.target.value)}
+									onChange={(e) =>
+										setPso2mapco4(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>{" "}
 							</td>
 							<td>
@@ -13543,7 +17419,11 @@ export default function App() {
 									type='number'
 									value={pso2mapco5.toString()}
 									readOnly
-									onChange={(e) => setPso2mapco5(e.target.value)}
+									onChange={(e) =>
+										setPso2mapco5(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>{" "}
 							</td>
 							<td>
@@ -13551,7 +17431,11 @@ export default function App() {
 									type='number'
 									value={pso2mapco6.toString()}
 									readOnly
-									onChange={(e) => setPso2mapco6(e.target.value)}
+									onChange={(e) =>
+										setPso2mapco6(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>{" "}
 							</td>
 							<td>
@@ -13559,7 +17443,11 @@ export default function App() {
 									type='number'
 									value={pso2mapco7.toString()}
 									readOnly
-									onChange={(e) => setPso2mapco7(e.target.value)}
+									onChange={(e) =>
+										setPso2mapco7(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>{" "}
 							</td>
 						</tr>
@@ -13571,7 +17459,11 @@ export default function App() {
 								<Textarea
 									readOnly
 									value={pso31}
-									onChange={(e) => setPso31(e.target.value)}
+									onChange={(e) =>
+										setPso31(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 									className='my-6'
 								/>
 							</td>
@@ -13579,14 +17471,22 @@ export default function App() {
 								<Textarea
 									readOnly
 									value={psocompetency31}
-									onChange={(e) => setPsocompetency31(e.target.value)}
+									onChange={(e) =>
+										setPsocompetency31(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Textarea
 									readOnly
 									value={psoindicators31}
-									onChange={(e) => setPsoindicators31(e.target.value)}
+									onChange={(e) =>
+										setPsoindicators31(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
@@ -13594,56 +17494,88 @@ export default function App() {
 									type='number'
 									readOnly
 									value={psoweight31}
-									onChange={(e) => setPsoweight31(e.target.value)}
+									onChange={(e) =>
+										setPsoweight31(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={psoco131}
-									onChange={(e) => setPsoco131(e.target.value)}
+									onChange={(e) =>
+										setPsoco131(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={psoco231}
-									onChange={(e) => setPsoco231(e.target.value)}
+									onChange={(e) =>
+										setPsoco231(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={psoco331}
-									onChange={(e) => setPsoco331(e.target.value)}
+									onChange={(e) =>
+										setPsoco331(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={psoco431}
-									onChange={(e) => setPsoco431(e.target.value)}
+									onChange={(e) =>
+										setPsoco431(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={psoco531}
-									onChange={(e) => setPsoco531(e.target.value)}
+									onChange={(e) =>
+										setPsoco531(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={psoco631}
-									onChange={(e) => setPsoco631(e.target.value)}
+									onChange={(e) =>
+										setPsoco631(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={psoco731}
-									onChange={(e) => setPsoco731(e.target.value)}
+									onChange={(e) =>
+										setPsoco731(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 						</tr>
@@ -13652,7 +17584,11 @@ export default function App() {
 								<Textarea
 									readOnly
 									value={psoindicators32}
-									onChange={(e) => setPsoindicators32(e.target.value)}
+									onChange={(e) =>
+										setPsoindicators32(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
@@ -13660,56 +17596,88 @@ export default function App() {
 									type='number'
 									readOnly
 									value={psoweight32}
-									onChange={(e) => setPsoweight32(e.target.value)}
+									onChange={(e) =>
+										setPsoweight32(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={psoco132}
-									onChange={(e) => setPsoco132(e.target.value)}
+									onChange={(e) =>
+										setPsoco132(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={psoco232}
-									onChange={(e) => setPsoco232(e.target.value)}
+									onChange={(e) =>
+										setPsoco232(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={psoco332}
-									onChange={(e) => setPsoco332(e.target.value)}
+									onChange={(e) =>
+										setPsoco332(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={psoco432}
-									onChange={(e) => setPsoco432(e.target.value)}
+									onChange={(e) =>
+										setPsoco432(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={psoco532}
-									onChange={(e) => setPsoco532(e.target.value)}
+									onChange={(e) =>
+										setPsoco532(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={psoco632}
-									onChange={(e) => setPsoco632(e.target.value)}
+									onChange={(e) =>
+										setPsoco632(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={psoco732}
-									onChange={(e) => setPsoco732(e.target.value)}
+									onChange={(e) =>
+										setPsoco732(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 						</tr>
@@ -13719,14 +17687,22 @@ export default function App() {
 								<Textarea
 									readOnly
 									value={psocompetency32}
-									onChange={(e) => setPsocompetency32(e.target.value)}
+									onChange={(e) =>
+										setPsocompetency32(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Textarea
 									readOnly
 									value={psoindicators33}
-									onChange={(e) => setPsoindicators33(e.target.value)}
+									onChange={(e) =>
+										setPsoindicators33(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
@@ -13734,56 +17710,88 @@ export default function App() {
 									type='number'
 									readOnly
 									value={psoweight33}
-									onChange={(e) => setPsoweight33(e.target.value)}
+									onChange={(e) =>
+										setPsoweight33(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={psoco133}
-									onChange={(e) => setPsoco133(e.target.value)}
+									onChange={(e) =>
+										setPsoco133(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={psoco233}
-									onChange={(e) => setPsoco233(e.target.value)}
+									onChange={(e) =>
+										setPsoco233(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={psoco333}
-									onChange={(e) => setPsoco333(e.target.value)}
+									onChange={(e) =>
+										setPsoco333(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={psoco433}
-									onChange={(e) => setPsoco433(e.target.value)}
+									onChange={(e) =>
+										setPsoco433(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={psoco533}
-									onChange={(e) => setPsoco533(e.target.value)}
+									onChange={(e) =>
+										setPsoco533(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={psoco633}
-									onChange={(e) => setPsoco633(e.target.value)}
+									onChange={(e) =>
+										setPsoco633(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={psoco733}
-									onChange={(e) => setPsoco733(e.target.value)}
+									onChange={(e) =>
+										setPsoco733(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 						</tr>
@@ -13792,7 +17800,11 @@ export default function App() {
 								<Textarea
 									readOnly
 									value={psoindicators34}
-									onChange={(e) => setPsoindicators34(e.target.value)}
+									onChange={(e) =>
+										setPsoindicators34(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
@@ -13800,56 +17812,88 @@ export default function App() {
 									type='number'
 									readOnly
 									value={psoweight34}
-									onChange={(e) => setPsoweight34(e.target.value)}
+									onChange={(e) =>
+										setPsoweight34(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={psoco134}
-									onChange={(e) => setPsoco134(e.target.value)}
+									onChange={(e) =>
+										setPsoco134(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={psoco234}
-									onChange={(e) => setPsoco234(e.target.value)}
+									onChange={(e) =>
+										setPsoco234(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={psoco334}
-									onChange={(e) => setPsoco334(e.target.value)}
+									onChange={(e) =>
+										setPsoco334(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={psoco434}
-									onChange={(e) => setPsoco434(e.target.value)}
+									onChange={(e) =>
+										setPsoco434(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={psoco534}
-									onChange={(e) => setPsoco534(e.target.value)}
+									onChange={(e) =>
+										setPsoco534(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={psoco634}
-									onChange={(e) => setPsoco634(e.target.value)}
+									onChange={(e) =>
+										setPsoco634(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
 									value={psoco734}
-									onChange={(e) => setPsoco734(e.target.value)}
+									onChange={(e) =>
+										setPsoco734(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 						</tr>
@@ -13868,7 +17912,11 @@ export default function App() {
 									type='number'
 									value={pso3mapco1.toString()}
 									readOnly
-									onChange={(e) => setPso3mapco1(e.target.value)}
+									onChange={(e) =>
+										setPso3mapco1(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>
 							</td>
 							<td>
@@ -13876,7 +17924,11 @@ export default function App() {
 									type='number'
 									value={pso3mapco2.toString()}
 									readOnly
-									onChange={(e) => setPso3mapco2(e.target.value)}
+									onChange={(e) =>
+										setPso3mapco2(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>{" "}
 							</td>
 							<td>
@@ -13884,7 +17936,11 @@ export default function App() {
 									type='number'
 									value={pso3mapco3.toString()}
 									readOnly
-									onChange={(e) => setPso3mapco3(e.target.value)}
+									onChange={(e) =>
+										setPso3mapco3(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>{" "}
 							</td>
 							<td>
@@ -13892,7 +17948,11 @@ export default function App() {
 									type='number'
 									value={pso3mapco4.toString()}
 									readOnly
-									onChange={(e) => setPso3mapco4(e.target.value)}
+									onChange={(e) =>
+										setPso3mapco4(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>{" "}
 							</td>
 							<td>
@@ -13900,7 +17960,11 @@ export default function App() {
 									type='number'
 									value={pso3mapco5.toString()}
 									readOnly
-									onChange={(e) => setPso3mapco5(e.target.value)}
+									onChange={(e) =>
+										setPso3mapco5(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>{" "}
 							</td>
 							<td>
@@ -13908,7 +17972,11 @@ export default function App() {
 									type='number'
 									value={pso3mapco6.toString()}
 									readOnly
-									onChange={(e) => setPso3mapco6(e.target.value)}
+									onChange={(e) =>
+										setPso3mapco6(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>{" "}
 							</td>
 							<td>
@@ -13916,7 +17984,11 @@ export default function App() {
 									type='number'
 									value={pso3mapco7.toString()}
 									readOnly
-									onChange={(e) => setPso3mapco7(e.target.value)}
+									onChange={(e) =>
+										setPso3mapco7(
+											String(Math.min(Math.max(Number(e.target.value), 0), 1))
+										)
+									}
 								/>{" "}
 							</td>
 						</tr>

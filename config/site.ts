@@ -12,10 +12,7 @@ export const siteConfig = {
 			label: "All-Tables",
 			href: "/all-tables",
 		},
-		{
-			label: "Edit-Table",
-			href: "/edit-table",
-		},
+
 		{
 			label: "Create-Table",
 			href: "/create-mapping-table",
@@ -34,10 +31,7 @@ export const siteConfig = {
 			label: "All-Tables",
 			href: "/all-tables",
 		},
-		{
-			label: "Edit-Table",
-			href: "/edit-table",
-		},
+
 		{
 			label: "Create-Table",
 			href: "/create-mapping-table",

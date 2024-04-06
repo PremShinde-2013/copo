@@ -11,6 +11,8 @@ import {
 	Image,
 	Link,
 } from "@nextui-org/react";
+import { DeleteOutlineRounded } from "@mui/icons-material";
+import DeleteBtn from "@/components/DeleteBtn";
 
 const Page = () => {
 	const [table, setTable] = useState<any[]>([]);
@@ -48,12 +50,21 @@ const Page = () => {
 							<h1 className='text-lg font-bold'> Subject : {t.subject}</h1>
 						</CardBody>
 						<Divider />
-						<CardFooter>
-							<Link href={`/table/${t._id}`}>
-								<Button variant='flat' color='primary'>
-									Enter
-								</Button>
-							</Link>
+						<CardFooter className='flex justify-between'>
+							<div className=' flex gap-4'>
+								<Link href={`/table/${t._id}`}>
+									<Button variant='flat' color='primary'>
+										Enter
+									</Button>
+								</Link>
+								<Link href={`/edit-table/${t._id}`}>
+									<Button variant='flat' color='primary'>
+										Edit
+									</Button>
+								</Link>
+							</div>
+
+							<DeleteBtn id={t._id} />
 						</CardFooter>
 					</Card>
 				</div>
