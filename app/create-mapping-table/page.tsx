@@ -2387,15 +2387,6 @@ export default function App() {
 	const [psocompetency12, setPsocompetency12] = useState(
 		"1.1  Demonstrate competence in mathematical modelling"
 	);
-	const [psocompetency13, setPsocompetency13] = useState(
-		"1.2 Demonstrate competence in basic sciences"
-	);
-	const [psocompetency14, setPsocompetency14] = useState(
-		"1.3 Demonstrate competence in engineering fundamentals"
-	);
-	const [psocompetency15, setPsocompetency15] = useState(
-		"1.4 Demonstrate competence in specialized engineering knowledge to the program"
-	);
 
 	const [psoindicators11, setPsoindicators11] = useState(
 		"1.1.1      Apply mathematical techniques such as calculus, linear algebra, and statistics to solve problems"
@@ -12185,8 +12176,10 @@ export default function App() {
 							</td>
 						</tr>
 
+						{/* ************************************  PSO : 1       ************************************ */}
+
 						<tr className='m-4'>
-							<td>
+							<td rowSpan={5}>
 								<Textarea
 									readOnly
 									value={pso11}
@@ -12194,7 +12187,7 @@ export default function App() {
 									className='my-6'
 								/>
 							</td>
-							<td>
+							<td rowSpan={2}>
 								<Textarea
 									readOnly
 									value={psocompetency11}
@@ -12219,69 +12212,54 @@ export default function App() {
 							<td>
 								<Input
 									type='number'
-									value={co111}
-									onChange={(e) => setCo111(e.target.value)}
+									value={psoco111}
+									onChange={(e) => setPsoco111(e.target.value)}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
-									value={co211}
-									onChange={(e) => setCo211(e.target.value)}
+									value={psoco211}
+									onChange={(e) => setPsoco211(e.target.value)}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
-									value={co311}
-									onChange={(e) => setCo311(e.target.value)}
+									value={psoco311}
+									onChange={(e) => setPsoco311(e.target.value)}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
-									value={co411}
-									onChange={(e) => setCo411(e.target.value)}
+									value={psoco411}
+									onChange={(e) => setPsoco411(e.target.value)}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
-									value={co511}
-									onChange={(e) => setCo511(e.target.value)}
+									value={psoco511}
+									onChange={(e) => setPsoco511(e.target.value)}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
-									value={co611}
-									onChange={(e) => setCo611(e.target.value)}
+									value={psoco611}
+									onChange={(e) => setPsoco611(e.target.value)}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
-									value={co711}
-									onChange={(e) => setCo711(e.target.value)}
+									value={psoco711}
+									onChange={(e) => setPsoco711(e.target.value)}
 								/>
 							</td>
 						</tr>
 						<tr className='m-4'>
-							<td>
-								<Textarea
-									readOnly
-									value={po12}
-									onChange={(e) => setPo12(e.target.value)}
-									className='my-6'
-								/>
-							</td>
-							<td>
-								<Textarea
-									readOnly
-									value={psocompetency12}
-									onChange={(e) => setPsocompetency12(e.target.value)}
-								/>
-							</td>
 							<td>
 								<Textarea
 									readOnly
@@ -12300,68 +12278,60 @@ export default function App() {
 							<td>
 								<Input
 									type='number'
-									value={co112}
-									onChange={(e) => setCo112(e.target.value)}
+									value={psoco112}
+									onChange={(e) => setPsoco112(e.target.value)}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
-									value={co212}
-									onChange={(e) => setCo212(e.target.value)}
+									value={psoco212}
+									onChange={(e) => setPsoco212(e.target.value)}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
-									value={co312}
-									onChange={(e) => setCo312(e.target.value)}
+									value={psoco312}
+									onChange={(e) => setPsoco312(e.target.value)}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
-									value={co412}
-									onChange={(e) => setCo412(e.target.value)}
+									value={psoco412}
+									onChange={(e) => setPsoco412(e.target.value)}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
-									value={co512}
-									onChange={(e) => setCo512(e.target.value)}
+									value={psoco512}
+									onChange={(e) => setPsoco512(e.target.value)}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
-									value={co612}
-									onChange={(e) => setCo612(e.target.value)}
+									value={psoco612}
+									onChange={(e) => setPsoco612(e.target.value)}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
-									value={co712}
-									onChange={(e) => setCo712(e.target.value)}
+									value={psoco712}
+									onChange={(e) => setPsoco712(e.target.value)}
 								/>
 							</td>
 						</tr>
 
 						<tr className='m-4'>
-							<td>
+							<td rowSpan={3}>
 								<Textarea
 									readOnly
-									value={po13}
-									onChange={(e) => setPo13(e.target.value)}
-									className='my-6'
-								/>
-							</td>
-							<td>
-								<Textarea
-									readOnly
-									value={psocompetency13}
-									onChange={(e) => setPsocompetency13(e.target.value)}
+									value={psocompetency12}
+									onChange={(e) => setPsocompetency12(e.target.value)}
 								/>
 							</td>
 							<td>
@@ -12382,69 +12352,54 @@ export default function App() {
 							<td>
 								<Input
 									type='number'
-									value={co113}
-									onChange={(e) => setCo113(e.target.value)}
+									value={psoco113}
+									onChange={(e) => setPsoco113(e.target.value)}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
-									value={co213}
-									onChange={(e) => setCo213(e.target.value)}
+									value={psoco213}
+									onChange={(e) => setPsoco213(e.target.value)}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
-									value={co313}
-									onChange={(e) => setCo313(e.target.value)}
+									value={psoco313}
+									onChange={(e) => setPsoco313(e.target.value)}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
-									value={co413}
-									onChange={(e) => setCo413(e.target.value)}
+									value={psoco413}
+									onChange={(e) => setPsoco413(e.target.value)}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
-									value={co513}
-									onChange={(e) => setCo513(e.target.value)}
+									value={psoco513}
+									onChange={(e) => setPsoco513(e.target.value)}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
-									value={co613}
-									onChange={(e) => setCo613(e.target.value)}
+									value={psoco613}
+									onChange={(e) => setPsoco613(e.target.value)}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
-									value={co713}
-									onChange={(e) => setCo713(e.target.value)}
+									value={psoco713}
+									onChange={(e) => setPsoco713(e.target.value)}
 								/>
 							</td>
 						</tr>
 						<tr className='m-4'>
-							<td>
-								<Textarea
-									readOnly
-									value={po14}
-									onChange={(e) => setPo14(e.target.value)}
-									className='my-6'
-								/>
-							</td>
-							<td>
-								<Textarea
-									readOnly
-									value={psocompetency14}
-									onChange={(e) => setPsocompetency14(e.target.value)}
-								/>
-							</td>
 							<td>
 								<Textarea
 									readOnly
@@ -12463,69 +12418,54 @@ export default function App() {
 							<td>
 								<Input
 									type='number'
-									value={co114}
-									onChange={(e) => setCo114(e.target.value)}
+									value={psoco114}
+									onChange={(e) => setPsoco114(e.target.value)}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
-									value={co214}
-									onChange={(e) => setCo214(e.target.value)}
+									value={psoco214}
+									onChange={(e) => setPsoco214(e.target.value)}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
-									value={co314}
-									onChange={(e) => setCo314(e.target.value)}
+									value={psoco314}
+									onChange={(e) => setPsoco314(e.target.value)}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
-									value={co414}
-									onChange={(e) => setCo414(e.target.value)}
+									value={psoco414}
+									onChange={(e) => setPsoco414(e.target.value)}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
-									value={co514}
-									onChange={(e) => setCo514(e.target.value)}
+									value={psoco514}
+									onChange={(e) => setPsoco514(e.target.value)}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
-									value={co614}
-									onChange={(e) => setCo614(e.target.value)}
+									value={psoco614}
+									onChange={(e) => setPsoco614(e.target.value)}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
-									value={co714}
-									onChange={(e) => setCo714(e.target.value)}
+									value={psoco714}
+									onChange={(e) => setPsoco714(e.target.value)}
 								/>
 							</td>
 						</tr>
 						<tr className='m-4'>
-							<td>
-								<Textarea
-									readOnly
-									value={po15}
-									onChange={(e) => setPo15(e.target.value)}
-									className='my-6'
-								/>
-							</td>
-							<td>
-								<Textarea
-									readOnly
-									value={psocompetency15}
-									onChange={(e) => setPsocompetency15(e.target.value)}
-								/>
-							</td>
 							<td>
 								<Textarea
 									readOnly
@@ -12542,53 +12482,52 @@ export default function App() {
 								/>
 							</td>
 							<td>
-								{/*  ***********************+++++++++++++++++++++++         till here   +++++++++++++++++++++++++++ *********************** */}
 								<Input
 									type='number'
-									value={co115}
-									onChange={(e) => setCo115(e.target.value)}
+									value={psoco115}
+									onChange={(e) => setPsoco115(e.target.value)}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
-									value={co215}
-									onChange={(e) => setCo215(e.target.value)}
+									value={psoco215}
+									onChange={(e) => setPsoco215(e.target.value)}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
-									value={co315}
-									onChange={(e) => setCo315(e.target.value)}
+									value={psoco315}
+									onChange={(e) => setPsoco315(e.target.value)}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
-									value={co415}
-									onChange={(e) => setCo415(e.target.value)}
+									value={psoco415}
+									onChange={(e) => setPsoco415(e.target.value)}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
-									value={co515}
-									onChange={(e) => setCo515(e.target.value)}
+									value={psoco515}
+									onChange={(e) => setPsoco515(e.target.value)}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
-									value={co615}
-									onChange={(e) => setCo615(e.target.value)}
+									value={psoco615}
+									onChange={(e) => setPsoco615(e.target.value)}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
-									value={co715}
-									onChange={(e) => setCo715(e.target.value)}
+									value={psoco715}
+									onChange={(e) => setPsoco715(e.target.value)}
 								/>
 							</td>
 						</tr>
@@ -12596,7 +12535,7 @@ export default function App() {
 							<td colSpan={4}>
 								<Textarea
 									readOnly
-									value='PO1 : Mapping Level'
+									value='PSO 1 : Mapping Level'
 									className='my-6'
 								/>
 							</td>
@@ -12604,57 +12543,57 @@ export default function App() {
 							<td>
 								<Input
 									type='number'
-									value={po1mapco1.toString()}
+									value={pso1mapco1.toString()}
 									readOnly
-									onChange={(e) => setPo1mapco1(e.target.value)}
+									onChange={(e) => setPso1mapco1(e.target.value)}
 								/>
 							</td>
 							<td>
 								<Input
 									type='number'
-									value={po1mapco2.toString()}
+									value={pso1mapco2.toString()}
 									readOnly
-									onChange={(e) => setPo1mapco2(e.target.value)}
+									onChange={(e) => setPso1mapco2(e.target.value)}
 								/>{" "}
 							</td>
 							<td>
 								<Input
 									type='number'
-									value={po1mapco3.toString()}
+									value={pso1mapco3.toString()}
 									readOnly
-									onChange={(e) => setPo1mapco3(e.target.value)}
+									onChange={(e) => setPso1mapco3(e.target.value)}
 								/>{" "}
 							</td>
 							<td>
 								<Input
 									type='number'
-									value={po1mapco4.toString()}
+									value={pso1mapco4.toString()}
 									readOnly
-									onChange={(e) => setPo1mapco4(e.target.value)}
+									onChange={(e) => setPso1mapco4(e.target.value)}
 								/>{" "}
 							</td>
 							<td>
 								<Input
 									type='number'
-									value={po1mapco5.toString()}
+									value={pso1mapco5.toString()}
 									readOnly
-									onChange={(e) => setPo1mapco5(e.target.value)}
+									onChange={(e) => setPso1mapco5(e.target.value)}
 								/>{" "}
 							</td>
 							<td>
 								<Input
 									type='number'
-									value={po1mapco6.toString()}
+									value={pso1mapco6.toString()}
 									readOnly
-									onChange={(e) => setPo1mapco6(e.target.value)}
+									onChange={(e) => setPso1mapco6(e.target.value)}
 								/>{" "}
 							</td>
 							<td>
 								<Input
 									type='number'
-									value={po1mapco7.toString()}
+									value={pso1mapco7.toString()}
 									readOnly
-									onChange={(e) => setPo1mapco7(e.target.value)}
+									onChange={(e) => setPso1mapco7(e.target.value)}
 								/>{" "}
 							</td>
 						</tr>
