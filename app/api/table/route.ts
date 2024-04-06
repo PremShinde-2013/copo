@@ -1169,6 +1169,66 @@ export async function POST(request: any) {
 		pso2mapco5,
 		pso2mapco6,
 		pso2mapco7,
+
+		// ******************************* PSO:3 *****************************
+
+		pso31,
+
+		psocompetency31,
+		psocompetency32,
+
+		psoindicators31,
+		psoindicators32,
+		psoindicators33,
+		psoindicators34,
+
+		psoweight31,
+		psoweight32,
+		psoweight33,
+		psoweight34,
+
+		psoco131,
+		psoco132,
+		psoco133,
+		psoco134,
+
+		psoco231,
+		psoco232,
+		psoco233,
+		psoco234,
+
+		psoco331,
+		psoco332,
+		psoco333,
+		psoco334,
+
+		psoco431,
+		psoco432,
+		psoco433,
+		psoco434,
+
+		psoco531,
+		psoco532,
+		psoco533,
+		psoco534,
+
+		psoco631,
+		psoco632,
+		psoco633,
+		psoco634,
+
+		psoco731,
+		psoco732,
+		psoco733,
+		psoco734,
+
+		pso3mapco1,
+		pso3mapco2,
+		pso3mapco3,
+		pso3mapco4,
+		pso3mapco5,
+		pso3mapco6,
+		pso3mapco7,
 	} = await request.json();
 	await connectDB();
 	await Table.create({
@@ -2336,6 +2396,66 @@ export async function POST(request: any) {
 		pso2mapco5,
 		pso2mapco6,
 		pso2mapco7,
+
+		// ******************************* PSO:3 *****************************
+
+		pso31,
+
+		psocompetency31,
+		psocompetency32,
+
+		psoindicators31,
+		psoindicators32,
+		psoindicators33,
+		psoindicators34,
+
+		psoweight31,
+		psoweight32,
+		psoweight33,
+		psoweight34,
+
+		psoco131,
+		psoco132,
+		psoco133,
+		psoco134,
+
+		psoco231,
+		psoco232,
+		psoco233,
+		psoco234,
+
+		psoco331,
+		psoco332,
+		psoco333,
+		psoco334,
+
+		psoco431,
+		psoco432,
+		psoco433,
+		psoco434,
+
+		psoco531,
+		psoco532,
+		psoco533,
+		psoco534,
+
+		psoco631,
+		psoco632,
+		psoco633,
+		psoco634,
+
+		psoco731,
+		psoco732,
+		psoco733,
+		psoco734,
+
+		pso3mapco1,
+		pso3mapco2,
+		pso3mapco3,
+		pso3mapco4,
+		pso3mapco5,
+		pso3mapco6,
+		pso3mapco7,
 	});
 
 	return NextResponse.json({ message: "Topic Created" });

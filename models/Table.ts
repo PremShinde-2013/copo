@@ -1110,7 +1110,7 @@ export interface TableInterface extends Document {
 	pso1mapco6: number;
 	pso1mapco7: number;
 
-	// ******************************* PSO:1 *****************************
+	// ******************************* PSO:2 *****************************
 
 	pso21: string;
 
@@ -1169,6 +1169,66 @@ export interface TableInterface extends Document {
 	pso2mapco5: number;
 	pso2mapco6: number;
 	pso2mapco7: number;
+
+	// ******************************* PSO:3 *****************************
+
+	pso31: string;
+
+	psocompetency31: string;
+	psocompetency32: string;
+
+	psoindicators31: string;
+	psoindicators32: string;
+	psoindicators33: string;
+	psoindicators34: string;
+
+	psoweight31: number;
+	psoweight32: number;
+	psoweight33: number;
+	psoweight34: number;
+
+	psoco131: number;
+	psoco132: number;
+	psoco133: number;
+	psoco134: number;
+
+	psoco231: number;
+	psoco232: number;
+	psoco233: number;
+	psoco234: number;
+
+	psoco331: number;
+	psoco332: number;
+	psoco333: number;
+	psoco334: number;
+
+	psoco431: number;
+	psoco432: number;
+	psoco433: number;
+	psoco434: number;
+
+	psoco531: number;
+	psoco532: number;
+	psoco533: number;
+	psoco534: number;
+
+	psoco631: number;
+	psoco632: number;
+	psoco633: number;
+	psoco634: number;
+
+	psoco731: number;
+	psoco732: number;
+	psoco733: number;
+	psoco734: number;
+
+	pso3mapco1: number;
+	pso3mapco2: number;
+	pso3mapco3: number;
+	pso3mapco4: number;
+	pso3mapco5: number;
+	pso3mapco6: number;
+	pso3mapco7: number;
 }
 
 const TableSchema = new Schema<TableInterface>({
@@ -2337,6 +2397,66 @@ const TableSchema = new Schema<TableInterface>({
 	pso2mapco5: { type: Number },
 	pso2mapco6: { type: Number },
 	pso2mapco7: { type: Number },
+
+	// ******************************* PSO:3 *****************************
+
+	pso31: { type: String },
+
+	psocompetency31: { type: String },
+	psocompetency32: { type: String },
+
+	psoindicators31: { type: String },
+	psoindicators32: { type: String },
+	psoindicators33: { type: String },
+	psoindicators34: { type: String },
+
+	psoweight31: { type: Number },
+	psoweight32: { type: Number },
+	psoweight33: { type: Number },
+	psoweight34: { type: Number },
+
+	psoco131: { type: Number },
+	psoco132: { type: Number },
+	psoco133: { type: Number },
+	psoco134: { type: Number },
+
+	psoco231: { type: Number },
+	psoco232: { type: Number },
+	psoco233: { type: Number },
+	psoco234: { type: Number },
+
+	psoco331: { type: Number },
+	psoco332: { type: Number },
+	psoco333: { type: Number },
+	psoco334: { type: Number },
+
+	psoco431: { type: Number },
+	psoco432: { type: Number },
+	psoco433: { type: Number },
+	psoco434: { type: Number },
+
+	psoco531: { type: Number },
+	psoco532: { type: Number },
+	psoco533: { type: Number },
+	psoco534: { type: Number },
+
+	psoco631: { type: Number },
+	psoco632: { type: Number },
+	psoco633: { type: Number },
+	psoco634: { type: Number },
+
+	psoco731: { type: Number },
+	psoco732: { type: Number },
+	psoco733: { type: Number },
+	psoco734: { type: Number },
+
+	pso3mapco1: { type: Number },
+	pso3mapco2: { type: Number },
+	pso3mapco3: { type: Number },
+	pso3mapco4: { type: Number },
+	pso3mapco5: { type: Number },
+	pso3mapco6: { type: Number },
+	pso3mapco7: { type: Number },
 });
 
 const Table =

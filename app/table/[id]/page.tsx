@@ -1432,6 +1432,76 @@ const TableDetail = ({ params }: { params: { id: string } }) => {
 				table.pso2mapco6, // Data for po1mapco6
 				table.pso2mapco7, // Data for po1mapco7
 			],
+
+			//  ***************************    PSO : 3  *****************************************
+
+			[
+				table.pso31,
+				table.psocompetency31,
+				table.psoindicators31,
+				table.psoweight31,
+				table.psoco131,
+				table.psoco231,
+				table.psoco331,
+				table.psoco431,
+				table.psoco531,
+				table.psoco631,
+				table.psoco731,
+			],
+			[
+				"",
+				"",
+				table.psoindicators32,
+				table.psoweight32,
+				table.psoco132,
+				table.psoco232,
+				table.psoco332,
+				table.psoco432,
+				table.psoco532,
+				table.psoco632,
+				table.psoco732,
+			],
+			[
+				"",
+				table.psocompetency32,
+				table.psoindicators33,
+				table.psoweight33,
+				table.psoco133,
+				table.psoco233,
+				table.psoco333,
+				table.psoco433,
+				table.psoco533,
+				table.psoco633,
+				table.psoco733,
+			],
+			[
+				"",
+				"",
+				table.psoindicators34,
+				table.psoweight34,
+				table.psoco134,
+				table.psoco234,
+				table.psoco334,
+				table.psoco434,
+				table.psoco534,
+				table.psoco634,
+				table.psoco734,
+			],
+
+			[
+				// Data for the special row
+				"PSO 3 :Mapping Level", // Label for the special row
+				"", // Empty cell for Competency
+				"", // Empty cell for Indicators
+				"", // Empty cell for Weight
+				table.pso3mapco1, // Data for po1mapco1
+				table.pso3mapco2, // Data for po1mapco2
+				table.pso3mapco3, // Data for po1mapco3
+				table.pso3mapco4, // Data for po1mapco4
+				table.pso3mapco5, // Data for po1mapco5
+				table.pso3mapco6, // Data for po1mapco6
+				table.pso3mapco7, // Data for po1mapco7
+			],
 		]);
 		const wb = XLSX.utils.book_new();
 		XLSX.utils.book_append_sheet(wb, ws, "Sheet1");
@@ -2795,7 +2865,7 @@ const TableDetail = ({ params }: { params: { id: string } }) => {
 								<td>{table.pso1mapco7}</td>
 							</tr>
 						)}
-						{/* *******************************   PSO : 1 **************************** */}
+						{/* *******************************   PSO : 2 **************************** */}
 
 						{table && (
 							<tr>
@@ -2828,7 +2898,7 @@ const TableDetail = ({ params }: { params: { id: string } }) => {
 						)}
 						{table && (
 							<tr>
-								<td rowSpan={2}>{table.psocompetency12}</td>
+								<td rowSpan={2}>{table.psocompetency22}</td>
 								<td>{table.psoindicators23}</td>
 								<td>{table.psoweight23}</td>
 								<td>{table.psoco123}</td>
@@ -2867,6 +2937,80 @@ const TableDetail = ({ params }: { params: { id: string } }) => {
 								<td>{table.pso2mapco5}</td>
 								<td>{table.pso2mapco6}</td>
 								<td>{table.pso2mapco7}</td>
+							</tr>
+						)}
+						{/* *******************************   PSO : 3  **************************** */}
+
+						{table && (
+							<tr>
+								<td rowSpan={4}>{table.pso31}</td>
+								<td rowSpan={2}>{table.psocompetency31}</td>
+								<td>{table.psoindicators31}</td>
+								<td>{table.psoweight31}</td>
+								<td>{table.psoco131}</td>
+								<td>{table.psoco231}</td>
+								<td>{table.psoco331}</td>
+								<td>{table.psoco431}</td>
+								<td>{table.psoco531}</td>
+								<td>{table.psoco631}</td>
+								<td>{table.psoco731}</td>
+							</tr>
+						)}
+
+						{table && (
+							<tr>
+								<td>{table.psoindicators32}</td>
+								<td>{table.psoweight32}</td>
+								<td>{table.psoco132}</td>
+								<td>{table.psoco232}</td>
+								<td>{table.psoco332}</td>
+								<td>{table.psoco432}</td>
+								<td>{table.psoco532}</td>
+								<td>{table.psoco632}</td>
+								<td>{table.psoco732}</td>
+							</tr>
+						)}
+						{table && (
+							<tr>
+								<td rowSpan={2}>{table.psocompetency32}</td>
+								<td>{table.psoindicators33}</td>
+								<td>{table.psoweight33}</td>
+								<td>{table.psoco133}</td>
+								<td>{table.psoco233}</td>
+								<td>{table.psoco333}</td>
+								<td>{table.psoco433}</td>
+								<td>{table.psoco533}</td>
+								<td>{table.psoco633}</td>
+								<td>{table.psoco733}</td>
+							</tr>
+						)}
+						{table && (
+							<tr>
+								<td>{table.psoindicators34}</td>
+								<td>{table.psoweight34}</td>
+								<td>{table.psoco134}</td>
+								<td>{table.psoco234}</td>
+								<td>{table.psoco334}</td>
+								<td>{table.psoco434}</td>
+								<td>{table.psoco534}</td>
+								<td>{table.psoco634}</td>
+								<td>{table.psoco734}</td>
+							</tr>
+						)}
+
+						{table && (
+							<tr>
+								<td colSpan={4} className='h-16'>
+									PSO 3 :Mapping Level
+								</td>
+
+								<td>{table.pso3mapco1}</td>
+								<td>{table.pso3mapco2}</td>
+								<td>{table.pso3mapco3}</td>
+								<td>{table.pso3mapco4}</td>
+								<td>{table.pso3mapco5}</td>
+								<td>{table.pso3mapco6}</td>
+								<td>{table.pso3mapco7}</td>
 							</tr>
 						)}
 					</tbody>
