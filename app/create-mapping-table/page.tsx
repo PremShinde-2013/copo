@@ -4872,8 +4872,8 @@ export default function App() {
 		// }
 
 		try {
-			// const res = await fetch("http://localhost:3000/api/table", {
-			const res = await fetch("https://copo-attainment.vercel.app/api/table", {
+			const res = await fetch("http://localhost:3000/api/table", {
+				// const res = await fetch("https://copo-attainment.vercel.app/api/table", {
 				method: "POST",
 				headers: {
 					"Content-type": "application/json",
@@ -6160,11 +6160,7 @@ export default function App() {
 					<Select
 						className='max-w-xs'
 						label='Select Year'
-						onChange={(e) =>
-							handleYearSelect(
-								String(Math.min(Math.max(Number(e.target.value), 0), 1))
-							)
-						}
+						onChange={(e) => handleYearSelect(e.target.value)}
 					>
 						{years.map((year) => (
 							<SelectItem key={year.key} value={year.key}>
@@ -6176,11 +6172,7 @@ export default function App() {
 					<Select
 						className='max-w-xs'
 						label='Select Department'
-						onChange={(e) =>
-							handleDepartSelect(
-								String(Math.min(Math.max(Number(e.target.value), 0), 1))
-							)
-						}
+						onChange={(e) => handleDepartSelect(e.target.value)}
 					>
 						{depart.map((dept) => (
 							<SelectItem key={dept.key} value={dept.key}>
@@ -6192,11 +6184,7 @@ export default function App() {
 					<Select
 						className='max-w-xs'
 						label='Select Semester'
-						onChange={(e) =>
-							handleSemesterSelect(
-								String(Math.min(Math.max(Number(e.target.value), 0), 1))
-							)
-						}
+						onChange={(e) => handleSemesterSelect(e.target.value)}
 					>
 						{semester.map((sem) => (
 							<SelectItem key={sem.key} value={sem.key}>
@@ -6210,11 +6198,7 @@ export default function App() {
 						className='w-auto'
 						type='text'
 						value={subject}
-						onChange={(e) =>
-							setSubject(
-								String(Math.min(Math.max(Number(e.target.value), 0), 1))
-							)
-						}
+						onChange={(e) => setSubject(e.target.value)}
 					/>
 				</div>
 
@@ -6243,7 +6227,7 @@ export default function App() {
 								<Textarea
 									readOnly
 									value={po11}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setPo11(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -6255,7 +6239,7 @@ export default function App() {
 								<Textarea
 									readOnly
 									value={competency11}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCompetency11(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -6266,7 +6250,7 @@ export default function App() {
 								<Textarea
 									readOnly
 									value={indicators11}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setIndicators11(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -6278,7 +6262,7 @@ export default function App() {
 									type='number'
 									readOnly
 									value={weight11}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setWeight11(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -6291,7 +6275,7 @@ export default function App() {
 									max={1}
 									type='number'
 									value={co111}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo111(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -6302,7 +6286,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co211}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo211(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -6313,7 +6297,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co311}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo311(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -6324,7 +6308,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co411}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo411(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -6335,7 +6319,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co511}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo511(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -6346,7 +6330,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co611}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo611(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -6357,7 +6341,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co711}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo711(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -6370,7 +6354,7 @@ export default function App() {
 								<Textarea
 									readOnly
 									value={po12}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setPo12(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -6382,7 +6366,7 @@ export default function App() {
 								<Textarea
 									readOnly
 									value={competency12}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCompetency12(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -6393,7 +6377,7 @@ export default function App() {
 								<Textarea
 									readOnly
 									value={indicators12}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setIndicators12(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -6405,7 +6389,7 @@ export default function App() {
 									type='number'
 									readOnly
 									value={weight12}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setWeight12(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -6416,7 +6400,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co112}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo112(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -6427,7 +6411,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co212}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo212(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -6438,7 +6422,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co312}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo312(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -6449,7 +6433,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co412}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo412(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -6460,7 +6444,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co512}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo512(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -6471,7 +6455,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co612}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo612(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -6482,7 +6466,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co712}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo712(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -6495,7 +6479,7 @@ export default function App() {
 								<Textarea
 									readOnly
 									value={po13}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setPo13(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -6507,7 +6491,7 @@ export default function App() {
 								<Textarea
 									readOnly
 									value={competency13}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCompetency13(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -6518,7 +6502,7 @@ export default function App() {
 								<Textarea
 									readOnly
 									value={indicators13}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setIndicators13(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -6530,7 +6514,7 @@ export default function App() {
 									type='number'
 									readOnly
 									value={weight13}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setWeight13(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -6541,7 +6525,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co113}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo113(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -6552,7 +6536,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co213}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo213(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -6563,7 +6547,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co313}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo313(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -6574,7 +6558,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co413}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo413(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -6585,7 +6569,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co513}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo513(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -6596,7 +6580,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co613}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo613(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -6607,7 +6591,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co713}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo713(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -6620,7 +6604,7 @@ export default function App() {
 								<Textarea
 									readOnly
 									value={po14}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setPo14(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -6643,7 +6627,7 @@ export default function App() {
 								<Textarea
 									readOnly
 									value={indicators14}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setIndicators14(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -6655,7 +6639,7 @@ export default function App() {
 									type='number'
 									readOnly
 									value={weight14}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setWeight14(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -6666,7 +6650,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co114}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo114(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -6677,7 +6661,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co214}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo214(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -6688,7 +6672,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co314}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo314(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -6699,7 +6683,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co414}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo414(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -6710,7 +6694,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co514}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo514(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -6721,7 +6705,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co614}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo614(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -6732,7 +6716,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co714}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo714(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -6745,7 +6729,7 @@ export default function App() {
 								<Textarea
 									readOnly
 									value={po15}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setPo15(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -6757,7 +6741,7 @@ export default function App() {
 								<Textarea
 									readOnly
 									value={competency15}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCompetency15(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -6768,7 +6752,7 @@ export default function App() {
 								<Textarea
 									readOnly
 									value={indicators15}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setIndicators15(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -6780,7 +6764,7 @@ export default function App() {
 									type='number'
 									value={weight15}
 									readOnly
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setWeight15(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -6791,7 +6775,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co115}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo115(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -6802,7 +6786,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co215}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo215(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -6813,7 +6797,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co315}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo315(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -6824,7 +6808,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co415}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo415(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -6835,7 +6819,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co515}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo515(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -6846,7 +6830,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co615}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo615(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -6857,7 +6841,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co715}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo715(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -6879,7 +6863,7 @@ export default function App() {
 									type='number'
 									value={po1mapco1.toString()}
 									readOnly
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setPo1mapco1(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -6891,7 +6875,7 @@ export default function App() {
 									type='number'
 									value={po1mapco2.toString()}
 									readOnly
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setPo1mapco2(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -6903,7 +6887,7 @@ export default function App() {
 									type='number'
 									value={po1mapco3.toString()}
 									readOnly
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setPo1mapco3(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -6915,7 +6899,7 @@ export default function App() {
 									type='number'
 									value={po1mapco4.toString()}
 									readOnly
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setPo1mapco4(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -6927,7 +6911,7 @@ export default function App() {
 									type='number'
 									value={po1mapco5.toString()}
 									readOnly
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setPo1mapco5(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -6939,7 +6923,7 @@ export default function App() {
 									type='number'
 									value={po1mapco6.toString()}
 									readOnly
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setPo1mapco6(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -6951,7 +6935,7 @@ export default function App() {
 									type='number'
 									value={po1mapco7.toString()}
 									readOnly
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setPo1mapco7(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -6967,7 +6951,7 @@ export default function App() {
 								<Textarea
 									readOnly
 									value={po21}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setPo21(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -6979,7 +6963,7 @@ export default function App() {
 								<Textarea
 									readOnly
 									value={competency21}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCompetency21(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -6990,7 +6974,7 @@ export default function App() {
 								<Textarea
 									readOnly
 									value={indicators21}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setIndicators21(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -7002,7 +6986,7 @@ export default function App() {
 									type='number'
 									readOnly
 									value={weight21}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setWeight21(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -7013,7 +6997,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co121}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo121(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -7024,7 +7008,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co221}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo221(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -7035,7 +7019,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co321}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo321(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -7046,7 +7030,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co421}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo421(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -7057,7 +7041,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co521}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo521(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -7068,7 +7052,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co621}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo621(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -7079,7 +7063,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co721}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo721(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -7092,7 +7076,7 @@ export default function App() {
 								<Textarea
 									readOnly
 									value={indicators22}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setIndicators22(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -7104,7 +7088,7 @@ export default function App() {
 									type='number'
 									readOnly
 									value={weight22}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setWeight22(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -7115,7 +7099,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co122}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo122(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -7126,7 +7110,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co222}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo222(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -7137,7 +7121,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co322}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo322(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -7148,7 +7132,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co422}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo422(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -7159,7 +7143,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co522}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo522(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -7170,7 +7154,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co622}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo622(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -7181,7 +7165,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co722}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo722(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -7194,7 +7178,7 @@ export default function App() {
 								<Textarea
 									readOnly
 									value={indicators23}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setIndicators23(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -7206,7 +7190,7 @@ export default function App() {
 									type='number'
 									readOnly
 									value={weight23}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setWeight23(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -7217,7 +7201,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co123}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo123(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -7228,7 +7212,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co223}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo223(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -7239,7 +7223,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co323}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo323(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -7250,7 +7234,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co423}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo423(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -7261,7 +7245,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co523}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo523(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -7272,7 +7256,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co623}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo623(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -7283,7 +7267,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co723}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo723(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -7296,7 +7280,7 @@ export default function App() {
 								<Textarea
 									readOnly
 									value={competency22}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCompetency22(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -7307,7 +7291,7 @@ export default function App() {
 								<Textarea
 									readOnly
 									value={indicators24}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setIndicators24(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -7319,7 +7303,7 @@ export default function App() {
 									type='number'
 									readOnly
 									value={weight24}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setWeight24(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -7330,7 +7314,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co124}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo124(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -7341,7 +7325,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co224}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo224(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -7352,7 +7336,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co324}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo324(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -7363,7 +7347,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co424}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo424(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -7374,7 +7358,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co524}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo524(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -7385,7 +7369,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co624}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo624(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -7396,7 +7380,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co724}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo724(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -7409,7 +7393,7 @@ export default function App() {
 								<Textarea
 									readOnly
 									value={indicators25}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setIndicators25(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -7421,7 +7405,7 @@ export default function App() {
 									type='number'
 									value={weight25}
 									readOnly
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setWeight25(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -7432,7 +7416,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co125}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo125(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -7443,7 +7427,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co225}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo225(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -7454,7 +7438,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co325}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo325(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -7465,7 +7449,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co425}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo425(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -7476,7 +7460,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co525}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo525(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -7487,7 +7471,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co625}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo625(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -7498,7 +7482,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co725}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo725(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -7511,7 +7495,7 @@ export default function App() {
 								<Textarea
 									readOnly
 									value={indicators26}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setIndicators26(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -7523,7 +7507,7 @@ export default function App() {
 									type='number'
 									value={weight26}
 									readOnly
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setWeight26(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -7534,7 +7518,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co126}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo126(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -7545,7 +7529,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co226}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo226(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -7556,7 +7540,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co326}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo326(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -7567,7 +7551,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co426}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo426(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -7578,7 +7562,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co526}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo526(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -7589,7 +7573,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co626}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo626(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -7600,7 +7584,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co726}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo726(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -7613,7 +7597,7 @@ export default function App() {
 								<Textarea
 									readOnly
 									value={indicators27}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setIndicators27(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -7625,7 +7609,7 @@ export default function App() {
 									type='number'
 									value={weight27}
 									readOnly
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setWeight27(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -7636,7 +7620,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co127}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo127(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -7647,7 +7631,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co227}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo227(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -7658,7 +7642,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co327}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo327(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -7669,7 +7653,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co427}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo427(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -7680,7 +7664,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co527}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo527(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -7691,7 +7675,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co627}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo627(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -7702,7 +7686,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co727}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo727(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -7715,7 +7699,7 @@ export default function App() {
 								<Textarea
 									readOnly
 									value={competency23}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCompetency23(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -7726,7 +7710,7 @@ export default function App() {
 								<Textarea
 									readOnly
 									value={indicators28}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setIndicators28(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -7738,7 +7722,7 @@ export default function App() {
 									type='number'
 									value={weight28}
 									readOnly
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setWeight28(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -7749,7 +7733,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co128}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo128(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -7760,7 +7744,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co228}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo228(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -7771,7 +7755,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co328}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo328(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -7782,7 +7766,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co428}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo428(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -7793,7 +7777,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co528}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo528(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -7804,7 +7788,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co628}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo628(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -7815,7 +7799,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co728}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo728(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -7828,7 +7812,7 @@ export default function App() {
 								<Textarea
 									readOnly
 									value={indicators29}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setIndicators29(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -7840,7 +7824,7 @@ export default function App() {
 									type='number'
 									value={weight29}
 									readOnly
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setWeight29(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -7851,7 +7835,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co129}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo129(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -7862,7 +7846,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co229}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo229(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -7873,7 +7857,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co329}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo329(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -7884,7 +7868,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co429}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo429(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -7895,7 +7879,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co529}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo529(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -7906,7 +7890,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co629}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo629(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -7917,7 +7901,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co729}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo729(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -7930,7 +7914,7 @@ export default function App() {
 								<Textarea
 									readOnly
 									value={competency24}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCompetency24(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -7941,7 +7925,7 @@ export default function App() {
 								<Textarea
 									readOnly
 									value={indicators210}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setIndicators210(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -7953,7 +7937,7 @@ export default function App() {
 									type='number'
 									value={weight210}
 									readOnly
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setWeight210(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -7964,7 +7948,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co1210}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo1210(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -7975,7 +7959,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co2210}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo2210(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -7986,7 +7970,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co3210}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo3210(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -7997,7 +7981,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co4210}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo4210(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -8008,7 +7992,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co5210}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo5210(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -8019,7 +8003,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co6210}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo6210(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -8030,7 +8014,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co7210}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo7210(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -8043,7 +8027,7 @@ export default function App() {
 								<Textarea
 									readOnly
 									value={indicators211}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setIndicators211(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -8055,7 +8039,7 @@ export default function App() {
 									type='number'
 									value={weight211}
 									readOnly
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setWeight211(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -8066,7 +8050,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co1211}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo1211(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -8077,7 +8061,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co2211}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo2211(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -8088,7 +8072,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co3211}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo3211(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -8099,7 +8083,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co4211}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo4211(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -8110,7 +8094,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co5211}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo5211(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -8121,7 +8105,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co6211}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo6211(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -8132,7 +8116,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co7211}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo7211(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -8145,7 +8129,7 @@ export default function App() {
 								<Textarea
 									readOnly
 									value={indicators212}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setIndicators212(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -8157,7 +8141,7 @@ export default function App() {
 									type='number'
 									value={weight212}
 									readOnly
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setWeight212(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -8168,7 +8152,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co1212}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo1212(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -8179,7 +8163,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co2212}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo2212(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -8190,7 +8174,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co3212}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo3212(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -8201,7 +8185,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co4212}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo4212(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -8212,7 +8196,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co5212}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo5212(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -8223,7 +8207,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co6212}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo6212(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -8234,7 +8218,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co7212}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo7212(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -8247,7 +8231,7 @@ export default function App() {
 								<Textarea
 									readOnly
 									value={indicators213}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setIndicators213(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -8259,7 +8243,7 @@ export default function App() {
 									type='number'
 									value={weight213}
 									readOnly
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setWeight213(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -8270,7 +8254,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co1213}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo1213(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -8281,7 +8265,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co2213}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo2213(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -8292,7 +8276,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co3213}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo3213(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -8303,7 +8287,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co4213}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo4213(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -8314,7 +8298,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co5213}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo5213(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -8325,7 +8309,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co6213}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo6213(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -8336,7 +8320,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co7213}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo7213(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -8358,7 +8342,7 @@ export default function App() {
 									type='number'
 									value={po2mapco1.toString()}
 									readOnly
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setPo2mapco1(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -8370,7 +8354,7 @@ export default function App() {
 									type='number'
 									value={po2mapco2.toString()}
 									readOnly
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setPo2mapco2(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -8382,7 +8366,7 @@ export default function App() {
 									type='number'
 									value={po2mapco3.toString()}
 									readOnly
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setPo2mapco3(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -8394,7 +8378,7 @@ export default function App() {
 									type='number'
 									value={po2mapco4.toString()}
 									readOnly
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setPo2mapco4(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -8406,7 +8390,7 @@ export default function App() {
 									type='number'
 									value={po2mapco5.toString()}
 									readOnly
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setPo2mapco5(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -8418,7 +8402,7 @@ export default function App() {
 									type='number'
 									value={po2mapco6.toString()}
 									readOnly
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setPo2mapco6(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -8430,7 +8414,7 @@ export default function App() {
 									type='number'
 									value={po2mapco7.toString()}
 									readOnly
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setPo2mapco7(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -8446,7 +8430,7 @@ export default function App() {
 								<Textarea
 									readOnly
 									value={po31}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setPo31(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -8458,7 +8442,7 @@ export default function App() {
 								<Textarea
 									readOnly
 									value={competency31}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCompetency31(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -8469,7 +8453,7 @@ export default function App() {
 								<Textarea
 									readOnly
 									value={indicators31}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setIndicators31(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -8481,7 +8465,7 @@ export default function App() {
 									type='number'
 									readOnly
 									value={weight31}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setWeight31(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -8492,7 +8476,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co131}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo131(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -8503,7 +8487,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co231}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo231(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -8514,7 +8498,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co331}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo331(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -8525,7 +8509,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co431}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo431(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -8536,7 +8520,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co531}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo531(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -8547,7 +8531,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co631}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo631(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -8558,7 +8542,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co731}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo731(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -8571,7 +8555,7 @@ export default function App() {
 								<Textarea
 									readOnly
 									value={indicators32}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setIndicators32(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -8583,7 +8567,7 @@ export default function App() {
 									type='number'
 									readOnly
 									value={weight32}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setWeight32(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -8594,7 +8578,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co132}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo132(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -8605,7 +8589,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co232}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo232(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -8616,7 +8600,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co332}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo332(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -8627,7 +8611,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co432}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo432(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -8638,7 +8622,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co532}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo532(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -8649,7 +8633,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co632}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo632(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -8660,7 +8644,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co732}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo732(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -8673,7 +8657,7 @@ export default function App() {
 								<Textarea
 									readOnly
 									value={indicators33}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setIndicators33(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -8685,7 +8669,7 @@ export default function App() {
 									type='number'
 									readOnly
 									value={weight33}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setWeight33(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -8696,7 +8680,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co133}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo133(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -8707,7 +8691,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co233}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo233(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -8718,7 +8702,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co333}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo333(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -8729,7 +8713,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co433}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo433(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -8740,7 +8724,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co533}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo533(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -8751,7 +8735,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co633}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo633(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -8762,7 +8746,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co733}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo733(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -8775,7 +8759,7 @@ export default function App() {
 								<Textarea
 									readOnly
 									value={indicators34}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setIndicators34(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -8787,7 +8771,7 @@ export default function App() {
 									type='number'
 									readOnly
 									value={weight34}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setWeight34(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -8798,7 +8782,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co134}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo134(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -8809,7 +8793,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co234}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo234(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -8820,7 +8804,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co334}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo334(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -8831,7 +8815,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co434}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo434(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -8842,7 +8826,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co534}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo534(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -8853,7 +8837,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co634}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo634(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -8864,7 +8848,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co734}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo734(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -8877,7 +8861,7 @@ export default function App() {
 								<Textarea
 									readOnly
 									value={indicators35}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setIndicators35(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -8889,7 +8873,7 @@ export default function App() {
 									type='number'
 									value={weight35}
 									readOnly
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setWeight35(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -8900,7 +8884,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co135}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo135(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -8911,7 +8895,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co235}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo235(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -8922,7 +8906,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co335}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo335(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -8933,7 +8917,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co435}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo435(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -8944,7 +8928,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co535}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo535(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -8955,7 +8939,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co635}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo635(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -8966,7 +8950,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co735}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo735(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -8979,7 +8963,7 @@ export default function App() {
 								<Textarea
 									readOnly
 									value={indicators36}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setIndicators36(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -8991,7 +8975,7 @@ export default function App() {
 									type='number'
 									value={weight36}
 									readOnly
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setWeight36(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -9002,7 +8986,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co136}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo136(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -9013,7 +8997,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co236}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo236(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -9024,7 +9008,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co336}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo336(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -9035,7 +9019,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co436}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo436(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -9046,7 +9030,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co536}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo536(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -9057,7 +9041,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co636}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo636(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -9068,7 +9052,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co736}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo736(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -9081,7 +9065,7 @@ export default function App() {
 								<Textarea
 									readOnly
 									value={competency32}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCompetency32(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -9093,7 +9077,7 @@ export default function App() {
 								<Textarea
 									readOnly
 									value={indicators37}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setIndicators37(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -9105,7 +9089,7 @@ export default function App() {
 									type='number'
 									value={weight37}
 									readOnly
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setWeight37(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -9116,7 +9100,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co137}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo137(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -9127,7 +9111,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co237}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo237(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -9138,7 +9122,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co337}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo337(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -9149,7 +9133,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co437}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo437(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -9160,7 +9144,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co537}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo537(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -9171,7 +9155,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co637}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo637(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -9182,7 +9166,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co737}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo737(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -9195,7 +9179,7 @@ export default function App() {
 								<Textarea
 									readOnly
 									value={indicators38}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setIndicators38(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -9207,7 +9191,7 @@ export default function App() {
 									type='number'
 									value={weight38}
 									readOnly
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setWeight38(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -9218,7 +9202,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co138}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo138(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -9229,7 +9213,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co238}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo238(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -9240,7 +9224,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co338}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo338(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -9251,7 +9235,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co438}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo438(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -9262,7 +9246,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co538}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo538(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -9273,7 +9257,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co638}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo638(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -9284,7 +9268,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co738}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo738(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -9297,7 +9281,7 @@ export default function App() {
 								<Textarea
 									readOnly
 									value={indicators39}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setIndicators39(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -9309,7 +9293,7 @@ export default function App() {
 									type='number'
 									value={weight39}
 									readOnly
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setWeight39(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -9320,7 +9304,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co139}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo139(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -9331,7 +9315,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co239}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo239(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -9342,7 +9326,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co339}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo339(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -9353,7 +9337,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co439}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo439(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -9364,7 +9348,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co539}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo539(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -9375,7 +9359,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co639}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo639(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -9386,7 +9370,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co739}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo739(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -9399,7 +9383,7 @@ export default function App() {
 								<Textarea
 									readOnly
 									value={competency33}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCompetency33(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -9410,7 +9394,7 @@ export default function App() {
 								<Textarea
 									readOnly
 									value={indicators310}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setIndicators310(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -9422,7 +9406,7 @@ export default function App() {
 									type='number'
 									value={weight310}
 									readOnly
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setWeight310(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -9433,7 +9417,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co1310}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo1310(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -9444,7 +9428,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co2310}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo2310(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -9455,7 +9439,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co3310}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo3310(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -9466,7 +9450,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co4310}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo4310(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -9477,7 +9461,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co5310}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo5310(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -9488,7 +9472,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co6310}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo6310(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -9499,7 +9483,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co7310}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo7310(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -9512,7 +9496,7 @@ export default function App() {
 								<Textarea
 									readOnly
 									value={indicators311}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setIndicators311(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -9524,7 +9508,7 @@ export default function App() {
 									type='number'
 									value={weight311}
 									readOnly
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setWeight311(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -9535,7 +9519,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co1311}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo1311(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -9546,7 +9530,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co2311}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo2311(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -9557,7 +9541,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co3311}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo3311(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -9568,7 +9552,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co4311}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo4311(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -9579,7 +9563,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co5311}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo5311(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -9590,7 +9574,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co6311}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo6311(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -9601,7 +9585,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co7311}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo7311(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -9614,7 +9598,7 @@ export default function App() {
 								<Textarea
 									readOnly
 									value={competency34}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCompetency34(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -9625,7 +9609,7 @@ export default function App() {
 								<Textarea
 									readOnly
 									value={indicators312}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setIndicators312(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -9637,7 +9621,7 @@ export default function App() {
 									type='number'
 									value={weight312}
 									readOnly
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setWeight312(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -9648,7 +9632,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co1312}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo1312(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -9659,7 +9643,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co2312}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo2312(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -9670,7 +9654,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co3312}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo3312(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -9681,7 +9665,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co4312}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo4312(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -9692,7 +9676,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co5312}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo5312(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -9703,7 +9687,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co6312}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo6312(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -9714,7 +9698,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co7312}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo7312(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -9727,7 +9711,7 @@ export default function App() {
 								<Textarea
 									readOnly
 									value={indicators313}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setIndicators313(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -9739,7 +9723,7 @@ export default function App() {
 									type='number'
 									value={weight313}
 									readOnly
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setWeight313(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -9750,7 +9734,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co1313}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo1313(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -9761,7 +9745,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co2313}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo2313(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -9772,7 +9756,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co3313}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo3313(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -9783,7 +9767,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co4313}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo4313(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -9794,7 +9778,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co5313}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo5313(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -9805,7 +9789,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co6313}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo6313(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -9816,7 +9800,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co7313}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo7313(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -9838,7 +9822,7 @@ export default function App() {
 									type='number'
 									value={po3mapco1.toString()}
 									readOnly
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setPo3mapco1(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -9850,7 +9834,7 @@ export default function App() {
 									type='number'
 									value={po3mapco2.toString()}
 									readOnly
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setPo3mapco2(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -9862,7 +9846,7 @@ export default function App() {
 									type='number'
 									value={po3mapco3.toString()}
 									readOnly
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setPo3mapco3(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -9874,7 +9858,7 @@ export default function App() {
 									type='number'
 									value={po3mapco4.toString()}
 									readOnly
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setPo3mapco4(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -9886,7 +9870,7 @@ export default function App() {
 									type='number'
 									value={po3mapco5.toString()}
 									readOnly
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setPo3mapco5(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -9898,7 +9882,7 @@ export default function App() {
 									type='number'
 									value={po3mapco6.toString()}
 									readOnly
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setPo3mapco6(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -9910,7 +9894,7 @@ export default function App() {
 									type='number'
 									value={po3mapco7.toString()}
 									readOnly
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setPo3mapco7(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -9925,7 +9909,7 @@ export default function App() {
 								<Textarea
 									readOnly
 									value={po41}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setPo41(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -9937,7 +9921,7 @@ export default function App() {
 								<Textarea
 									readOnly
 									value={competency41}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCompetency41(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -9948,7 +9932,7 @@ export default function App() {
 								<Textarea
 									readOnly
 									value={indicators41}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setIndicators41(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -9960,7 +9944,7 @@ export default function App() {
 									type='number'
 									readOnly
 									value={weight41}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setWeight41(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -9971,7 +9955,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co141}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo141(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -9982,7 +9966,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co241}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo241(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -9993,7 +9977,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co341}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo341(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -10004,7 +9988,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co441}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo441(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -10015,7 +9999,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co541}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo541(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -10026,7 +10010,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co641}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo641(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -10037,7 +10021,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co741}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo741(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -10050,7 +10034,7 @@ export default function App() {
 								<Textarea
 									readOnly
 									value={indicators42}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setIndicators42(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -10062,7 +10046,7 @@ export default function App() {
 									type='number'
 									readOnly
 									value={weight42}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setWeight42(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -10073,7 +10057,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co142}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo142(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -10084,7 +10068,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co242}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo242(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -10095,7 +10079,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co342}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo342(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -10106,7 +10090,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co442}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo442(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -10117,7 +10101,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co542}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo542(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -10128,7 +10112,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co642}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo642(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -10139,7 +10123,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co742}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo742(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -10152,7 +10136,7 @@ export default function App() {
 								<Textarea
 									readOnly
 									value={indicators43}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setIndicators43(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -10164,7 +10148,7 @@ export default function App() {
 									type='number'
 									readOnly
 									value={weight43}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setWeight43(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -10175,7 +10159,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co143}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo143(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -10186,7 +10170,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co243}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo243(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -10197,7 +10181,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co343}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo343(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -10208,7 +10192,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co443}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo443(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -10219,7 +10203,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co543}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo543(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -10230,7 +10214,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co643}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo643(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -10241,7 +10225,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co743}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo743(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -10254,7 +10238,7 @@ export default function App() {
 								<Textarea
 									readOnly
 									value={indicators44}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setIndicators44(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -10266,7 +10250,7 @@ export default function App() {
 									type='number'
 									readOnly
 									value={weight44}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setWeight44(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -10277,7 +10261,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co144}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo144(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -10288,7 +10272,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co244}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo244(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -10299,7 +10283,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co344}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo344(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -10310,7 +10294,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co444}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo444(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -10321,7 +10305,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co544}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo544(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -10332,7 +10316,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co644}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo644(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -10343,7 +10327,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co744}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo744(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -10356,7 +10340,7 @@ export default function App() {
 								<Textarea
 									readOnly
 									value={competency42}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCompetency42(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -10367,7 +10351,7 @@ export default function App() {
 								<Textarea
 									readOnly
 									value={indicators45}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setIndicators45(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -10379,7 +10363,7 @@ export default function App() {
 									type='number'
 									value={weight45}
 									readOnly
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setWeight45(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -10390,7 +10374,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co145}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo145(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -10401,7 +10385,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co245}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo245(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -10412,7 +10396,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co345}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo345(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -10423,7 +10407,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co445}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo445(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -10434,7 +10418,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co545}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo545(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -10445,7 +10429,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co645}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo645(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -10456,7 +10440,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co745}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo745(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -10469,7 +10453,7 @@ export default function App() {
 								<Textarea
 									readOnly
 									value={indicators46}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setIndicators46(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -10481,7 +10465,7 @@ export default function App() {
 									type='number'
 									value={weight46}
 									readOnly
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setWeight46(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -10492,7 +10476,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co146}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo146(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -10503,7 +10487,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co246}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo246(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -10514,7 +10498,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co346}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo346(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -10525,7 +10509,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co446}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo446(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -10536,7 +10520,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co546}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo546(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -10547,7 +10531,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co646}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo646(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -10558,7 +10542,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co746}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo746(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -10571,7 +10555,7 @@ export default function App() {
 								<Textarea
 									readOnly
 									value={competency43}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCompetency43(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -10583,7 +10567,7 @@ export default function App() {
 								<Textarea
 									readOnly
 									value={indicators47}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setIndicators47(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -10595,7 +10579,7 @@ export default function App() {
 									type='number'
 									value={weight47}
 									readOnly
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setWeight47(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -10606,7 +10590,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co147}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo147(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -10617,7 +10601,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co247}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo247(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -10628,7 +10612,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co347}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo347(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -10639,7 +10623,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co447}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo447(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -10650,7 +10634,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co547}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo547(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -10661,7 +10645,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co647}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo647(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -10672,7 +10656,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co747}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo747(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -10685,7 +10669,7 @@ export default function App() {
 								<Textarea
 									readOnly
 									value={indicators48}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setIndicators48(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -10697,7 +10681,7 @@ export default function App() {
 									type='number'
 									value={weight48}
 									readOnly
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setWeight48(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -10708,7 +10692,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co148}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo148(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -10719,7 +10703,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co248}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo248(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -10730,7 +10714,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co348}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo348(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -10741,7 +10725,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co448}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo448(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -10752,7 +10736,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co548}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo548(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -10763,7 +10747,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co648}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo648(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -10774,7 +10758,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co748}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo748(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -10787,7 +10771,7 @@ export default function App() {
 								<Textarea
 									readOnly
 									value={indicators49}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setIndicators49(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -10799,7 +10783,7 @@ export default function App() {
 									type='number'
 									value={weight49}
 									readOnly
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setWeight49(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -10810,7 +10794,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co149}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo149(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -10821,7 +10805,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co249}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo249(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -10832,7 +10816,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co349}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo349(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -10843,7 +10827,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co449}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo449(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -10854,7 +10838,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co549}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo549(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -10865,7 +10849,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co649}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo649(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -10876,7 +10860,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co749}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo749(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -10889,7 +10873,7 @@ export default function App() {
 								<Textarea
 									readOnly
 									value={indicators410}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setIndicators410(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -10901,7 +10885,7 @@ export default function App() {
 									type='number'
 									value={weight410}
 									readOnly
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setWeight410(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -10912,7 +10896,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co1410}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo1410(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -10923,7 +10907,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co2410}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo2410(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -10934,7 +10918,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co3410}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo3410(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -10945,7 +10929,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co4410}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo4410(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -10956,7 +10940,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co5410}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo5410(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -10967,7 +10951,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co6410}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo6410(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -10978,7 +10962,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co7410}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo7410(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -11001,7 +10985,7 @@ export default function App() {
 									type='number'
 									value={po4mapco1.toString()}
 									readOnly
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setPo4mapco1(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -11013,7 +10997,7 @@ export default function App() {
 									type='number'
 									value={po4mapco2.toString()}
 									readOnly
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setPo4mapco2(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -11025,7 +11009,7 @@ export default function App() {
 									type='number'
 									value={po4mapco3.toString()}
 									readOnly
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setPo4mapco3(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -11037,7 +11021,7 @@ export default function App() {
 									type='number'
 									value={po4mapco4.toString()}
 									readOnly
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setPo4mapco4(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -11049,7 +11033,7 @@ export default function App() {
 									type='number'
 									value={po4mapco5.toString()}
 									readOnly
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setPo4mapco5(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -11061,7 +11045,7 @@ export default function App() {
 									type='number'
 									value={po4mapco6.toString()}
 									readOnly
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setPo4mapco6(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -11073,7 +11057,7 @@ export default function App() {
 									type='number'
 									value={po4mapco7.toString()}
 									readOnly
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setPo4mapco7(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -11088,7 +11072,7 @@ export default function App() {
 								<Textarea
 									readOnly
 									value={po51}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setPo51(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -11100,7 +11084,7 @@ export default function App() {
 								<Textarea
 									readOnly
 									value={competency51}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCompetency51(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -11111,7 +11095,7 @@ export default function App() {
 								<Textarea
 									readOnly
 									value={indicators51}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setIndicators51(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -11123,7 +11107,7 @@ export default function App() {
 									type='number'
 									readOnly
 									value={weight51}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setWeight51(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -11134,7 +11118,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co151}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo151(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -11145,7 +11129,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co251}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo251(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -11156,7 +11140,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co351}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo351(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -11167,7 +11151,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co451}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo451(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -11178,7 +11162,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co551}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo551(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -11189,7 +11173,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co651}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo651(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -11200,7 +11184,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co751}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo751(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -11213,7 +11197,7 @@ export default function App() {
 								<Textarea
 									readOnly
 									value={indicators52}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setIndicators52(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -11225,7 +11209,7 @@ export default function App() {
 									type='number'
 									readOnly
 									value={weight52}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setWeight52(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -11236,7 +11220,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co152}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo152(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -11247,7 +11231,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co252}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo252(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -11258,7 +11242,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co352}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo352(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -11269,7 +11253,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co452}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo452(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -11280,7 +11264,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co552}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo552(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -11291,7 +11275,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co652}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo652(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -11302,7 +11286,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co752}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo752(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -11315,7 +11299,7 @@ export default function App() {
 								<Textarea
 									readOnly
 									value={competency52}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCompetency52(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -11326,7 +11310,7 @@ export default function App() {
 								<Textarea
 									readOnly
 									value={indicators53}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setIndicators53(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -11338,7 +11322,7 @@ export default function App() {
 									type='number'
 									readOnly
 									value={weight53}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setWeight53(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -11349,7 +11333,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co153}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo153(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -11360,7 +11344,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co253}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo253(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -11371,7 +11355,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co353}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo353(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -11382,7 +11366,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co453}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo453(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -11393,7 +11377,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co553}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo553(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -11404,7 +11388,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co653}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo653(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -11415,7 +11399,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co753}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo753(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -11428,7 +11412,7 @@ export default function App() {
 								<Textarea
 									readOnly
 									value={indicators54}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setIndicators54(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -11440,7 +11424,7 @@ export default function App() {
 									type='number'
 									readOnly
 									value={weight54}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setWeight54(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -11451,7 +11435,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co154}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo154(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -11462,7 +11446,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co254}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo254(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -11473,7 +11457,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co354}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo354(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -11484,7 +11468,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co454}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo454(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -11495,7 +11479,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co554}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo554(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -11506,7 +11490,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co654}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo654(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -11517,7 +11501,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co754}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo754(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -11530,7 +11514,7 @@ export default function App() {
 								<Textarea
 									readOnly
 									value={competency53}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCompetency53(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -11541,7 +11525,7 @@ export default function App() {
 								<Textarea
 									readOnly
 									value={indicators55}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setIndicators55(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -11553,7 +11537,7 @@ export default function App() {
 									type='number'
 									value={weight55}
 									readOnly
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setWeight55(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -11564,7 +11548,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co155}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo155(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -11575,7 +11559,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co255}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo255(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -11586,7 +11570,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co355}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo355(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -11597,7 +11581,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co455}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo455(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -11608,7 +11592,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co555}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo555(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -11619,7 +11603,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co655}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo655(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -11630,7 +11614,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co755}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo755(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -11643,7 +11627,7 @@ export default function App() {
 								<Textarea
 									readOnly
 									value={indicators56}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setIndicators56(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -11655,7 +11639,7 @@ export default function App() {
 									type='number'
 									value={weight56}
 									readOnly
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setWeight56(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -11666,7 +11650,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co156}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo156(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -11677,7 +11661,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co256}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo256(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -11688,7 +11672,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co356}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo356(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -11699,7 +11683,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co456}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo456(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -11710,7 +11694,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co556}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo556(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -11721,7 +11705,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co656}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo656(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -11732,7 +11716,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co756}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo756(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -11754,7 +11738,7 @@ export default function App() {
 									type='number'
 									value={po5mapco1.toString()}
 									readOnly
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setPo5mapco1(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -11766,7 +11750,7 @@ export default function App() {
 									type='number'
 									value={po5mapco2.toString()}
 									readOnly
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setPo5mapco2(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -11778,7 +11762,7 @@ export default function App() {
 									type='number'
 									value={po5mapco3.toString()}
 									readOnly
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setPo5mapco3(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -11790,7 +11774,7 @@ export default function App() {
 									type='number'
 									value={po5mapco4.toString()}
 									readOnly
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setPo5mapco4(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -11802,7 +11786,7 @@ export default function App() {
 									type='number'
 									value={po5mapco5.toString()}
 									readOnly
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setPo5mapco5(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -11814,7 +11798,7 @@ export default function App() {
 									type='number'
 									value={po5mapco6.toString()}
 									readOnly
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setPo5mapco6(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -11826,7 +11810,7 @@ export default function App() {
 									type='number'
 									value={po5mapco7.toString()}
 									readOnly
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setPo5mapco7(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -11841,7 +11825,7 @@ export default function App() {
 								<Textarea
 									readOnly
 									value={po61}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setPo61(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -11853,7 +11837,7 @@ export default function App() {
 								<Textarea
 									readOnly
 									value={competency61}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCompetency61(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -11864,7 +11848,7 @@ export default function App() {
 								<Textarea
 									readOnly
 									value={indicators61}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setIndicators61(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -11876,7 +11860,7 @@ export default function App() {
 									type='number'
 									readOnly
 									value={weight61}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setWeight61(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -11887,7 +11871,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co161}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo161(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -11898,7 +11882,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co261}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo261(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -11909,7 +11893,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co361}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo361(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -11920,7 +11904,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co461}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo461(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -11931,7 +11915,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co561}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo561(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -11942,7 +11926,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co661}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo661(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -11953,7 +11937,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co761}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo761(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -11966,7 +11950,7 @@ export default function App() {
 								<Textarea
 									readOnly
 									value={competency62}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCompetency62(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -11977,7 +11961,7 @@ export default function App() {
 								<Textarea
 									readOnly
 									value={indicators62}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setIndicators62(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -11989,7 +11973,7 @@ export default function App() {
 									type='number'
 									readOnly
 									value={weight62}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setWeight62(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -12000,7 +11984,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co162}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo162(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -12011,7 +11995,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co262}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo262(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -12022,7 +12006,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co362}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo362(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -12033,7 +12017,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co462}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo462(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -12044,7 +12028,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co562}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo562(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -12055,7 +12039,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co662}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo662(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -12066,7 +12050,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co762}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo762(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -12089,7 +12073,7 @@ export default function App() {
 									type='number'
 									value={po6mapco1.toString()}
 									readOnly
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setPo6mapco1(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -12101,7 +12085,7 @@ export default function App() {
 									type='number'
 									value={po6mapco2.toString()}
 									readOnly
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setPo6mapco2(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -12113,7 +12097,7 @@ export default function App() {
 									type='number'
 									value={po6mapco3.toString()}
 									readOnly
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setPo6mapco3(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -12125,7 +12109,7 @@ export default function App() {
 									type='number'
 									value={po6mapco4.toString()}
 									readOnly
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setPo6mapco4(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -12137,7 +12121,7 @@ export default function App() {
 									type='number'
 									value={po6mapco5.toString()}
 									readOnly
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setPo6mapco5(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -12149,7 +12133,7 @@ export default function App() {
 									type='number'
 									value={po6mapco6.toString()}
 									readOnly
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setPo6mapco6(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -12161,7 +12145,7 @@ export default function App() {
 									type='number'
 									value={po6mapco7.toString()}
 									readOnly
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setPo6mapco7(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -12177,7 +12161,7 @@ export default function App() {
 								<Textarea
 									readOnly
 									value={po71}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setPo71(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -12189,7 +12173,7 @@ export default function App() {
 								<Textarea
 									readOnly
 									value={competency71}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCompetency71(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -12200,7 +12184,7 @@ export default function App() {
 								<Textarea
 									readOnly
 									value={indicators71}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setIndicators71(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -12212,7 +12196,7 @@ export default function App() {
 									type='number'
 									readOnly
 									value={weight71}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setWeight71(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -12223,7 +12207,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co171}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo171(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -12234,7 +12218,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co271}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo271(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -12245,7 +12229,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co371}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo371(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -12256,7 +12240,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co471}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo471(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -12267,7 +12251,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co571}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo571(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -12278,7 +12262,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co671}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo671(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -12289,7 +12273,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co771}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo771(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -12302,7 +12286,7 @@ export default function App() {
 								<Textarea
 									readOnly
 									value={indicators72}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setIndicators72(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -12314,7 +12298,7 @@ export default function App() {
 									type='number'
 									readOnly
 									value={weight72}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setWeight72(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -12325,7 +12309,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co172}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo172(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -12336,7 +12320,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co272}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo272(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -12347,7 +12331,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co372}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo372(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -12358,7 +12342,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co472}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo472(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -12369,7 +12353,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co572}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo572(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -12380,7 +12364,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co672}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo672(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -12391,7 +12375,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co772}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo772(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -12404,7 +12388,7 @@ export default function App() {
 								<Textarea
 									readOnly
 									value={competency72}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCompetency72(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -12415,7 +12399,7 @@ export default function App() {
 								<Textarea
 									readOnly
 									value={indicators73}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setIndicators73(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -12427,7 +12411,7 @@ export default function App() {
 									type='number'
 									readOnly
 									value={weight73}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setWeight73(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -12438,7 +12422,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co173}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo173(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -12449,7 +12433,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co273}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo273(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -12460,7 +12444,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co373}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo373(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -12471,7 +12455,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co473}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo473(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -12482,7 +12466,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co573}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo573(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -12493,7 +12477,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co673}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo673(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -12504,7 +12488,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co773}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo773(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -12517,7 +12501,7 @@ export default function App() {
 								<Textarea
 									readOnly
 									value={indicators74}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setIndicators74(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -12529,7 +12513,7 @@ export default function App() {
 									type='number'
 									readOnly
 									value={weight74}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setWeight74(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -12540,7 +12524,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co174}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo174(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -12551,7 +12535,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co274}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo274(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -12562,7 +12546,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co374}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo374(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -12573,7 +12557,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co474}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo474(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -12584,7 +12568,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co574}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo574(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -12595,7 +12579,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co674}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo674(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -12606,7 +12590,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co774}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo774(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -12629,7 +12613,7 @@ export default function App() {
 									type='number'
 									value={po7mapco1.toString()}
 									readOnly
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setPo7mapco1(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -12641,7 +12625,7 @@ export default function App() {
 									type='number'
 									value={po7mapco2.toString()}
 									readOnly
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setPo7mapco2(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -12653,7 +12637,7 @@ export default function App() {
 									type='number'
 									value={po7mapco3.toString()}
 									readOnly
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setPo7mapco3(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -12665,7 +12649,7 @@ export default function App() {
 									type='number'
 									value={po7mapco4.toString()}
 									readOnly
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setPo7mapco4(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -12677,7 +12661,7 @@ export default function App() {
 									type='number'
 									value={po7mapco5.toString()}
 									readOnly
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setPo7mapco5(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -12689,7 +12673,7 @@ export default function App() {
 									type='number'
 									value={po7mapco6.toString()}
 									readOnly
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setPo7mapco6(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -12701,7 +12685,7 @@ export default function App() {
 									type='number'
 									value={po7mapco7.toString()}
 									readOnly
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setPo7mapco7(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -12716,7 +12700,7 @@ export default function App() {
 								<Textarea
 									readOnly
 									value={po81}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setPo81(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -12728,7 +12712,7 @@ export default function App() {
 								<Textarea
 									readOnly
 									value={competency81}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCompetency81(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -12739,7 +12723,7 @@ export default function App() {
 								<Textarea
 									readOnly
 									value={indicators81}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setIndicators81(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -12751,7 +12735,7 @@ export default function App() {
 									type='number'
 									readOnly
 									value={weight81}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setWeight81(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -12762,7 +12746,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co181}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo181(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -12773,7 +12757,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co281}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo281(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -12784,7 +12768,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co381}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo381(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -12795,7 +12779,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co481}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo481(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -12806,7 +12790,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co581}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo581(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -12817,7 +12801,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co681}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo681(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -12828,7 +12812,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co781}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo781(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -12841,7 +12825,7 @@ export default function App() {
 								<Textarea
 									readOnly
 									value={competency82}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCompetency82(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -12852,7 +12836,7 @@ export default function App() {
 								<Textarea
 									readOnly
 									value={indicators82}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setIndicators82(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -12864,7 +12848,7 @@ export default function App() {
 									type='number'
 									readOnly
 									value={weight82}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setWeight82(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -12875,7 +12859,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co182}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo182(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -12886,7 +12870,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co282}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo282(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -12897,7 +12881,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co382}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo382(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -12908,7 +12892,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co482}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo482(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -12919,7 +12903,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co582}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo582(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -12930,7 +12914,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co682}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo682(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -12941,7 +12925,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co782}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo782(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -12954,7 +12938,7 @@ export default function App() {
 								<Textarea
 									readOnly
 									value={indicators83}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setIndicators83(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -12966,7 +12950,7 @@ export default function App() {
 									type='number'
 									readOnly
 									value={weight83}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setWeight83(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -12977,7 +12961,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co183}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo183(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -12988,7 +12972,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co283}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo283(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -12999,7 +12983,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co383}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo383(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -13010,7 +12994,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co483}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo483(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -13021,7 +13005,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co583}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo583(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -13032,7 +13016,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co683}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo683(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -13043,7 +13027,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co783}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo783(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -13065,7 +13049,7 @@ export default function App() {
 									type='number'
 									value={po8mapco1.toString()}
 									readOnly
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setPo8mapco1(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -13077,7 +13061,7 @@ export default function App() {
 									type='number'
 									value={po8mapco2.toString()}
 									readOnly
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setPo8mapco2(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -13089,7 +13073,7 @@ export default function App() {
 									type='number'
 									value={po8mapco3.toString()}
 									readOnly
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setPo8mapco3(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -13101,7 +13085,7 @@ export default function App() {
 									type='number'
 									value={po8mapco4.toString()}
 									readOnly
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setPo8mapco4(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -13113,7 +13097,7 @@ export default function App() {
 									type='number'
 									value={po8mapco5.toString()}
 									readOnly
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setPo8mapco5(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -13125,7 +13109,7 @@ export default function App() {
 									type='number'
 									value={po8mapco6.toString()}
 									readOnly
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setPo8mapco6(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -13137,7 +13121,7 @@ export default function App() {
 									type='number'
 									value={po8mapco7.toString()}
 									readOnly
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setPo8mapco7(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -13153,7 +13137,7 @@ export default function App() {
 								<Textarea
 									readOnly
 									value={po91}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setPo91(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -13165,7 +13149,7 @@ export default function App() {
 								<Textarea
 									readOnly
 									value={competency91}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCompetency91(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -13176,7 +13160,7 @@ export default function App() {
 								<Textarea
 									readOnly
 									value={indicators91}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setIndicators91(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -13188,7 +13172,7 @@ export default function App() {
 									type='number'
 									readOnly
 									value={weight91}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setWeight91(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -13199,7 +13183,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co191}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo191(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -13210,7 +13194,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co291}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo291(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -13221,7 +13205,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co391}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo391(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -13232,7 +13216,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co491}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo491(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -13243,7 +13227,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co591}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo591(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -13254,7 +13238,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co691}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo691(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -13265,7 +13249,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co791}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo791(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -13278,7 +13262,7 @@ export default function App() {
 								<Textarea
 									readOnly
 									value={indicators92}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setIndicators92(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -13290,7 +13274,7 @@ export default function App() {
 									type='number'
 									readOnly
 									value={weight92}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setWeight92(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -13301,7 +13285,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co192}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo192(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -13312,7 +13296,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co292}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo292(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -13323,7 +13307,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co392}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo392(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -13334,7 +13318,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co492}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo492(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -13345,7 +13329,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co592}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo592(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -13356,7 +13340,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co692}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo692(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -13367,7 +13351,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co792}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo792(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -13380,7 +13364,7 @@ export default function App() {
 								<Textarea
 									readOnly
 									value={competency92}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCompetency92(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -13391,7 +13375,7 @@ export default function App() {
 								<Textarea
 									readOnly
 									value={indicators93}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setIndicators93(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -13403,7 +13387,7 @@ export default function App() {
 									type='number'
 									readOnly
 									value={weight93}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setWeight93(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -13414,7 +13398,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co193}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo193(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -13425,7 +13409,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co293}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo293(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -13436,7 +13420,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co393}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo393(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -13447,7 +13431,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co493}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo493(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -13458,7 +13442,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co593}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo593(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -13469,7 +13453,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co693}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo693(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -13480,7 +13464,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co793}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo793(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -13493,7 +13477,7 @@ export default function App() {
 								<Textarea
 									readOnly
 									value={indicators94}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setIndicators94(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -13505,7 +13489,7 @@ export default function App() {
 									type='number'
 									readOnly
 									value={weight94}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setWeight94(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -13516,7 +13500,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co194}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo194(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -13527,7 +13511,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co294}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo294(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -13538,7 +13522,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co394}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo394(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -13549,7 +13533,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co494}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo494(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -13560,7 +13544,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co594}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo594(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -13571,7 +13555,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co694}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo694(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -13582,7 +13566,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co794}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo794(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -13595,7 +13579,7 @@ export default function App() {
 								<Textarea
 									readOnly
 									value={indicators95}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setIndicators95(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -13607,7 +13591,7 @@ export default function App() {
 									type='number'
 									value={weight95}
 									readOnly
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setWeight95(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -13618,7 +13602,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co195}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo195(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -13629,7 +13613,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co295}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo295(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -13640,7 +13624,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co395}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo395(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -13651,7 +13635,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co495}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo495(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -13662,7 +13646,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co595}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo595(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -13673,7 +13657,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co695}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo695(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -13684,7 +13668,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co795}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo795(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -13697,7 +13681,7 @@ export default function App() {
 								<Textarea
 									readOnly
 									value={indicators96}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setIndicators96(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -13709,7 +13693,7 @@ export default function App() {
 									type='number'
 									value={weight96}
 									readOnly
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setWeight96(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -13720,7 +13704,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co196}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo196(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -13731,7 +13715,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co296}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo296(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -13742,7 +13726,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co396}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo396(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -13753,7 +13737,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co496}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo496(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -13764,7 +13748,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co596}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo596(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -13775,7 +13759,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co696}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo696(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -13786,7 +13770,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co796}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo796(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -13799,7 +13783,7 @@ export default function App() {
 								<Textarea
 									readOnly
 									value={competency93}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCompetency93(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -13811,7 +13795,7 @@ export default function App() {
 								<Textarea
 									readOnly
 									value={indicators97}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setIndicators97(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -13823,7 +13807,7 @@ export default function App() {
 									type='number'
 									value={weight97}
 									readOnly
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setWeight97(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -13834,7 +13818,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co197}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo197(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -13845,7 +13829,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co297}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo297(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -13856,7 +13840,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co397}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo397(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -13867,7 +13851,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co497}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo497(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -13878,7 +13862,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co597}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo597(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -13889,7 +13873,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co697}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo697(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -13900,7 +13884,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co797}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo797(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -13923,7 +13907,7 @@ export default function App() {
 									type='number'
 									value={po9mapco1.toString()}
 									readOnly
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setPo9mapco1(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -13935,7 +13919,7 @@ export default function App() {
 									type='number'
 									value={po9mapco2.toString()}
 									readOnly
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setPo9mapco2(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -13947,7 +13931,7 @@ export default function App() {
 									type='number'
 									value={po9mapco3.toString()}
 									readOnly
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setPo9mapco3(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -13959,7 +13943,7 @@ export default function App() {
 									type='number'
 									value={po9mapco4.toString()}
 									readOnly
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setPo9mapco4(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -13971,7 +13955,7 @@ export default function App() {
 									type='number'
 									value={po9mapco5.toString()}
 									readOnly
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setPo9mapco5(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -13983,7 +13967,7 @@ export default function App() {
 									type='number'
 									value={po9mapco6.toString()}
 									readOnly
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setPo9mapco6(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -13995,7 +13979,7 @@ export default function App() {
 									type='number'
 									value={po9mapco7.toString()}
 									readOnly
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setPo9mapco7(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -14011,7 +13995,7 @@ export default function App() {
 								<Textarea
 									readOnly
 									value={po101}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setPo101(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -14023,7 +14007,7 @@ export default function App() {
 								<Textarea
 									readOnly
 									value={competency101}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCompetency101(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -14034,7 +14018,7 @@ export default function App() {
 								<Textarea
 									readOnly
 									value={indicators101}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setIndicators101(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -14046,7 +14030,7 @@ export default function App() {
 									type='number'
 									readOnly
 									value={weight101}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setWeight101(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -14057,7 +14041,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co1101}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo1101(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -14068,7 +14052,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co2101}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo2101(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -14079,7 +14063,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co3101}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo3101(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -14090,7 +14074,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co4101}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo4101(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -14101,7 +14085,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co5101}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo5101(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -14112,7 +14096,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co6101}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo6101(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -14123,7 +14107,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co7101}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo7101(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -14136,7 +14120,7 @@ export default function App() {
 								<Textarea
 									readOnly
 									value={indicators102}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setIndicators102(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -14148,7 +14132,7 @@ export default function App() {
 									type='number'
 									readOnly
 									value={weight102}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setWeight102(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -14159,7 +14143,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co1102}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo1102(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -14170,7 +14154,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co2102}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo2102(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -14181,7 +14165,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co3102}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo3102(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -14192,7 +14176,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co4102}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo4102(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -14203,7 +14187,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co5102}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo5102(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -14214,7 +14198,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co6102}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo6102(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -14225,7 +14209,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co7102}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo7102(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -14238,7 +14222,7 @@ export default function App() {
 								<Textarea
 									readOnly
 									value={indicators103}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setIndicators103(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -14250,7 +14234,7 @@ export default function App() {
 									type='number'
 									readOnly
 									value={weight103}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setWeight103(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -14261,7 +14245,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co1103}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo1103(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -14272,7 +14256,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co2103}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo2103(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -14283,7 +14267,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co3103}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo3103(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -14294,7 +14278,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co4103}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo4103(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -14305,7 +14289,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co5103}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo5103(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -14316,7 +14300,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co6103}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo6103(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -14327,7 +14311,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co7103}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo7103(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -14340,7 +14324,7 @@ export default function App() {
 								<Textarea
 									readOnly
 									value={competency102}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCompetency102(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -14351,7 +14335,7 @@ export default function App() {
 								<Textarea
 									readOnly
 									value={indicators104}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setIndicators104(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -14363,7 +14347,7 @@ export default function App() {
 									type='number'
 									readOnly
 									value={weight104}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setWeight104(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -14374,7 +14358,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co1104}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo1104(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -14385,7 +14369,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co2104}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo2104(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -14396,7 +14380,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co3104}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo3104(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -14407,7 +14391,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co4104}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo4104(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -14418,7 +14402,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co5104}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo5104(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -14429,7 +14413,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co6104}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo6104(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -14440,7 +14424,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co7104}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo7104(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -14453,7 +14437,7 @@ export default function App() {
 								<Textarea
 									readOnly
 									value={indicators105}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setIndicators105(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -14465,7 +14449,7 @@ export default function App() {
 									type='number'
 									value={weight105}
 									readOnly
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setWeight105(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -14476,7 +14460,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co1105}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo1105(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -14487,7 +14471,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co2105}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo2105(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -14498,7 +14482,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co3105}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo3105(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -14509,7 +14493,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co4105}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo4105(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -14520,7 +14504,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co5105}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo5105(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -14531,7 +14515,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co6105}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo6105(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -14542,7 +14526,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co7105}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo7105(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -14555,7 +14539,7 @@ export default function App() {
 								<Textarea
 									readOnly
 									value={competency103}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCompetency103(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -14566,7 +14550,7 @@ export default function App() {
 								<Textarea
 									readOnly
 									value={indicators106}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setIndicators106(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -14578,7 +14562,7 @@ export default function App() {
 									type='number'
 									value={weight106}
 									readOnly
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setWeight106(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -14589,7 +14573,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co1106}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo1106(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -14600,7 +14584,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co2106}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo2106(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -14611,7 +14595,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co3106}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo3106(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -14622,7 +14606,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co4106}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo4106(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -14633,7 +14617,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co5106}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo5106(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -14644,7 +14628,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co6106}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo6106(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -14655,7 +14639,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co7106}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo7106(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -14668,7 +14652,7 @@ export default function App() {
 								<Textarea
 									readOnly
 									value={indicators107}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setIndicators107(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -14680,7 +14664,7 @@ export default function App() {
 									type='number'
 									value={weight107}
 									readOnly
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setWeight107(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -14691,7 +14675,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co1107}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo1107(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -14702,7 +14686,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co2107}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo2107(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -14713,7 +14697,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co3107}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo3107(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -14724,7 +14708,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co4107}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo4107(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -14735,7 +14719,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co5107}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo5107(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -14746,7 +14730,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co6107}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo6107(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -14757,7 +14741,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co7107}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo7107(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -14780,7 +14764,7 @@ export default function App() {
 									type='number'
 									value={po10mapco1.toString()}
 									readOnly
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setPo10mapco1(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -14792,7 +14776,7 @@ export default function App() {
 									type='number'
 									value={po10mapco2.toString()}
 									readOnly
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setPo10mapco2(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -14804,7 +14788,7 @@ export default function App() {
 									type='number'
 									value={po10mapco3.toString()}
 									readOnly
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setPo10mapco3(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -14816,7 +14800,7 @@ export default function App() {
 									type='number'
 									value={po10mapco4.toString()}
 									readOnly
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setPo10mapco4(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -14828,7 +14812,7 @@ export default function App() {
 									type='number'
 									value={po10mapco5.toString()}
 									readOnly
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setPo10mapco5(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -14840,7 +14824,7 @@ export default function App() {
 									type='number'
 									value={po10mapco6.toString()}
 									readOnly
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setPo10mapco6(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -14852,7 +14836,7 @@ export default function App() {
 									type='number'
 									value={po10mapco7.toString()}
 									readOnly
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setPo10mapco7(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -14868,7 +14852,7 @@ export default function App() {
 								<Textarea
 									readOnly
 									value={po111}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setPo111(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -14880,7 +14864,7 @@ export default function App() {
 								<Textarea
 									readOnly
 									value={competency111}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCompetency111(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -14891,7 +14875,7 @@ export default function App() {
 								<Textarea
 									readOnly
 									value={indicators111}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setIndicators111(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -14903,7 +14887,7 @@ export default function App() {
 									type='number'
 									readOnly
 									value={weight111}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setWeight111(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -14914,7 +14898,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co1111}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo1111(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -14925,7 +14909,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co2111}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo2111(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -14936,7 +14920,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co3111}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo3111(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -14947,7 +14931,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co4111}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo4111(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -14958,7 +14942,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co5111}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo5111(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -14969,7 +14953,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co6111}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo6111(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -14980,7 +14964,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co7111}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo7111(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -14993,7 +14977,7 @@ export default function App() {
 								<Textarea
 									readOnly
 									value={indicators112}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setIndicators112(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -15005,7 +14989,7 @@ export default function App() {
 									type='number'
 									readOnly
 									value={weight112}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setWeight112(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -15016,7 +15000,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co1112}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo1112(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -15027,7 +15011,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co2112}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo2112(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -15038,7 +15022,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co3112}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo3112(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -15049,7 +15033,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co4112}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo4112(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -15060,7 +15044,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co5112}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo5112(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -15071,7 +15055,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co6112}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo6112(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -15082,7 +15066,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co7112}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo7112(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -15095,7 +15079,7 @@ export default function App() {
 								<Textarea
 									readOnly
 									value={competency112}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCompetency112(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -15106,7 +15090,7 @@ export default function App() {
 								<Textarea
 									readOnly
 									value={indicators113}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setIndicators113(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -15118,7 +15102,7 @@ export default function App() {
 									type='number'
 									readOnly
 									value={weight113}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setWeight113(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -15129,7 +15113,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co1113}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo1113(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -15140,7 +15124,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co2113}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo2113(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -15151,7 +15135,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co3113}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo3113(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -15162,7 +15146,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co4113}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo4113(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -15173,7 +15157,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co5113}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo5113(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -15184,7 +15168,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co6113}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo6113(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -15195,7 +15179,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co7113}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo7113(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -15208,7 +15192,7 @@ export default function App() {
 								<Textarea
 									readOnly
 									value={competency113}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCompetency113(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -15219,7 +15203,7 @@ export default function App() {
 								<Textarea
 									readOnly
 									value={indicators114}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setIndicators114(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -15231,7 +15215,7 @@ export default function App() {
 									type='number'
 									readOnly
 									value={weight114}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setWeight114(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -15242,7 +15226,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co1114}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo1114(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -15253,7 +15237,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co2114}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo2114(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -15264,7 +15248,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co3114}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo3114(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -15275,7 +15259,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co4114}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo4114(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -15286,7 +15270,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co5114}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo5114(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -15297,7 +15281,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co6114}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo6114(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -15308,7 +15292,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co7114}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo7114(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -15321,7 +15305,7 @@ export default function App() {
 								<Textarea
 									readOnly
 									value={indicators115}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setIndicators115(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -15333,7 +15317,7 @@ export default function App() {
 									type='number'
 									value={weight115}
 									readOnly
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setWeight115(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -15344,7 +15328,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co1115}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo1115(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -15355,7 +15339,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co2115}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo2115(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -15366,7 +15350,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co3115}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo3115(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -15377,7 +15361,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co4115}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo4115(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -15388,7 +15372,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co5115}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo5115(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -15399,7 +15383,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co6115}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo6115(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -15410,7 +15394,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co7115}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo7115(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -15433,7 +15417,7 @@ export default function App() {
 									type='number'
 									value={po11mapco1.toString()}
 									readOnly
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setPo11mapco1(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -15445,7 +15429,7 @@ export default function App() {
 									type='number'
 									value={po11mapco2.toString()}
 									readOnly
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setPo11mapco2(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -15457,7 +15441,7 @@ export default function App() {
 									type='number'
 									value={po11mapco3.toString()}
 									readOnly
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setPo11mapco3(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -15469,7 +15453,7 @@ export default function App() {
 									type='number'
 									value={po11mapco4.toString()}
 									readOnly
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setPo11mapco4(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -15481,7 +15465,7 @@ export default function App() {
 									type='number'
 									value={po11mapco5.toString()}
 									readOnly
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setPo11mapco5(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -15493,7 +15477,7 @@ export default function App() {
 									type='number'
 									value={po11mapco6.toString()}
 									readOnly
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setPo11mapco6(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -15505,7 +15489,7 @@ export default function App() {
 									type='number'
 									value={po11mapco7.toString()}
 									readOnly
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setPo11mapco7(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -15521,7 +15505,7 @@ export default function App() {
 								<Textarea
 									readOnly
 									value={po121}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setPo121(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -15533,7 +15517,7 @@ export default function App() {
 								<Textarea
 									readOnly
 									value={competency121}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCompetency121(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -15544,7 +15528,7 @@ export default function App() {
 								<Textarea
 									readOnly
 									value={indicators121}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setIndicators121(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -15556,7 +15540,7 @@ export default function App() {
 									type='number'
 									readOnly
 									value={weight121}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setWeight121(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -15567,7 +15551,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co1121}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo1121(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -15578,7 +15562,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co2121}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo2121(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -15589,7 +15573,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co3121}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo3121(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -15600,7 +15584,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co4121}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo4121(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -15611,7 +15595,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co5121}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo5121(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -15622,7 +15606,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co6121}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo6121(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -15633,7 +15617,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co7121}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo7121(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -15646,7 +15630,7 @@ export default function App() {
 								<Textarea
 									readOnly
 									value={indicators122}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setIndicators122(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -15658,7 +15642,7 @@ export default function App() {
 									type='number'
 									readOnly
 									value={weight122}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setWeight122(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -15669,7 +15653,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co1122}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo1122(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -15680,7 +15664,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co2122}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo2122(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -15691,7 +15675,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co3122}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo3122(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -15702,7 +15686,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co4122}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo4122(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -15713,7 +15697,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co5122}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo5122(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -15724,7 +15708,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co6122}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo6122(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -15735,7 +15719,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co7122}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo7122(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -15748,7 +15732,7 @@ export default function App() {
 								<Textarea
 									readOnly
 									value={competency122}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCompetency122(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -15759,7 +15743,7 @@ export default function App() {
 								<Textarea
 									readOnly
 									value={indicators123}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setIndicators123(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -15771,7 +15755,7 @@ export default function App() {
 									type='number'
 									readOnly
 									value={weight123}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setWeight123(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -15782,7 +15766,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co1123}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo1123(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -15793,7 +15777,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co2123}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo2123(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -15804,7 +15788,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co3123}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo3123(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -15815,7 +15799,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co4123}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo4123(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -15826,7 +15810,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co5123}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo5123(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -15837,7 +15821,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co6123}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo6123(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -15848,7 +15832,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co7123}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo7123(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -15861,7 +15845,7 @@ export default function App() {
 								<Textarea
 									readOnly
 									value={indicators124}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setIndicators124(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -15873,7 +15857,7 @@ export default function App() {
 									type='number'
 									readOnly
 									value={weight124}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setWeight124(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -15884,7 +15868,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co1124}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo1124(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -15895,7 +15879,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co2124}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo2124(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -15906,7 +15890,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co3124}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo3124(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -15917,7 +15901,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co4124}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo4124(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -15928,7 +15912,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co5124}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo5124(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -15939,7 +15923,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co6124}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo6124(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -15950,7 +15934,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co7124}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo7124(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -15963,7 +15947,7 @@ export default function App() {
 								<Textarea
 									readOnly
 									value={competency123}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCompetency123(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -15974,7 +15958,7 @@ export default function App() {
 								<Textarea
 									readOnly
 									value={indicators125}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setIndicators125(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -15986,7 +15970,7 @@ export default function App() {
 									type='number'
 									value={weight125}
 									readOnly
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setWeight125(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -15997,7 +15981,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co1125}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo1125(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -16008,7 +15992,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co2125}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo2125(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -16019,7 +16003,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co3125}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo3125(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -16030,7 +16014,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co4125}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo4125(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -16041,7 +16025,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co5125}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo5125(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -16052,7 +16036,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co6125}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo6125(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -16063,7 +16047,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co7125}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo7125(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -16076,7 +16060,7 @@ export default function App() {
 								<Textarea
 									readOnly
 									value={indicators126}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setIndicators126(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -16088,7 +16072,7 @@ export default function App() {
 									type='number'
 									value={weight126}
 									readOnly
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setWeight126(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -16099,7 +16083,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co1126}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo1126(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -16110,7 +16094,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co2126}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo2126(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -16121,7 +16105,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co3126}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo3126(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -16132,7 +16116,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co4126}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo4126(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -16143,7 +16127,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co5126}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo5126(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -16154,7 +16138,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co6126}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo6126(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -16165,7 +16149,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={co7126}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setCo7126(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -16188,7 +16172,7 @@ export default function App() {
 									type='number'
 									value={po12mapco1.toString()}
 									readOnly
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setPo12mapco1(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -16200,7 +16184,7 @@ export default function App() {
 									type='number'
 									value={po12mapco2.toString()}
 									readOnly
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setPo12mapco2(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -16212,7 +16196,7 @@ export default function App() {
 									type='number'
 									value={po12mapco3.toString()}
 									readOnly
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setPo12mapco3(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -16224,7 +16208,7 @@ export default function App() {
 									type='number'
 									value={po12mapco4.toString()}
 									readOnly
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setPo12mapco4(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -16236,7 +16220,7 @@ export default function App() {
 									type='number'
 									value={po12mapco5.toString()}
 									readOnly
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setPo12mapco5(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -16248,7 +16232,7 @@ export default function App() {
 									type='number'
 									value={po12mapco6.toString()}
 									readOnly
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setPo12mapco6(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -16260,7 +16244,7 @@ export default function App() {
 									type='number'
 									value={po12mapco7.toString()}
 									readOnly
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setPo12mapco7(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -16276,7 +16260,7 @@ export default function App() {
 								<Textarea
 									readOnly
 									value={pso11}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setPso11(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -16288,7 +16272,7 @@ export default function App() {
 								<Textarea
 									readOnly
 									value={psocompetency11}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setPsocompetency11(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -16299,7 +16283,7 @@ export default function App() {
 								<Textarea
 									readOnly
 									value={psoindicators11}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setPsoindicators11(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -16311,7 +16295,7 @@ export default function App() {
 									type='number'
 									readOnly
 									value={psoweight11}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setPsoweight11(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -16322,7 +16306,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={psoco111}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setPsoco111(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -16333,7 +16317,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={psoco211}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setPsoco211(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -16344,7 +16328,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={psoco311}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setPsoco311(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -16355,7 +16339,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={psoco411}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setPsoco411(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -16366,7 +16350,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={psoco511}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setPsoco511(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -16377,7 +16361,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={psoco611}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setPsoco611(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -16388,7 +16372,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={psoco711}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setPsoco711(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -16401,7 +16385,7 @@ export default function App() {
 								<Textarea
 									readOnly
 									value={psoindicators12}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setPsoindicators12(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -16413,7 +16397,7 @@ export default function App() {
 									type='number'
 									readOnly
 									value={psoweight12}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setPsoweight12(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -16424,7 +16408,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={psoco112}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setPsoco112(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -16435,7 +16419,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={psoco212}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setPsoco212(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -16446,7 +16430,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={psoco312}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setPsoco312(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -16457,7 +16441,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={psoco412}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setPsoco412(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -16468,7 +16452,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={psoco512}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setPsoco512(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -16479,7 +16463,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={psoco612}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setPsoco612(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -16490,7 +16474,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={psoco712}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setPsoco712(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -16504,7 +16488,7 @@ export default function App() {
 								<Textarea
 									readOnly
 									value={psocompetency12}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setPsocompetency12(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -16515,7 +16499,7 @@ export default function App() {
 								<Textarea
 									readOnly
 									value={psoindicators13}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setPsoindicators13(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -16527,7 +16511,7 @@ export default function App() {
 									type='number'
 									readOnly
 									value={psoweight13}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setPsoweight13(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -16538,7 +16522,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={psoco113}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setPsoco113(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -16549,7 +16533,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={psoco213}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setPsoco213(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -16560,7 +16544,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={psoco313}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setPsoco313(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -16571,7 +16555,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={psoco413}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setPsoco413(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -16582,7 +16566,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={psoco513}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setPsoco513(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -16593,7 +16577,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={psoco613}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setPsoco613(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -16604,7 +16588,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={psoco713}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setPsoco713(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -16617,7 +16601,7 @@ export default function App() {
 								<Textarea
 									readOnly
 									value={psoindicators14}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setPsoindicators14(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -16629,7 +16613,7 @@ export default function App() {
 									type='number'
 									readOnly
 									value={psoweight14}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setPsoweight14(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -16640,7 +16624,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={psoco114}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setPsoco114(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -16651,7 +16635,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={psoco214}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setPsoco214(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -16662,7 +16646,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={psoco314}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setPsoco314(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -16673,7 +16657,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={psoco414}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setPsoco414(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -16684,7 +16668,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={psoco514}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setPsoco514(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -16695,7 +16679,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={psoco614}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setPsoco614(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -16706,7 +16690,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={psoco714}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setPsoco714(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -16719,7 +16703,7 @@ export default function App() {
 								<Textarea
 									readOnly
 									value={psoindicators15}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setPsoindicators15(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -16731,7 +16715,7 @@ export default function App() {
 									type='number'
 									value={psoweight15}
 									readOnly
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setPsoweight15(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -16742,7 +16726,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={psoco115}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setPsoco115(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -16753,7 +16737,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={psoco215}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setPsoco215(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -16764,7 +16748,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={psoco315}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setPsoco315(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -16775,7 +16759,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={psoco415}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setPsoco415(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -16786,7 +16770,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={psoco515}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setPsoco515(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -16797,7 +16781,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={psoco615}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setPsoco615(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -16808,7 +16792,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={psoco715}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setPsoco715(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -16830,7 +16814,7 @@ export default function App() {
 									type='number'
 									value={pso1mapco1.toString()}
 									readOnly
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setPso1mapco1(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -16842,7 +16826,7 @@ export default function App() {
 									type='number'
 									value={pso1mapco2.toString()}
 									readOnly
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setPso1mapco2(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -16854,7 +16838,7 @@ export default function App() {
 									type='number'
 									value={pso1mapco3.toString()}
 									readOnly
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setPso1mapco3(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -16866,7 +16850,7 @@ export default function App() {
 									type='number'
 									value={pso1mapco4.toString()}
 									readOnly
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setPso1mapco4(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -16878,7 +16862,7 @@ export default function App() {
 									type='number'
 									value={pso1mapco5.toString()}
 									readOnly
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setPso1mapco5(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -16890,7 +16874,7 @@ export default function App() {
 									type='number'
 									value={pso1mapco6.toString()}
 									readOnly
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setPso1mapco6(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -16902,7 +16886,7 @@ export default function App() {
 									type='number'
 									value={pso1mapco7.toString()}
 									readOnly
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setPso1mapco7(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -16918,7 +16902,7 @@ export default function App() {
 								<Textarea
 									readOnly
 									value={pso21}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setPso21(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -16930,7 +16914,7 @@ export default function App() {
 								<Textarea
 									readOnly
 									value={psocompetency21}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setPsocompetency21(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -16941,7 +16925,7 @@ export default function App() {
 								<Textarea
 									readOnly
 									value={psoindicators21}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setPsoindicators21(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -16953,7 +16937,7 @@ export default function App() {
 									type='number'
 									readOnly
 									value={psoweight21}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setPsoweight21(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -16964,7 +16948,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={psoco121}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setPsoco121(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -16975,7 +16959,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={psoco221}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setPsoco221(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -16986,7 +16970,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={psoco321}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setPsoco321(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -16997,7 +16981,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={psoco421}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setPsoco421(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -17008,7 +16992,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={psoco521}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setPsoco521(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -17019,7 +17003,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={psoco621}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setPsoco621(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -17030,7 +17014,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={psoco721}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setPsoco721(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -17043,7 +17027,7 @@ export default function App() {
 								<Textarea
 									readOnly
 									value={psoindicators22}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setPsoindicators22(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -17055,7 +17039,7 @@ export default function App() {
 									type='number'
 									readOnly
 									value={psoweight22}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setPsoweight22(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -17066,7 +17050,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={psoco122}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setPsoco122(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -17077,7 +17061,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={psoco222}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setPsoco222(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -17088,7 +17072,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={psoco322}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setPsoco322(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -17099,7 +17083,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={psoco422}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setPsoco422(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -17110,7 +17094,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={psoco522}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setPsoco522(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -17121,7 +17105,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={psoco622}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setPsoco622(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -17132,7 +17116,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={psoco722}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setPsoco722(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -17146,7 +17130,7 @@ export default function App() {
 								<Textarea
 									readOnly
 									value={psocompetency22}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setPsocompetency22(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -17157,7 +17141,7 @@ export default function App() {
 								<Textarea
 									readOnly
 									value={psoindicators23}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setPsoindicators23(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -17169,7 +17153,7 @@ export default function App() {
 									type='number'
 									readOnly
 									value={psoweight23}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setPsoweight23(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -17180,7 +17164,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={psoco123}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setPsoco123(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -17191,7 +17175,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={psoco223}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setPsoco223(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -17202,7 +17186,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={psoco323}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setPsoco323(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -17213,7 +17197,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={psoco423}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setPsoco423(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -17224,7 +17208,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={psoco523}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setPsoco523(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -17235,7 +17219,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={psoco623}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setPsoco623(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -17246,7 +17230,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={psoco723}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setPsoco723(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -17259,7 +17243,7 @@ export default function App() {
 								<Textarea
 									readOnly
 									value={psoindicators24}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setPsoindicators24(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -17271,7 +17255,7 @@ export default function App() {
 									type='number'
 									readOnly
 									value={psoweight24}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setPsoweight24(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -17282,7 +17266,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={psoco124}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setPsoco124(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -17293,7 +17277,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={psoco224}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setPsoco224(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -17304,7 +17288,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={psoco324}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setPsoco324(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -17315,7 +17299,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={psoco424}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setPsoco424(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -17326,7 +17310,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={psoco524}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setPsoco524(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -17337,7 +17321,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={psoco624}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setPsoco624(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -17348,7 +17332,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={psoco724}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setPsoco724(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -17371,7 +17355,7 @@ export default function App() {
 									type='number'
 									value={pso2mapco1.toString()}
 									readOnly
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setPso2mapco1(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -17383,7 +17367,7 @@ export default function App() {
 									type='number'
 									value={pso2mapco2.toString()}
 									readOnly
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setPso2mapco2(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -17395,7 +17379,7 @@ export default function App() {
 									type='number'
 									value={pso2mapco3.toString()}
 									readOnly
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setPso2mapco3(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -17407,7 +17391,7 @@ export default function App() {
 									type='number'
 									value={pso2mapco4.toString()}
 									readOnly
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setPso2mapco4(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -17419,7 +17403,7 @@ export default function App() {
 									type='number'
 									value={pso2mapco5.toString()}
 									readOnly
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setPso2mapco5(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -17431,7 +17415,7 @@ export default function App() {
 									type='number'
 									value={pso2mapco6.toString()}
 									readOnly
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setPso2mapco6(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -17443,7 +17427,7 @@ export default function App() {
 									type='number'
 									value={pso2mapco7.toString()}
 									readOnly
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setPso2mapco7(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -17459,7 +17443,7 @@ export default function App() {
 								<Textarea
 									readOnly
 									value={pso31}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setPso31(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -17471,7 +17455,7 @@ export default function App() {
 								<Textarea
 									readOnly
 									value={psocompetency31}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setPsocompetency31(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -17482,7 +17466,7 @@ export default function App() {
 								<Textarea
 									readOnly
 									value={psoindicators31}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setPsoindicators31(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -17494,7 +17478,7 @@ export default function App() {
 									type='number'
 									readOnly
 									value={psoweight31}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setPsoweight31(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -17505,7 +17489,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={psoco131}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setPsoco131(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -17516,7 +17500,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={psoco231}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setPsoco231(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -17527,7 +17511,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={psoco331}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setPsoco331(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -17538,7 +17522,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={psoco431}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setPsoco431(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -17549,7 +17533,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={psoco531}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setPsoco531(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -17560,7 +17544,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={psoco631}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setPsoco631(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -17571,7 +17555,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={psoco731}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setPsoco731(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -17584,7 +17568,7 @@ export default function App() {
 								<Textarea
 									readOnly
 									value={psoindicators32}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setPsoindicators32(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -17596,7 +17580,7 @@ export default function App() {
 									type='number'
 									readOnly
 									value={psoweight32}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setPsoweight32(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -17607,7 +17591,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={psoco132}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setPsoco132(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -17618,7 +17602,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={psoco232}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setPsoco232(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -17629,7 +17613,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={psoco332}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setPsoco332(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -17640,7 +17624,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={psoco432}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setPsoco432(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -17651,7 +17635,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={psoco532}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setPsoco532(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -17662,7 +17646,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={psoco632}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setPsoco632(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -17673,7 +17657,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={psoco732}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setPsoco732(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -17687,7 +17671,7 @@ export default function App() {
 								<Textarea
 									readOnly
 									value={psocompetency32}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setPsocompetency32(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -17698,7 +17682,7 @@ export default function App() {
 								<Textarea
 									readOnly
 									value={psoindicators33}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setPsoindicators33(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -17710,7 +17694,7 @@ export default function App() {
 									type='number'
 									readOnly
 									value={psoweight33}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setPsoweight33(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -17721,7 +17705,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={psoco133}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setPsoco133(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -17732,7 +17716,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={psoco233}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setPsoco233(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -17743,7 +17727,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={psoco333}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setPsoco333(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -17754,7 +17738,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={psoco433}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setPsoco433(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -17765,7 +17749,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={psoco533}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setPsoco533(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -17776,7 +17760,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={psoco633}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setPsoco633(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -17787,7 +17771,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={psoco733}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setPsoco733(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -17800,7 +17784,7 @@ export default function App() {
 								<Textarea
 									readOnly
 									value={psoindicators34}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setPsoindicators34(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -17812,7 +17796,7 @@ export default function App() {
 									type='number'
 									readOnly
 									value={psoweight34}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setPsoweight34(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -17823,7 +17807,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={psoco134}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setPsoco134(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -17834,7 +17818,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={psoco234}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setPsoco234(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -17845,7 +17829,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={psoco334}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setPsoco334(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -17856,7 +17840,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={psoco434}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setPsoco434(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -17867,7 +17851,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={psoco534}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setPsoco534(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -17878,7 +17862,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={psoco634}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setPsoco634(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -17889,7 +17873,7 @@ export default function App() {
 								<Input
 									type='number'
 									value={psoco734}
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setPsoco734(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -17912,7 +17896,7 @@ export default function App() {
 									type='number'
 									value={pso3mapco1.toString()}
 									readOnly
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setPso3mapco1(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -17924,7 +17908,7 @@ export default function App() {
 									type='number'
 									value={pso3mapco2.toString()}
 									readOnly
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setPso3mapco2(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -17936,7 +17920,7 @@ export default function App() {
 									type='number'
 									value={pso3mapco3.toString()}
 									readOnly
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setPso3mapco3(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -17948,7 +17932,7 @@ export default function App() {
 									type='number'
 									value={pso3mapco4.toString()}
 									readOnly
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setPso3mapco4(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -17960,7 +17944,7 @@ export default function App() {
 									type='number'
 									value={pso3mapco5.toString()}
 									readOnly
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setPso3mapco5(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -17972,7 +17956,7 @@ export default function App() {
 									type='number'
 									value={pso3mapco6.toString()}
 									readOnly
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setPso3mapco6(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)
@@ -17984,7 +17968,7 @@ export default function App() {
 									type='number'
 									value={pso3mapco7.toString()}
 									readOnly
-									onChange={(e) =>
+									onChange={(e: { target: { value: any } }) =>
 										setPso3mapco7(
 											String(Math.min(Math.max(Number(e.target.value), 0), 1))
 										)

@@ -1,2743 +1,5671 @@
-// "use client";
-// import React, { useEffect, useState } from "react";
-// import {
-// 	Table,
-// 	TableHeader,
-// 	TableColumn,
-// 	TableBody,
-// 	TableRow,
-// 	TableCell,
-// 	Input,
-// 	Button,
-// 	Textarea,
-// 	Dropdown,
-// 	DropdownItem,
-// 	DropdownMenu,
-// 	DropdownTrigger,
-// 	Avatar,
-// 	Select,
-// 	SelectItem,
-// } from "@nextui-org/react";
-// import axios from "axios";
-
-// import { useRouter } from "next/navigation";
-
-// interface TableRowData {
-// 	po11: string;
-// 	po12: string;
-// 	po13: string;
-// 	po14: string;
-// 	po15: string;
-
-// 	competency11: string;
-// 	competency12: string;
-// 	competency13: string;
-// 	competency14: string;
-// 	competency15: string;
-
-// 	indicators11: string;
-// 	indicators12: string;
-// 	indicators13: string;
-// 	indicators14: string;
-// 	indicators15: string;
-
-// 	weight11: number;
-// 	weight12: number;
-// 	weight13: number;
-// 	weight14: number;
-// 	weight15: number;
-
-// 	co111: number;
-// 	co112: number;
-// 	co113: number;
-// 	co114: number;
-// 	co115: number;
-
-// 	co211: number;
-// 	co212: number;
-// 	co213: number;
-// 	co214: number;
-// 	co215: number;
-
-// 	co311: number;
-// 	co312: number;
-// 	co313: number;
-// 	co314: number;
-// 	co315: number;
-
-// 	co411: number;
-// 	co412: number;
-// 	co413: number;
-// 	co414: number;
-// 	co415: number;
-
-// 	co511: number;
-// 	co512: number;
-// 	co513: number;
-// 	co514: number;
-// 	co515: number;
-
-// 	co611: number;
-// 	co612: number;
-// 	co613: number;
-// 	co614: number;
-// 	co615: number;
-
-// 	co711: number;
-// 	co712: number;
-// 	co713: number;
-// 	co714: number;
-// 	co715: number;
-
-// 	po1mapco1: number;
-// 	po1mapco2: number;
-// 	po1mapco3: number;
-// 	po1mapco4: number;
-// 	po1mapco5: number;
-// 	po1mapco6: number;
-// 	po1mapco7: number;
-
-// 	year: string;
-// 	dept: string;
-// 	sem: string;
-// 	subject: string;
-
-// 	// **************** PO:2      ****************************
-
-// 	// ************************ PO:3  ***************************************
-
-// 	po31: string;
-
-// 	competency31: string;
-// 	competency33: string;
-// 	competency33: string;
-// 	competency34: string;
-
-// 	indicators31: string;
-// 	indicators33: string;
-// 	indicators33: string;
-// 	indicators34: string;
-// 	indicators35: string;
-// 	indicators36: string;
-// 	indicators37: string;
-// 	indicators38: string;
-// 	indicators39: string;
-// 	indicators310: string;
-// 	indicators311: string;
-// 	indicators312: string;
-// 	indicators313: string;
-
-// 	weight31: string;
-// 	weight33: string;
-// 	weight33: string;
-// 	weight34: string;
-// 	weight35: string;
-// 	weight36: string;
-// 	weight37: string;
-// 	weight38: string;
-// 	weight39: string;
-// 	weight310: string;
-// 	weight311: string;
-// 	weight312: string;
-// 	weight313: string;
-
-// 	co131: number;
-// 	co133: number;
-// 	co133: number;
-// 	co134: number;
-// 	co135: number;
-// 	co136: number;
-// 	co137: number;
-// 	co138: number;
-// 	co139: number;
-// 	co1310: number;
-// 	co1311: number;
-// 	co1312: number;
-// 	co1313: number;
-
-// 	co231: number;
-// 	co233: number;
-// 	co233: number;
-// 	co234: number;
-// 	co235: number;
-// 	co236: number;
-// 	co237: number;
-// 	co238: number;
-// 	co239: number;
-// 	co2310: number;
-// 	co2311: number;
-// 	co2312: number;
-// 	co2313: number;
-
-// 	co331: number;
-// 	co333: number;
-// 	co333: number;
-// 	co334: number;
-// 	co335: number;
-// 	co336: number;
-// 	co337: number;
-// 	co338: number;
-// 	co339: number;
-// 	co3310: number;
-// 	co3311: number;
-// 	co3312: number;
-// 	co3313: number;
-
-// 	co431: number;
-// 	co433: number;
-// 	co433: number;
-// 	co434: number;
-// 	co435: number;
-// 	co436: number;
-// 	co437: number;
-// 	co438: number;
-// 	co439: number;
-// 	co4310: number;
-// 	co4311: number;
-// 	co4312: number;
-// 	co4313: number;
-
-// 	co531: number;
-// 	co533: number;
-// 	co533: number;
-// 	co534: number;
-// 	co535: number;
-// 	co536: number;
-// 	co537: number;
-// 	co538: number;
-// 	co539: number;
-// 	co5310: number;
-// 	co5311: number;
-// 	co5312: number;
-// 	co5313: number;
-
-// 	co631: number;
-// 	co633: number;
-// 	co633: number;
-// 	co634: number;
-// 	co635: number;
-// 	co636: number;
-// 	co637: number;
-// 	co638: number;
-// 	co639: number;
-// 	co6310: number;
-// 	co6311: number;
-// 	co6312: number;
-// 	co6313: number;
-
-// 	co731: number;
-// 	co733: number;
-// 	co733: number;
-// 	co734: number;
-// 	co735: number;
-// 	co736: number;
-// 	co737: number;
-// 	co738: number;
-// 	co739: number;
-// 	co7310: number;
-// 	co7311: number;
-// 	co7312: number;
-// 	co7313: number;
-
-// 	po3mapco1: number;
-// 	po3mapco2: number;
-// 	po3mapco3: number;
-// 	po3mapco4: number;
-// 	po3mapco5: number;
-// 	po3mapco6: number;
-// 	po3mapco7: number;
-// }
-
-// export default function App() {
-// 	const router = useRouter();
-
-// 	const [po11, setPo11] = useState(
-// 		"PO 1: Engineering knowledge: Apply the knowledge of mathematics, science, engineering fundamentals, and an engineering specialisation for the solution of complex engineering problems."
-// 	);
-// 	const [po12, setPo12] = useState(
-// 		"PO 1: Engineering knowledge: Apply the knowledge of mathematics, science, engineering fundamentals, and an engineering specialisation for the solution of complex engineering problems."
-// 	);
-// 	const [po13, setPo13] = useState(
-// 		"PO 1: Engineering knowledge: Apply the knowledge of mathematics, science, engineering fundamentals, and an engineering specialisation for the solution of complex engineering problems."
-// 	);
-// 	const [po14, setPo14] = useState(
-// 		"PO 1: Engineering knowledge: Apply the knowledge of mathematics, science, engineering fundamentals, and an engineering specialisation for the solution of complex engineering problems."
-// 	);
-// 	const [po15, setPo15] = useState(
-// 		"PO 1: Engineering knowledge: Apply the knowledge of mathematics, science, engineering fundamentals, and an engineering specialisation for the solution of complex engineering problems."
-// 	);
-
-// 	const [competency11, setCompetency11] = useState(
-// 		"1.1  Demonstrate competence in mathematical modelling"
-// 	);
-// 	const [competency12, setCompetency12] = useState(
-// 		"1.1  Demonstrate competence in mathematical modelling"
-// 	);
-// 	const [competency13, setCompetency13] = useState(
-// 		"1.2 Demonstrate competence in basic sciences"
-// 	);
-// 	const [competency14, setCompetency14] = useState(
-// 		"1.3 Demonstrate competence in engineering fundamentals"
-// 	);
-// 	const [competency15, setCompetency15] = useState(
-// 		"1.4 Demonstrate competence in specialized engineering knowledge to the program"
-// 	);
-
-// 	const [indicators11, setIndicators11] = useState(
-// 		"1.1.1      Apply mathematical techniques such as calculus, linear algebra, and statistics to solve problems"
-// 	);
-// 	const [indicators12, setIndicators12] = useState(
-// 		"1.1.2      Apply advanced mathematical techniques to model and solve mechanical engineering problems"
-// 	);
-// 	const [indicators13, setIndicators13] = useState(
-// 		"1.2.1  Apply laws of natural science to an engineering problem"
-// 	);
-// 	const [indicators14, setIndicators14] = useState(
-// 		"1.3.1  Apply fundamental engineering concepts to solve engineering problems"
-// 	);
-// 	const [indicators15, setIndicators15] = useState(
-// 		"1.4.1  Apply Mechanical engineering concepts to solve engineering problems."
-// 	);
-
-// 	const [weight11, setWeight11] = useState("0.2");
-// 	const [weight12, setWeight12] = useState("0.2");
-// 	const [weight13, setWeight13] = useState("0.2");
-// 	const [weight14, setWeight14] = useState("0.2");
-// 	const [weight15, setWeight15] = useState("0.2");
-
-// 	const [co111, setCo111] = useState("");
-// 	const [co112, setCo112] = useState("");
-// 	const [co113, setCo113] = useState("");
-// 	const [co114, setCo114] = useState("");
-// 	const [co115, setCo115] = useState("");
-
-// 	const [co211, setCo211] = useState("");
-// 	const [co212, setCo212] = useState("");
-// 	const [co213, setCo213] = useState("");
-// 	const [co214, setCo214] = useState("");
-// 	const [co215, setCo215] = useState("");
-
-// 	const [co311, setCo311] = useState("");
-// 	const [co312, setCo312] = useState("");
-// 	const [co313, setCo313] = useState("");
-// 	const [co314, setCo314] = useState("");
-// 	const [co315, setCo315] = useState("");
-
-// 	const [co411, setCo411] = useState("");
-// 	const [co412, setCo412] = useState("");
-// 	const [co413, setCo413] = useState("");
-// 	const [co414, setCo414] = useState("");
-// 	const [co415, setCo415] = useState("");
-
-// 	const [co511, setCo511] = useState("");
-// 	const [co512, setCo512] = useState("");
-// 	const [co513, setCo513] = useState("");
-// 	const [co514, setCo514] = useState("");
-// 	const [co515, setCo515] = useState("");
-
-// 	const [co611, setCo611] = useState("");
-// 	const [co612, setCo612] = useState("");
-// 	const [co613, setCo613] = useState("");
-// 	const [co614, setCo614] = useState("");
-// 	const [co615, setCo615] = useState("");
-
-// 	const [co711, setCo711] = useState("");
-// 	const [co712, setCo712] = useState("");
-// 	const [co713, setCo713] = useState("");
-// 	const [co714, setCo714] = useState("");
-// 	const [co715, setCo715] = useState("");
-
-// 	const [po1mapco1, setPo1mapco1] = useState<number | string>("");
-// 	const [po1mapco2, setPo1mapco2] = useState<number | string>("");
-// 	const [po1mapco3, setPo1mapco3] = useState<number | string>("");
-// 	const [po1mapco4, setPo1mapco4] = useState<number | string>("");
-// 	const [po1mapco5, setPo1mapco5] = useState<number | string>("");
-// 	const [po1mapco6, setPo1mapco6] = useState<number | string>("");
-// 	const [po1mapco7, setPo1mapco7] = useState<number | string>("");
-
-// 	const [year, setYear] = useState("");
-// 	const [dept, setDept] = useState("");
-// 	const [sem, setSem] = useState("");
-// 	const [subject, setSubject] = useState("");
-
-// 	// ******************** PO:2 ******************************
-
-// 	const [po21, setPo21] = useState(
-// 		"PO 1: Engineering knowledge: Apply the knowledge of mathematics, science, engineering fundamentals, and an engineering specialisation for the solution of complex engineering problems."
-// 	);
-
-// 	const [competency21, setCompetency21] = useState(
-// 		"1.1  Demonstrate competence in mathematical modelling"
-// 	);
-// 	const [competency23, setCompetency23] = useState(
-// 		"1.1  Demonstrate competence in mathematical modelling"
-// 	);
-// 	const [competency23, setCompetency23] = useState(
-// 		"1.2 Demonstrate competence in basic sciences"
-// 	);
-// 	const [competency24, setCompetency24] = useState(
-// 		"1.3 Demonstrate competence in engineering fundamentals"
-// 	);
-
-// 	const [indicators21, setIndicators21] = useState(
-// 		"1.1.1      Apply mathematical techniques such as calculus, linear algebra, and statistics to solve problems"
-// 	);
-// 	const [indicators23, setIndicators23] = useState(
-// 		"1.1.2      Apply advanced mathematical techniques to model and solve mechanical engineering problems"
-// 	);
-// 	const [indicators23, setIndicators23] = useState(
-// 		"1.2.1  Apply laws of natural science to an engineering problem"
-// 	);
-// 	const [indicators24, setIndicators24] = useState(
-// 		"1.3.1  Apply fundamental engineering concepts to solve engineering problems"
-// 	);
-// 	const [indicators25, setIndicators25] = useState(
-// 		"1.4.1  Apply Mechanical engineering concepts to solve engineering problems."
-// 	);
-// 	const [indicators26, setIndicators26] = useState(
-// 		"1.4.1  Apply Mechanical engineering concepts to solve engineering problems."
-// 	);
-// 	const [indicators27, setIndicators27] = useState(
-// 		"1.4.1  Apply Mechanical engineering concepts to solve engineering problems."
-// 	);
-// 	const [indicators28, setIndicators28] = useState(
-// 		"1.4.1  Apply Mechanical engineering concepts to solve engineering problems."
-// 	);
-// 	const [indicators29, setIndicators29] = useState(
-// 		"1.4.1  Apply Mechanical engineering concepts to solve engineering problems."
-// 	);
-// 	const [indicators210, setIndicators210] = useState(
-// 		"1.4.1  Apply Mechanical engineering concepts to solve engineering problems."
-// 	);
-// 	const [indicators211, setIndicators211] = useState(
-// 		"1.4.1  Apply Mechanical engineering concepts to solve engineering problems."
-// 	);
-// 	const [indicators212, setIndicators212] = useState(
-// 		"1.4.1  Apply Mechanical engineering concepts to solve engineering problems."
-// 	);
-// 	const [indicators213, setIndicators213] = useState(
-// 		"1.4.1  Apply Mechanical engineering concepts to solve engineering problems."
-// 	);
-
-// 	const [weight21, setWeight21] = useState("0.8");
-// 	const [weight23, setWeight23] = useState("0.8");
-// 	const [weight23, setWeight23] = useState("0.8");
-// 	const [weight24, setWeight24] = useState("0.8");
-// 	const [weight25, setWeight25] = useState("0.8");
-// 	const [weight26, setWeight26] = useState("0.8");
-// 	const [weight27, setWeight27] = useState("0.8");
-// 	const [weight28, setWeight28] = useState("0.8");
-// 	const [weight29, setWeight29] = useState("0.8");
-// 	const [weight210, setWeight210] = useState("0.8");
-// 	const [weight211, setWeight211] = useState("0.8");
-// 	const [weight212, setWeight212] = useState("0.8");
-// 	const [weight213, setWeight213] = useState("0.8");
-
-// 	const [co121, setCo121] = useState("");
-// 	const [co123, setCo123] = useState("");
-// 	const [co123, setCo123] = useState("");
-// 	const [co124, setCo124] = useState("");
-// 	const [co125, setCo125] = useState("");
-// 	const [co126, setCo126] = useState("");
-// 	const [co127, setCo127] = useState("");
-// 	const [co128, setCo128] = useState("");
-// 	const [co129, setCo129] = useState("");
-// 	const [co1210, setCo1210] = useState("");
-// 	const [co1211, setCo1211] = useState("");
-// 	const [co1212, setCo1212] = useState("");
-// 	const [co1213, setCo1213] = useState("");
-
-// 	const [co231, setCo231] = useState("");
-// 	const [co233, setCo233] = useState("");
-// 	const [co233, setCo233] = useState("");
-// 	const [co234, setCo234] = useState("");
-// 	const [co235, setCo235] = useState("");
-// 	const [co236, setCo236] = useState("");
-// 	const [co237, setCo237] = useState("");
-// 	const [co238, setCo238] = useState("");
-// 	const [co239, setCo239] = useState("");
-// 	const [co2310, setCo2310] = useState("");
-// 	const [co2311, setCo2311] = useState("");
-// 	const [co2312, setCo2312] = useState("");
-// 	const [co2313, setCo2313] = useState("");
-
-// 	const [co331, setCo331] = useState("");
-// 	const [co333, setCo333] = useState("");
-// 	const [co333, setCo333] = useState("");
-// 	const [co334, setCo334] = useState("");
-// 	const [co335, setCo335] = useState("");
-// 	const [co336, setCo336] = useState("");
-// 	const [co337, setCo337] = useState("");
-// 	const [co338, setCo338] = useState("");
-// 	const [co339, setCo339] = useState("");
-// 	const [co3310, setCo3310] = useState("");
-// 	const [co3311, setCo3311] = useState("");
-// 	const [co3312, setCo3312] = useState("");
-// 	const [co3313, setCo3313] = useState("");
-
-// 	const [co421, setCo421] = useState("");
-// 	const [co423, setCo423] = useState("");
-// 	const [co423, setCo423] = useState("");
-// 	const [co424, setCo424] = useState("");
-// 	const [co425, setCo425] = useState("");
-// 	const [co426, setCo426] = useState("");
-// 	const [co427, setCo427] = useState("");
-// 	const [co428, setCo428] = useState("");
-// 	const [co429, setCo429] = useState("");
-// 	const [co4210, setCo4210] = useState("");
-// 	const [co4211, setCo4211] = useState("");
-// 	const [co4212, setCo4212] = useState("");
-// 	const [co4213, setCo4213] = useState("");
-
-// 	const [co521, setCo521] = useState("");
-// 	const [co523, setCo523] = useState("");
-// 	const [co523, setCo523] = useState("");
-// 	const [co524, setCo524] = useState("");
-// 	const [co525, setCo525] = useState("");
-// 	const [co526, setCo526] = useState("");
-// 	const [co527, setCo527] = useState("");
-// 	const [co528, setCo528] = useState("");
-// 	const [co529, setCo529] = useState("");
-// 	const [co5210, setCo5210] = useState("");
-// 	const [co5211, setCo5211] = useState("");
-// 	const [co5212, setCo5212] = useState("");
-// 	const [co5213, setCo5213] = useState("");
-
-// 	const [co621, setCo621] = useState("");
-// 	const [co623, setCo623] = useState("");
-// 	const [co623, setCo623] = useState("");
-// 	const [co624, setCo624] = useState("");
-// 	const [co625, setCo625] = useState("");
-// 	const [co626, setCo626] = useState("");
-// 	const [co627, setCo627] = useState("");
-// 	const [co628, setCo628] = useState("");
-// 	const [co629, setCo629] = useState("");
-// 	const [co6210, setCo6210] = useState("");
-// 	const [co6211, setCo6211] = useState("");
-// 	const [co6212, setCo6212] = useState("");
-// 	const [co6213, setCo6213] = useState("");
-
-// 	const [co721, setCo721] = useState("");
-// 	const [co723, setCo723] = useState("");
-// 	const [co723, setCo723] = useState("");
-// 	const [co724, setCo724] = useState("");
-// 	const [co725, setCo725] = useState("");
-// 	const [co726, setCo726] = useState("");
-// 	const [co727, setCo727] = useState("");
-// 	const [co728, setCo728] = useState("");
-// 	const [co729, setCo729] = useState("");
-// 	const [co7210, setCo7210] = useState("");
-// 	const [co7211, setCo7211] = useState("");
-// 	const [co7212, setCo7212] = useState("");
-// 	const [co7213, setCo7213] = useState("");
-
-// 	const [po2mapco1, setPo2mapco1] = useState<number | string>("");
-// 	const [po2mapco2, setPo2mapco2] = useState<number | string>("");
-// 	const [po2mapco3, setPo2mapco3] = useState<number | string>("");
-// 	const [po2mapco4, setPo2mapco4] = useState<number | string>("");
-// 	const [po2mapco5, setPo2mapco5] = useState<number | string>("");
-// 	const [po2mapco6, setPo2mapco6] = useState<number | string>("");
-// 	const [po2mapco7, setPo2mapco7] = useState<number | string>("");
-
-// 	// ******************** PO:3 ******************************
-
-// 	const [po31, setPo31] = useState(
-// 		"PO 3: Engineering knowledge: Apply the knowledge of mathematics, science, engineering fundamentals, and an engineering specialisation for the solution of complex engineering problems."
-// 	);
-
-// 	const [competency31, setCompetency31] = useState(
-// 		"1.1  Demonstrate competence in mathematical modelling"
-// 	);
-// 	const [competency33, setCompetency33] = useState(
-// 		"1.1  Demonstrate competence in mathematical modelling"
-// 	);
-// 	const [competency33, setCompetency33] = useState(
-// 		"1.2 Demonstrate competence in basic sciences"
-// 	);
-// 	const [competency34, setCompetency34] = useState(
-// 		"1.3 Demonstrate competence in engineering fundamentals"
-// 	);
-
-// 	const [indicators31, setIndicators31] = useState(
-// 		"1.1.1      Apply mathematical techniques such as calculus, linear algebra, and statistics to solve problems"
-// 	);
-// 	const [indicators33, setIndicators33] = useState(
-// 		"1.1.2      Apply advanced mathematical techniques to model and solve mechanical engineering problems"
-// 	);
-// 	const [indicators33, setIndicators33] = useState(
-// 		"1.2.1  Apply laws of natural science to an engineering problem"
-// 	);
-// 	const [indicators34, setIndicators34] = useState(
-// 		"1.3.1  Apply fundamental engineering concepts to solve engineering problems"
-// 	);
-// 	const [indicators35, setIndicators35] = useState(
-// 		"1.4.1  Apply Mechanical engineering concepts to solve engineering problems."
-// 	);
-// 	const [indicators36, setIndicators36] = useState(
-// 		"1.4.1  Apply Mechanical engineering concepts to solve engineering problems."
-// 	);
-// 	const [indicators37, setIndicators37] = useState(
-// 		"1.4.1  Apply Mechanical engineering concepts to solve engineering problems."
-// 	);
-// 	const [indicators38, setIndicators38] = useState(
-// 		"1.4.1  Apply Mechanical engineering concepts to solve engineering problems."
-// 	);
-// 	const [indicators39, setIndicators39] = useState(
-// 		"1.4.1  Apply Mechanical engineering concepts to solve engineering problems."
-// 	);
-// 	const [indicators310, setIndicators310] = useState(
-// 		"1.4.1  Apply Mechanical engineering concepts to solve engineering problems."
-// 	);
-// 	const [indicators311, setIndicators311] = useState(
-// 		"1.4.1  Apply Mechanical engineering concepts to solve engineering problems."
-// 	);
-// 	const [indicators312, setIndicators312] = useState(
-// 		"1.4.1  Apply Mechanical engineering concepts to solve engineering problems."
-// 	);
-// 	const [indicators313, setIndicators313] = useState(
-// 		"1.4.1  Apply Mechanical engineering concepts to solve engineering problems."
-// 	);
-
-// 	const [weight31, setWeight31] = useState("0.8");
-// 	const [weight33, setWeight33] = useState("0.8");
-// 	const [weight33, setWeight33] = useState("0.8");
-// 	const [weight34, setWeight34] = useState("0.8");
-// 	const [weight35, setWeight35] = useState("0.8");
-// 	const [weight36, setWeight36] = useState("0.8");
-// 	const [weight37, setWeight37] = useState("0.8");
-// 	const [weight38, setWeight38] = useState("0.8");
-// 	const [weight39, setWeight39] = useState("0.8");
-// 	const [weight310, setWeight310] = useState("0.8");
-// 	const [weight311, setWeight311] = useState("0.8");
-// 	const [weight312, setWeight312] = useState("0.8");
-// 	const [weight313, setWeight313] = useState("0.8");
-
-// 	const [co131, setCo131] = useState("");
-// 	const [co133, setCo133] = useState("");
-// 	const [co133, setCo133] = useState("");
-// 	const [co134, setCo134] = useState("");
-// 	const [co135, setCo135] = useState("");
-// 	const [co136, setCo136] = useState("");
-// 	const [co137, setCo137] = useState("");
-// 	const [co138, setCo138] = useState("");
-// 	const [co139, setCo139] = useState("");
-// 	const [co1310, setCo1310] = useState("");
-// 	const [co1311, setCo1311] = useState("");
-// 	const [co1312, setCo1312] = useState("");
-// 	const [co1313, setCo1313] = useState("");
-
-// 	const [co231, setCo231] = useState("");
-// 	const [co233, setCo233] = useState("");
-// 	const [co233, setCo233] = useState("");
-// 	const [co234, setCo234] = useState("");
-// 	const [co235, setCo235] = useState("");
-// 	const [co236, setCo236] = useState("");
-// 	const [co237, setCo237] = useState("");
-// 	const [co238, setCo238] = useState("");
-// 	const [co239, setCo239] = useState("");
-// 	const [co2310, setCo2310] = useState("");
-// 	const [co2311, setCo2311] = useState("");
-// 	const [co2312, setCo2312] = useState("");
-// 	const [co2313, setCo2313] = useState("");
-
-// 	const [co331, setCo331] = useState("");
-// 	const [co333, setCo333] = useState("");
-// 	const [co333, setCo333] = useState("");
-// 	const [co334, setCo334] = useState("");
-// 	const [co335, setCo335] = useState("");
-// 	const [co336, setCo336] = useState("");
-// 	const [co337, setCo337] = useState("");
-// 	const [co338, setCo338] = useState("");
-// 	const [co339, setCo339] = useState("");
-// 	const [co3310, setCo3310] = useState("");
-// 	const [co3311, setCo3311] = useState("");
-// 	const [co3312, setCo3312] = useState("");
-// 	const [co3313, setCo3313] = useState("");
-
-// 	const [co431, setCo431] = useState("");
-// 	const [co433, setCo433] = useState("");
-// 	const [co433, setCo433] = useState("");
-// 	const [co434, setCo434] = useState("");
-// 	const [co435, setCo435] = useState("");
-// 	const [co436, setCo436] = useState("");
-// 	const [co437, setCo437] = useState("");
-// 	const [co438, setCo438] = useState("");
-// 	const [co439, setCo439] = useState("");
-// 	const [co4310, setCo4310] = useState("");
-// 	const [co4311, setCo4311] = useState("");
-// 	const [co4312, setCo4312] = useState("");
-// 	const [co4313, setCo4313] = useState("");
-
-// 	const [co531, setCo531] = useState("");
-// 	const [co533, setCo533] = useState("");
-// 	const [co533, setCo533] = useState("");
-// 	const [co534, setCo534] = useState("");
-// 	const [co535, setCo535] = useState("");
-// 	const [co536, setCo536] = useState("");
-// 	const [co537, setCo537] = useState("");
-// 	const [co538, setCo538] = useState("");
-// 	const [co539, setCo539] = useState("");
-// 	const [co5310, setCo5310] = useState("");
-// 	const [co5311, setCo5311] = useState("");
-// 	const [co5312, setCo5312] = useState("");
-// 	const [co5313, setCo5313] = useState("");
-
-// 	const [co631, setCo631] = useState("");
-// 	const [co633, setCo633] = useState("");
-// 	const [co633, setCo633] = useState("");
-// 	const [co634, setCo634] = useState("");
-// 	const [co635, setCo635] = useState("");
-// 	const [co636, setCo636] = useState("");
-// 	const [co637, setCo637] = useState("");
-// 	const [co638, setCo638] = useState("");
-// 	const [co639, setCo639] = useState("");
-// 	const [co6310, setCo6310] = useState("");
-// 	const [co6311, setCo6311] = useState("");
-// 	const [co6312, setCo6312] = useState("");
-// 	const [co6313, setCo6313] = useState("");
-
-// 	const [co731, setCo731] = useState("");
-// 	const [co733, setCo733] = useState("");
-// 	const [co733, setCo733] = useState("");
-// 	const [co734, setCo734] = useState("");
-// 	const [co735, setCo735] = useState("");
-// 	const [co736, setCo736] = useState("");
-// 	const [co737, setCo737] = useState("");
-// 	const [co738, setCo738] = useState("");
-// 	const [co739, setCo739] = useState("");
-// 	const [co7310, setCo7310] = useState("");
-// 	const [co7311, setCo7311] = useState("");
-// 	const [co7312, setCo7312] = useState("");
-// 	const [co7313, setCo7313] = useState("");
-
-// 	const [po3mapco1, setPo3mapco1] = useState<number | string>("");
-// 	const [po3mapco2, setPo3mapco2] = useState<number | string>("");
-// 	const [po3mapco3, setPo3mapco3] = useState<number | string>("");
-// 	const [po3mapco4, setPo3mapco4] = useState<number | string>("");
-// 	const [po3mapco5, setPo3mapco5] = useState<number | string>("");
-// 	const [po3mapco6, setPo3mapco6] = useState<number | string>("");
-// 	const [po3mapco7, setPo3mapco7] = useState<number | string>("");
-
-// 	const calculatePo1mapco1 = () => {
-// 		const sumCo =
-// 			parseInt(co111) +
-// 			parseInt(co112) +
-// 			parseInt(co113) +
-// 			parseInt(co114) +
-// 			parseInt(co115);
-// 		const calculatedValue = Math.round((sumCo * 0.2) / 0.33);
-// 		setPo1mapco1(calculatedValue);
-// 	};
-// 	const calculatePo1mapco2 = () => {
-// 		const sumCo =
-// 			parseInt(co211) +
-// 			parseInt(co212) +
-// 			parseInt(co213) +
-// 			parseInt(co214) +
-// 			parseInt(co215);
-// 		const calculatedValue = Math.round((sumCo * 0.2) / 0.33);
-// 		setPo1mapco2(calculatedValue);
-// 	};
-// 	const calculatePo1mapco3 = () => {
-// 		const sumCo =
-// 			parseInt(co311) +
-// 			parseInt(co312) +
-// 			parseInt(co313) +
-// 			parseInt(co314) +
-// 			parseInt(co315);
-// 		const calculatedValue = Math.round((sumCo * 0.2) / 0.33);
-// 		setPo1mapco3(calculatedValue);
-// 	};
-// 	const calculatePo1mapco4 = () => {
-// 		const sumCo =
-// 			parseInt(co411) +
-// 			parseInt(co412) +
-// 			parseInt(co413) +
-// 			parseInt(co414) +
-// 			parseInt(co415);
-// 		const calculatedValue = Math.round((sumCo * 0.2) / 0.33);
-// 		setPo1mapco4(calculatedValue);
-// 	};
-// 	const calculatePo1mapco5 = () => {
-// 		const sumCo =
-// 			parseInt(co511) +
-// 			parseInt(co512) +
-// 			parseInt(co513) +
-// 			parseInt(co514) +
-// 			parseInt(co515);
-// 		const calculatedValue = Math.round((sumCo * 0.2) / 0.33);
-// 		setPo1mapco5(calculatedValue);
-// 	};
-// 	const calculatePo1mapco6 = () => {
-// 		const sumCo =
-// 			parseInt(co611) +
-// 			parseInt(co612) +
-// 			parseInt(co613) +
-// 			parseInt(co614) +
-// 			parseInt(co615);
-// 		const calculatedValue = Math.round((sumCo * 0.2) / 0.33);
-// 		setPo1mapco6(calculatedValue);
-// 	};
-// 	const calculatePo1mapco7 = () => {
-// 		const sumCo =
-// 			parseInt(co711) +
-// 			parseInt(co712) +
-// 			parseInt(co713) +
-// 			parseInt(co714) +
-// 			parseInt(co715);
-// 		const calculatedValue = Math.round((sumCo * 0.2) / 0.33);
-// 		setPo1mapco7(calculatedValue);
-// 	};
-
-// 	// PO: 2
-// 	const calculatePo2mapco1 = () => {
-// 		const sumCo =
-// 			parseInt(co121) +
-// 			parseInt(co123) +
-// 			parseInt(co123) +
-// 			parseInt(co124) +
-// 			parseInt(co125) +
-// 			parseInt(co126) +
-// 			parseInt(co127) +
-// 			parseInt(co128) +
-// 			parseInt(co129) +
-// 			parseInt(co1210) +
-// 			parseInt(co1211) +
-// 			parseInt(co1212) +
-// 			parseInt(co1213);
-// 		const calculatedValue = Math.round((sumCo * 0.08) / 0.33);
-// 		setPo2mapco1(calculatedValue);
-// 	};
-// 	const calculatePo2mapco2 = () => {
-// 		const sumCo =
-// 			parseInt(co231) +
-// 			parseInt(co233) +
-// 			parseInt(co233) +
-// 			parseInt(co234) +
-// 			parseInt(co235) +
-// 			parseInt(co236) +
-// 			parseInt(co237) +
-// 			parseInt(co238) +
-// 			parseInt(co239) +
-// 			parseInt(co2310) +
-// 			parseInt(co2311) +
-// 			parseInt(co2312) +
-// 			parseInt(co2313);
-// 		const calculatedValue = Math.round((sumCo * 0.08) / 0.33);
-// 		setPo2mapco2(calculatedValue);
-// 	};
-// 	const calculatePo2mapco3 = () => {
-// 		const sumCo =
-// 			parseInt(co331) +
-// 			parseInt(co333) +
-// 			parseInt(co333) +
-// 			parseInt(co334) +
-// 			parseInt(co335) +
-// 			parseInt(co336) +
-// 			parseInt(co337) +
-// 			parseInt(co338) +
-// 			parseInt(co339) +
-// 			parseInt(co3310) +
-// 			parseInt(co3311) +
-// 			parseInt(co3312) +
-// 			parseInt(co3313);
-// 		const calculatedValue = Math.round((sumCo * 0.08) / 0.33);
-// 		setPo2mapco3(calculatedValue);
-// 	};
-// 	const calculatePo2mapco4 = () => {
-// 		const sumCo =
-// 			parseInt(co421) +
-// 			parseInt(co423) +
-// 			parseInt(co423) +
-// 			parseInt(co424) +
-// 			parseInt(co425) +
-// 			parseInt(co426) +
-// 			parseInt(co427) +
-// 			parseInt(co428) +
-// 			parseInt(co429) +
-// 			parseInt(co4210) +
-// 			parseInt(co4211) +
-// 			parseInt(co4212) +
-// 			parseInt(co4213);
-// 		const calculatedValue = Math.round((sumCo * 0.08) / 0.33);
-// 		setPo2mapco4(calculatedValue);
-// 	};
-// 	const calculatePo2mapco5 = () => {
-// 		const sumCo =
-// 			parseInt(co521) +
-// 			parseInt(co523) +
-// 			parseInt(co523) +
-// 			parseInt(co524) +
-// 			parseInt(co525) +
-// 			parseInt(co526) +
-// 			parseInt(co527) +
-// 			parseInt(co528) +
-// 			parseInt(co529) +
-// 			parseInt(co5210) +
-// 			parseInt(co5211) +
-// 			parseInt(co5212) +
-// 			parseInt(co5213);
-// 		const calculatedValue = Math.round((sumCo * 0.08) / 0.33);
-// 		setPo2mapco5(calculatedValue);
-// 	};
-// 	const calculatePo2mapco6 = () => {
-// 		const sumCo =
-// 			parseInt(co621) +
-// 			parseInt(co623) +
-// 			parseInt(co623) +
-// 			parseInt(co624) +
-// 			parseInt(co625) +
-// 			parseInt(co626) +
-// 			parseInt(co627) +
-// 			parseInt(co628) +
-// 			parseInt(co629) +
-// 			parseInt(co6210) +
-// 			parseInt(co6211) +
-// 			parseInt(co6212) +
-// 			parseInt(co6213);
-// 		const calculatedValue = Math.round((sumCo * 0.08) / 0.33);
-// 		setPo2mapco6(calculatedValue);
-// 	};
-// 	const calculatePo2mapco7 = () => {
-// 		const sumCo =
-// 			parseInt(co721) +
-// 			parseInt(co723) +
-// 			parseInt(co723) +
-// 			parseInt(co724) +
-// 			parseInt(co725) +
-// 			parseInt(co726) +
-// 			parseInt(co727) +
-// 			parseInt(co728) +
-// 			parseInt(co729) +
-// 			parseInt(co7210) +
-// 			parseInt(co7211) +
-// 			parseInt(co7212) +
-// 			parseInt(co7213);
-// 		const calculatedValue = Math.round((sumCo * 0.08) / 0.33);
-// 		setPo2mapco7(calculatedValue);
-// 	};
-// 	// PO: 2
-// 	const calculatePo3mapco1 = () => {
-// 		const sumCo =
-// 			parseInt(co131) +
-// 			parseInt(co133) +
-// 			parseInt(co133) +
-// 			parseInt(co134) +
-// 			parseInt(co135) +
-// 			parseInt(co136) +
-// 			parseInt(co137) +
-// 			parseInt(co138) +
-// 			parseInt(co139) +
-// 			parseInt(co1310) +
-// 			parseInt(co1311) +
-// 			parseInt(co1312) +
-// 			parseInt(co1313);
-// 		const calculatedValue = Math.round((sumCo * 0.08) / 0.33);
-// 		setPo3mapco1(calculatedValue);
-// 	};
-// 	const calculatePo3mapco2 = () => {
-// 		const sumCo =
-// 			parseInt(co231) +
-// 			parseInt(co233) +
-// 			parseInt(co233) +
-// 			parseInt(co234) +
-// 			parseInt(co235) +
-// 			parseInt(co236) +
-// 			parseInt(co237) +
-// 			parseInt(co238) +
-// 			parseInt(co239) +
-// 			parseInt(co2310) +
-// 			parseInt(co2311) +
-// 			parseInt(co2312) +
-// 			parseInt(co2313);
-// 		const calculatedValue = Math.round((sumCo * 0.08) / 0.33);
-// 		setPo3mapco2(calculatedValue);
-// 	};
-// 	const calculatePo3mapco3 = () => {
-// 		const sumCo =
-// 			parseInt(co331) +
-// 			parseInt(co333) +
-// 			parseInt(co333) +
-// 			parseInt(co334) +
-// 			parseInt(co335) +
-// 			parseInt(co336) +
-// 			parseInt(co337) +
-// 			parseInt(co338) +
-// 			parseInt(co339) +
-// 			parseInt(co3310) +
-// 			parseInt(co3311) +
-// 			parseInt(co3312) +
-// 			parseInt(co3313);
-// 		const calculatedValue = Math.round((sumCo * 0.08) / 0.33);
-// 		setPo3mapco3(calculatedValue);
-// 	};
-// 	const calculatePo3mapco4 = () => {
-// 		const sumCo =
-// 			parseInt(co431) +
-// 			parseInt(co433) +
-// 			parseInt(co433) +
-// 			parseInt(co434) +
-// 			parseInt(co435) +
-// 			parseInt(co436) +
-// 			parseInt(co437) +
-// 			parseInt(co438) +
-// 			parseInt(co439) +
-// 			parseInt(co4310) +
-// 			parseInt(co4311) +
-// 			parseInt(co4312) +
-// 			parseInt(co4313);
-// 		const calculatedValue = Math.round((sumCo * 0.08) / 0.33);
-// 		setPo3mapco4(calculatedValue);
-// 	};
-// 	const calculatePo3mapco5 = () => {
-// 		const sumCo =
-// 			parseInt(co531) +
-// 			parseInt(co533) +
-// 			parseInt(co533) +
-// 			parseInt(co534) +
-// 			parseInt(co535) +
-// 			parseInt(co536) +
-// 			parseInt(co537) +
-// 			parseInt(co538) +
-// 			parseInt(co539) +
-// 			parseInt(co5310) +
-// 			parseInt(co5311) +
-// 			parseInt(co5312) +
-// 			parseInt(co5313);
-// 		const calculatedValue = Math.round((sumCo * 0.08) / 0.33);
-// 		setPo3mapco5(calculatedValue);
-// 	};
-// 	const calculatePo3mapco6 = () => {
-// 		const sumCo =
-// 			parseInt(co631) +
-// 			parseInt(co633) +
-// 			parseInt(co633) +
-// 			parseInt(co634) +
-// 			parseInt(co635) +
-// 			parseInt(co636) +
-// 			parseInt(co637) +
-// 			parseInt(co638) +
-// 			parseInt(co639) +
-// 			parseInt(co6310) +
-// 			parseInt(co6311) +
-// 			parseInt(co6312) +
-// 			parseInt(co6313);
-// 		const calculatedValue = Math.round((sumCo * 0.08) / 0.33);
-// 		setPo3mapco6(calculatedValue);
-// 	};
-// 	const calculatePo3mapco7 = () => {
-// 		const sumCo =
-// 			parseInt(co731) +
-// 			parseInt(co733) +
-// 			parseInt(co733) +
-// 			parseInt(co734) +
-// 			parseInt(co735) +
-// 			parseInt(co736) +
-// 			parseInt(co737) +
-// 			parseInt(co738) +
-// 			parseInt(co739) +
-// 			parseInt(co7310) +
-// 			parseInt(co7311) +
-// 			parseInt(co7312) +
-// 			parseInt(co7313);
-// 		const calculatedValue = Math.round((sumCo * 0.08) / 0.33);
-// 		setPo3mapco7(calculatedValue);
-// 	};
-
-// 	// Effect to call calculatePo1mapco1 whenever any of the co variables change
-// 	useEffect(() => {
-// 		calculatePo1mapco1();
-// 		calculatePo1mapco2();
-// 		calculatePo1mapco3();
-// 		calculatePo1mapco4();
-// 		calculatePo1mapco5();
-// 		calculatePo1mapco6();
-// 		calculatePo1mapco7();
-// 		//  PO: 2
-// 		calculatePo2mapco1();
-// 		calculatePo2mapco2();
-// 		calculatePo2mapco3();
-// 		calculatePo2mapco4();
-// 		calculatePo2mapco5();
-// 		calculatePo2mapco6();
-// 		calculatePo2mapco7();
-// 		//  PO: 3
-// 		calculatePo3mapco1();
-// 		calculatePo3mapco2();
-// 		calculatePo3mapco3();
-// 		calculatePo3mapco4();
-// 		calculatePo3mapco5();
-// 		calculatePo3mapco6();
-// 		calculatePo3mapco7();
-// 	}, [
-// 		co111,
-// 		co112,
-// 		co113,
-// 		co114,
-// 		co115,
-// 		co211,
-// 		co212,
-// 		co213,
-// 		co214,
-// 		co215,
-// 		co311,
-// 		co312,
-// 		co313,
-// 		co314,
-// 		co315,
-
-// 		co411,
-// 		co412,
-// 		co413,
-// 		co414,
-// 		co415,
-
-// 		co511,
-// 		co512,
-// 		co513,
-// 		co514,
-// 		co515,
-
-// 		co611,
-// 		co612,
-// 		co613,
-// 		co614,
-// 		co615,
-
-// 		co711,
-// 		co712,
-// 		co713,
-// 		co714,
-// 		co715,
-
-// 		co121,
-// 		co123,
-// 		co123,
-// 		co124,
-// 		co125,
-// 		co126,
-// 		co127,
-// 		co128,
-// 		co129,
-// 		co1210,
-// 		co1211,
-// 		co1212,
-// 		co1213,
-
-// 		co231,
-// 		co233,
-// 		co233,
-// 		co234,
-// 		co235,
-// 		co236,
-// 		co237,
-// 		co238,
-// 		co239,
-// 		co2310,
-// 		co2311,
-// 		co2312,
-// 		co2313,
-
-// 		co331,
-// 		co333,
-// 		co333,
-// 		co334,
-// 		co335,
-// 		co336,
-// 		co337,
-// 		co338,
-// 		co339,
-// 		co3310,
-// 		co3311,
-// 		co3312,
-// 		co3313,
-
-// 		co421,
-// 		co423,
-// 		co423,
-// 		co424,
-// 		co425,
-// 		co426,
-// 		co427,
-// 		co428,
-// 		co429,
-// 		co4210,
-// 		co4211,
-// 		co4212,
-// 		co4213,
-
-// 		co521,
-// 		co523,
-// 		co523,
-// 		co524,
-// 		co525,
-// 		co526,
-// 		co527,
-// 		co528,
-// 		co529,
-// 		co5210,
-// 		co5211,
-// 		co5212,
-// 		co5213,
-
-// 		co621,
-// 		co623,
-// 		co623,
-// 		co624,
-// 		co625,
-// 		co626,
-// 		co627,
-// 		co628,
-// 		co629,
-// 		co6210,
-// 		co6211,
-// 		co6212,
-// 		co6213,
-
-// 		co721,
-// 		co723,
-// 		co723,
-// 		co724,
-// 		co725,
-// 		co726,
-// 		co727,
-// 		co728,
-// 		co729,
-// 		co7210,
-// 		co7211,
-// 		co7212,
-// 		co7213,
-
-// 		// po:3
-
-// 		co131,
-// 		co133,
-// 		co133,
-// 		co134,
-// 		co135,
-// 		co136,
-// 		co137,
-// 		co138,
-// 		co139,
-// 		co1310,
-// 		co1311,
-// 		co1312,
-// 		co1313,
-
-// 		co231,
-// 		co233,
-// 		co233,
-// 		co234,
-// 		co235,
-// 		co236,
-// 		co237,
-// 		co238,
-// 		co239,
-// 		co2310,
-// 		co2311,
-// 		co2312,
-// 		co2313,
-
-// 		co331,
-// 		co333,
-// 		co333,
-// 		co334,
-// 		co335,
-// 		co336,
-// 		co337,
-// 		co338,
-// 		co339,
-// 		co3310,
-// 		co3311,
-// 		co3312,
-// 		co3313,
-
-// 		co431,
-// 		co433,
-// 		co433,
-// 		co434,
-// 		co435,
-// 		co436,
-// 		co437,
-// 		co438,
-// 		co439,
-// 		co4310,
-// 		co4311,
-// 		co4312,
-// 		co4313,
-
-// 		co531,
-// 		co533,
-// 		co533,
-// 		co534,
-// 		co535,
-// 		co536,
-// 		co537,
-// 		co538,
-// 		co539,
-// 		co5310,
-// 		co5311,
-// 		co5312,
-// 		co5313,
-
-// 		co631,
-// 		co633,
-// 		co633,
-// 		co634,
-// 		co635,
-// 		co636,
-// 		co637,
-// 		co638,
-// 		co639,
-// 		co6310,
-// 		co6311,
-// 		co6312,
-// 		co6313,
-
-// 		co731,
-// 		co733,
-// 		co733,
-// 		co734,
-// 		co735,
-// 		co736,
-// 		co737,
-// 		co738,
-// 		co739,
-// 		co7310,
-// 		co7311,
-// 		co7312,
-// 		co7313,
-// 	]);
-
-// 	const handleSubmit = async (e: any) => {
-// 		e.preventDefault();
-
-// 		// if (
-// 		// 	!po ||
-// 		// 	!competency ||
-// 		// 	!indicators ||
-// 		// 	!weight ||
-// 		// 	!co1 ||
-// 		// 	!co2 ||
-// 		// 	!co3 ||
-// 		// 	!co4 ||
-// 		// 	!co5 ||
-// 		// 	!co6 ||
-// 		// 	!co7
-// 		// ) {
-// 		// 	alert("fill all fields");
-// 		// 	return;
-// 		// }
-
-// 		try {
-// 			const res = await fetch("http://localhost:3000/api/table", {
-// 				// const res = await fetch("https://copo-attainment.vercel.app/api/table", {
-// 				method: "POST",
-// 				headers: {
-// 					"Content-type": "application/json",
-// 				},
-// 				body: JSON.stringify({
-// 					po11,
-// 					po12,
-// 					po13,
-// 					po14,
-// 					po15,
-
-// 					competency11,
-// 					competency12,
-// 					competency13,
-// 					competency14,
-// 					competency15,
-
-// 					indicators11,
-// 					indicators12,
-// 					indicators13,
-// 					indicators14,
-// 					indicators15,
-
-// 					weight11,
-// 					weight12,
-// 					weight13,
-// 					weight14,
-// 					weight15,
-
-// 					co111,
-// 					co112,
-// 					co113,
-// 					co114,
-// 					co115,
-
-// 					co211,
-// 					co212,
-// 					co213,
-// 					co214,
-// 					co215,
-
-// 					co311,
-// 					co312,
-// 					co313,
-// 					co314,
-// 					co315,
-
-// 					co411,
-// 					co412,
-// 					co413,
-// 					co414,
-// 					co415,
-
-// 					co511,
-// 					co512,
-// 					co513,
-// 					co514,
-// 					co515,
-
-// 					co611,
-// 					co612,
-// 					co613,
-// 					co614,
-// 					co615,
-
-// 					co711,
-// 					co712,
-// 					co713,
-// 					co714,
-// 					co715,
-
-// 					po1mapco1,
-// 					po1mapco2,
-// 					po1mapco3,
-// 					po1mapco4,
-// 					po1mapco5,
-// 					po1mapco6,
-// 					po1mapco7,
-
-// 					year,
-// 					dept,
-// 					sem,
-// 					subject,
-
-// 					//  **********************   po2    *****************************
-
-// 					po21,
-
-// 					competency21,
-// 					competency23,
-// 					competency23,
-// 					competency24,
-
-// 					indicators21,
-// 					indicators23,
-// 					indicators23,
-// 					indicators24,
-// 					indicators25,
-// 					indicators26,
-// 					indicators27,
-// 					indicators28,
-// 					indicators29,
-// 					indicators210,
-// 					indicators211,
-// 					indicators212,
-// 					indicators213,
-
-// 					weight21,
-// 					weight23,
-// 					weight23,
-// 					weight24,
-// 					weight25,
-// 					weight26,
-// 					weight27,
-// 					weight28,
-// 					weight29,
-// 					weight210,
-// 					weight211,
-// 					weight212,
-// 					weight213,
-
-// 					co121,
-// 					co123,
-// 					co123,
-// 					co124,
-// 					co125,
-// 					co126,
-// 					co127,
-// 					co128,
-// 					co129,
-// 					co1210,
-// 					co1211,
-// 					co1212,
-// 					co1213,
-
-// 					co231,
-// 					co233,
-// 					co233,
-// 					co234,
-// 					co235,
-// 					co236,
-// 					co237,
-// 					co238,
-// 					co239,
-// 					co2310,
-// 					co2311,
-// 					co2312,
-// 					co2313,
-
-// 					co331,
-// 					co333,
-// 					co333,
-// 					co334,
-// 					co335,
-// 					co336,
-// 					co337,
-// 					co338,
-// 					co339,
-// 					co3310,
-// 					co3311,
-// 					co3312,
-// 					co3313,
-
-// 					co421,
-// 					co423,
-// 					co423,
-// 					co424,
-// 					co425,
-// 					co426,
-// 					co427,
-// 					co428,
-// 					co429,
-// 					co4210,
-// 					co4211,
-// 					co4212,
-// 					co4213,
-
-// 					co521,
-// 					co523,
-// 					co523,
-// 					co524,
-// 					co525,
-// 					co526,
-// 					co527,
-// 					co528,
-// 					co529,
-// 					co5210,
-// 					co5211,
-// 					co5212,
-// 					co5213,
-
-// 					co621,
-// 					co623,
-// 					co623,
-// 					co624,
-// 					co625,
-// 					co626,
-// 					co627,
-// 					co628,
-// 					co629,
-// 					co6210,
-// 					co6211,
-// 					co6212,
-// 					co6213,
-
-// 					co721,
-// 					co723,
-// 					co723,
-// 					co724,
-// 					co725,
-// 					co726,
-// 					co727,
-// 					co728,
-// 					co729,
-// 					co7210,
-// 					co7211,
-// 					co7212,
-// 					co7213,
-
-// 					po2mapco1,
-// 					po2mapco2,
-// 					po2mapco3,
-// 					po2mapco4,
-// 					po2mapco5,
-// 					po2mapco6,
-// 					po2mapco7,
-
-// 					// ************************ PO:3  ***************************************
-
-// 					po31,
-
-// 					competency31,
-// 					competency33,
-// 					competency33,
-// 					competency34,
-
-// 					indicators31,
-// 					indicators33,
-// 					indicators33,
-// 					indicators34,
-// 					indicators35,
-// 					indicators36,
-// 					indicators37,
-// 					indicators38,
-// 					indicators39,
-// 					indicators310,
-// 					indicators311,
-// 					indicators312,
-// 					indicators313,
-
-// 					weight31,
-// 					weight33,
-// 					weight33,
-// 					weight34,
-// 					weight35,
-// 					weight36,
-// 					weight37,
-// 					weight38,
-// 					weight39,
-// 					weight310,
-// 					weight311,
-// 					weight312,
-// 					weight313,
-
-// 					co131,
-// 					co133,
-// 					co133,
-// 					co134,
-// 					co135,
-// 					co136,
-// 					co137,
-// 					co138,
-// 					co139,
-// 					co1310,
-// 					co1311,
-// 					co1312,
-// 					co1313,
-
-// 					co231,
-// 					co233,
-// 					co233,
-// 					co234,
-// 					co235,
-// 					co236,
-// 					co237,
-// 					co238,
-// 					co239,
-// 					co2310,
-// 					co2311,
-// 					co2312,
-// 					co2313,
-
-// 					co331,
-// 					co333,
-// 					co333,
-// 					co334,
-// 					co335,
-// 					co336,
-// 					co337,
-// 					co338,
-// 					co339,
-// 					co3310,
-// 					co3311,
-// 					co3312,
-// 					co3313,
-
-// 					co431,
-// 					co433,
-// 					co433,
-// 					co434,
-// 					co435,
-// 					co436,
-// 					co437,
-// 					co438,
-// 					co439,
-// 					co4310,
-// 					co4311,
-// 					co4312,
-// 					co4313,
-
-// 					co531,
-// 					co533,
-// 					co533,
-// 					co534,
-// 					co535,
-// 					co536,
-// 					co537,
-// 					co538,
-// 					co539,
-// 					co5310,
-// 					co5311,
-// 					co5312,
-// 					co5313,
-
-// 					co631,
-// 					co633,
-// 					co633,
-// 					co634,
-// 					co635,
-// 					co636,
-// 					co637,
-// 					co638,
-// 					co639,
-// 					co6310,
-// 					co6311,
-// 					co6312,
-// 					co6313,
-
-// 					co731,
-// 					co733,
-// 					co733,
-// 					co734,
-// 					co735,
-// 					co736,
-// 					co737,
-// 					co738,
-// 					co739,
-// 					co7310,
-// 					co7311,
-// 					co7312,
-// 					co7313,
-
-// 					po3mapco1,
-// 					po3mapco2,
-// 					po3mapco3,
-// 					po3mapco4,
-// 					po3mapco5,
-// 					po3mapco6,
-// 					po3mapco7,
-// 				}),
-// 			});
-
-// 			if (res.ok) {
-// 				router.push("/");
-// 			} else {
-// 				throw new Error("Failed to create table");
-// 			}
-// 		} catch (error) {
-// 			console.log(error);
-// 		}
-// 	};
-
-// 	const years = [
-// 		{ key: "FIRST", label: "First Year" },
-// 		{ key: "SECOND", label: "Second Year" },
-// 		{ key: "THIRD", label: "Third Year" },
-// 		{ key: "FOURTH", label: "Fourth Year" },
-// 	];
-// 	const depart = [
-// 		{ key: "CSE", label: "Computer Science and Engineering" },
-// 		{ key: "ENTC", label: "Electronics and Telecommunication Engineering" },
-// 		{ key: "MECHANICAL", label: "Mechanical Engineering" },
-// 		{ key: "ELECTRICAL", label: "Electrical Engineering" },
-// 		{ key: "CIVIL", label: "Civil Engineering" },
-// 	];
-// 	const semester = [
-// 		{ key: "FIRST", label: "First Semester" },
-// 		{ key: "SECOND", label: "Second Semester" },
-// 		{ key: "THIRD", label: "Third Semester" },
-// 		{ key: "FOURTH", label: "Fourth Semester" },
-// 		{ key: "FIFTH", label: "Fifth Semester" },
-// 		{ key: "SIXTH", label: "Sixth Semester" },
-// 		{ key: "SEVENTH", label: "Seventh Semester" },
-// 		{ key: "EIGHTH", label: "Eighth Semester" },
-// 	];
-
-// 	const handleYearSelect = (selectedYear: any) => {
-// 		setYear(selectedYear);
-// 	};
-// 	const handleDepartSelect = (selectedDept: any) => {
-// 		setDept(selectedDept);
-// 	};
-// 	const handleSemesterSelect = (selectedSem: any) => {
-// 		setSem(selectedSem);
-// 	};
-
-// 	return (
-// 		<>
-// 			<form onSubmit={handleSubmit}>
-// 				<table
-// 					className='  table-fixed'
-// 					aria-label='Example static collection table'
-// 				>
-// 					<thead>
-// 						<tr>
-// 							<th>PO</th>
-// 							<th>Competency</th>
-// 							<th>Indicators</th>
-// 							<th>Weight</th>
-// 							<th>CO1</th>
-// 							<th>CO2</th>
-// 							<th>CO3</th>
-// 							<th>CO4</th>
-// 							<th>CO5</th>
-// 							<th>CO6</th>
-// 							<th>CO7</th>
-// 						</tr>
-// 					</thead>
-// 					<tbody>
-// 						{/* PO:3 */}
-
-// 						<tr className='m-4'>
-// 							<td rowSpan={13}>
-// 								<Textarea
-// 									readOnly
-// 									value={po31}
-// 									onChange={(e) => setPo31(e.target.value)}
-// 									className='my-6'
-// 								/>
-// 							</td>
-// 							<td rowSpan={6}>
-// 								<Textarea
-// 									readOnly
-// 									value={competency31}
-// 									onChange={(e) => setCompetency31(e.target.value)}
-// 								/>
-// 							</td>
-// 							<td>
-// 								<Textarea
-// 									readOnly
-// 									value={indicators31}
-// 									onChange={(e) => setIndicators31(e.target.value)}
-// 								/>
-// 							</td>
-// 							<td>
-// 								<Input
-// 									type='number'
-// 									readOnly
-// 									value={weight31}
-// 									onChange={(e) => setWeight31(e.target.value)}
-// 								/>
-// 							</td>
-// 							<td>
-// 								<Input
-// 									type='number'
-// 									value={co131}
-// 									onChange={(e) => setCo131(e.target.value)}
-// 								/>
-// 							</td>
-// 							<td>
-// 								<Input
-// 									type='number'
-// 									value={co231}
-// 									onChange={(e) => setCo231(e.target.value)}
-// 								/>
-// 							</td>
-// 							<td>
-// 								<Input
-// 									type='number'
-// 									value={co331}
-// 									onChange={(e) => setCo331(e.target.value)}
-// 								/>
-// 							</td>
-// 							<td>
-// 								<Input
-// 									type='number'
-// 									value={co431}
-// 									onChange={(e) => setCo431(e.target.value)}
-// 								/>
-// 							</td>
-// 							<td>
-// 								<Input
-// 									type='number'
-// 									value={co531}
-// 									onChange={(e) => setCo531(e.target.value)}
-// 								/>
-// 							</td>
-// 							<td>
-// 								<Input
-// 									type='number'
-// 									value={co631}
-// 									onChange={(e) => setCo631(e.target.value)}
-// 								/>
-// 							</td>
-// 							<td>
-// 								<Input
-// 									type='number'
-// 									value={co731}
-// 									onChange={(e) => setCo731(e.target.value)}
-// 								/>
-// 							</td>
-// 						</tr>
-// 						<tr className='m-4'>
-// 							<td>
-// 								<Textarea
-// 									readOnly
-// 									value={indicators33}
-// 									onChange={(e) => setIndicators33(e.target.value)}
-// 								/>
-// 							</td>
-// 							<td>
-// 								<Input
-// 									type='number'
-// 									readOnly
-// 									value={weight33}
-// 									onChange={(e) => setWeight33(e.target.value)}
-// 								/>
-// 							</td>
-// 							<td>
-// 								<Input
-// 									type='number'
-// 									value={co133}
-// 									onChange={(e) => setCo133(e.target.value)}
-// 								/>
-// 							</td>
-// 							<td>
-// 								<Input
-// 									type='number'
-// 									value={co233}
-// 									onChange={(e) => setCo233(e.target.value)}
-// 								/>
-// 							</td>
-// 							<td>
-// 								<Input
-// 									type='number'
-// 									value={co333}
-// 									onChange={(e) => setCo333(e.target.value)}
-// 								/>
-// 							</td>
-// 							<td>
-// 								<Input
-// 									type='number'
-// 									value={co433}
-// 									onChange={(e) => setCo433(e.target.value)}
-// 								/>
-// 							</td>
-// 							<td>
-// 								<Input
-// 									type='number'
-// 									value={co533}
-// 									onChange={(e) => setCo533(e.target.value)}
-// 								/>
-// 							</td>
-// 							<td>
-// 								<Input
-// 									type='number'
-// 									value={co633}
-// 									onChange={(e) => setCo633(e.target.value)}
-// 								/>
-// 							</td>
-// 							<td>
-// 								<Input
-// 									type='number'
-// 									value={co733}
-// 									onChange={(e) => setCo733(e.target.value)}
-// 								/>
-// 							</td>
-// 						</tr>
-// 						<tr className='m-4'>
-// 							<td>
-// 								<Textarea
-// 									readOnly
-// 									value={indicators33}
-// 									onChange={(e) => setIndicators33(e.target.value)}
-// 								/>
-// 							</td>
-// 							<td>
-// 								<Input
-// 									type='number'
-// 									readOnly
-// 									value={weight33}
-// 									onChange={(e) => setWeight33(e.target.value)}
-// 								/>
-// 							</td>
-// 							<td>
-// 								<Input
-// 									type='number'
-// 									value={co133}
-// 									onChange={(e) => setCo133(e.target.value)}
-// 								/>
-// 							</td>
-// 							<td>
-// 								<Input
-// 									type='number'
-// 									value={co233}
-// 									onChange={(e) => setCo233(e.target.value)}
-// 								/>
-// 							</td>
-// 							<td>
-// 								<Input
-// 									type='number'
-// 									value={co333}
-// 									onChange={(e) => setCo333(e.target.value)}
-// 								/>
-// 							</td>
-// 							<td>
-// 								<Input
-// 									type='number'
-// 									value={co433}
-// 									onChange={(e) => setCo433(e.target.value)}
-// 								/>
-// 							</td>
-// 							<td>
-// 								<Input
-// 									type='number'
-// 									value={co533}
-// 									onChange={(e) => setCo533(e.target.value)}
-// 								/>
-// 							</td>
-// 							<td>
-// 								<Input
-// 									type='number'
-// 									value={co633}
-// 									onChange={(e) => setCo633(e.target.value)}
-// 								/>
-// 							</td>
-// 							<td>
-// 								<Input
-// 									type='number'
-// 									value={co733}
-// 									onChange={(e) => setCo733(e.target.value)}
-// 								/>
-// 							</td>
-// 						</tr>
-// 						<tr className='m-4'>
-// 							<td rowSpan={4}>
-// 								<Textarea
-// 									readOnly
-// 									value={competency33}
-// 									onChange={(e) => setCompetency33(e.target.value)}
-// 								/>
-// 							</td>
-// 							<td>
-// 								<Textarea
-// 									readOnly
-// 									value={indicators34}
-// 									onChange={(e) => setIndicators34(e.target.value)}
-// 								/>
-// 							</td>
-// 							<td>
-// 								<Input
-// 									type='number'
-// 									readOnly
-// 									value={weight34}
-// 									onChange={(e) => setWeight34(e.target.value)}
-// 								/>
-// 							</td>
-// 							<td>
-// 								<Input
-// 									type='number'
-// 									value={co134}
-// 									onChange={(e) => setCo134(e.target.value)}
-// 								/>
-// 							</td>
-// 							<td>
-// 								<Input
-// 									type='number'
-// 									value={co234}
-// 									onChange={(e) => setCo234(e.target.value)}
-// 								/>
-// 							</td>
-// 							<td>
-// 								<Input
-// 									type='number'
-// 									value={co334}
-// 									onChange={(e) => setCo334(e.target.value)}
-// 								/>
-// 							</td>
-// 							<td>
-// 								<Input
-// 									type='number'
-// 									value={co434}
-// 									onChange={(e) => setCo434(e.target.value)}
-// 								/>
-// 							</td>
-// 							<td>
-// 								<Input
-// 									type='number'
-// 									value={co534}
-// 									onChange={(e) => setCo534(e.target.value)}
-// 								/>
-// 							</td>
-// 							<td>
-// 								<Input
-// 									type='number'
-// 									value={co634}
-// 									onChange={(e) => setCo634(e.target.value)}
-// 								/>
-// 							</td>
-// 							<td>
-// 								<Input
-// 									type='number'
-// 									value={co734}
-// 									onChange={(e) => setCo734(e.target.value)}
-// 								/>
-// 							</td>
-// 						</tr>
-// 						<tr className='m-4'>
-// 							<td>
-// 								<Textarea
-// 									readOnly
-// 									value={indicators35}
-// 									onChange={(e) => setIndicators35(e.target.value)}
-// 								/>
-// 							</td>
-// 							<td>
-// 								<Input
-// 									type='number'
-// 									value={weight35}
-// 									readOnly
-// 									onChange={(e) => setWeight35(e.target.value)}
-// 								/>
-// 							</td>
-// 							<td>
-// 								<Input
-// 									type='number'
-// 									value={co135}
-// 									onChange={(e) => setCo135(e.target.value)}
-// 								/>
-// 							</td>
-// 							<td>
-// 								<Input
-// 									type='number'
-// 									value={co235}
-// 									onChange={(e) => setCo235(e.target.value)}
-// 								/>
-// 							</td>
-// 							<td>
-// 								<Input
-// 									type='number'
-// 									value={co335}
-// 									onChange={(e) => setCo335(e.target.value)}
-// 								/>
-// 							</td>
-// 							<td>
-// 								<Input
-// 									type='number'
-// 									value={co435}
-// 									onChange={(e) => setCo435(e.target.value)}
-// 								/>
-// 							</td>
-// 							<td>
-// 								<Input
-// 									type='number'
-// 									value={co535}
-// 									onChange={(e) => setCo535(e.target.value)}
-// 								/>
-// 							</td>
-// 							<td>
-// 								<Input
-// 									type='number'
-// 									value={co635}
-// 									onChange={(e) => setCo635(e.target.value)}
-// 								/>
-// 							</td>
-// 							<td>
-// 								<Input
-// 									type='number'
-// 									value={co735}
-// 									onChange={(e) => setCo735(e.target.value)}
-// 								/>
-// 							</td>
-// 						</tr>
-// 						<tr className='m-4'>
-// 							<td>
-// 								<Textarea
-// 									readOnly
-// 									value={indicators36}
-// 									onChange={(e) => setIndicators36(e.target.value)}
-// 								/>
-// 							</td>
-// 							<td>
-// 								<Input
-// 									type='number'
-// 									value={weight36}
-// 									readOnly
-// 									onChange={(e) => setWeight36(e.target.value)}
-// 								/>
-// 							</td>
-// 							<td>
-// 								<Input
-// 									type='number'
-// 									value={co136}
-// 									onChange={(e) => setCo136(e.target.value)}
-// 								/>
-// 							</td>
-// 							<td>
-// 								<Input
-// 									type='number'
-// 									value={co236}
-// 									onChange={(e) => setCo236(e.target.value)}
-// 								/>
-// 							</td>
-// 							<td>
-// 								<Input
-// 									type='number'
-// 									value={co336}
-// 									onChange={(e) => setCo336(e.target.value)}
-// 								/>
-// 							</td>
-// 							<td>
-// 								<Input
-// 									type='number'
-// 									value={co436}
-// 									onChange={(e) => setCo436(e.target.value)}
-// 								/>
-// 							</td>
-// 							<td>
-// 								<Input
-// 									type='number'
-// 									value={co536}
-// 									onChange={(e) => setCo536(e.target.value)}
-// 								/>
-// 							</td>
-// 							<td>
-// 								<Input
-// 									type='number'
-// 									value={co636}
-// 									onChange={(e) => setCo636(e.target.value)}
-// 								/>
-// 							</td>
-// 							<td>
-// 								<Input
-// 									type='number'
-// 									value={co736}
-// 									onChange={(e) => setCo736(e.target.value)}
-// 								/>
-// 							</td>
-// 						</tr>
-// 						<tr className='m-4'>
-// 							<td>
-// 								<Textarea
-// 									readOnly
-// 									value={indicators37}
-// 									onChange={(e) => setIndicators37(e.target.value)}
-// 								/>
-// 							</td>
-// 							<td>
-// 								<Input
-// 									type='number'
-// 									value={weight37}
-// 									readOnly
-// 									onChange={(e) => setWeight37(e.target.value)}
-// 								/>
-// 							</td>
-// 							<td>
-// 								<Input
-// 									type='number'
-// 									value={co137}
-// 									onChange={(e) => setCo137(e.target.value)}
-// 								/>
-// 							</td>
-// 							<td>
-// 								<Input
-// 									type='number'
-// 									value={co237}
-// 									onChange={(e) => setCo237(e.target.value)}
-// 								/>
-// 							</td>
-// 							<td>
-// 								<Input
-// 									type='number'
-// 									value={co337}
-// 									onChange={(e) => setCo337(e.target.value)}
-// 								/>
-// 							</td>
-// 							<td>
-// 								<Input
-// 									type='number'
-// 									value={co437}
-// 									onChange={(e) => setCo437(e.target.value)}
-// 								/>
-// 							</td>
-// 							<td>
-// 								<Input
-// 									type='number'
-// 									value={co537}
-// 									onChange={(e) => setCo537(e.target.value)}
-// 								/>
-// 							</td>
-// 							<td>
-// 								<Input
-// 									type='number'
-// 									value={co637}
-// 									onChange={(e) => setCo637(e.target.value)}
-// 								/>
-// 							</td>
-// 							<td>
-// 								<Input
-// 									type='number'
-// 									value={co737}
-// 									onChange={(e) => setCo737(e.target.value)}
-// 								/>
-// 							</td>
-// 						</tr>
-// 						<tr className='m-4'>
-// 							<td rowSpan={2}>
-// 								<Textarea
-// 									readOnly
-// 									value={competency33}
-// 									onChange={(e) => setCompetency33(e.target.value)}
-// 								/>
-// 							</td>
-// 							<td>
-// 								<Textarea
-// 									readOnly
-// 									value={indicators38}
-// 									onChange={(e) => setIndicators38(e.target.value)}
-// 								/>
-// 							</td>
-// 							<td>
-// 								<Input
-// 									type='number'
-// 									value={weight38}
-// 									readOnly
-// 									onChange={(e) => setWeight38(e.target.value)}
-// 								/>
-// 							</td>
-// 							<td>
-// 								<Input
-// 									type='number'
-// 									value={co138}
-// 									onChange={(e) => setCo138(e.target.value)}
-// 								/>
-// 							</td>
-// 							<td>
-// 								<Input
-// 									type='number'
-// 									value={co238}
-// 									onChange={(e) => setCo238(e.target.value)}
-// 								/>
-// 							</td>
-// 							<td>
-// 								<Input
-// 									type='number'
-// 									value={co338}
-// 									onChange={(e) => setCo338(e.target.value)}
-// 								/>
-// 							</td>
-// 							<td>
-// 								<Input
-// 									type='number'
-// 									value={co438}
-// 									onChange={(e) => setCo438(e.target.value)}
-// 								/>
-// 							</td>
-// 							<td>
-// 								<Input
-// 									type='number'
-// 									value={co538}
-// 									onChange={(e) => setCo538(e.target.value)}
-// 								/>
-// 							</td>
-// 							<td>
-// 								<Input
-// 									type='number'
-// 									value={co638}
-// 									onChange={(e) => setCo638(e.target.value)}
-// 								/>
-// 							</td>
-// 							<td>
-// 								<Input
-// 									type='number'
-// 									value={co738}
-// 									onChange={(e) => setCo738(e.target.value)}
-// 								/>
-// 							</td>
-// 						</tr>
-// 						<tr className='m-4'>
-// 							<td>
-// 								<Textarea
-// 									readOnly
-// 									value={indicators39}
-// 									onChange={(e) => setIndicators39(e.target.value)}
-// 								/>
-// 							</td>
-// 							<td>
-// 								<Input
-// 									type='number'
-// 									value={weight39}
-// 									readOnly
-// 									onChange={(e) => setWeight39(e.target.value)}
-// 								/>
-// 							</td>
-// 							<td>
-// 								<Input
-// 									type='number'
-// 									value={co139}
-// 									onChange={(e) => setCo139(e.target.value)}
-// 								/>
-// 							</td>
-// 							<td>
-// 								<Input
-// 									type='number'
-// 									value={co239}
-// 									onChange={(e) => setCo239(e.target.value)}
-// 								/>
-// 							</td>
-// 							<td>
-// 								<Input
-// 									type='number'
-// 									value={co339}
-// 									onChange={(e) => setCo339(e.target.value)}
-// 								/>
-// 							</td>
-// 							<td>
-// 								<Input
-// 									type='number'
-// 									value={co439}
-// 									onChange={(e) => setCo439(e.target.value)}
-// 								/>
-// 							</td>
-// 							<td>
-// 								<Input
-// 									type='number'
-// 									value={co539}
-// 									onChange={(e) => setCo539(e.target.value)}
-// 								/>
-// 							</td>
-// 							<td>
-// 								<Input
-// 									type='number'
-// 									value={co639}
-// 									onChange={(e) => setCo639(e.target.value)}
-// 								/>
-// 							</td>
-// 							<td>
-// 								<Input
-// 									type='number'
-// 									value={co739}
-// 									onChange={(e) => setCo739(e.target.value)}
-// 								/>
-// 							</td>
-// 						</tr>
-// 						<tr className='m-4'>
-// 							<td rowSpan={4}>
-// 								<Textarea
-// 									readOnly
-// 									value={competency34}
-// 									onChange={(e) => setCompetency34(e.target.value)}
-// 								/>
-// 							</td>
-// 							<td>
-// 								<Textarea
-// 									readOnly
-// 									value={indicators310}
-// 									onChange={(e) => setIndicators310(e.target.value)}
-// 								/>
-// 							</td>
-// 							<td>
-// 								<Input
-// 									type='number'
-// 									value={weight310}
-// 									readOnly
-// 									onChange={(e) => setWeight310(e.target.value)}
-// 								/>
-// 							</td>
-// 							<td>
-// 								<Input
-// 									type='number'
-// 									value={co1310}
-// 									onChange={(e) => setCo1310(e.target.value)}
-// 								/>
-// 							</td>
-// 							<td>
-// 								<Input
-// 									type='number'
-// 									value={co2310}
-// 									onChange={(e) => setCo2310(e.target.value)}
-// 								/>
-// 							</td>
-// 							<td>
-// 								<Input
-// 									type='number'
-// 									value={co3310}
-// 									onChange={(e) => setCo3310(e.target.value)}
-// 								/>
-// 							</td>
-// 							<td>
-// 								<Input
-// 									type='number'
-// 									value={co4310}
-// 									onChange={(e) => setCo4310(e.target.value)}
-// 								/>
-// 							</td>
-// 							<td>
-// 								<Input
-// 									type='number'
-// 									value={co5310}
-// 									onChange={(e) => setCo5310(e.target.value)}
-// 								/>
-// 							</td>
-// 							<td>
-// 								<Input
-// 									type='number'
-// 									value={co6310}
-// 									onChange={(e) => setCo6310(e.target.value)}
-// 								/>
-// 							</td>
-// 							<td>
-// 								<Input
-// 									type='number'
-// 									value={co7310}
-// 									onChange={(e) => setCo7310(e.target.value)}
-// 								/>
-// 							</td>
-// 						</tr>
-// 						<tr className='m-4'>
-// 							<td>
-// 								<Textarea
-// 									readOnly
-// 									value={indicators311}
-// 									onChange={(e) => setIndicators311(e.target.value)}
-// 								/>
-// 							</td>
-// 							<td>
-// 								<Input
-// 									type='number'
-// 									value={weight311}
-// 									readOnly
-// 									onChange={(e) => setWeight311(e.target.value)}
-// 								/>
-// 							</td>
-// 							<td>
-// 								<Input
-// 									type='number'
-// 									value={co1311}
-// 									onChange={(e) => setCo1311(e.target.value)}
-// 								/>
-// 							</td>
-// 							<td>
-// 								<Input
-// 									type='number'
-// 									value={co2311}
-// 									onChange={(e) => setCo2311(e.target.value)}
-// 								/>
-// 							</td>
-// 							<td>
-// 								<Input
-// 									type='number'
-// 									value={co3311}
-// 									onChange={(e) => setCo3311(e.target.value)}
-// 								/>
-// 							</td>
-// 							<td>
-// 								<Input
-// 									type='number'
-// 									value={co4311}
-// 									onChange={(e) => setCo4311(e.target.value)}
-// 								/>
-// 							</td>
-// 							<td>
-// 								<Input
-// 									type='number'
-// 									value={co5311}
-// 									onChange={(e) => setCo5311(e.target.value)}
-// 								/>
-// 							</td>
-// 							<td>
-// 								<Input
-// 									type='number'
-// 									value={co6311}
-// 									onChange={(e) => setCo6311(e.target.value)}
-// 								/>
-// 							</td>
-// 							<td>
-// 								<Input
-// 									type='number'
-// 									value={co7311}
-// 									onChange={(e) => setCo7311(e.target.value)}
-// 								/>
-// 							</td>
-// 						</tr>
-// 						<tr className='m-4'>
-// 							<td>
-// 								<Textarea
-// 									readOnly
-// 									value={indicators312}
-// 									onChange={(e) => setIndicators312(e.target.value)}
-// 								/>
-// 							</td>
-// 							<td>
-// 								<Input
-// 									type='number'
-// 									value={weight312}
-// 									readOnly
-// 									onChange={(e) => setWeight312(e.target.value)}
-// 								/>
-// 							</td>
-// 							<td>
-// 								<Input
-// 									type='number'
-// 									value={co1312}
-// 									onChange={(e) => setCo1312(e.target.value)}
-// 								/>
-// 							</td>
-// 							<td>
-// 								<Input
-// 									type='number'
-// 									value={co2312}
-// 									onChange={(e) => setCo2312(e.target.value)}
-// 								/>
-// 							</td>
-// 							<td>
-// 								<Input
-// 									type='number'
-// 									value={co3312}
-// 									onChange={(e) => setCo3312(e.target.value)}
-// 								/>
-// 							</td>
-// 							<td>
-// 								<Input
-// 									type='number'
-// 									value={co4312}
-// 									onChange={(e) => setCo4312(e.target.value)}
-// 								/>
-// 							</td>
-// 							<td>
-// 								<Input
-// 									type='number'
-// 									value={co5312}
-// 									onChange={(e) => setCo5312(e.target.value)}
-// 								/>
-// 							</td>
-// 							<td>
-// 								<Input
-// 									type='number'
-// 									value={co6312}
-// 									onChange={(e) => setCo6312(e.target.value)}
-// 								/>
-// 							</td>
-// 							<td>
-// 								<Input
-// 									type='number'
-// 									value={co7312}
-// 									onChange={(e) => setCo7312(e.target.value)}
-// 								/>
-// 							</td>
-// 						</tr>
-// 						<tr className='m-4'>
-// 							<td>
-// 								<Textarea
-// 									readOnly
-// 									value={indicators313}
-// 									onChange={(e) => setIndicators313(e.target.value)}
-// 								/>
-// 							</td>
-// 							<td>
-// 								<Input
-// 									type='number'
-// 									value={weight313}
-// 									readOnly
-// 									onChange={(e) => setWeight313(e.target.value)}
-// 								/>
-// 							</td>
-// 							<td>
-// 								<Input
-// 									type='number'
-// 									value={co1313}
-// 									onChange={(e) => setCo1313(e.target.value)}
-// 								/>
-// 							</td>
-// 							<td>
-// 								<Input
-// 									type='number'
-// 									value={co2313}
-// 									onChange={(e) => setCo2313(e.target.value)}
-// 								/>
-// 							</td>
-// 							<td>
-// 								<Input
-// 									type='number'
-// 									value={co3313}
-// 									onChange={(e) => setCo3313(e.target.value)}
-// 								/>
-// 							</td>
-// 							<td>
-// 								<Input
-// 									type='number'
-// 									value={co4313}
-// 									onChange={(e) => setCo4313(e.target.value)}
-// 								/>
-// 							</td>
-// 							<td>
-// 								<Input
-// 									type='number'
-// 									value={co5313}
-// 									onChange={(e) => setCo5313(e.target.value)}
-// 								/>
-// 							</td>
-// 							<td>
-// 								<Input
-// 									type='number'
-// 									value={co6313}
-// 									onChange={(e) => setCo6313(e.target.value)}
-// 								/>
-// 							</td>
-// 							<td>
-// 								<Input
-// 									type='number'
-// 									value={co7313}
-// 									onChange={(e) => setCo7313(e.target.value)}
-// 								/>
-// 							</td>
-// 						</tr>
-// 						<tr className='m-4'>
-// 							<td colSpan={4}>
-// 								<Textarea
-// 									readOnly
-// 									value='PO3 : Mapping Level'
-// 									className='my-6'
-// 								/>
-// 							</td>
-
-// 							<td>
-// 								<Input
-// 									type='number'
-// 									value={po3mapco1.toString()}
-// 									readOnly
-// 									onChange={(e) => setPo3mapco1(e.target.value)}
-// 								/>
-// 							</td>
-// 							<td>
-// 								<Input
-// 									type='number'
-// 									value={po3mapco2.toString()}
-// 									readOnly
-// 									onChange={(e) => setPo3mapco2(e.target.value)}
-// 								/>{" "}
-// 							</td>
-// 							<td>
-// 								<Input
-// 									type='number'
-// 									value={po3mapco3.toString()}
-// 									readOnly
-// 									onChange={(e) => setPo3mapco3(e.target.value)}
-// 								/>{" "}
-// 							</td>
-// 							<td>
-// 								<Input
-// 									type='number'
-// 									value={po3mapco4.toString()}
-// 									readOnly
-// 									onChange={(e) => setPo3mapco4(e.target.value)}
-// 								/>{" "}
-// 							</td>
-// 							<td>
-// 								<Input
-// 									type='number'
-// 									value={po3mapco5.toString()}
-// 									readOnly
-// 									onChange={(e) => setPo3mapco5(e.target.value)}
-// 								/>{" "}
-// 							</td>
-// 							<td>
-// 								<Input
-// 									type='number'
-// 									value={po3mapco6.toString()}
-// 									readOnly
-// 									onChange={(e) => setPo3mapco6(e.target.value)}
-// 								/>{" "}
-// 							</td>
-// 							<td>
-// 								<Input
-// 									type='number'
-// 									value={po3mapco7.toString()}
-// 									readOnly
-// 									onChange={(e) => setPo3mapco7(e.target.value)}
-// 								/>{" "}
-// 							</td>
-// 						</tr>
-// 					</tbody>
-// 				</table>
-
-// 				<Button type='submit'>Submit</Button>
-// 			</form>
-// 		</>
-// 	);
-// }
+import React from "react";
+
+type Props = {};
+
+const po2 = (props: Props) => {
+	return (
+		<div>
+			{/* *****************************************     PO:2       ****************************************/}
+
+			<tr className='m-4'>
+				<td rowSpan={13}>
+					<Textarea readOnly value={editedTable?.po21} className='my-6' />
+				</td>
+				<td rowSpan={3}>
+					<Textarea readOnly value={editedTable?.competency21} />
+				</td>
+				<td>
+					<Textarea readOnly value={editedTable?.indicators21} />
+				</td>
+				<td>
+					<Input type='number' readOnly value={editedTable?.weight21} />
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co121}
+						onChange={handleCo121Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co221}
+						onChange={handleCo221Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co321}
+						onChange={handleCo321Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co421}
+						onChange={handleCo421Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co521}
+						onChange={handleCo521Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co621}
+						onChange={handleCo621Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co721}
+						onChange={handleCo721Change}
+					/>
+				</td>
+			</tr>
+			<tr className='m-4'>
+				<td>
+					<Textarea readOnly value={editedTable?.indicators22} />
+				</td>
+				<td>
+					<Input type='number' readOnly value={editedTable?.weight22} />
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co122}
+						onChange={handleCo122Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co222}
+						onChange={handleCo222Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co322}
+						onChange={handleCo322Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co422}
+						onChange={handleCo422Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co522}
+						onChange={handleCo522Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co622}
+						onChange={handleCo622Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co722}
+						onChange={handleCo722Change}
+					/>
+				</td>
+			</tr>
+			<tr className='m-4'>
+				<td>
+					<Textarea readOnly value={editedTable?.indicators23} />
+				</td>
+				<td>
+					<Input type='number' readOnly value={editedTable?.weight23} />
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co123}
+						onChange={handleCo123Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co223}
+						onChange={handleCo223Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co323}
+						onChange={handleCo323Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co423}
+						onChange={handleCo423Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co523}
+						onChange={handleCo523Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co623}
+						onChange={handleCo623Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co723}
+						onChange={handleCo723Change}
+					/>
+				</td>
+			</tr>
+			<tr className='m-4'>
+				<td rowSpan={4}>
+					<Textarea readOnly value={editedTable?.competency22} />
+				</td>
+				<td>
+					<Textarea readOnly value={editedTable?.indicators24} />
+				</td>
+				<td>
+					<Input type='number' readOnly value={editedTable?.weight24} />
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co124}
+						onChange={handleCo124Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co224}
+						onChange={handleCo224Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co324}
+						onChange={handleCo324Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co424}
+						onChange={handleCo424Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co524}
+						onChange={handleCo524Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co624}
+						onChange={handleCo624Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co724}
+						onChange={handleCo724Change}
+					/>
+				</td>
+			</tr>
+			<tr className='m-4'>
+				<td>
+					<Textarea readOnly value={editedTable?.indicators25} />
+				</td>
+				<td>
+					<Input type='number' value={editedTable?.weight25} readOnly />
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co125}
+						onChange={handleCo125Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co225}
+						onChange={handleCo225Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co325}
+						onChange={handleCo325Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co425}
+						onChange={handleCo425Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co525}
+						onChange={handleCo525Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co625}
+						onChange={handleCo625Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co725}
+						onChange={handleCo725Change}
+					/>
+				</td>
+			</tr>
+			<tr className='m-4'>
+				<td>
+					<Textarea readOnly value={editedTable?.indicators26} />
+				</td>
+				<td>
+					<Input type='number' value={editedTable?.weight26} readOnly />
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co126}
+						onChange={handleCo126Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co226}
+						onChange={handleCo226Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co326}
+						onChange={handleCo326Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co426}
+						onChange={handleCo426Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co526}
+						onChange={handleCo526Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co626}
+						onChange={handleCo626Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co726}
+						onChange={handleCo726Change}
+					/>
+				</td>
+			</tr>
+			<tr className='m-4'>
+				<td>
+					<Textarea readOnly value={editedTable?.indicators27} />
+				</td>
+				<td>
+					<Input type='number' value={editedTable?.weight27} readOnly />
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co127}
+						onChange={handleCo127Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co227}
+						onChange={handleCo227Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co327}
+						onChange={handleCo327Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co427}
+						onChange={handleCo427Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co527}
+						onChange={handleCo527Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co627}
+						onChange={handleCo627Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co727}
+						onChange={handleCo727Change}
+					/>
+				</td>
+			</tr>
+			<tr className='m-4'>
+				<td rowSpan={2}>
+					<Textarea readOnly value={editedTable?.competency23} />
+				</td>
+				<td>
+					<Textarea readOnly value={editedTable?.indicators28} />
+				</td>
+				<td>
+					<Input type='number' value={editedTable?.weight28} readOnly />
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co128}
+						onChange={handleCo128Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co228}
+						onChange={handleCo228Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co328}
+						onChange={handleCo328Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co428}
+						onChange={handleCo428Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co528}
+						onChange={handleCo528Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co628}
+						onChange={handleCo628Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co728}
+						onChange={handleCo728Change}
+					/>
+				</td>
+			</tr>
+			<tr className='m-4'>
+				<td>
+					<Textarea readOnly value={editedTable?.indicators29} />
+				</td>
+				<td>
+					<Input type='number' value={editedTable?.weight29} readOnly />
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co129}
+						onChange={handleCo129Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co229}
+						onChange={handleCo229Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co329}
+						onChange={handleCo329Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co429}
+						onChange={handleCo429Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co529}
+						onChange={handleCo529Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co629}
+						onChange={handleCo629Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co729}
+						onChange={handleCo729Change}
+					/>
+				</td>
+			</tr>
+			<tr className='m-4'>
+				<td rowSpan={4}>
+					<Textarea readOnly value={editedTable?.competency24} />
+				</td>
+				<td>
+					<Textarea readOnly value={editedTable?.indicators210} />
+				</td>
+				<td>
+					<Input type='number' value={editedTable?.weight210} readOnly />
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co1210}
+						onChange={handleCo1210Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co2210}
+						onChange={handleCo2210Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co3210}
+						onChange={handleCo3210Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co4210}
+						onChange={handleCo4210Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co5210}
+						onChange={handleCo5210Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co6210}
+						onChange={handleCo6210Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co7210}
+						onChange={handleCo7210Change}
+					/>
+				</td>
+			</tr>
+			<tr className='m-4'>
+				<td>
+					<Textarea readOnly value={editedTable?.indicators211} />
+				</td>
+				<td>
+					<Input type='number' value={editedTable?.weight211} readOnly />
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co1211}
+						onChange={handleCo1211Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co2211}
+						onChange={handleCo2211Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co3211}
+						onChange={handleCo3211Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co4211}
+						onChange={handleCo4211Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co5211}
+						onChange={handleCo5211Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co6211}
+						onChange={handleCo6211Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co7211}
+						onChange={handleCo7211Change}
+					/>
+				</td>
+			</tr>
+			<tr className='m-4'>
+				<td>
+					<Textarea readOnly value={editedTable?.indicators212} />
+				</td>
+				<td>
+					<Input type='number' value={editedTable?.weight212} readOnly />
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co1212}
+						onChange={handleCo1212Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co2212}
+						onChange={handleCo2212Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co3212}
+						onChange={handleCo3212Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co4212}
+						onChange={handleCo4212Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co5212}
+						onChange={handleCo5212Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co6212}
+						onChange={handleCo6212Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co7212}
+						onChange={handleCo7212Change}
+					/>
+				</td>
+			</tr>
+			<tr className='m-4'>
+				<td>
+					<Textarea readOnly value={editedTable?.indicators213} />
+				</td>
+				<td>
+					<Input type='number' value={editedTable?.weight213} readOnly />
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co1213}
+						onChange={handleCo1213Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co2213}
+						onChange={handleCo2213Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co3213}
+						onChange={handleCo3213Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co4213}
+						onChange={handleCo4213Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co5213}
+						onChange={handleCo5213Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co6213}
+						onChange={handleCo6213Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co7213}
+						onChange={handleCo7213Change}
+					/>
+				</td>
+			</tr>
+			<tr className='m-4'>
+				<td colSpan={4}>
+					<Textarea readOnly value='PO2 : Mapping Level' className='my-6' />
+				</td>
+
+				<td>
+					<Input type='number' value={editedTable?.po2mapco1} readOnly />
+				</td>
+				<td>
+					<Input type='number' value={editedTable?.po2mapco2} readOnly />{" "}
+				</td>
+				<td>
+					<Input type='number' value={editedTable?.po2mapco3} readOnly />{" "}
+				</td>
+				<td>
+					<Input type='number' value={editedTable?.po2mapco4} readOnly />{" "}
+				</td>
+				<td>
+					<Input type='number' value={editedTable?.po2mapco5} readOnly />{" "}
+				</td>
+				<td>
+					<Input type='number' value={editedTable?.po2mapco6} readOnly />{" "}
+				</td>
+				<td>
+					<Input type='number' value={editedTable?.po2mapco7} readOnly />{" "}
+				</td>
+			</tr>
+
+			{/* **************************************       PO:3         ****************************************************/}
+
+			<tr className='m-4'>
+				<td rowSpan={13}>
+					<Textarea readOnly value={editedTable?.po31} className='my-6' />
+				</td>
+				<td rowSpan={6}>
+					<Textarea readOnly value={editedTable?.competency31} />
+				</td>
+				<td>
+					<Textarea readOnly value={editedTable?.indicators31} />
+				</td>
+				<td>
+					<Input type='number' readOnly value={editedTable?.weight31} />
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co131}
+						onChange={handleCo131Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co231}
+						onChange={handleCo231Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co331}
+						onChange={handleCo331Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co431}
+						onChange={handleCo431Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co531}
+						onChange={handleCo531Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co631}
+						onChange={handleCo631Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co731}
+						onChange={handleCo731Change}
+					/>
+				</td>
+			</tr>
+			<tr className='m-4'>
+				<td>
+					<Textarea readOnly value={editedTable?.indicators32} />
+				</td>
+				<td>
+					<Input type='number' readOnly value={editedTable?.weight32} />
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co132}
+						onChange={handleCo132Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co232}
+						onChange={handleCo232Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co332}
+						onChange={handleCo332Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co432}
+						onChange={handleCo432Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co532}
+						onChange={handleCo532Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co632}
+						onChange={handleCo632Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co732}
+						onChange={handleCo732Change}
+					/>
+				</td>
+			</tr>
+			<tr className='m-4'>
+				<td>
+					<Textarea readOnly value={editedTable?.indicators33} />
+				</td>
+				<td>
+					<Input type='number' readOnly value={editedTable?.weight33} />
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co133}
+						onChange={handleCo133Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co233}
+						onChange={handleCo233Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co333}
+						onChange={handleCo333Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co433}
+						onChange={handleCo433Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co533}
+						onChange={handleCo533Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co633}
+						onChange={handleCo633Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co733}
+						onChange={handleCo733Change}
+					/>
+				</td>
+			</tr>
+			<tr className='m-4'>
+				<td>
+					<Textarea readOnly value={editedTable?.indicators34} />
+				</td>
+				<td>
+					<Input type='number' readOnly value={editedTable?.weight34} />
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co134}
+						onChange={handleCo134Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co234}
+						onChange={handleCo234Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co334}
+						onChange={handleCo334Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co434}
+						onChange={handleCo434Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co534}
+						onChange={handleCo534Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co634}
+						onChange={handleCo634Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co734}
+						onChange={handleCo734Change}
+					/>
+				</td>
+			</tr>
+			<tr className='m-4'>
+				<td>
+					<Textarea readOnly value={editedTable?.indicators35} />
+				</td>
+				<td>
+					<Input type='number' value={editedTable?.weight35} readOnly />
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co135}
+						onChange={handleCo135Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co235}
+						onChange={handleCo235Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co335}
+						onChange={handleCo335Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co435}
+						onChange={handleCo435Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co535}
+						onChange={handleCo535Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co635}
+						onChange={handleCo635Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co735}
+						onChange={handleCo735Change}
+					/>
+				</td>
+			</tr>
+			<tr className='m-4'>
+				<td>
+					<Textarea readOnly value={editedTable?.indicators36} />
+				</td>
+				<td>
+					<Input type='number' value={editedTable?.weight36} readOnly />
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co136}
+						onChange={handleCo136Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co236}
+						onChange={handleCo236Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co336}
+						onChange={handleCo336Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co436}
+						onChange={handleCo436Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co536}
+						onChange={handleCo536Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co636}
+						onChange={handleCo636Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co736}
+						onChange={handleCo736Change}
+					/>
+				</td>
+			</tr>
+			<tr className='m-4'>
+				<td rowSpan={3}>
+					<Textarea readOnly value={editedTable?.competency32} />
+				</td>
+
+				<td>
+					<Textarea readOnly value={editedTable?.indicators37} />
+				</td>
+				<td>
+					<Input type='number' value={editedTable?.weight37} readOnly />
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co137}
+						onChange={handleCo137Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co237}
+						onChange={handleCo237Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co337}
+						onChange={handleCo337Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co437}
+						onChange={handleCo437Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co537}
+						onChange={handleCo537Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co637}
+						onChange={handleCo637Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co737}
+						onChange={handleCo737Change}
+					/>
+				</td>
+			</tr>
+			<tr className='m-4'>
+				<td>
+					<Textarea readOnly value={editedTable?.indicators38} />
+				</td>
+				<td>
+					<Input type='number' value={editedTable?.weight38} readOnly />
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co138}
+						onChange={handleCo138Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co238}
+						onChange={handleCo238Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co338}
+						onChange={handleCo338Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co438}
+						onChange={handleCo438Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co538}
+						onChange={handleCo538Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co638}
+						onChange={handleCo638Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co738}
+						onChange={handleCo738Change}
+					/>
+				</td>
+			</tr>
+			<tr className='m-4'>
+				<td>
+					<Textarea readOnly value={editedTable?.indicators39} />
+				</td>
+				<td>
+					<Input type='number' value={editedTable?.weight39} readOnly />
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co139}
+						onChange={handleCo139Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co239}
+						onChange={handleCo239Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co339}
+						onChange={handleCo339Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co439}
+						onChange={handleCo439Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co539}
+						onChange={handleCo539Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co639}
+						onChange={handleCo639Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co739}
+						onChange={handleCo739Change}
+					/>
+				</td>
+			</tr>
+			<tr className='m-4'>
+				<td rowSpan={2}>
+					<Textarea readOnly value={editedTable?.competency33} />
+				</td>
+				<td>
+					<Textarea readOnly value={editedTable?.indicators310} />
+				</td>
+				<td>
+					<Input type='number' value={editedTable?.weight310} readOnly />
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co1310}
+						onChange={handleCo1310Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co2310}
+						onChange={handleCo2310Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co3310}
+						onChange={handleCo3310Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co4310}
+						onChange={handleCo4310Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co5310}
+						onChange={handleCo5310Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co6310}
+						onChange={handleCo6310Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co7310}
+						onChange={handleCo7310Change}
+					/>
+				</td>
+			</tr>
+			<tr className='m-4'>
+				<td>
+					<Textarea readOnly value={editedTable?.indicators311} />
+				</td>
+				<td>
+					<Input type='number' value={editedTable?.weight311} readOnly />
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co1311}
+						onChange={handleCo1311Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co2311}
+						onChange={handleCo2311Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co3311}
+						onChange={handleCo3311Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co4311}
+						onChange={handleCo4311Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co5311}
+						onChange={handleCo5311Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co6311}
+						onChange={handleCo6311Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co7311}
+						onChange={handleCo7311Change}
+					/>
+				</td>
+			</tr>
+			<tr className='m-4'>
+				<td rowSpan={2}>
+					<Textarea readOnly value={editedTable?.competency34} />
+				</td>
+				<td>
+					<Textarea readOnly value={editedTable?.indicators312} />
+				</td>
+				<td>
+					<Input type='number' value={editedTable?.weight312} readOnly />
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co1312}
+						onChange={handleCo1312Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co2312}
+						onChange={handleCo2312Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co3312}
+						onChange={handleCo3312Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co4312}
+						onChange={handleCo4312Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co5312}
+						onChange={handleCo5312Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co6312}
+						onChange={handleCo6312Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co7312}
+						onChange={handleCo7312Change}
+					/>
+				</td>
+			</tr>
+			<tr className='m-4'>
+				<td>
+					<Textarea readOnly value={editedTable?.indicators313} />
+				</td>
+				<td>
+					<Input type='number' value={editedTable?.weight313} readOnly />
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co1313}
+						onChange={handleCo1313Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co2313}
+						onChange={handleCo2313Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co3313}
+						onChange={handleCo3313Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co4313}
+						onChange={handleCo4313Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co5313}
+						onChange={handleCo5313Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co6313}
+						onChange={handleCo6313Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co7313}
+						onChange={handleCo7313Change}
+					/>
+				</td>
+			</tr>
+			<tr className='m-4'>
+				<td colSpan={4}>
+					<Textarea readOnly value='PO3 : Mapping Level' className='my-6' />
+				</td>
+
+				<td>
+					<Input type='number' value={editedTable?.po3mapco1} readOnly />
+				</td>
+				<td>
+					<Input type='number' value={editedTable?.po3mapco2} readOnly />{" "}
+				</td>
+				<td>
+					<Input type='number' value={editedTable?.po3mapco3} readOnly />{" "}
+				</td>
+				<td>
+					<Input type='number' value={editedTable?.po3mapco4} readOnly />{" "}
+				</td>
+				<td>
+					<Input type='number' value={editedTable?.po3mapco5} readOnly />{" "}
+				</td>
+				<td>
+					<Input type='number' value={editedTable?.po3mapco6} readOnly />{" "}
+				</td>
+				<td>
+					<Input type='number' value={editedTable?.po3mapco7} readOnly />{" "}
+				</td>
+			</tr>
+			{/* **************************************       PO:4        ****************************************************/}
+
+			<tr className='m-4'>
+				<td rowSpan={10}>
+					<Textarea readOnly value={editedTable?.po41} className='my-6' />
+				</td>
+				<td rowSpan={4}>
+					<Textarea readOnly value={editedTable?.competency41} />
+				</td>
+				<td>
+					<Textarea readOnly value={editedTable?.indicators41} />
+				</td>
+				<td>
+					<Input type='number' readOnly value={editedTable?.weight41} />
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co141}
+						onChange={handleCo141Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co241}
+						onChange={handleCo241Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co341}
+						onChange={handleCo341Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co441}
+						onChange={handleCo441Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co541}
+						onChange={handleCo541Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co641}
+						onChange={handleCo641Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co741}
+						onChange={handleCo741Change}
+					/>
+				</td>
+			</tr>
+			<tr className='m-4'>
+				<td>
+					<Textarea readOnly value={editedTable?.indicators42} />
+				</td>
+				<td>
+					<Input type='number' readOnly value={editedTable?.weight42} />
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co142}
+						onChange={handleCo142Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co242}
+						onChange={handleCo242Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co342}
+						onChange={handleCo342Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co442}
+						onChange={handleCo442Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co542}
+						onChange={handleCo542Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co642}
+						onChange={handleCo642Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co742}
+						onChange={handleCo742Change}
+					/>
+				</td>
+			</tr>
+			<tr className='m-4'>
+				<td>
+					<Textarea readOnly value={editedTable?.indicators43} />
+				</td>
+				<td>
+					<Input type='number' readOnly value={editedTable?.weight43} />
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co143}
+						onChange={handleCo143Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co243}
+						onChange={handleCo243Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co343}
+						onChange={handleCo343Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co443}
+						onChange={handleCo443Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co543}
+						onChange={handleCo543Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co643}
+						onChange={handleCo643Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co743}
+						onChange={handleCo743Change}
+					/>
+				</td>
+			</tr>
+			<tr className='m-4'>
+				<td>
+					<Textarea readOnly value={editedTable?.indicators44} />
+				</td>
+				<td>
+					<Input type='number' readOnly value={editedTable?.weight44} />
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co144}
+						onChange={handleCo144Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co244}
+						onChange={handleCo244Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co344}
+						onChange={handleCo344Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co444}
+						onChange={handleCo444Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co544}
+						onChange={handleCo544Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co644}
+						onChange={handleCo644Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co744}
+						onChange={handleCo744Change}
+					/>
+				</td>
+			</tr>
+			<tr className='m-4'>
+				<td rowSpan={2}>
+					<Textarea readOnly value={editedTable?.competency42} />
+				</td>
+				<td>
+					<Textarea readOnly value={editedTable?.indicators45} />
+				</td>
+				<td>
+					<Input type='number' value={editedTable?.weight45} readOnly />
+				</td>
+				<td>
+					<Input
+						type='number'
+						onChange={handleCo145Change}
+						value={editedTable?.co145}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						onChange={handleCo245Change}
+						value={editedTable?.co245}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co345}
+						onChange={handleCo345Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co445}
+						onChange={handleCo445Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co545}
+						onChange={handleCo545Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co645}
+						onChange={handleCo645Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co745}
+						onChange={handleCo745Change}
+					/>
+				</td>
+			</tr>
+			<tr className='m-4'>
+				<td>
+					<Textarea readOnly value={editedTable?.indicators46} />
+				</td>
+				<td>
+					<Input type='number' value={editedTable?.weight46} readOnly />
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co146}
+						onChange={handleCo146Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co246}
+						onChange={handleCo246Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co346}
+						onChange={handleCo346Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co446}
+						onChange={handleCo446Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co546}
+						onChange={handleCo546Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co646}
+						onChange={handleCo646Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co746}
+						onChange={handleCo746Change}
+					/>
+				</td>
+			</tr>
+			<tr className='m-4'>
+				<td rowSpan={4}>
+					<Textarea readOnly value={editedTable?.competency43} />
+				</td>
+
+				<td>
+					<Textarea readOnly value={editedTable?.indicators47} />
+				</td>
+				<td>
+					<Input type='number' value={editedTable?.weight47} readOnly />
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co147}
+						onChange={handleCo147Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co247}
+						onChange={handleCo247Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co347}
+						onChange={handleCo347Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co447}
+						onChange={handleCo447Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co547}
+						onChange={handleCo547Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co647}
+						onChange={handleCo647Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co747}
+						onChange={handleCo747Change}
+					/>
+				</td>
+			</tr>
+			<tr className='m-4'>
+				<td>
+					<Textarea readOnly value={editedTable?.indicators48} />
+				</td>
+				<td>
+					<Input type='number' value={editedTable?.weight48} readOnly />
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co148}
+						onChange={handleCo148Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co248}
+						onChange={handleCo248Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co348}
+						onChange={handleCo348Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co448}
+						onChange={handleCo448Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co548}
+						onChange={handleCo548Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co648}
+						onChange={handleCo648Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co748}
+						onChange={handleCo748Change}
+					/>
+				</td>
+			</tr>
+			<tr className='m-4'>
+				<td>
+					<Textarea readOnly value={editedTable?.indicators49} />
+				</td>
+				<td>
+					<Input type='number' value={editedTable?.weight49} readOnly />
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co149}
+						onChange={handleCo149Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co249}
+						onChange={handleCo249Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co349}
+						onChange={handleCo349Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co449}
+						onChange={handleCo449Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co549}
+						onChange={handleCo549Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co649}
+						onChange={handleCo649Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co749}
+						onChange={handleCo749Change}
+					/>
+				</td>
+			</tr>
+			<tr className='m-4'>
+				<td>
+					<Textarea readOnly value={editedTable?.indicators410} />
+				</td>
+				<td>
+					<Input type='number' value={editedTable?.weight410} readOnly />
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co1410}
+						onChange={handleCo1410Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co2410}
+						onChange={handleCo2410Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co3410}
+						onChange={handleCo3410Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co4410}
+						onChange={handleCo4410Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co5410}
+						onChange={handleCo5410Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co6410}
+						onChange={handleCo6410Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co7410}
+						onChange={handleCo7410Change}
+					/>
+				</td>
+			</tr>
+
+			<tr className='m-4'>
+				<td colSpan={4}>
+					<Textarea readOnly value='PO4 : Mapping Level' className='my-6' />
+				</td>
+
+				<td>
+					<Input type='number' value={editedTable?.po4mapco1} readOnly />
+				</td>
+				<td>
+					<Input type='number' value={editedTable?.po4mapco2} readOnly />{" "}
+				</td>
+				<td>
+					<Input type='number' value={editedTable?.po4mapco3} readOnly />{" "}
+				</td>
+				<td>
+					<Input type='number' value={editedTable?.po4mapco4} readOnly />{" "}
+				</td>
+				<td>
+					<Input type='number' value={editedTable?.po4mapco5} readOnly />{" "}
+				</td>
+				<td>
+					<Input type='number' value={editedTable?.po4mapco6} readOnly />{" "}
+				</td>
+				<td>
+					<Input type='number' value={editedTable?.po4mapco7} readOnly />{" "}
+				</td>
+			</tr>
+			{/* **************************************       PO:5        ****************************************************/}
+
+			<tr className='m-4'>
+				<td rowSpan={6}>
+					<Textarea readOnly value={editedTable?.po51} className='my-6' />
+				</td>
+				<td rowSpan={2}>
+					<Textarea readOnly value={editedTable?.competency51} />
+				</td>
+				<td>
+					<Textarea readOnly value={editedTable?.indicators51} />
+				</td>
+				<td>
+					<Input type='number' readOnly value={editedTable?.weight51} />
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co151}
+						onChange={handleCo151Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co251}
+						onChange={handleCo251Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co351}
+						onChange={handleCo351Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co451}
+						onChange={handleCo451Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co551}
+						onChange={handleCo551Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co651}
+						onChange={handleCo651Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co751}
+						onChange={handleCo751Change}
+					/>
+				</td>
+			</tr>
+			<tr className='m-4'>
+				<td>
+					<Textarea readOnly value={editedTable?.indicators52} />
+				</td>
+				<td>
+					<Input type='number' readOnly value={editedTable?.weight52} />
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co152}
+						onChange={handleCo152Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co252}
+						onChange={handleCo252Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co352}
+						onChange={handleCo352Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co452}
+						onChange={handleCo452Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co552}
+						onChange={handleCo552Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co652}
+						onChange={handleCo652Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co752}
+						onChange={handleCo752Change}
+					/>
+				</td>
+			</tr>
+			<tr className='m-4'>
+				<td rowSpan={2}>
+					<Textarea readOnly value={editedTable?.competency52} />
+				</td>
+				<td>
+					<Textarea readOnly value={editedTable?.indicators53} />
+				</td>
+				<td>
+					<Input type='number' readOnly value={editedTable?.weight53} />
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co153}
+						onChange={handleCo153Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co253}
+						onChange={handleCo253Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co353}
+						onChange={handleCo253Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co453}
+						onChange={handleCo353Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co553}
+						onChange={handleCo453Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co653}
+						onChange={handleCo553Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co753}
+						onChange={handleCo753Change}
+					/>
+				</td>
+			</tr>
+			<tr className='m-4'>
+				<td>
+					<Textarea readOnly value={editedTable?.indicators54} />
+				</td>
+				<td>
+					<Input type='number' readOnly value={editedTable?.weight54} />
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co154}
+						onChange={handleCo154Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co254}
+						onChange={handleCo254Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co354}
+						onChange={handleCo354Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co454}
+						onChange={handleCo454Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co554}
+						onChange={handleCo554Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co654}
+						onChange={handleCo654Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co754}
+						onChange={handleCo754Change}
+					/>
+				</td>
+			</tr>
+			<tr className='m-4'>
+				<td rowSpan={2}>
+					<Textarea readOnly value={editedTable?.competency53} />
+				</td>
+				<td>
+					<Textarea readOnly value={editedTable?.indicators55} />
+				</td>
+				<td>
+					<Input type='number' value={editedTable?.weight55} readOnly />
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co155}
+						onChange={handleCo155Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co255}
+						onChange={handleCo255Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co355}
+						onChange={handleCo355Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co455}
+						onChange={handleCo455Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co555}
+						onChange={handleCo555Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co655}
+						onChange={handleCo655Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co755}
+						onChange={handleCo755Change}
+					/>
+				</td>
+			</tr>
+			<tr className='m-4'>
+				<td>
+					<Textarea readOnly value={editedTable?.indicators56} />
+				</td>
+				<td>
+					<Input type='number' value={editedTable?.weight56} readOnly />
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co156}
+						onChange={handleCo156Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co256}
+						onChange={handleCo256Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co356}
+						onChange={handleCo356Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co456}
+						onChange={handleCo456Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co556}
+						onChange={handleCo556Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co656}
+						onChange={handleCo656Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co756}
+						onChange={handleCo756Change}
+					/>
+				</td>
+			</tr>
+			<tr className='m-4'>
+				<td colSpan={4}>
+					<Textarea readOnly value='PO5 : Mapping Level' className='my-6' />
+				</td>
+
+				<td>
+					<Input type='number' value={editedTable?.po5mapco1} readOnly />
+				</td>
+				<td>
+					<Input type='number' value={editedTable?.po5mapco2} readOnly />{" "}
+				</td>
+				<td>
+					<Input type='number' value={editedTable?.po5mapco3} readOnly />{" "}
+				</td>
+				<td>
+					<Input type='number' value={editedTable?.po5mapco4} readOnly />{" "}
+				</td>
+				<td>
+					<Input type='number' value={editedTable?.po5mapco5} readOnly />{" "}
+				</td>
+				<td>
+					<Input type='number' value={editedTable?.po5mapco6} readOnly />{" "}
+				</td>
+				<td>
+					<Input type='number' value={editedTable?.po5mapco7} readOnly />{" "}
+				</td>
+			</tr>
+			{/* **************************************       PO:6        ****************************************************/}
+
+			<tr className='m-4'>
+				<td rowSpan={2}>
+					<Textarea readOnly value={editedTable?.po61} className='my-6' />
+				</td>
+				<td>
+					<Textarea readOnly value={editedTable?.competency61} />
+				</td>
+				<td>
+					<Textarea readOnly value={editedTable?.indicators61} />
+				</td>
+				<td>
+					<Input type='number' readOnly value={editedTable?.weight61} />
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co161}
+						onChange={handleCo161Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co261}
+						onChange={handleCo261Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co361}
+						onChange={handleCo361Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co461}
+						onChange={handleCo461Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co561}
+						onChange={handleCo561Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co661}
+						onChange={handleCo661Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co761}
+						onChange={handleCo761Change}
+					/>
+				</td>
+			</tr>
+			<tr className='m-4'>
+				<td>
+					<Textarea readOnly value={editedTable?.competency62} />
+				</td>
+				<td>
+					<Textarea readOnly value={editedTable?.indicators62} />
+				</td>
+				<td>
+					<Input type='number' readOnly value={editedTable?.weight62} />
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co162}
+						onChange={handleCo162Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co262}
+						onChange={handleCo262Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co362}
+						onChange={handleCo362Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co462}
+						onChange={handleCo462Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co562}
+						onChange={handleCo562Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co662}
+						onChange={handleCo662Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co762}
+						onChange={handleCo762Change}
+					/>
+				</td>
+			</tr>
+
+			<tr className='m-4'>
+				<td colSpan={4}>
+					<Textarea readOnly value='PO6 : Mapping Level' className='my-6' />
+				</td>
+
+				<td>
+					<Input type='number' value={editedTable?.po6mapco1} readOnly />
+				</td>
+				<td>
+					<Input type='number' value={editedTable?.po6mapco2} readOnly />{" "}
+				</td>
+				<td>
+					<Input type='number' value={editedTable?.po6mapco3} readOnly />{" "}
+				</td>
+				<td>
+					<Input type='number' value={editedTable?.po6mapco4} readOnly />{" "}
+				</td>
+				<td>
+					<Input type='number' value={editedTable?.po6mapco5} readOnly />{" "}
+				</td>
+				<td>
+					<Input type='number' value={editedTable?.po6mapco6} readOnly />{" "}
+				</td>
+				<td>
+					<Input type='number' value={editedTable?.po6mapco7} readOnly />{" "}
+				</td>
+			</tr>
+
+			{/* **************************************       PO: 7        ****************************************************/}
+
+			<tr className='m-4'>
+				<td rowSpan={4}>
+					<Textarea readOnly value={editedTable?.po71} className='my-6' />
+				</td>
+				<td rowSpan={2}>
+					<Textarea readOnly value={editedTable?.competency71} />
+				</td>
+				<td>
+					<Textarea readOnly value={editedTable?.indicators71} />
+				</td>
+				<td>
+					<Input type='number' readOnly value={editedTable?.weight71} />
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co171}
+						onChange={handleCo171Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co271}
+						onChange={handleCo271Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co371}
+						onChange={handleCo371Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co471}
+						onChange={handleCo471Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co571}
+						onChange={handleCo571Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co671}
+						onChange={handleCo671Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co771}
+						onChange={handleCo771Change}
+					/>
+				</td>
+			</tr>
+			<tr className='m-4'>
+				<td>
+					<Textarea readOnly value={editedTable?.indicators72} />
+				</td>
+				<td>
+					<Input type='number' readOnly value={editedTable?.weight72} />
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co172}
+						onChange={handleCo172Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co272}
+						onChange={handleCo272Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co372}
+						onChange={handleCo372Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co472}
+						onChange={handleCo472Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co572}
+						onChange={handleCo572Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co672}
+						onChange={handleCo672Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co772}
+						onChange={handleCo772Change}
+					/>
+				</td>
+			</tr>
+			<tr className='m-4'>
+				<td rowSpan={2}>
+					<Textarea readOnly value={editedTable?.competency72} />
+				</td>
+				<td>
+					<Textarea readOnly value={editedTable?.indicators73} />
+				</td>
+				<td>
+					<Input type='number' readOnly value={editedTable?.weight73} />
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co173}
+						onChange={handleCo173Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co273}
+						onChange={handleCo273Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co373}
+						onChange={handleCo373Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co473}
+						onChange={handleCo473Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co573}
+						onChange={handleCo573Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co673}
+						onChange={handleCo673Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co773}
+						onChange={handleCo773Change}
+					/>
+				</td>
+			</tr>
+			<tr className='m-4'>
+				<td>
+					<Textarea readOnly value={editedTable?.indicators74} />
+				</td>
+				<td>
+					<Input type='number' readOnly value={editedTable?.weight74} />
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co174}
+						onChange={handleCo174Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co274}
+						onChange={handleCo274Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co374}
+						onChange={handleCo374Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co474}
+						onChange={handleCo474Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co574}
+						onChange={handleCo574Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co674}
+						onChange={handleCo674Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co774}
+						onChange={handleCo774Change}
+					/>
+				</td>
+			</tr>
+
+			<tr className='m-4'>
+				<td colSpan={4}>
+					<Textarea readOnly value='PO7 : Mapping Level' className='my-6' />
+				</td>
+
+				<td>
+					<Input type='number' value={editedTable?.po7mapco1} readOnly />
+				</td>
+				<td>
+					<Input type='number' value={editedTable?.po7mapco2} readOnly />{" "}
+				</td>
+				<td>
+					<Input type='number' value={editedTable?.po7mapco3} readOnly />{" "}
+				</td>
+				<td>
+					<Input type='number' value={editedTable?.po7mapco4} readOnly />{" "}
+				</td>
+				<td>
+					<Input type='number' value={editedTable?.po7mapco5} readOnly />{" "}
+				</td>
+				<td>
+					<Input type='number' value={editedTable?.po7mapco6} readOnly />{" "}
+				</td>
+				<td>
+					<Input type='number' value={editedTable?.po7mapco7} readOnly />{" "}
+				</td>
+			</tr>
+			{/* **************************************       PO: 8        ****************************************************/}
+
+			<tr className='m-4'>
+				<td rowSpan={3}>
+					<Textarea readOnly value={editedTable?.po81} className='my-6' />
+				</td>
+				<td>
+					<Textarea readOnly value={editedTable?.competency81} />
+				</td>
+				<td>
+					<Textarea readOnly value={editedTable?.indicators81} />
+				</td>
+				<td>
+					<Input type='number' readOnly value={editedTable?.weight81} />
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co181}
+						onChange={handleCo181Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co281}
+						onChange={handleCo281Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co381}
+						onChange={handleCo381Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co481}
+						onChange={handleCo481Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co581}
+						onChange={handleCo581Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co681}
+						onChange={handleCo681Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co781}
+						onChange={handleCo781Change}
+					/>
+				</td>
+			</tr>
+			<tr className='m-4'>
+				<td rowSpan={2}>
+					<Textarea readOnly value={editedTable?.competency82} />
+				</td>
+				<td>
+					<Textarea readOnly value={editedTable?.indicators82} />
+				</td>
+				<td>
+					<Input type='number' readOnly value={editedTable?.weight82} />
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co182}
+						onChange={handleCo182Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co282}
+						onChange={handleCo282Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co382}
+						onChange={handleCo382Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co482}
+						onChange={handleCo482Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co582}
+						onChange={handleCo582Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co682}
+						onChange={handleCo682Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co782}
+						onChange={handleCo782Change}
+					/>
+				</td>
+			</tr>
+			<tr className='m-4'>
+				<td>
+					<Textarea readOnly value={editedTable?.indicators83} />
+				</td>
+				<td>
+					<Input type='number' readOnly value={editedTable?.weight83} />
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co183}
+						onChange={handleCo183Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co283}
+						onChange={handleCo283Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co383}
+						onChange={handleCo383Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co483}
+						onChange={handleCo483Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co583}
+						onChange={handleCo583Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co683}
+						onChange={handleCo683Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co783}
+						onChange={handleCo783Change}
+					/>
+				</td>
+			</tr>
+			<tr className='m-4'>
+				<td colSpan={4}>
+					<Textarea readOnly value='PO8 : Mapping Level' className='my-6' />
+				</td>
+
+				<td>
+					<Input type='number' value={editedTable?.po8mapco1} readOnly />
+				</td>
+				<td>
+					<Input type='number' value={editedTable?.po8mapco2} readOnly />{" "}
+				</td>
+				<td>
+					<Input type='number' value={editedTable?.po8mapco3} readOnly />{" "}
+				</td>
+				<td>
+					<Input type='number' value={editedTable?.po8mapco4} readOnly />{" "}
+				</td>
+				<td>
+					<Input type='number' value={editedTable?.po8mapco5} readOnly />{" "}
+				</td>
+				<td>
+					<Input type='number' value={editedTable?.po8mapco6} readOnly />{" "}
+				</td>
+				<td>
+					<Input type='number' value={editedTable?.po8mapco7} readOnly />{" "}
+				</td>
+			</tr>
+
+			{/* **************************************       PO:9        ****************************************************/}
+
+			<tr className='m-4'>
+				<td rowSpan={7}>
+					<Textarea readOnly value={editedTable?.po91} className='my-6' />
+				</td>
+				<td rowSpan={2}>
+					<Textarea readOnly value={editedTable?.competency91} />
+				</td>
+				<td>
+					<Textarea readOnly value={editedTable?.indicators91} />
+				</td>
+				<td>
+					<Input type='number' readOnly value={editedTable?.weight91} />
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co191}
+						onChange={handleCo191Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co291}
+						onChange={handleCo291Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co391}
+						onChange={handleCo391Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co491}
+						onChange={handleCo491Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co591}
+						onChange={handleCo591Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co691}
+						onChange={handleCo691Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co791}
+						onChange={handleCo791Change}
+					/>
+				</td>
+			</tr>
+			<tr className='m-4'>
+				<td>
+					<Textarea readOnly value={editedTable?.indicators92} />
+				</td>
+				<td>
+					<Input type='number' readOnly value={editedTable?.weight92} />
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co192}
+						onChange={handleCo192Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co292}
+						onChange={handleCo292Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co392}
+						onChange={handleCo392Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co492}
+						onChange={handleCo492Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co592}
+						onChange={handleCo592Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co692}
+						onChange={handleCo692Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co792}
+						onChange={handleCo792Change}
+					/>
+				</td>
+			</tr>
+			<tr className='m-4'>
+				<td rowSpan={4}>
+					<Textarea readOnly value={editedTable?.competency92} />
+				</td>
+				<td>
+					<Textarea readOnly value={editedTable?.indicators93} />
+				</td>
+				<td>
+					<Input type='number' readOnly value={editedTable?.weight93} />
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co193}
+						onChange={handleCo193Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co293}
+						onChange={handleCo293Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co393}
+						onChange={handleCo393Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co493}
+						onChange={handleCo493Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co593}
+						onChange={handleCo593Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co693}
+						onChange={handleCo693Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co793}
+						onChange={handleCo793Change}
+					/>
+				</td>
+			</tr>
+			<tr className='m-4'>
+				<td>
+					<Textarea readOnly value={editedTable?.indicators94} />
+				</td>
+				<td>
+					<Input type='number' readOnly value={editedTable?.weight94} />
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co194}
+						onChange={handleCo194Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co294}
+						onChange={handleCo294Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co394}
+						onChange={handleCo394Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co494}
+						onChange={handleCo494Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co594}
+						onChange={handleCo594Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co694}
+						onChange={handleCo694Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co794}
+						onChange={handleCo794Change}
+					/>
+				</td>
+			</tr>
+			<tr className='m-4'>
+				<td>
+					<Textarea readOnly value={editedTable?.indicators95} />
+				</td>
+				<td>
+					<Input type='number' value={editedTable?.weight95} readOnly />
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co195}
+						onChange={handleCo195Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co295}
+						onChange={handleCo295Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co395}
+						onChange={handleCo395Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co495}
+						onChange={handleCo495Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co595}
+						onChange={handleCo595Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co695}
+						onChange={handleCo695Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co795}
+						onChange={handleCo795Change}
+					/>
+				</td>
+			</tr>
+			<tr className='m-4'>
+				<td>
+					<Textarea readOnly value={editedTable?.indicators96} />
+				</td>
+				<td>
+					<Input type='number' value={editedTable?.weight96} readOnly />
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co196}
+						onChange={handleCo196Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co296}
+						onChange={handleCo296Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co396}
+						onChange={handleCo396Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co496}
+						onChange={handleCo496Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co596}
+						onChange={handleCo596Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co696}
+						onChange={handleCo696Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co796}
+						onChange={handleCo796Change}
+					/>
+				</td>
+			</tr>
+			<tr className='m-4'>
+				<td>
+					<Textarea readOnly value={editedTable?.competency93} />
+				</td>
+
+				<td>
+					<Textarea readOnly value={editedTable?.indicators97} />
+				</td>
+				<td>
+					<Input type='number' value={editedTable?.weight97} readOnly />
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co197}
+						onChange={handleCo197Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co297}
+						onChange={handleCo297Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co397}
+						onChange={handleCo397Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co497}
+						onChange={handleCo497Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co597}
+						onChange={handleCo597Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co697}
+						onChange={handleCo697Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co797}
+						onChange={handleCo797Change}
+					/>
+				</td>
+			</tr>
+
+			<tr className='m-4'>
+				<td colSpan={4}>
+					<Textarea readOnly value='PO9 : Mapping Level' className='my-6' />
+				</td>
+
+				<td>
+					<Input type='number' value={editedTable?.po9mapco1} readOnly />
+				</td>
+				<td>
+					<Input type='number' value={editedTable?.po9mapco2} readOnly />{" "}
+				</td>
+				<td>
+					<Input type='number' value={editedTable?.po9mapco3} readOnly />{" "}
+				</td>
+				<td>
+					<Input type='number' value={editedTable?.po9mapco4} readOnly />{" "}
+				</td>
+				<td>
+					<Input type='number' value={editedTable?.po9mapco5} readOnly />{" "}
+				</td>
+				<td>
+					<Input type='number' value={editedTable?.po9mapco6} readOnly />{" "}
+				</td>
+				<td>
+					<Input type='number' value={editedTable?.po9mapco7} readOnly />{" "}
+				</td>
+			</tr>
+
+			{/* **************************************       PO:10        ****************************************************/}
+
+			<tr className='m-4'>
+				<td rowSpan={7}>
+					<Textarea readOnly value={editedTable?.po101} className='my-6' />
+				</td>
+				<td rowSpan={3}>
+					<Textarea readOnly value={editedTable?.competency101} />
+				</td>
+				<td>
+					<Textarea readOnly value={editedTable?.indicators101} />
+				</td>
+				<td>
+					<Input type='number' readOnly value={editedTable?.weight101} />
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co1101}
+						onChange={handleCo1101Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co2101}
+						onChange={handleCo2101Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co3101}
+						onChange={handleCo3101Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co4101}
+						onChange={handleCo4101Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co5101}
+						onChange={handleCo5101Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co6101}
+						onChange={handleCo6101Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co7101}
+						onChange={handleCo7101Change}
+					/>
+				</td>
+			</tr>
+			<tr className='m-4'>
+				<td>
+					<Textarea readOnly value={editedTable?.indicators102} />
+				</td>
+				<td>
+					<Input type='number' readOnly value={editedTable?.weight102} />
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co1102}
+						onChange={handleCo1102Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co2102}
+						onChange={handleCo2102Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co3102}
+						onChange={handleCo3102Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co4102}
+						onChange={handleCo4102Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co5102}
+						onChange={handleCo5102Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co6102}
+						onChange={handleCo6102Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co7102}
+						onChange={handleCo7102Change}
+					/>
+				</td>
+			</tr>
+			<tr className='m-4'>
+				<td>
+					<Textarea readOnly value={editedTable?.indicators103} />
+				</td>
+				<td>
+					<Input type='number' readOnly value={editedTable?.weight103} />
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co1103}
+						onChange={handleCo1103Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co2103}
+						onChange={handleCo2103Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co3103}
+						onChange={handleCo3103Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co4103}
+						onChange={handleCo4103Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co5103}
+						onChange={handleCo5103Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co6103}
+						onChange={handleCo6103Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co7103}
+						onChange={handleCo7103Change}
+					/>
+				</td>
+			</tr>
+			<tr className='m-4'>
+				<td rowSpan={2}>
+					<Textarea readOnly value={editedTable?.competency102} />
+				</td>
+				<td>
+					<Textarea readOnly value={editedTable?.indicators104} />
+				</td>
+				<td>
+					<Input type='number' readOnly value={editedTable?.weight104} />
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co1104}
+						onChange={handleCo1104Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co2104}
+						onChange={handleCo2104Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co3104}
+						onChange={handleCo3104Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co4104}
+						onChange={handleCo4104Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co5104}
+						onChange={handleCo5104Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co6104}
+						onChange={handleCo6104Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co7104}
+						onChange={handleCo7104Change}
+					/>
+				</td>
+			</tr>
+			<tr className='m-4'>
+				<td>
+					<Textarea readOnly value={editedTable?.indicators105} />
+				</td>
+				<td>
+					<Input type='number' value={editedTable?.weight105} readOnly />
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co1105}
+						onChange={handleCo1105Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co2105}
+						onChange={handleCo2105Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co3105}
+						onChange={handleCo3105Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co4105}
+						onChange={handleCo4105Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co5105}
+						onChange={handleCo5105Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co6105}
+						onChange={handleCo6105Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co7105}
+						onChange={handleCo7105Change}
+					/>
+				</td>
+			</tr>
+			<tr className='m-4'>
+				<td rowSpan={2}>
+					<Textarea readOnly value={editedTable?.competency103} />
+				</td>
+				<td>
+					<Textarea readOnly value={editedTable?.indicators106} />
+				</td>
+				<td>
+					<Input type='number' value={editedTable?.weight106} readOnly />
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co1106}
+						onChange={handleCo1106Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co2106}
+						onChange={handleCo2106Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co3106}
+						onChange={handleCo3106Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co4106}
+						onChange={handleCo4106Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co5106}
+						onChange={handleCo5106Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co6106}
+						onChange={handleCo6106Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co7106}
+						onChange={handleCo7106Change}
+					/>
+				</td>
+			</tr>
+			<tr className='m-4'>
+				<td>
+					<Textarea readOnly value={editedTable?.indicators107} />
+				</td>
+				<td>
+					<Input type='number' value={editedTable?.weight107} readOnly />
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co1107}
+						onChange={handleCo1107Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co2107}
+						onChange={handleCo2107Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co3107}
+						onChange={handleCo3107Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co4107}
+						onChange={handleCo4107Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co5107}
+						onChange={handleCo5107Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co6107}
+						onChange={handleCo6107Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co7107}
+						onChange={handleCo7107Change}
+					/>
+				</td>
+			</tr>
+
+			<tr className='m-4'>
+				<td colSpan={4}>
+					<Textarea readOnly value='PO10 : Mapping Level' className='my-6' />
+				</td>
+
+				<td>
+					<Input type='number' value={editedTable?.po10mapco1} readOnly />
+				</td>
+				<td>
+					<Input type='number' value={editedTable?.po10mapco2} readOnly />{" "}
+				</td>
+				<td>
+					<Input type='number' value={editedTable?.po10mapco3} readOnly />{" "}
+				</td>
+				<td>
+					<Input type='number' value={editedTable?.po10mapco4} readOnly />{" "}
+				</td>
+				<td>
+					<Input type='number' value={editedTable?.po10mapco5} readOnly />{" "}
+				</td>
+				<td>
+					<Input type='number' value={editedTable?.po10mapco6} readOnly />{" "}
+				</td>
+				<td>
+					<Input type='number' value={editedTable?.po10mapco7} readOnly />{" "}
+				</td>
+			</tr>
+
+			{/* **************************************       PO:11        ****************************************************/}
+
+			<tr className='m-4'>
+				<td rowSpan={5}>
+					<Textarea readOnly value={editedTable?.po111} className='my-6' />
+				</td>
+				<td rowSpan={2}>
+					<Textarea readOnly value={editedTable?.competency111} />
+				</td>
+				<td>
+					<Textarea readOnly value={editedTable?.indicators111} />
+				</td>
+				<td>
+					<Input type='number' readOnly value={editedTable?.weight111} />
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co1111}
+						onChange={handleCo1111Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co2111}
+						onChange={handleCo2111Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co3111}
+						onChange={handleCo3111Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co4111}
+						onChange={handleCo4111Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co5111}
+						onChange={handleCo5111Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co6111}
+						onChange={handleCo6111Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co7111}
+						onChange={handleCo7111Change}
+					/>
+				</td>
+			</tr>
+			<tr className='m-4'>
+				<td>
+					<Textarea readOnly value={editedTable?.indicators112} />
+				</td>
+				<td>
+					<Input type='number' readOnly value={editedTable?.weight112} />
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co1112}
+						onChange={handleCo1112Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co2112}
+						onChange={handleCo2112Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co3112}
+						onChange={handleCo3112Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co4112}
+						onChange={handleCo4112Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co5112}
+						onChange={handleCo5112Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co6112}
+						onChange={handleCo6112Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co7112}
+						onChange={handleCo7112Change}
+					/>
+				</td>
+			</tr>
+			<tr className='m-4'>
+				<td>
+					<Textarea readOnly value={editedTable?.competency112} />
+				</td>
+				<td>
+					<Textarea readOnly value={editedTable?.indicators113} />
+				</td>
+				<td>
+					<Input type='number' readOnly value={editedTable?.weight113} />
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co1113}
+						onChange={handleCo1113Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co2113}
+						onChange={handleCo2113Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co3113}
+						onChange={handleCo3113Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co4113}
+						onChange={handleCo4113Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co5113}
+						onChange={handleCo5113Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co6113}
+						onChange={handleCo6113Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co7113}
+						onChange={handleCo7113Change}
+					/>
+				</td>
+			</tr>
+			<tr className='m-4'>
+				<td rowSpan={2}>
+					<Textarea readOnly value={editedTable?.competency113} />
+				</td>
+				<td>
+					<Textarea readOnly value={editedTable?.indicators114} />
+				</td>
+				<td>
+					<Input type='number' readOnly value={editedTable?.weight114} />
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co1114}
+						onChange={handleCo1114Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co2114}
+						onChange={handleCo2114Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co3114}
+						onChange={handleCo3114Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co4114}
+						onChange={handleCo4114Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co5114}
+						onChange={handleCo5114Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co6114}
+						onChange={handleCo6114Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co7114}
+						onChange={handleCo7114Change}
+					/>
+				</td>
+			</tr>
+			<tr className='m-4'>
+				<td>
+					<Textarea readOnly value={editedTable?.indicators115} />
+				</td>
+				<td>
+					<Input type='number' value={editedTable?.weight115} readOnly />
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co1115}
+						onChange={handleCo1115Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co2115}
+						onChange={handleCo2115Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co3115}
+						onChange={handleCo3115Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co4115}
+						onChange={handleCo4115Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co5115}
+						onChange={handleCo5115Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co6115}
+						onChange={handleCo6115Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co7115}
+						onChange={handleCo7115Change}
+					/>
+				</td>
+			</tr>
+
+			<tr className='m-4'>
+				<td colSpan={4}>
+					<Textarea readOnly value='PO11 : Mapping Level' className='my-6' />
+				</td>
+
+				<td>
+					<Input type='number' value={editedTable?.po11mapco1} readOnly />
+				</td>
+				<td>
+					<Input type='number' value={editedTable?.po11mapco2} readOnly />{" "}
+				</td>
+				<td>
+					<Input type='number' value={editedTable?.po11mapco3} readOnly />{" "}
+				</td>
+				<td>
+					<Input type='number' value={editedTable?.po11mapco4} readOnly />{" "}
+				</td>
+				<td>
+					<Input type='number' value={editedTable?.po11mapco5} readOnly />{" "}
+				</td>
+				<td>
+					<Input type='number' value={editedTable?.po11mapco6} readOnly />{" "}
+				</td>
+				<td>
+					<Input type='number' value={editedTable?.po11mapco7} readOnly />{" "}
+				</td>
+			</tr>
+
+			{/* **************************************       PO:12        ****************************************************/}
+
+			<tr className='m-4'>
+				<td rowSpan={6}>
+					<Textarea readOnly value={editedTable?.po121} className='my-6' />
+				</td>
+				<td rowSpan={2}>
+					<Textarea readOnly value={editedTable?.competency121} />
+				</td>
+				<td>
+					<Textarea readOnly value={editedTable?.indicators121} />
+				</td>
+				<td>
+					<Input type='number' readOnly value={editedTable?.weight121} />
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co1121}
+						onChange={handleCo1121Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co2121}
+						onChange={handleCo2121Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co3121}
+						onChange={handleCo3121Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co4121}
+						onChange={handleCo4121Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co5121}
+						onChange={handleCo5121Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co6121}
+						onChange={handleCo6121Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co7121}
+						onChange={handleCo7121Change}
+					/>
+				</td>
+			</tr>
+			<tr className='m-4'>
+				<td>
+					<Textarea readOnly value={editedTable?.indicators122} />
+				</td>
+				<td>
+					<Input type='number' readOnly value={editedTable?.weight122} />
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co1122}
+						onChange={handleCo1122Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co2122}
+						onChange={handleCo2122Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co3122}
+						onChange={handleCo3122Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co4122}
+						onChange={handleCo4122Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co5122}
+						onChange={handleCo5122Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co6122}
+						onChange={handleCo6122Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co7122}
+						onChange={handleCo7122Change}
+					/>
+				</td>
+			</tr>
+			<tr className='m-4'>
+				<td rowSpan={2}>
+					<Textarea readOnly value={editedTable?.competency122} />
+				</td>
+				<td>
+					<Textarea readOnly value={editedTable?.indicators123} />
+				</td>
+				<td>
+					<Input type='number' readOnly value={editedTable?.weight123} />
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co1123}
+						onChange={handleCo1123Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co2123}
+						onChange={handleCo2123Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co3123}
+						onChange={handleCo3123Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co4123}
+						onChange={handleCo4123Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co5123}
+						onChange={handleCo5123Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co6123}
+						onChange={handleCo6123Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co7123}
+						onChange={handleCo7123Change}
+					/>
+				</td>
+			</tr>
+			<tr className='m-4'>
+				<td>
+					<Textarea readOnly value={editedTable?.indicators124} />
+				</td>
+				<td>
+					<Input type='number' readOnly value={editedTable?.weight124} />
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co1124}
+						onChange={handleCo1124Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co2124}
+						onChange={handleCo2124Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co3124}
+						onChange={handleCo3124Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co4124}
+						onChange={handleCo4124Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co5124}
+						onChange={handleCo5124Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co6124}
+						onChange={handleCo6124Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co7124}
+						onChange={handleCo7124Change}
+					/>
+				</td>
+			</tr>
+			<tr className='m-4'>
+				<td rowSpan={2}>
+					<Textarea readOnly value={editedTable?.competency123} />
+				</td>
+				<td>
+					<Textarea readOnly value={editedTable?.indicators125} />
+				</td>
+				<td>
+					<Input type='number' value={editedTable?.weight125} readOnly />
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co1125}
+						onChange={handleCo1125Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co2125}
+						onChange={handleCo2125Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co3125}
+						onChange={handleCo3125Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co4125}
+						onChange={handleCo4125Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co5125}
+						onChange={handleCo5125Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co6125}
+						onChange={handleCo6125Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co7125}
+						onChange={handleCo7125Change}
+					/>
+				</td>
+			</tr>
+			<tr className='m-4'>
+				<td>
+					<Textarea readOnly value={editedTable?.indicators126} />
+				</td>
+				<td>
+					<Input type='number' value={editedTable?.weight126} readOnly />
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co1126}
+						onChange={handleCo1126Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co2126}
+						onChange={handleCo2126Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co3126}
+						onChange={handleCo3126Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co4126}
+						onChange={handleCo4126Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co5126}
+						onChange={handleCo5126Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co6126}
+						onChange={handleCo6126Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.co7126}
+						onChange={handleCo7126Change}
+					/>
+				</td>
+			</tr>
+
+			<tr className='m-4'>
+				<td colSpan={4}>
+					<Textarea readOnly value='PO12 : Mapping Level' className='my-6' />
+				</td>
+
+				<td>
+					<Input type='number' value={editedTable?.po12mapco1} readOnly />
+				</td>
+				<td>
+					<Input type='number' value={editedTable?.po12mapco2} readOnly />{" "}
+				</td>
+				<td>
+					<Input type='number' value={editedTable?.po12mapco3} readOnly />{" "}
+				</td>
+				<td>
+					<Input type='number' value={editedTable?.po12mapco4} readOnly />{" "}
+				</td>
+				<td>
+					<Input type='number' value={editedTable?.po12mapco5} readOnly />{" "}
+				</td>
+				<td>
+					<Input type='number' value={editedTable?.po12mapco6} readOnly />{" "}
+				</td>
+				<td>
+					<Input type='number' value={editedTable?.po12mapco7} readOnly />{" "}
+				</td>
+			</tr>
+
+			{/* ************************************  PSO : 1       ************************************ */}
+
+			<tr className='m-4'>
+				<td rowSpan={5}>
+					<Textarea readOnly value={editedTable?.pso11} className='my-6' />
+				</td>
+				<td rowSpan={2}>
+					<Textarea readOnly value={editedTable?.psocompetency11} />
+				</td>
+				<td>
+					<Textarea readOnly value={editedTable?.psoindicators11} />
+				</td>
+				<td>
+					<Input type='number' readOnly value={editedTable?.psoweight11} />
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.psoco111}
+						onChange={handlePsoCo111Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.psoco211}
+						onChange={handlePsoCo211Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.psoco311}
+						onChange={handlePsoCo311Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.psoco411}
+						onChange={handlePsoCo411Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.psoco511}
+						onChange={handlePsoCo511Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.psoco611}
+						onChange={handlePsoCo611Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.psoco711}
+						onChange={handlePsoCo711Change}
+					/>
+				</td>
+			</tr>
+			<tr className='m-4'>
+				<td>
+					<Textarea readOnly value={editedTable?.psoindicators12} />
+				</td>
+				<td>
+					<Input type='number' readOnly value={editedTable?.psoweight12} />
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.psoco112}
+						onChange={handlePsoCo112Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.psoco212}
+						onChange={handlePsoCo212Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.psoco312}
+						onChange={handlePsoCo312Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.psoco412}
+						onChange={handlePsoCo412Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.psoco512}
+						onChange={handlePsoCo512Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.psoco612}
+						onChange={handlePsoCo612Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.psoco712}
+						onChange={handlePsoCo712Change}
+					/>
+				</td>
+			</tr>
+
+			<tr className='m-4'>
+				<td rowSpan={3}>
+					<Textarea readOnly value={editedTable?.psocompetency12} />
+				</td>
+				<td>
+					<Textarea readOnly value={editedTable?.psoindicators13} />
+				</td>
+				<td>
+					<Input type='number' readOnly value={editedTable?.psoweight13} />
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.psoco113}
+						onChange={handlePsoCo113Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.psoco213}
+						onChange={handlePsoCo213Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.psoco313}
+						onChange={handlePsoCo313Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.psoco413}
+						onChange={handlePsoCo413Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.psoco513}
+						onChange={handlePsoCo513Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.psoco613}
+						onChange={handlePsoCo613Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.psoco713}
+						onChange={handlePsoCo713Change}
+					/>
+				</td>
+			</tr>
+			<tr className='m-4'>
+				<td>
+					<Textarea readOnly value={editedTable?.psoindicators14} />
+				</td>
+				<td>
+					<Input type='number' readOnly value={editedTable?.psoweight14} />
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.psoco114}
+						onChange={handlePsoCo114Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.psoco214}
+						onChange={handlePsoCo214Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.psoco314}
+						onChange={handlePsoCo314Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.psoco414}
+						onChange={handlePsoCo414Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.psoco514}
+						onChange={handlePsoCo514Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.psoco614}
+						onChange={handlePsoCo614Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.psoco714}
+						onChange={handlePsoCo714Change}
+					/>
+				</td>
+			</tr>
+			<tr className='m-4'>
+				<td>
+					<Textarea readOnly value={editedTable?.psoindicators15} />
+				</td>
+				<td>
+					<Input type='number' value={editedTable?.psoweight15} readOnly />
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.psoco115}
+						onChange={handlePsoCo115Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.psoco215}
+						onChange={handlePsoCo215Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.psoco315}
+						onChange={handlePsoCo315Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.psoco415}
+						onChange={handlePsoCo415Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.psoco515}
+						onChange={handlePsoCo515Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.psoco615}
+						onChange={handlePsoCo615Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.psoco715}
+						onChange={handlePsoCo715Change}
+					/>
+				</td>
+			</tr>
+			<tr className='m-4'>
+				<td colSpan={4}>
+					<Textarea readOnly value='PSO 1 : Mapping Level' className='my-6' />
+				</td>
+
+				<td>
+					<Input type='number' value={editedTable?.pso1mapco1} readOnly />
+				</td>
+				<td>
+					<Input type='number' value={editedTable?.pso1mapco2} readOnly />{" "}
+				</td>
+				<td>
+					<Input type='number' value={editedTable?.pso1mapco3} readOnly />{" "}
+				</td>
+				<td>
+					<Input type='number' value={editedTable?.pso1mapco4} readOnly />{" "}
+				</td>
+				<td>
+					<Input type='number' value={editedTable?.pso1mapco5} readOnly />{" "}
+				</td>
+				<td>
+					<Input type='number' value={editedTable?.pso1mapco6} readOnly />{" "}
+				</td>
+				<td>
+					<Input type='number' value={editedTable?.pso1mapco7} readOnly />{" "}
+				</td>
+			</tr>
+
+			{/* ************************************  PSO : 2       ************************************ */}
+
+			<tr className='m-4'>
+				<td rowSpan={4}>
+					<Textarea readOnly value={editedTable?.pso21} className='my-6' />
+				</td>
+				<td rowSpan={2}>
+					<Textarea readOnly value={editedTable?.psocompetency21} />
+				</td>
+				<td>
+					<Textarea readOnly value={editedTable?.psoindicators21} />
+				</td>
+				<td>
+					<Input type='number' readOnly value={editedTable?.psoweight21} />
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.psoco121}
+						onChange={handlePsoCo121Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.psoco221}
+						onChange={handlePsoCo221Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.psoco321}
+						onChange={handlePsoCo321Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.psoco421}
+						onChange={handlePsoCo421Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.psoco521}
+						onChange={handlePsoCo521Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.psoco621}
+						onChange={handlePsoCo621Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.psoco721}
+						onChange={handlePsoCo721Change}
+					/>
+				</td>
+			</tr>
+			<tr className='m-4'>
+				<td>
+					<Textarea readOnly value={editedTable?.psoindicators22} />
+				</td>
+				<td>
+					<Input type='number' readOnly value={editedTable?.psoweight22} />
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.psoco122}
+						onChange={handlePsoCo122Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.psoco222}
+						onChange={handlePsoCo222Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.psoco322}
+						onChange={handlePsoCo322Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.psoco422}
+						onChange={handlePsoCo422Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.psoco522}
+						onChange={handlePsoCo522Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.psoco622}
+						onChange={handlePsoCo622Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.psoco722}
+						onChange={handlePsoCo722Change}
+					/>
+				</td>
+			</tr>
+
+			<tr className='m-4'>
+				<td rowSpan={2}>
+					<Textarea readOnly value={editedTable?.psocompetency22} />
+				</td>
+				<td>
+					<Textarea readOnly value={editedTable?.psoindicators23} />
+				</td>
+				<td>
+					<Input type='number' readOnly value={editedTable?.psoweight23} />
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.psoco123}
+						onChange={handlePsoCo123Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.psoco223}
+						onChange={handlePsoCo223Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.psoco323}
+						onChange={handlePsoCo323Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.psoco423}
+						onChange={handlePsoCo423Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.psoco523}
+						onChange={handlePsoCo523Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.psoco623}
+						onChange={handlePsoCo623Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.psoco723}
+						onChange={handlePsoCo723Change}
+					/>
+				</td>
+			</tr>
+			<tr className='m-4'>
+				<td>
+					<Textarea readOnly value={editedTable?.psoindicators24} />
+				</td>
+				<td>
+					<Input type='number' readOnly value={editedTable?.psoweight24} />
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.psoco124}
+						onChange={handlePsoCo124Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.psoco224}
+						onChange={handlePsoCo224Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.psoco324}
+						onChange={handlePsoCo324Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.psoco424}
+						onChange={handlePsoCo424Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.psoco524}
+						onChange={handlePsoCo524Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.psoco624}
+						onChange={handlePsoCo624Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.psoco724}
+						onChange={handlePsoCo724Change}
+					/>
+				</td>
+			</tr>
+
+			<tr className='m-4'>
+				<td colSpan={4}>
+					<Textarea readOnly value='PSO 2 : Mapping Level' className='my-6' />
+				</td>
+
+				<td>
+					<Input type='number' value={editedTable?.pso2mapco1} readOnly />
+				</td>
+				<td>
+					<Input type='number' value={editedTable?.pso2mapco2} readOnly />{" "}
+				</td>
+				<td>
+					<Input type='number' value={editedTable?.pso2mapco3} readOnly />{" "}
+				</td>
+				<td>
+					<Input type='number' value={editedTable?.pso2mapco4} readOnly />{" "}
+				</td>
+				<td>
+					<Input type='number' value={editedTable?.pso2mapco5} readOnly />{" "}
+				</td>
+				<td>
+					<Input type='number' value={editedTable?.pso2mapco6} readOnly />{" "}
+				</td>
+				<td>
+					<Input type='number' value={editedTable?.pso2mapco7} readOnly />{" "}
+				</td>
+			</tr>
+
+			{/* ************************************  PSO : 3       ************************************ */}
+
+			<tr className='m-4'>
+				<td rowSpan={4}>
+					<Textarea readOnly value={editedTable?.pso31} className='my-6' />
+				</td>
+				<td rowSpan={2}>
+					<Textarea readOnly value={editedTable?.psocompetency31} />
+				</td>
+				<td>
+					<Textarea readOnly value={editedTable?.psoindicators31} />
+				</td>
+				<td>
+					<Input type='number' readOnly value={editedTable?.psoweight31} />
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.psoco131}
+						onChange={handlePsoCo131Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.psoco231}
+						onChange={handlePsoCo231Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.psoco331}
+						onChange={handlePsoCo331Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.psoco431}
+						onChange={handlePsoCo431Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.psoco531}
+						onChange={handlePsoCo531Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.psoco631}
+						onChange={handlePsoCo631Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.psoco731}
+						onChange={handlePsoCo731Change}
+					/>
+				</td>
+			</tr>
+			<tr className='m-4'>
+				<td>
+					<Textarea readOnly value={editedTable?.psoindicators32} />
+				</td>
+				<td>
+					<Input type='number' readOnly value={editedTable?.psoweight32} />
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.psoco132}
+						onChange={handlePsoCo132Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.psoco232}
+						onChange={handlePsoCo232Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.psoco332}
+						onChange={handlePsoCo332Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.psoco432}
+						onChange={handlePsoCo432Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.psoco532}
+						onChange={handlePsoCo532Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.psoco632}
+						onChange={handlePsoCo632Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.psoco732}
+						onChange={handlePsoCo732Change}
+					/>
+				</td>
+			</tr>
+
+			<tr className='m-4'>
+				<td rowSpan={2}>
+					<Textarea readOnly value={editedTable?.psocompetency32} />
+				</td>
+				<td>
+					<Textarea readOnly value={editedTable?.psoindicators33} />
+				</td>
+				<td>
+					<Input type='number' readOnly value={editedTable?.psoweight33} />
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.psoco133}
+						onChange={handlePsoCo133Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.psoco233}
+						onChange={handlePsoCo233Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.psoco333}
+						onChange={handlePsoCo333Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.psoco433}
+						onChange={handlePsoCo433Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.psoco533}
+						onChange={handlePsoCo533Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.psoco633}
+						onChange={handlePsoCo633Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.psoco733}
+						onChange={handlePsoCo733Change}
+					/>
+				</td>
+			</tr>
+			<tr className='m-4'>
+				<td>
+					<Textarea readOnly value={editedTable?.psoindicators34} />
+				</td>
+				<td>
+					<Input type='number' readOnly value={editedTable?.psoweight34} />
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.psoco134}
+						onChange={handlePsoCo134Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.psoco234}
+						onChange={handlePsoCo234Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.psoco334}
+						onChange={handlePsoCo334Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.psoco434}
+						onChange={handlePsoCo434Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.psoco534}
+						onChange={handlePsoCo534Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.psoco634}
+						onChange={handlePsoCo634Change}
+					/>
+				</td>
+				<td>
+					<Input
+						type='number'
+						value={editedTable?.psoco734}
+						onChange={handlePsoCo734Change}
+					/>
+				</td>
+			</tr>
+
+			<tr className='m-4'>
+				<td colSpan={4}>
+					<Textarea readOnly value='PSO 3 : Mapping Level' className='my-6' />
+				</td>
+
+				<td>
+					<Input type='number' value={editedTable?.pso3mapco1} readOnly />
+				</td>
+				<td>
+					<Input type='number' value={editedTable?.pso3mapco2} readOnly />{" "}
+				</td>
+				<td>
+					<Input type='number' value={editedTable?.pso3mapco3} readOnly />{" "}
+				</td>
+				<td>
+					<Input type='number' value={editedTable?.pso3mapco4} readOnly />{" "}
+				</td>
+				<td>
+					<Input type='number' value={editedTable?.pso3mapco5} readOnly />{" "}
+				</td>
+				<td>
+					<Input type='number' value={editedTable?.pso3mapco6} readOnly />{" "}
+				</td>
+				<td>
+					<Input type='number' value={editedTable?.pso3mapco7} readOnly />{" "}
+				</td>
+			</tr>
+		</div>
+	);
+};
+
+export default po2;
