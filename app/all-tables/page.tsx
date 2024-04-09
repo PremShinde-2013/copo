@@ -62,6 +62,11 @@ const Page = () => {
 										Edit
 									</Button>
 								</Link>
+								<Link href={`/po-table/${t._id}`}>
+									<Button variant='flat' color='primary'>
+										Edit PO&apos;s
+									</Button>
+								</Link>
 							</div>
 
 							<DeleteBtn id={t._id} />

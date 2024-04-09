@@ -21,10 +21,10 @@ const DeleteBtn: React.FC<DeleteBtnProps> = ({ id }) => {
 
 	const handleDelete = async () => {
 		try {
-			const response = await fetch(`http://localhost:3000/api/table?id=${id}`, {
-			// const response = await fetch(
-			// 	`https://copo-attainment.vercel.app/api/table?id=${id}`,
-			// 	{
+			// const response = await fetch(`http://localhost:3000/api/table?id=${id}`, {
+			const response = await fetch(
+				`https://copo-attainment.vercel.app/api/table?id=${id}`,
+				{
 					method: "DELETE",
 				}
 			);
