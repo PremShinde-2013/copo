@@ -68,23 +68,23 @@ interface TableData {
 	co715: number;
 }
 
-const fetchData = async (): Promise<TableData[] | null> => {
+const fetchRecent = async (): Promise<TableData[] | null> => {
 	try {
-		const res = await fetch("http://localhost:3000/api/table", {
+		const res = await fetch("http://localhost:3000/api/get-recent-tables", {
 			// const res = await fetch("https://copo-attainment.vercel.app/api/table", {
 			cache: "no-store",
 		});
 
 		if (!res.ok) {
-			throw new Error("Failed to fetch topics");
+			throw new Error("Failed to fetch recent tables");
 		}
 
 		const data = await res.json(); // Return the JSON response
-		return data.table;
+		return data.recentTables;
 	} catch (error) {
-		console.log("Error loading topics", error);
+		console.log("Error loading recent tables", error);
 		return null;
 	}
 };
 
-export default fetchData;
+export default fetchRecent;

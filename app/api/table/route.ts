@@ -2473,3 +2473,18 @@ export async function DELETE(request: any) {
 	await Table.findByIdAndDelete(id);
 	return NextResponse.json({ message: "Table deleted " }, { status: 200 });
 }
+
+export async function getRecentTables() {
+	try {
+		await connectDB();
+		const recentTables = await Table.find().sort({ createdAt: -1 }).limit(3);
+		return new Response(JSON.stringify({ tables: recentTables }), {
+			status: 200,
+			headers: { "Content-Type": "application/json" },
+		});
+	} catch (error: any) {
+		return new Response(error.message || "Failed to fetch recent tables", {
+			status: 500,
+		});
+	}
+}

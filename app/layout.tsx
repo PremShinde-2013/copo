@@ -7,6 +7,7 @@ import { Navbar } from "@/components/navbar";
 import { Link } from "@nextui-org/link";
 import clsx from "clsx";
 import { Toaster } from "react-hot-toast";
+import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
 	title: "COPO",
@@ -43,6 +44,8 @@ export default function RootLayout({
 							{children}
 						</main>
 						<Toaster position='top-center' reverseOrder={false} />
+
+						<Footer />
 					</div>
 				</Providers>
 			</body>
