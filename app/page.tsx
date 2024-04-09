@@ -92,7 +92,7 @@ export default function Home() {
 											Enter
 										</Button>
 									</Link>
-									<Link href={`/edit-table/${table._id}`}>
+									{/* <Link href={`/edit-table/${table._id}`}>
 										<Button variant='flat' color='primary'>
 											Edit
 										</Button>
@@ -101,7 +101,7 @@ export default function Home() {
 										<Button variant='flat' color='primary'>
 											Edit PO&apos;s
 										</Button>
-									</Link>
+									</Link> */}
 								</div>
 
 								<DeleteBtn id={table._id} />

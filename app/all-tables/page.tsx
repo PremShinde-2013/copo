@@ -57,7 +57,7 @@ const Page = () => {
 										Enter
 									</Button>
 								</Link>
-								<Link href={`/edit-table/${t._id}`}>
+								{/* <Link href={`/edit-table/${t._id}`}>
 									<Button variant='flat' color='primary'>
 										Edit
 									</Button>
@@ -66,7 +66,7 @@ const Page = () => {
 									<Button variant='flat' color='primary'>
 										Edit PO&apos;s
 									</Button>
-								</Link>
+								</Link> */}
 							</div>
 
 							<DeleteBtn id={t._id} />
