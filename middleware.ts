@@ -2,8 +2,8 @@ import { clerkMiddleware, createRouteMatcher } from "@clerk/nextjs/server";
 
 const protectedRoute = createRouteMatcher([
 	"/",
-	"/all-table",
-	"/meeting(.*)",
+	"/all-tables",
+	"/edit-table(.*)",
 	"/create-mapping-table",
 ]);
 
