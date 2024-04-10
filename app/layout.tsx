@@ -8,6 +8,7 @@ import { Link } from "@nextui-org/link";
 import clsx from "clsx";
 import { Toaster } from "react-hot-toast";
 import Footer from "@/components/Footer";
+import { ClerkProvider } from "@clerk/nextjs";
 
 export const metadata: Metadata = {
 	title: "COPO",
@@ -30,25 +31,41 @@ export default function RootLayout({
 }) {
 	return (
 		<html lang='en' suppressHydrationWarning>
-			<head />
-			<body
-				className={clsx(
-					"min-h-screen bg-background font-sans antialiased",
-					fontSans.variable
-				)}
+			<ClerkProvider
+				appearance={{
+					layout: {
+						socialButtonsVariant: "iconButton",
+						logoImageUrl: "/icons/yoom-logo.svg",
+					},
+					variables: {
+						colorText: "#fff",
+						colorPrimary: "#0E78F9",
+						colorBackground: "#1C1F2E",
+						colorInputBackground: "#252A41",
+						colorInputText: "#fff",
+					},
+				}}
 			>
-				<Providers themeProps={{ attribute: "class", defaultTheme: "dark" }}>
-					<div className='relative flex flex-col h-screen'>
-						<Navbar />
-						<main className='container mx-auto max-w-7xl pt-16 px-6 flex-grow'>
-							{children}
-						</main>
-						<Toaster position='top-center' reverseOrder={false} />
+				<head />
+				<body
+					className={clsx(
+						"min-h-screen bg-background font-sans antialiased",
+						fontSans.variable
+					)}
+				>
+					<Providers themeProps={{ attribute: "class", defaultTheme: "dark" }}>
+						<div className='relative flex flex-col h-screen'>
+							<Navbar />
+							<main className='container mx-auto max-w-7xl pt-16 px-6 flex-grow'>
+								{children}
+							</main>
+							<Toaster position='top-center' reverseOrder={false} />
 
-						<Footer />
-					</div>
-				</Providers>
-			</body>
+							<Footer />
+						</div>
+					</Providers>
+				</body>
+			</ClerkProvider>
 		</html>
 	);
 }

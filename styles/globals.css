@@ -1,3 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.cl-internal-1yphags > button,
+.cl-internal-1yphags div {
+	color: white;
+	border: 0px solid rgba(0, 0, 0, 0.07);
+}

@@ -51,13 +51,13 @@ const Page = () => {
 						</CardBody>
 						<Divider />
 						<CardFooter className='flex justify-between'>
-							<div className=' flex gap-4'>
+							<div className=' flex gap-2'>
 								<Link href={`/table/${t._id}`}>
 									<Button variant='flat' color='primary'>
 										Enter
 									</Button>
 								</Link>
-								{/* <Link href={`/edit-table/${t._id}`}>
+								<Link href={`/edit-table/${t._id}`}>
 									<Button variant='flat' color='primary'>
 										Edit
 									</Button>
@@ -66,7 +66,7 @@ const Page = () => {
 									<Button variant='flat' color='primary'>
 										Edit PO&apos;s
 									</Button>
-								</Link> */}
+								</Link>
 							</div>
 
 							<DeleteBtn id={t._id} />
