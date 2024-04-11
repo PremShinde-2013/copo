@@ -70,12 +70,13 @@ interface TableData {
 
 const fetchRecent = async (): Promise<TableData[] | null> => {
 	try {
-		const res = await fetch("http://localhost:3000/api/get-recent-tables", {
-			// const res = await fetch(
-			// 	"https://copo-attainment.vercel.app/api/get-recent-tables",
-			// 	{
-			cache: "no-store",
-		});
+		// const res = await fetch("http://localhost:3000/api/get-recent-tables", {
+		const res = await fetch(
+			"https://copo-attainment.vercel.app/api/get-recent-tables",
+			{
+				cache: "no-store",
+			}
+		);
 
 		if (!res.ok) {
 			throw new Error("Failed to fetch recent tables");
