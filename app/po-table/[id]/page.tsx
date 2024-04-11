@@ -82,7 +82,7 @@ const TableDetail = ({ params }: { params: { id: string } }) => {
 				<Card className=' cursor-pointer'>
 					<CardHeader className='flex gap-3'>
 						<div className='flex flex-col'>
-							<p className='text-2xl font-bold'>Edit PO&apos;s</p>
+							<p className='text-2xl font-bold'>Edit PO</p>
 						</div>
 					</CardHeader>
 					<Divider />
@@ -103,8 +103,8 @@ const TableDetail = ({ params }: { params: { id: string } }) => {
 						</h1>
 					</CardBody>
 					<Divider />
-					<CardFooter className='flex gap-6'>
-						<Card>
+					<CardFooter className='flex justify-center  gap-6 flex-wrap'>
+						<Card className='px-4'>
 							<CardHeader>Edit PO : 1</CardHeader>
 							<CardBody></CardBody>
 
@@ -114,7 +114,7 @@ const TableDetail = ({ params }: { params: { id: string } }) => {
 								</Link>
 							</CardFooter>
 						</Card>
-						<Card>
+						<Card className='px-4'>
 							<CardHeader>Edit PO : 2</CardHeader>
 							<CardBody></CardBody>
 
@@ -124,25 +124,138 @@ const TableDetail = ({ params }: { params: { id: string } }) => {
 								</Link>
 							</CardFooter>
 						</Card>
-						{/* <div className=' flex gap-4'>
-							<Link href={`/table/${editedTable?._id}`}>
-								<Button variant='flat' color='primary'>
-									Enter
-								</Button>
-							</Link>
-							<Link href={`/edit-table/${editedTable?._id}`}>
-								<Button variant='flat' color='primary'>
-									Edit
-								</Button>
-							</Link>
-							<Link href={`/edit-po/${editedTable?._id}`}>
-								<Button variant='flat' color='primary'>
-									Edit PO&apos;s
-								</Button>
-							</Link>
-						</div> */}
+						<Card className='px-4'>
+							<CardHeader>Edit PO : 3</CardHeader>
+							<CardBody></CardBody>
 
-						<DeleteBtn id={editedTable?._id} />
+							<CardFooter>
+								<Link href={`/edit-po3/${editedTable?._id}`}>
+									<Button color='secondary'>Edit</Button>
+								</Link>
+							</CardFooter>
+						</Card>
+						<Card className='px-4'>
+							<CardHeader>Edit PO : 4</CardHeader>
+							<CardBody></CardBody>
+
+							<CardFooter>
+								<Link href={`/edit-po4/${editedTable?._id}`}>
+									<Button color='secondary'>Edit</Button>
+								</Link>
+							</CardFooter>
+						</Card>
+						<Card className='px-4'>
+							<CardHeader>Edit PO : 5</CardHeader>
+							<CardBody></CardBody>
+
+							<CardFooter>
+								<Link href={`/edit-po5/${editedTable?._id}`}>
+									<Button color='secondary'>Edit</Button>
+								</Link>
+							</CardFooter>
+						</Card>
+						<Card className='px-4'>
+							<CardHeader>Edit PO : 6</CardHeader>
+							<CardBody></CardBody>
+
+							<CardFooter>
+								<Link href={`/edit-po6/${editedTable?._id}`}>
+									<Button color='secondary'>Edit</Button>
+								</Link>
+							</CardFooter>
+						</Card>
+						<Card className='px-4'>
+							<CardHeader>Edit PO : 7</CardHeader>
+							<CardBody></CardBody>
+
+							<CardFooter>
+								<Link href={`/edit-po7/${editedTable?._id}`}>
+									<Button color='secondary'>Edit</Button>
+								</Link>
+							</CardFooter>
+						</Card>
+						<Card className='px-4'>
+							<CardHeader>Edit PO : 8</CardHeader>
+							<CardBody></CardBody>
+
+							<CardFooter>
+								<Link href={`/edit-po8/${editedTable?._id}`}>
+									<Button color='secondary'>Edit</Button>
+								</Link>
+							</CardFooter>
+						</Card>
+						<Card className='px-4'>
+							<CardHeader>Edit PO : 9</CardHeader>
+							<CardBody></CardBody>
+
+							<CardFooter>
+								<Link href={`/edit-po9/${editedTable?._id}`}>
+									<Button color='secondary'>Edit</Button>
+								</Link>
+							</CardFooter>
+						</Card>
+						<Card className='px-4'>
+							<CardHeader>Edit PO : 10</CardHeader>
+							<CardBody></CardBody>
+
+							<CardFooter>
+								<Link href={`/edit-po10/${editedTable?._id}`}>
+									<Button color='secondary'>Edit</Button>
+								</Link>
+							</CardFooter>
+						</Card>
+						<Card className='px-4'>
+							<CardHeader>Edit PO : 11</CardHeader>
+							<CardBody></CardBody>
+
+							<CardFooter>
+								<Link href={`/edit-po11/${editedTable?._id}`}>
+									<Button color='secondary'>Edit</Button>
+								</Link>
+							</CardFooter>
+						</Card>
+						<Card className='px-4'>
+							<CardHeader>Edit PO : 12</CardHeader>
+							<CardBody></CardBody>
+
+							<CardFooter>
+								<Link href={`/edit-po12/${editedTable?._id}`}>
+									<Button color='secondary'>Edit</Button>
+								</Link>
+							</CardFooter>
+						</Card>
+						<Card className='px-4'>
+							<CardHeader>Edit PSO : 1</CardHeader>
+							<CardBody></CardBody>
+
+							<CardFooter>
+								<Link href={`/edit-pso1/${editedTable?._id}`}>
+									<Button color='secondary'>Edit</Button>
+								</Link>
+							</CardFooter>
+						</Card>
+						<Card className='px-4'>
+							<CardHeader>Edit PSO : 2</CardHeader>
+							<CardBody></CardBody>
+
+							<CardFooter>
+								<Link href={`/edit-pso2/${editedTable?._id}`}>
+									<Button color='secondary'>Edit</Button>
+								</Link>
+							</CardFooter>
+						</Card>
+						<Card className='px-4'>
+							<CardHeader>Edit PSO : 3</CardHeader>
+							<CardBody></CardBody>
+
+							<CardFooter>
+								<Link href={`/edit-pso3/${editedTable?._id}`}>
+									<Button color='secondary'>Edit</Button>
+								</Link>
+							</CardFooter>
+						</Card>
+
+						{/* <DeleteBtn id={editedTable?._id} /> */}
 					</CardFooter>
 				</Card>
 			</div>

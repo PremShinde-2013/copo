@@ -520,27 +520,49 @@ const TableDetail = ({ params }: { params: { id: string } }) => {
 	}
 
 	return (
-		<div>
+		<div className='overflow-x-auto'>
 			<table
-				className='  table-fixed mt-20'
+				className='  min-w-full divide-y divide-gray-200 mt-20 '
 				aria-label='Example static collection table'
 			>
-				<thead>
+				<thead className=''>
 					<tr>
-						<th>PO</th>
-						<th>Competency</th>
-						<th>Indicators</th>
-						<th>Weight</th>
-						<th>CO1</th>
-						<th>CO2</th>
-						<th>CO3</th>
-						<th>CO4</th>
-						<th>CO5</th>
-						<th>CO6</th>
-						<th>CO7</th>
+						<th className='px-6 py-3 text-left  font-medium  uppercase tracking-wider'>
+							PO
+						</th>
+						<th className='px-6 py-3 text-left  font-medium  uppercase tracking-wider'>
+							Competency
+						</th>
+						<th className='px-6 py-3 text-left  font-medium  uppercase tracking-wider'>
+							Indicators
+						</th>
+						<th className='px-6 py-3 text-left  font-medium  uppercase tracking-wider'>
+							Weight
+						</th>
+						<th className='px-6 py-3 text-left  font-medium  uppercase tracking-wider'>
+							CO1
+						</th>
+						<th className='px-6 py-3 text-left  font-medium  uppercase tracking-wider'>
+							CO2
+						</th>
+						<th className='px-6 py-3 text-left  font-medium  uppercase tracking-wider'>
+							CO3
+						</th>
+						<th className='px-6 py-3 text-left  font-medium  uppercase tracking-wider'>
+							CO4
+						</th>
+						<th className='px-6 py-3 text-left  font-medium  uppercase tracking-wider'>
+							CO5
+						</th>
+						<th className='px-6 py-3 text-left  font-medium  uppercase tracking-wider'>
+							CO6
+						</th>
+						<th className='px-6 py-3 text-left  font-medium  uppercase tracking-wider'>
+							CO7
+						</th>
 					</tr>
 				</thead>
-				<tbody>
+				<tbody className=' divide-y  divide-gray-200'>
 					<tr className='m-4'>
 						<td>
 							<Textarea readOnly value={editedTable2?.po11} className='my-6' />
@@ -894,14 +916,6 @@ const TableDetail = ({ params }: { params: { id: string } }) => {
 				</tbody>
 			</table>
 			<Button onClick={handleSaveChanges}>Save Changes</Button>
-
-			<div className='mt-8'>
-				<Link href={`/po-table/${editedTable2?._id}`}>
-					<Button variant='flat' color='primary'>
-						Edit
-					</Button>
-				</Link>
-			</div>
 		</div>
 	);
 };

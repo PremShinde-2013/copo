@@ -57,11 +57,7 @@ const Page = () => {
 										Enter
 									</Button>
 								</Link>
-								<Link href={`/edit-table/${t._id}`}>
-									<Button variant='flat' color='primary'>
-										Edit
-									</Button>
-								</Link>
+
 								<Link href={`/po-table/${t._id}`}>
 									<Button variant='flat' color='primary'>
 										Edit PO&apos;s

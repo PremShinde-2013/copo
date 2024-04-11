@@ -40,6 +40,21 @@ const TableDetail = ({ params }: { params: { id: string } }) => {
 
 	const exportToExcel = () => {
 		const ws = XLSX.utils.aoa_to_sheet([
+			[`Department 0f ${table.dept} `, "", "", "", "", "", "", "", "", "", ""],
+			["CO PO PSO Corelation", "", "", "", "", "", "", "", "", "", ""],
+			[
+				`Name of Course with Coursecode - ${table.subject}`,
+				"",
+				"",
+				"",
+				"",
+				"",
+				"",
+				"",
+				"",
+				"",
+				"",
+			],
 			[
 				"PO",
 				"Competency",
@@ -67,8 +82,8 @@ const TableDetail = ({ params }: { params: { id: string } }) => {
 				table.co711,
 			],
 			[
-				table.po12,
-				table.competency12,
+				"",
+				"",
 				table.indicators12,
 				table.weight12,
 				table.co112,
@@ -80,7 +95,7 @@ const TableDetail = ({ params }: { params: { id: string } }) => {
 				table.co712,
 			],
 			[
-				table.po13,
+				"",
 				table.competency13,
 				table.indicators13,
 				table.weight13,
@@ -93,7 +108,7 @@ const TableDetail = ({ params }: { params: { id: string } }) => {
 				table.co713,
 			],
 			[
-				table.po14,
+				"",
 				table.competency14,
 				table.indicators14,
 				table.weight14,
@@ -106,7 +121,7 @@ const TableDetail = ({ params }: { params: { id: string } }) => {
 				table.co714,
 			],
 			[
-				table.po15,
+				"",
 				table.competency15,
 				table.indicators15,
 				table.weight15,
@@ -1506,6 +1521,135 @@ const TableDetail = ({ params }: { params: { id: string } }) => {
 				table.pso3mapco7, // Data for po1mapco7
 			],
 		]);
+		// Set column widths
+		const columnWidths = [
+			{ wch: 30 }, // Column A
+			{ wch: 30 }, // Column B
+			{ wch: 30 }, // Column C
+			{ wch: 10 }, // Column D
+			{ wch: 5 }, // Column E
+			{ wch: 5 }, // Column F
+			{ wch: 5 }, // Column G
+			{ wch: 5 }, // Column H
+			{ wch: 5 }, // Column I
+			{ wch: 5 }, // Column J
+			{ wch: 5 }, // Column K
+		];
+		ws["!cols"] = columnWidths;
+
+		// Set text wrapping for all cells and row height to 100
+		const range = ws["!ref"];
+		if (range) {
+			const decodedRange = XLSX.utils.decode_range(range);
+			for (let R = decodedRange.s.r; R <= decodedRange.e.r; ++R) {
+				ws["!rows"] = ws["!rows"] || [];
+
+				ws["!rows"][R] = { hpx: 60 }; // Set row height to 100
+
+				for (let C = decodedRange.s.c; C <= decodedRange.e.c; ++C) {
+					const cellAddress = { r: R, c: C };
+					const cellRef = XLSX.utils.encode_cell(cellAddress);
+					if (!ws[cellRef]) continue;
+
+					if (!ws[cellRef].s) {
+						ws[cellRef].s = {}; // Ensure style object exists
+					}
+					ws[cellRef].s.wrapText = true; // Set text wrapping
+					ws[cellRef].s.alignment = {
+						vertical: "middle",
+						horizontal: "center",
+					}; // Set middle alignment
+
+					// Set bold font for cells in row 1
+					if (R === 0) {
+						if (!ws[cellRef].s.font) {
+							ws[cellRef].s.font = {};
+						}
+						ws[cellRef].s.font.bold = true;
+					}
+				}
+			}
+		}
+
+		// Merge cells A8 to A14
+		ws["!merges"] = ws["!merges"] || [];
+
+		// *****************************   PO     *******************************
+		ws["!merges"].push({ s: { r: 4, c: 0 }, e: { r: 8, c: 0 } });
+		ws["!merges"].push({ s: { r: 10, c: 0 }, e: { r: 22, c: 0 } });
+		// Merge cells A25 to A37
+		ws["!merges"].push({ s: { r: 24, c: 0 }, e: { r: 36, c: 0 } });
+		ws["!merges"].push({ s: { r: 38, c: 0 }, e: { r: 47, c: 0 } });
+		ws["!merges"].push({ s: { r: 49, c: 0 }, e: { r: 54, c: 0 } });
+		ws["!merges"].push({ s: { r: 56, c: 0 }, e: { r: 57, c: 0 } });
+		ws["!merges"].push({ s: { r: 59, c: 0 }, e: { r: 62, c: 0 } });
+		ws["!merges"].push({ s: { r: 64, c: 0 }, e: { r: 66, c: 0 } });
+		ws["!merges"].push({ s: { r: 68, c: 0 }, e: { r: 74, c: 0 } });
+		ws["!merges"].push({ s: { r: 76, c: 0 }, e: { r: 82, c: 0 } });
+		ws["!merges"].push({ s: { r: 84, c: 0 }, e: { r: 88, c: 0 } });
+		ws["!merges"].push({ s: { r: 90, c: 0 }, e: { r: 95, c: 0 } });
+		ws["!merges"].push({ s: { r: 97, c: 0 }, e: { r: 101, c: 0 } });
+		ws["!merges"].push({ s: { r: 103, c: 0 }, e: { r: 106, c: 0 } });
+		ws["!merges"].push({ s: { r: 108, c: 0 }, e: { r: 111, c: 0 } });
+
+		// **********************    Competency   **************************
+
+		ws["!merges"].push({ s: { r: 4, c: 1 }, e: { r: 5, c: 1 } });
+		ws["!merges"].push({ s: { r: 10, c: 1 }, e: { r: 12, c: 1 } });
+		ws["!merges"].push({ s: { r: 13, c: 1 }, e: { r: 16, c: 1 } });
+		ws["!merges"].push({ s: { r: 17, c: 1 }, e: { r: 18, c: 1 } });
+		ws["!merges"].push({ s: { r: 19, c: 1 }, e: { r: 22, c: 1 } });
+		ws["!merges"].push({ s: { r: 24, c: 1 }, e: { r: 29, c: 1 } });
+		ws["!merges"].push({ s: { r: 30, c: 1 }, e: { r: 32, c: 1 } });
+		ws["!merges"].push({ s: { r: 33, c: 1 }, e: { r: 34, c: 1 } });
+		ws["!merges"].push({ s: { r: 35, c: 1 }, e: { r: 36, c: 1 } });
+		ws["!merges"].push({ s: { r: 38, c: 1 }, e: { r: 41, c: 1 } });
+		ws["!merges"].push({ s: { r: 42, c: 1 }, e: { r: 43, c: 1 } });
+		ws["!merges"].push({ s: { r: 44, c: 1 }, e: { r: 47, c: 1 } });
+		ws["!merges"].push({ s: { r: 49, c: 1 }, e: { r: 50, c: 1 } });
+		ws["!merges"].push({ s: { r: 51, c: 1 }, e: { r: 52, c: 1 } });
+		ws["!merges"].push({ s: { r: 53, c: 1 }, e: { r: 54, c: 1 } });
+		ws["!merges"].push({ s: { r: 59, c: 1 }, e: { r: 60, c: 1 } });
+		ws["!merges"].push({ s: { r: 61, c: 1 }, e: { r: 62, c: 1 } });
+		ws["!merges"].push({ s: { r: 65, c: 1 }, e: { r: 66, c: 1 } });
+		ws["!merges"].push({ s: { r: 68, c: 1 }, e: { r: 69, c: 1 } });
+		ws["!merges"].push({ s: { r: 70, c: 1 }, e: { r: 73, c: 1 } });
+		ws["!merges"].push({ s: { r: 76, c: 1 }, e: { r: 78, c: 1 } });
+		ws["!merges"].push({ s: { r: 79, c: 1 }, e: { r: 80, c: 1 } });
+		ws["!merges"].push({ s: { r: 81, c: 1 }, e: { r: 82, c: 1 } });
+		ws["!merges"].push({ s: { r: 84, c: 1 }, e: { r: 85, c: 1 } });
+		ws["!merges"].push({ s: { r: 87, c: 1 }, e: { r: 88, c: 1 } });
+		ws["!merges"].push({ s: { r: 90, c: 1 }, e: { r: 91, c: 1 } });
+		ws["!merges"].push({ s: { r: 92, c: 1 }, e: { r: 93, c: 1 } });
+		ws["!merges"].push({ s: { r: 94, c: 1 }, e: { r: 95, c: 1 } });
+		ws["!merges"].push({ s: { r: 97, c: 1 }, e: { r: 98, c: 1 } });
+		ws["!merges"].push({ s: { r: 99, c: 1 }, e: { r: 101, c: 1 } });
+		ws["!merges"].push({ s: { r: 103, c: 1 }, e: { r: 104, c: 1 } });
+		ws["!merges"].push({ s: { r: 105, c: 1 }, e: { r: 106, c: 1 } });
+		ws["!merges"].push({ s: { r: 108, c: 1 }, e: { r: 109, c: 1 } });
+
+		// ************************   PO: Mappling Level    *************************
+		ws["!merges"].push({ s: { r: 9, c: 0 }, e: { r: 9, c: 2 } });
+		ws["!merges"].push({ s: { r: 23, c: 0 }, e: { r: 23, c: 2 } });
+		ws["!merges"].push({ s: { r: 37, c: 0 }, e: { r: 37, c: 2 } });
+		ws["!merges"].push({ s: { r: 48, c: 0 }, e: { r: 48, c: 2 } });
+		ws["!merges"].push({ s: { r: 55, c: 0 }, e: { r: 55, c: 2 } });
+		ws["!merges"].push({ s: { r: 58, c: 0 }, e: { r: 58, c: 2 } });
+		ws["!merges"].push({ s: { r: 63, c: 0 }, e: { r: 63, c: 2 } });
+		ws["!merges"].push({ s: { r: 67, c: 0 }, e: { r: 67, c: 2 } });
+		ws["!merges"].push({ s: { r: 75, c: 0 }, e: { r: 75, c: 2 } });
+		ws["!merges"].push({ s: { r: 83, c: 0 }, e: { r: 83, c: 2 } });
+		ws["!merges"].push({ s: { r: 89, c: 0 }, e: { r: 89, c: 2 } });
+		ws["!merges"].push({ s: { r: 96, c: 0 }, e: { r: 96, c: 2 } });
+		ws["!merges"].push({ s: { r: 102, c: 0 }, e: { r: 102, c: 2 } });
+		ws["!merges"].push({ s: { r: 107, c: 0 }, e: { r: 107, c: 2 } });
+		ws["!merges"].push({ s: { r: 112, c: 0 }, e: { r: 112, c: 2 } });
+
+		// designing first 3 rows
+		ws["!merges"].push({ s: { r: 0, c: 0 }, e: { r: 0, c: 10 } });
+		ws["!merges"].push({ s: { r: 1, c: 0 }, e: { r: 1, c: 10 } });
+		ws["!merges"].push({ s: { r: 2, c: 0 }, e: { r: 2, c: 10 } });
+
 		const wb = XLSX.utils.book_new();
 		XLSX.utils.book_append_sheet(wb, ws, "Sheet1");
 		const excelBuffer = XLSX.write(wb, { bookType: "xlsx", type: "array" });
@@ -1513,7 +1657,6 @@ const TableDetail = ({ params }: { params: { id: string } }) => {
 			new Blob([excelBuffer], { type: "application/octet-stream" }),
 			"table.xlsx"
 		);
-
 		toast.success("Excel file downloaded successfully!");
 	};
 
@@ -1551,8 +1694,8 @@ const TableDetail = ({ params }: { params: { id: string } }) => {
 					<tbody>
 						{table && (
 							<tr>
-								<td>{table.po11}</td>
-								<td>{table.competency11}</td>
+								<td rowSpan={5}>{table.po11}</td>
+								<td rowSpan={2}>{table.competency11}</td>
 								<td>{table.indicators11}</td>
 								<td>{table.weight11}</td>
 								<td>{table.co111}</td>
@@ -1567,9 +1710,7 @@ const TableDetail = ({ params }: { params: { id: string } }) => {
 
 						{table && (
 							<tr>
-								<td>{table.po12}</td>
 								<td>{table.competency12}</td>
-								<td>{table.indicators12}</td>
 								<td>{table.weight12}</td>
 								<td>{table.co112}</td>
 								<td>{table.co212}</td>
@@ -1582,7 +1723,6 @@ const TableDetail = ({ params }: { params: { id: string } }) => {
 						)}
 						{table && (
 							<tr>
-								<td>{table.po13}</td>
 								<td>{table.competency13}</td>
 								<td>{table.indicators13}</td>
 								<td>{table.weight13}</td>
@@ -1597,7 +1737,6 @@ const TableDetail = ({ params }: { params: { id: string } }) => {
 						)}
 						{table && (
 							<tr>
-								<td>{table.po14}</td>
 								<td>{table.competency14}</td>
 								<td>{table.indicators14}</td>
 								<td>{table.weight14}</td>
@@ -1612,7 +1751,6 @@ const TableDetail = ({ params }: { params: { id: string } }) => {
 						)}
 						{table && (
 							<tr>
-								<td>{table.po15}</td>
 								<td>{table.competency15}</td>
 								<td>{table.indicators15}</td>
 								<td>{table.weight15}</td>
@@ -1627,17 +1765,34 @@ const TableDetail = ({ params }: { params: { id: string } }) => {
 						)}
 						{table && (
 							<tr>
-								<td colSpan={4} className='h-16'>
+								<td
+									colSpan={4}
+									className='h-16  bg-green-100 dark:bg-green-900 dark:text-black font-bold '
+								>
 									PO1 :Mapping Level
 								</td>
 
-								<td>{table.po1mapco1}</td>
-								<td>{table.po1mapco2}</td>
-								<td>{table.po1mapco3}</td>
-								<td>{table.po1mapco4}</td>
-								<td>{table.po1mapco5}</td>
-								<td>{table.po1mapco6}</td>
-								<td>{table.po1mapco7}</td>
+								<td className=' bg-green-100 dark:bg-green-900 dark:text-black font-bold '>
+									{table.po1mapco1}
+								</td>
+								<td className=' bg-green-100 dark:bg-green-900 dark:text-black font-bold '>
+									{table.po1mapco2}
+								</td>
+								<td className=' bg-green-100 dark:bg-green-900 dark:text-black font-bold '>
+									{table.po1mapco3}
+								</td>
+								<td className=' bg-green-100 dark:bg-green-900 dark:text-black font-bold '>
+									{table.po1mapco4}
+								</td>
+								<td className=' bg-green-100 dark:bg-green-900 dark:text-black font-bold '>
+									{table.po1mapco5}
+								</td>
+								<td className=' bg-green-100 dark:bg-green-900 dark:text-black font-bold '>
+									{table.po1mapco6}
+								</td>
+								<td className=' bg-green-100 dark:bg-green-900 dark:text-black font-bold '>
+									{table.po1mapco7}
+								</td>
 							</tr>
 						)}
 
@@ -1821,17 +1976,34 @@ const TableDetail = ({ params }: { params: { id: string } }) => {
 
 						{table && (
 							<tr>
-								<td colSpan={4} className='h-16'>
+								<td
+									colSpan={4}
+									className='h-16 bg-green-100 dark:bg-green-900 dark:text-black font-bold '
+								>
 									PO2 :Mapping Level
 								</td>
 
-								<td>{table.po2mapco1}</td>
-								<td>{table.po2mapco2}</td>
-								<td>{table.po2mapco3}</td>
-								<td>{table.po2mapco4}</td>
-								<td>{table.po2mapco5}</td>
-								<td>{table.po2mapco6}</td>
-								<td>{table.po2mapco7}</td>
+								<td className=' bg-green-100 dark:bg-green-900 dark:text-black font-bold '>
+									{table.po2mapco1}
+								</td>
+								<td className=' bg-green-100 dark:bg-green-900 dark:text-black font-bold '>
+									{table.po2mapco2}
+								</td>
+								<td className=' bg-green-100 dark:bg-green-900 dark:text-black font-bold '>
+									{table.po2mapco3}
+								</td>
+								<td className=' bg-green-100 dark:bg-green-900 dark:text-black font-bold '>
+									{table.po2mapco4}
+								</td>
+								<td className=' bg-green-100 dark:bg-green-900 dark:text-black font-bold '>
+									{table.po2mapco5}
+								</td>
+								<td className=' bg-green-100 dark:bg-green-900 dark:text-black font-bold '>
+									{table.po2mapco6}
+								</td>
+								<td className=' bg-green-100 dark:bg-green-900 dark:text-black font-bold '>
+									{table.po2mapco7}
+								</td>
 							</tr>
 						)}
 
@@ -2014,17 +2186,34 @@ const TableDetail = ({ params }: { params: { id: string } }) => {
 
 						{table && (
 							<tr>
-								<td colSpan={4} className='h-16'>
+								<td
+									colSpan={4}
+									className='h-16  bg-green-100 dark:bg-green-900 dark:text-black font-bold '
+								>
 									PO3 :Mapping Level
 								</td>
 
-								<td>{table.po3mapco1}</td>
-								<td>{table.po3mapco2}</td>
-								<td>{table.po3mapco3}</td>
-								<td>{table.po3mapco4}</td>
-								<td>{table.po3mapco5}</td>
-								<td>{table.po3mapco6}</td>
-								<td>{table.po3mapco7}</td>
+								<td className=' bg-green-100 dark:bg-green-900 dark:text-black font-bold '>
+									{table.po3mapco1}
+								</td>
+								<td className=' bg-green-100 dark:bg-green-900 dark:text-black font-bold '>
+									{table.po3mapco2}
+								</td>
+								<td className=' bg-green-100 dark:bg-green-900 dark:text-black font-bold '>
+									{table.po3mapco3}
+								</td>
+								<td className=' bg-green-100 dark:bg-green-900 dark:text-black font-bold '>
+									{table.po3mapco4}
+								</td>
+								<td className=' bg-green-100 dark:bg-green-900 dark:text-black font-bold '>
+									{table.po3mapco5}
+								</td>
+								<td className=' bg-green-100 dark:bg-green-900 dark:text-black font-bold '>
+									{table.po3mapco6}
+								</td>
+								<td className=' bg-green-100 dark:bg-green-900 dark:text-black font-bold '>
+									{table.po3mapco7}
+								</td>
 							</tr>
 						)}
 
@@ -2165,17 +2354,34 @@ const TableDetail = ({ params }: { params: { id: string } }) => {
 						)}
 						{table && (
 							<tr>
-								<td colSpan={4} className='h-16'>
+								<td
+									colSpan={4}
+									className='h-16  bg-green-100 dark:bg-green-900 dark:text-black font-bold '
+								>
 									PO4 :Mapping Level
 								</td>
 
-								<td>{table.po4mapco1}</td>
-								<td>{table.po4mapco2}</td>
-								<td>{table.po4mapco3}</td>
-								<td>{table.po4mapco4}</td>
-								<td>{table.po4mapco5}</td>
-								<td>{table.po4mapco6}</td>
-								<td>{table.po4mapco7}</td>
+								<td className=' bg-green-100 dark:bg-green-900 dark:text-black font-bold '>
+									{table.po4mapco1}
+								</td>
+								<td className=' bg-green-100 dark:bg-green-900 dark:text-black font-bold '>
+									{table.po4mapco2}
+								</td>
+								<td className=' bg-green-100 dark:bg-green-900 dark:text-black font-bold '>
+									{table.po4mapco3}
+								</td>
+								<td className=' bg-green-100 dark:bg-green-900 dark:text-black font-bold '>
+									{table.po4mapco4}
+								</td>
+								<td className=' bg-green-100 dark:bg-green-900 dark:text-black font-bold '>
+									{table.po4mapco5}
+								</td>
+								<td className=' bg-green-100 dark:bg-green-900 dark:text-black font-bold '>
+									{table.po4mapco6}
+								</td>
+								<td className=' bg-green-100 dark:bg-green-900 dark:text-black font-bold '>
+									{table.po4mapco7}
+								</td>
 							</tr>
 						)}
 						{/* ************************************ PO :5  **************************************************** */}
@@ -2263,17 +2469,34 @@ const TableDetail = ({ params }: { params: { id: string } }) => {
 						)}
 						{table && (
 							<tr>
-								<td colSpan={4} className='h-16'>
+								<td
+									colSpan={4}
+									className='h-16  bg-green-100 dark:bg-green-900 dark:text-black font-bold '
+								>
 									PO5 :Mapping Level
 								</td>
 
-								<td>{table.po5mapco1}</td>
-								<td>{table.po5mapco2}</td>
-								<td>{table.po5mapco3}</td>
-								<td>{table.po5mapco4}</td>
-								<td>{table.po5mapco5}</td>
-								<td>{table.po5mapco6}</td>
-								<td>{table.po5mapco7}</td>
+								<td className=' bg-green-100 dark:bg-green-900 dark:text-black font-bold '>
+									{table.po5mapco1}
+								</td>
+								<td className=' bg-green-100 dark:bg-green-900 dark:text-black font-bold '>
+									{table.po5mapco2}
+								</td>
+								<td className=' bg-green-100 dark:bg-green-900 dark:text-black font-bold '>
+									{table.po5mapco3}
+								</td>
+								<td className=' bg-green-100 dark:bg-green-900 dark:text-black font-bold '>
+									{table.po5mapco4}
+								</td>
+								<td className=' bg-green-100 dark:bg-green-900 dark:text-black font-bold '>
+									{table.po5mapco5}
+								</td>
+								<td className=' bg-green-100 dark:bg-green-900 dark:text-black font-bold '>
+									{table.po5mapco6}
+								</td>
+								<td className=' bg-green-100 dark:bg-green-900 dark:text-black font-bold '>
+									{table.po5mapco7}
+								</td>
 							</tr>
 						)}
 
@@ -2309,22 +2532,39 @@ const TableDetail = ({ params }: { params: { id: string } }) => {
 						)}
 						{table && (
 							<tr>
-								<td colSpan={4} className='h-16'>
+								<td
+									colSpan={4}
+									className='h-16  bg-green-100 dark:bg-green-900 dark:text-black font-bold '
+								>
 									PO6 :Mapping Level
 								</td>
-								<td>{table.po6mapco1}</td>
-								<td>{table.po6mapco2}</td>
-								<td>{table.po6mapco3}</td>
-								<td>{table.po6mapco4}</td>
-								<td>{table.po6mapco5}</td>
-								<td>{table.po6mapco6}</td>
-								<td>{table.po6mapco7}</td>
+								<td className=' bg-green-100 dark:bg-green-900 dark:text-black font-bold '>
+									{table.po6mapco1}
+								</td>
+								<td className=' bg-green-100 dark:bg-green-900 dark:text-black font-bold '>
+									{table.po6mapco2}
+								</td>
+								<td className=' bg-green-100 dark:bg-green-900 dark:text-black font-bold '>
+									{table.po6mapco3}
+								</td>
+								<td className=' bg-green-100 dark:bg-green-900 dark:text-black font-bold '>
+									{table.po6mapco4}
+								</td>
+								<td className=' bg-green-100 dark:bg-green-900 dark:text-black font-bold '>
+									{table.po6mapco5}
+								</td>
+								<td className=' bg-green-100 dark:bg-green-900 dark:text-black font-bold '>
+									{table.po6mapco6}
+								</td>
+								<td className=' bg-green-100 dark:bg-green-900 dark:text-black font-bold '>
+									{table.po6mapco7}
+								</td>
 							</tr>
 						)}
 						{/* ************************************ PO :8  **************************************************** */}
 						{table && (
 							<tr>
-								<td rowSpan={4}>{table.po81}</td>
+								<td rowSpan={3}>{table.po81}</td>
 								<td>{table.competency81}</td>
 								<td>{table.indicators81}</td>
 								<td>{table.weight81}</td>
@@ -2366,17 +2606,34 @@ const TableDetail = ({ params }: { params: { id: string } }) => {
 						)}
 						{table && (
 							<tr>
-								<td colSpan={4} className='h-16'>
+								<td
+									colSpan={4}
+									className='h-16  bg-green-100 dark:bg-green-900 dark:text-black font-bold '
+								>
 									PO8 :Mapping Level
 								</td>
 
-								<td>{table.po8mapco1}</td>
-								<td>{table.po8mapco2}</td>
-								<td>{table.po8mapco3}</td>
-								<td>{table.po8mapco4}</td>
-								<td>{table.po8mapco5}</td>
-								<td>{table.po8mapco6}</td>
-								<td>{table.po8mapco7}</td>
+								<td className=' bg-green-100 dark:bg-green-900 dark:text-black font-bold'>
+									{table.po8mapco1}
+								</td>
+								<td className=' bg-green-100 dark:bg-green-900 dark:text-black font-bold'>
+									{table.po8mapco2}
+								</td>
+								<td className=' bg-green-100 dark:bg-green-900 dark:text-black font-bold'>
+									{table.po8mapco3}
+								</td>
+								<td className=' bg-green-100 dark:bg-green-900 dark:text-black font-bold'>
+									{table.po8mapco4}
+								</td>
+								<td className=' bg-green-100 dark:bg-green-900 dark:text-black font-bold'>
+									{table.po8mapco5}
+								</td>
+								<td className=' bg-green-100 dark:bg-green-900 dark:text-black font-bold'>
+									{table.po8mapco6}
+								</td>
+								<td className=' bg-green-100 dark:bg-green-900 dark:text-black font-bold'>
+									{table.po8mapco7}
+								</td>
 							</tr>
 						)}
 
@@ -2478,17 +2735,34 @@ const TableDetail = ({ params }: { params: { id: string } }) => {
 						)}
 						{table && (
 							<tr>
-								<td colSpan={4} className='h-16'>
+								<td
+									colSpan={4}
+									className='h-16  bg-green-100 dark:bg-green-900 dark:text-black font-bold'
+								>
 									PO9 :Mapping Level
 								</td>
 
-								<td>{table.po9mapco1}</td>
-								<td>{table.po9mapco2}</td>
-								<td>{table.po9mapco3}</td>
-								<td>{table.po9mapco4}</td>
-								<td>{table.po9mapco5}</td>
-								<td>{table.po9mapco6}</td>
-								<td>{table.po9mapco7}</td>
+								<td className=' bg-green-100 dark:bg-green-900 dark:text-black font-bold'>
+									{table.po9mapco1}
+								</td>
+								<td className=' bg-green-100 dark:bg-green-900 dark:text-black font-bold'>
+									{table.po9mapco2}
+								</td>
+								<td className=' bg-green-100 dark:bg-green-900 dark:text-black font-bold'>
+									{table.po9mapco3}
+								</td>
+								<td className=' bg-green-100 dark:bg-green-900 dark:text-black font-bold'>
+									{table.po9mapco4}
+								</td>
+								<td className=' bg-green-100 dark:bg-green-900 dark:text-black font-bold'>
+									{table.po9mapco5}
+								</td>
+								<td className=' bg-green-100 dark:bg-green-900 dark:text-black font-bold'>
+									{table.po9mapco6}
+								</td>
+								<td className=' bg-green-100 dark:bg-green-900 dark:text-black font-bold'>
+									{table.po9mapco7}
+								</td>
 							</tr>
 						)}
 						{/* ************************************ PO : 10  **************************************************** */}
@@ -2589,17 +2863,34 @@ const TableDetail = ({ params }: { params: { id: string } }) => {
 						)}
 						{table && (
 							<tr>
-								<td colSpan={4} className='h-16'>
+								<td
+									colSpan={4}
+									className='h-16  bg-green-100 dark:bg-green-900 dark:text-black font-bold'
+								>
 									PO10 :Mapping Level
 								</td>
 
-								<td>{table.po10mapco1}</td>
-								<td>{table.po10mapco2}</td>
-								<td>{table.po10mapco3}</td>
-								<td>{table.po10mapco4}</td>
-								<td>{table.po10mapco5}</td>
-								<td>{table.po10mapco6}</td>
-								<td>{table.po10mapco7}</td>
+								<td className=' bg-green-100 dark:bg-green-900 dark:text-black font-bold'>
+									{table.po10mapco1}
+								</td>
+								<td className=' bg-green-100 dark:bg-green-900 dark:text-black font-bold'>
+									{table.po10mapco2}
+								</td>
+								<td className=' bg-green-100 dark:bg-green-900 dark:text-black font-bold'>
+									{table.po10mapco3}
+								</td>
+								<td className=' bg-green-100 dark:bg-green-900 dark:text-black font-bold'>
+									{table.po10mapco4}
+								</td>
+								<td className=' bg-green-100 dark:bg-green-900 dark:text-black font-bold'>
+									{table.po10mapco5}
+								</td>
+								<td className=' bg-green-100 dark:bg-green-900 dark:text-black font-bold'>
+									{table.po10mapco6}
+								</td>
+								<td className=' bg-green-100 dark:bg-green-900 dark:text-black font-bold'>
+									{table.po10mapco7}
+								</td>
 							</tr>
 						)}
 						{/* ************************************ PO : 11  **************************************************** */}
@@ -2674,17 +2965,34 @@ const TableDetail = ({ params }: { params: { id: string } }) => {
 						)}
 						{table && (
 							<tr>
-								<td colSpan={4} className='h-16'>
+								<td
+									colSpan={4}
+									className='h-16  bg-green-100 dark:bg-green-900 dark:text-black font-bold'
+								>
 									PO11 :Mapping Level
 								</td>
 
-								<td>{table.po11mapco1}</td>
-								<td>{table.po11mapco2}</td>
-								<td>{table.po11mapco3}</td>
-								<td>{table.po11mapco4}</td>
-								<td>{table.po11mapco5}</td>
-								<td>{table.po11mapco6}</td>
-								<td>{table.po11mapco7}</td>
+								<td className=' bg-green-100 dark:bg-green-900 dark:text-black font-bold'>
+									{table.po11mapco1}
+								</td>
+								<td className=' bg-green-100 dark:bg-green-900 dark:text-black font-bold'>
+									{table.po11mapco2}
+								</td>
+								<td className=' bg-green-100 dark:bg-green-900 dark:text-black font-bold'>
+									{table.po11mapco3}
+								</td>
+								<td className=' bg-green-100 dark:bg-green-900 dark:text-black font-bold'>
+									{table.po11mapco4}
+								</td>
+								<td className=' bg-green-100 dark:bg-green-900 dark:text-black font-bold'>
+									{table.po11mapco5}
+								</td>
+								<td className=' bg-green-100 dark:bg-green-900 dark:text-black font-bold'>
+									{table.po11mapco6}
+								</td>
+								<td className=' bg-green-100 dark:bg-green-900 dark:text-black font-bold'>
+									{table.po11mapco7}
+								</td>
 							</tr>
 						)}
 						{/* ************************************ PO : 12  **************************************************** */}
@@ -2774,17 +3082,34 @@ const TableDetail = ({ params }: { params: { id: string } }) => {
 
 						{table && (
 							<tr>
-								<td colSpan={4} className='h-16'>
+								<td
+									colSpan={4}
+									className='h-16  bg-green-100 dark:bg-green-900 dark:text-black font-bold'
+								>
 									PO12 :Mapping Level
 								</td>
 
-								<td>{table.po12mapco1}</td>
-								<td>{table.po12mapco2}</td>
-								<td>{table.po12mapco3}</td>
-								<td>{table.po12mapco4}</td>
-								<td>{table.po12mapco5}</td>
-								<td>{table.po12mapco6}</td>
-								<td>{table.po12mapco7}</td>
+								<td className=' bg-green-100 dark:bg-green-900 dark:text-black font-bold'>
+									{table.po12mapco1}
+								</td>
+								<td className=' bg-green-100 dark:bg-green-900 dark:text-black font-bold'>
+									{table.po12mapco2}
+								</td>
+								<td className=' bg-green-100 dark:bg-green-900 dark:text-black font-bold'>
+									{table.po12mapco3}
+								</td>
+								<td className=' bg-green-100 dark:bg-green-900 dark:text-black font-bold'>
+									{table.po12mapco4}
+								</td>
+								<td className=' bg-green-100 dark:bg-green-900 dark:text-black font-bold'>
+									{table.po12mapco5}
+								</td>
+								<td className=' bg-green-100 dark:bg-green-900 dark:text-black font-bold'>
+									{table.po12mapco6}
+								</td>
+								<td className=' bg-green-100 dark:bg-green-900 dark:text-black font-bold'>
+									{table.po12mapco7}
+								</td>
 							</tr>
 						)}
 
@@ -2861,17 +3186,34 @@ const TableDetail = ({ params }: { params: { id: string } }) => {
 						)}
 						{table && (
 							<tr>
-								<td colSpan={4} className='h-16'>
+								<td
+									colSpan={4}
+									className='h-16  bg-green-100 dark:bg-green-900 dark:text-black font-bold'
+								>
 									PSO 1 :Mapping Level
 								</td>
 
-								<td>{table.pso1mapco1}</td>
-								<td>{table.pso1mapco2}</td>
-								<td>{table.pso1mapco3}</td>
-								<td>{table.pso1mapco4}</td>
-								<td>{table.pso1mapco5}</td>
-								<td>{table.pso1mapco6}</td>
-								<td>{table.pso1mapco7}</td>
+								<td className=' bg-green-100 dark:bg-green-900 dark:text-black font-bold'>
+									{table.pso1mapco1}
+								</td>
+								<td className=' bg-green-100 dark:bg-green-900 dark:text-black font-bold'>
+									{table.pso1mapco2}
+								</td>
+								<td className=' bg-green-100 dark:bg-green-900 dark:text-black font-bold'>
+									{table.pso1mapco3}
+								</td>
+								<td className=' bg-green-100 dark:bg-green-900 dark:text-black font-bold'>
+									{table.pso1mapco4}
+								</td>
+								<td className=' bg-green-100 dark:bg-green-900 dark:text-black font-bold'>
+									{table.pso1mapco5}
+								</td>
+								<td className=' bg-green-100 dark:bg-green-900 dark:text-black font-bold'>
+									{table.pso1mapco6}
+								</td>
+								<td className=' bg-green-100 dark:bg-green-900 dark:text-black font-bold'>
+									{table.pso1mapco7}
+								</td>
 							</tr>
 						)}
 						{/* *******************************   PSO : 2 **************************** */}
@@ -2935,17 +3277,34 @@ const TableDetail = ({ params }: { params: { id: string } }) => {
 
 						{table && (
 							<tr>
-								<td colSpan={4} className='h-16'>
+								<td
+									colSpan={4}
+									className='h-16  bg-green-100 dark:bg-green-900 dark:text-black font-bold'
+								>
 									PSO 2 :Mapping Level
 								</td>
 
-								<td>{table.pso2mapco1}</td>
-								<td>{table.pso2mapco2}</td>
-								<td>{table.pso2mapco3}</td>
-								<td>{table.pso2mapco4}</td>
-								<td>{table.pso2mapco5}</td>
-								<td>{table.pso2mapco6}</td>
-								<td>{table.pso2mapco7}</td>
+								<td className=' bg-green-100 dark:bg-green-900 dark:text-black font-bold'>
+									{table.pso2mapco1}
+								</td>
+								<td className=' bg-green-100 dark:bg-green-900 dark:text-black font-bold'>
+									{table.pso2mapco2}
+								</td>
+								<td className=' bg-green-100 dark:bg-green-900 dark:text-black font-bold'>
+									{table.pso2mapco3}
+								</td>
+								<td className=' bg-green-100 dark:bg-green-900 dark:text-black font-bold'>
+									{table.pso2mapco4}
+								</td>
+								<td className=' bg-green-100 dark:bg-green-900 dark:text-black font-bold'>
+									{table.pso2mapco5}
+								</td>
+								<td className=' bg-green-100 dark:bg-green-900 dark:text-black font-bold'>
+									{table.pso2mapco6}
+								</td>
+								<td className=' bg-green-100 dark:bg-green-900 dark:text-black font-bold'>
+									{table.pso2mapco7}
+								</td>
 							</tr>
 						)}
 						{/* *******************************   PSO : 3  **************************** */}
@@ -3009,24 +3368,44 @@ const TableDetail = ({ params }: { params: { id: string } }) => {
 
 						{table && (
 							<tr>
-								<td colSpan={4} className='h-16'>
+								<td
+									colSpan={4}
+									className='h-16  bg-green-100 dark:bg-green-900 dark:text-black font-bold'
+								>
 									PSO 3 :Mapping Level
 								</td>
 
-								<td>{table.pso3mapco1}</td>
-								<td>{table.pso3mapco2}</td>
-								<td>{table.pso3mapco3}</td>
-								<td>{table.pso3mapco4}</td>
-								<td>{table.pso3mapco5}</td>
-								<td>{table.pso3mapco6}</td>
-								<td>{table.pso3mapco7}</td>
+								<td className=' bg-green-100 dark:bg-green-900 dark:text-black font-bold'>
+									{table.pso3mapco1}
+								</td>
+								<td className=' bg-green-100 dark:bg-green-900 dark:text-black font-bold'>
+									{table.pso3mapco2}
+								</td>
+								<td className=' bg-green-100 dark:bg-green-900 dark:text-black font-bold'>
+									{table.pso3mapco3}
+								</td>
+								<td className=' bg-green-100 dark:bg-green-900 dark:text-black font-bold'>
+									{table.pso3mapco4}
+								</td>
+								<td className=' bg-green-100 dark:bg-green-900 dark:text-black font-bold'>
+									{table.pso3mapco5}
+								</td>
+								<td className=' bg-green-100 dark:bg-green-900 dark:text-black font-bold'>
+									{table.pso3mapco6}
+								</td>
+								<td className=' bg-green-100 dark:bg-green-900 dark:text-black font-bold'>
+									{table.pso3mapco7}
+								</td>
 							</tr>
 						)}
 					</tbody>
 				</table>
 			</Card>
-
-			<Button onClick={exportToExcel}>Download as Excel</Button>
+			<div className='mt-10'>
+				<Button color='success' size='lg' onClick={exportToExcel}>
+					Download as Excel
+				</Button>
+			</div>
 		</>
 	);
 };
