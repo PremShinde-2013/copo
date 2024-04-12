@@ -2,6 +2,9 @@ import { nextui } from "@nextui-org/theme";
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
+	variants: {
+		tableLayout: ["responsive", "hover", "focus"],
+	},
 	content: [
 		"./pages/**/*.{js,ts,jsx,tsx,mdx}",
 		"./components/**/*.{js,ts,jsx,tsx,mdx}",

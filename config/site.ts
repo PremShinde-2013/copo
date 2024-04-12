@@ -14,7 +14,7 @@ export const siteConfig = {
 		},
 
 		{
-			label: "Create-Table",
+			label: "Create-Corelation",
 			href: "/create-mapping-table",
 		},
 		{
@@ -33,7 +33,7 @@ export const siteConfig = {
 		},
 
 		{
-			label: "Create-Table",
+			label: "Create-Corelation",
 			href: "/create-mapping-table",
 		},
 		{

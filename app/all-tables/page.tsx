@@ -32,17 +32,17 @@ const Page = () => {
 	}, []);
 
 	return (
-		<div className='flex flex-wrap gap-6 justify-center'>
+		<div className='flex flex-wrap gap-6 justify-center mx-4'>
 			{table.map((t: any, index: number) => (
 				<div key={index} className='w-full sm:w-1/2 md:w-1/3 lg:w-1/3 xl:w-1/3'>
-					<Card className='max-w-[400px] cursor-pointer'>
+					<Card className='max-w-[800px] cursor-pointer'>
 						<CardHeader className='flex gap-3'>
 							<div className='flex flex-col'>
-								<p className='text-md'>Mapping Table : </p>
+								<p className='text-md'>Corelation Table : </p>
 							</div>
 						</CardHeader>
 						<Divider />
-						<CardBody>
+						<CardBody className='flex justify-center items-center'>
 							<h1 className='text-lg font-bold'> Year : {t.year}</h1>
 
 							<h1 className='text-lg font-bold'> Department : {t.dept}</h1>
@@ -55,6 +55,11 @@ const Page = () => {
 								<Link href={`/table/${t._id}`}>
 									<Button variant='flat' color='primary'>
 										Enter
+									</Button>
+								</Link>
+								<Link href={`/articulation/${t._id}`}>
+									<Button variant='flat' color='primary'>
+										Articulation
 									</Button>
 								</Link>
 

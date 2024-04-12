@@ -1524,16 +1524,16 @@ const TableDetail = ({ params }: { params: { id: string } }) => {
 		// Set column widths
 		const columnWidths = [
 			{ wch: 30 }, // Column A
-			{ wch: 30 }, // Column B
-			{ wch: 30 }, // Column C
+			{ wch: 40 }, // Column B
+			{ wch: 50 }, // Column C
 			{ wch: 10 }, // Column D
-			{ wch: 5 }, // Column E
-			{ wch: 5 }, // Column F
-			{ wch: 5 }, // Column G
-			{ wch: 5 }, // Column H
-			{ wch: 5 }, // Column I
-			{ wch: 5 }, // Column J
-			{ wch: 5 }, // Column K
+			{ wch: 8 }, // Column E
+			{ wch: 8 }, // Column F
+			{ wch: 8 }, // Column G
+			{ wch: 8 }, // Column H
+			{ wch: 8 }, // Column I
+			{ wch: 8 }, // Column J
+			{ wch: 8 }, // Column K
 		];
 		ws["!cols"] = columnWidths;
 
@@ -1655,7 +1655,7 @@ const TableDetail = ({ params }: { params: { id: string } }) => {
 		const excelBuffer = XLSX.write(wb, { bookType: "xlsx", type: "array" });
 		saveAs(
 			new Blob([excelBuffer], { type: "application/octet-stream" }),
-			"table.xlsx"
+			`CO-PO Correlation Matrix_${table.subject}.xlsx`
 		);
 		toast.success("Excel file downloaded successfully!");
 	};
