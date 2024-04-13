@@ -17,10 +17,6 @@ export const siteConfig = {
 			label: "Create-Corelation",
 			href: "/create-mapping-table",
 		},
-		{
-			label: "Test-Table",
-			href: "/test-table",
-		},
 	],
 	navMenuItems: [
 		{
@@ -35,10 +31,6 @@ export const siteConfig = {
 		{
 			label: "Create-Corelation",
 			href: "/create-mapping-table",
-		},
-		{
-			label: "Test-Table",
-			href: "/test-table",
 		},
 	],
 	links: {
