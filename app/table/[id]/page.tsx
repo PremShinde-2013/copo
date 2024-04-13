@@ -1521,7 +1521,6 @@ const TableDetail = ({ params }: { params: { id: string } }) => {
 				table.pso3mapco7, // Data for po1mapco7
 			],
 		]);
-		// Set column widths
 		const columnWidths = [
 			{ wch: 30 }, // Column A
 			{ wch: 40 }, // Column B
