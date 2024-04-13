@@ -70,7 +70,7 @@ const Footer = ({}: FooterProps) => {
 						<ul className='space-y-4'>
 							<li>
 								<Link
-									href='https://www.linkedin.com/in/prem-shinde-diet/'
+									href='https://www.linkedin.com/company/dnyanashreeinstitute/'
 									className='text-base text-black dark:text-gray-300 dark:hover:text-white'
 								>
 									Linkedin
@@ -78,36 +78,36 @@ const Footer = ({}: FooterProps) => {
 							</li>
 							<li>
 								<Link
-									href='https://www.instagram.com/premshinde__/'
+									href='https://www.instagram.com/dnyanshree_institute?igsh=anJ1YmtwN21lejV6'
 									className='text-base text-black dark:text-gray-300 dark:hover:text-white'
 								>
 									Instagram
 								</Link>
 							</li>
-							<li>
+							{/* <li>
 								<Link
 									href='https://github.com/PremShinde-2013'
 									className='text-base text-black dark:text-gray-300 dark:hover:text-white'
 								>
 									github
 								</Link>
-							</li>
+							</li> */}
 						</ul>
 					</div>
 					<div>
 						<h3 className='text-[20px] font-[600] text-black dark:text-white pb-3'>
 							Contact Info
 						</h3>
-						<p className='text-base text-black dark:text-gray-300 dark:hover:text-white pb-2'>
-							Call Us: 92845 79372
-						</p>
 
 						<p className='text-base text-black dark:text-gray-300 dark:hover:text-white pb-2'>
-							Address: Satara, Maharashtra , India
+							Tel: +91-8600009009
+						</p>
+						<p className='text-base text-black dark:text-gray-300 dark:hover:text-white pb-2'>
+							A/P- Sonwadi-Gajawadi, Sajjangad Road, Satara-415013
 						</p>
 
 						<p className='text-base text-black dark:text-gray-300 dark:hover:text-white  pb-2'>
-							Mail Us: shindeprem102@gmail.com
+							Mail Us: admindiet@dnyanshree.edu.in
 						</p>
 					</div>
 				</div>
