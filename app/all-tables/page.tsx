@@ -50,8 +50,8 @@ const Page = () => {
 							<h1 className='text-lg font-bold'> Subject : {t.subject}</h1>
 						</CardBody>
 						<Divider />
-						<CardFooter className='flex justify-between flex-wrap'>
-							<div className=' flex gap-2'>
+						<CardFooter className='flex justify-between flex-wrap mx-2'>
+							<div className=' flex gap-2 my-4'>
 								<Link href={`/table/${t._id}`}>
 									<Button variant='flat' color='primary'>
 										Enter

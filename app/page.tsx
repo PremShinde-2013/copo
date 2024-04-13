@@ -85,8 +85,8 @@ export default function Home() {
 								</h1>
 							</CardBody>
 							<Divider />
-							<CardFooter className='flex justify-between flex-wrap'>
-								<div className=' flex gap-4 '>
+							<CardFooter className='flex justify-between flex-wrap mx-2'>
+								<div className=' flex gap-4 my-4'>
 									<Link href={`/table/${table._id}`}>
 										<Button variant='flat' color='primary'>
 											Enter
