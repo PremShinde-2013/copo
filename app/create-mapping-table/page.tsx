@@ -18017,7 +18017,9 @@ export default function App() {
 					</table>
 				</div>
 
-				<Button type='submit'>Submit</Button>
+				<Button type='submit' variant='flat' color='success' size='lg'>
+					Submit
+				</Button>
 			</form>
 		</>
 	);

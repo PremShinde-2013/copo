@@ -42,12 +42,12 @@ export default function Home() {
 						<h2 className='glassmorphism max-w-[273px] rounded py-2 text-center text-base font-normal'></h2>
 						<div className='flex xl:flex-row  flex-col gap-2'>
 							<Link href='/create-mapping-table'>
-								<Button variant='flat' color='primary'>
+								<Button variant='solid' color='success'>
 									Create Mapping Table
 								</Button>
 							</Link>
 							<Link href='/all-tables'>
-								<Button variant='flat' color='primary'>
+								<Button variant='solid' color='success'>
 									View All Tables
 								</Button>
 							</Link>
@@ -88,17 +88,17 @@ export default function Home() {
 							<CardFooter className='flex justify-between flex-wrap '>
 								<div className=' flex gap-4 my-4'>
 									<Link href={`/table/${table._id}`}>
-										<Button variant='flat' color='primary'>
+										<Button variant='flat' color='success'>
 											Enter
 										</Button>
 									</Link>
 									<Link href={`/articulation/${table._id}`}>
-										<Button variant='flat' color='primary'>
+										<Button variant='flat' color='success'>
 											Articulation
 										</Button>
 									</Link>
 									<Link href={`/po-table/${table._id}`}>
-										<Button variant='flat' color='primary'>
+										<Button variant='flat' color='success'>
 											Edit PO&apos;s
 										</Button>
 									</Link>

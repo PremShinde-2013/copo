@@ -62,7 +62,7 @@ module.exports = {
 				"accordion-up": "accordion-up 0.2s ease-out",
 			},
 			backgroundImage: {
-				hero: "url('/hero-background.png')",
+				hero: "url('/bg-copo.jpg')",
 			},
 		},
 	},

@@ -53,18 +53,18 @@ const Page = () => {
 						<CardFooter className='flex justify-between flex-wrap '>
 							<div className=' flex gap-2 my-4'>
 								<Link href={`/table/${t._id}`}>
-									<Button variant='flat' color='primary'>
+									<Button variant='flat' color='success'>
 										Enter
 									</Button>
 								</Link>
 								<Link href={`/articulation/${t._id}`}>
-									<Button variant='flat' color='primary'>
+									<Button variant='flat' color='success'>
 										Articulation
 									</Button>
 								</Link>
 
 								<Link href={`/po-table/${t._id}`}>
-									<Button variant='flat' color='primary'>
+									<Button variant='flat' color='success'>
 										Edit PO&apos;s
 									</Button>
 								</Link>
