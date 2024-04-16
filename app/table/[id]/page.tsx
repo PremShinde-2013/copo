@@ -40,8 +40,8 @@ const TableDetail = ({ params }: { params: { id: string } }) => {
 
 	const exportToExcel = () => {
 		const ws = XLSX.utils.aoa_to_sheet([
-			[`Department 0f ${table.dept} `, "", "", "", "", "", "", "", "", "", ""],
-			["CO PO PSO Corelation", "", "", "", "", "", "", "", "", "", ""],
+			[`Department Of ${table.dept} `, "", "", "", "", "", "", "", "", "", ""],
+			["CO PO PSO Corelation Matrix", "", "", "", "", "", "", "", "", "", ""],
 			[
 				`Name of Course with Coursecode - ${table.subject}`,
 				"",

@@ -40,8 +40,8 @@ const TableDetail = ({ params }: { params: { id: string } }) => {
 
 	const exportToExcel = () => {
 		const ws = XLSX.utils.aoa_to_sheet([
-			[`Department 0f ${table.dept} `, "", "", "", "", "", "", ""],
-			["CO PO PSO Articulation", "", "", "", "", "", "", ""],
+			[`Department Of ${table.dept} `, "", "", "", "", "", "", ""],
+			["CO PO PSO Articulation Matrix", "", "", "", "", "", "", ""],
 			[
 				`Name of Course with Coursecode - ${table.subject}`,
 				"",
@@ -55,7 +55,8 @@ const TableDetail = ({ params }: { params: { id: string } }) => {
 			],
 			["PO", "CO1", "CO2", "CO3", "CO4", "CO5", "CO6", "CO7"],
 			[
-				table.po11,
+				// table.po11,
+				"PO : 1",
 				table.po1mapco1, // Data for po1mapco1
 				table.po1mapco2, // Data for po1mapco2
 				table.po1mapco3, // Data for po1mapco3
@@ -67,7 +68,8 @@ const TableDetail = ({ params }: { params: { id: string } }) => {
 
 			// ***************************************     PO 2  **********************************************
 			[
-				table.po21,
+				// table.po21,
+				"PO : 2",
 				table.po2mapco1,
 				table.po2mapco2,
 				table.po2mapco3,
@@ -79,7 +81,9 @@ const TableDetail = ({ params }: { params: { id: string } }) => {
 
 			//  ***********************************  po3      ***************************************************
 			[
-				table.po31,
+				// table.po31,
+				"PO : 3",
+
 				table.po3mapco1,
 				table.po3mapco2,
 				table.po3mapco3,
@@ -91,7 +95,9 @@ const TableDetail = ({ params }: { params: { id: string } }) => {
 
 			//  ***********************************  po4      ***************************************************
 			[
-				table.po41,
+				// table.po41,
+				"PO : 4",
+
 				table.po4mapco1,
 				table.po4mapco2,
 				table.po4mapco3,
@@ -103,7 +109,9 @@ const TableDetail = ({ params }: { params: { id: string } }) => {
 
 			//  ***********************************  po 5      ***************************************************
 			[
-				table.po51,
+				// table.po51,
+				"PO : 5",
+
 				table.po5mapco1,
 				table.po5mapco2,
 				table.po5mapco3,
@@ -115,7 +123,9 @@ const TableDetail = ({ params }: { params: { id: string } }) => {
 
 			//  ***********************************  po 6      ***************************************************
 			[
-				table.po61,
+				// table.po61,
+				"PO : 6",
+
 				table.po6mapco1,
 				table.po6mapco2,
 				table.po6mapco3,
@@ -127,7 +137,9 @@ const TableDetail = ({ params }: { params: { id: string } }) => {
 
 			//  ***********************************  po 7      ***************************************************
 			[
-				table.po71,
+				// table.po71,
+				"PO : 7",
+
 				table.po7mapco1,
 				table.po7mapco2,
 				table.po7mapco3,
@@ -139,7 +151,9 @@ const TableDetail = ({ params }: { params: { id: string } }) => {
 
 			//  ***********************************  po 8      ***************************************************
 			[
-				table.po81,
+				// table.po81,
+				"PO : 8",
+
 				table.po8mapco1,
 				table.po8mapco2,
 				table.po8mapco3,
@@ -151,7 +165,9 @@ const TableDetail = ({ params }: { params: { id: string } }) => {
 
 			//  ***********************************  po : 9      ***************************************************
 			[
-				table.po91,
+				// table.po91,
+				"PO : 9",
+
 				table.po9mapco1,
 				table.po9mapco2,
 				table.po9mapco3,
@@ -163,7 +179,9 @@ const TableDetail = ({ params }: { params: { id: string } }) => {
 
 			//  ***********************************  po : 10      ***************************************************
 			[
-				table.po101,
+				// table.po101,
+				"PO : 10",
+
 				table.po10mapco1,
 				table.po10mapco2,
 				table.po10mapco3,
@@ -175,7 +193,9 @@ const TableDetail = ({ params }: { params: { id: string } }) => {
 
 			//  ***********************************  po : 11      ***************************************************
 			[
-				table.po111,
+				// table.po111,
+				"PO : 11",
+
 				table.po11mapco1,
 				table.po11mapco2,
 				table.po11mapco3,
@@ -187,7 +207,9 @@ const TableDetail = ({ params }: { params: { id: string } }) => {
 
 			//  ***********************************  po : 12      ***************************************************
 			[
-				table.po121,
+				// table.po121,
+				"PO : 12",
+
 				table.po12mapco1,
 				table.po12mapco2,
 				table.po12mapco3,
@@ -200,7 +222,9 @@ const TableDetail = ({ params }: { params: { id: string } }) => {
 			//  ***************************    PSO : 1  *****************************************
 
 			[
-				table.pso11,
+				// table.pso11,
+				"PSO : 1",
+
 				table.pso1mapco1,
 				table.pso1mapco2,
 				table.pso1mapco3,
@@ -213,7 +237,9 @@ const TableDetail = ({ params }: { params: { id: string } }) => {
 			//  ***************************    PSO : 2  *****************************************
 
 			[
-				table.pso21,
+				// table.pso21,
+				"PSO : 2",
+
 				table.pso2mapco1,
 				table.pso2mapco2,
 				table.pso2mapco3,
@@ -226,7 +252,9 @@ const TableDetail = ({ params }: { params: { id: string } }) => {
 			//  ***************************    PSO : 3  *****************************************
 
 			[
-				table.pso31,
+				// table.pso31,
+				"PSO : 3",
+
 				table.pso3mapco1,
 				table.pso3mapco2,
 				table.pso3mapco3,
@@ -405,7 +433,8 @@ const TableDetail = ({ params }: { params: { id: string } }) => {
 						{table && (
 							<tr>
 								<td className='py-10' rowSpan={1}>
-									{table.po11}
+									{/* {table.po11} */}
+									PO : 1
 								</td>
 								<td className='py-10'>{table.po1mapco1}</td>
 								<td className='py-10'>{table.po1mapco2}</td>
@@ -421,7 +450,9 @@ const TableDetail = ({ params }: { params: { id: string } }) => {
 						{table && (
 							<tr>
 								<td className='py-10' rowSpan={1}>
-									{table.po21}
+									{/* {table.po21}
+									 */}
+									PO : 2
 								</td>
 								<td className='py-10'>{table.po2mapco1}</td>
 								<td className='py-10'>{table.po2mapco2}</td>
@@ -437,7 +468,8 @@ const TableDetail = ({ params }: { params: { id: string } }) => {
 						{table && (
 							<tr>
 								<td className='py-10' rowSpan={1}>
-									{table.po31}
+									{/* {table.po31} */}
+									PO : 3
 								</td>
 								<td className='py-10'>{table.po3mapco1}</td>
 								<td className='py-10'>{table.po3mapco2}</td>
@@ -453,7 +485,8 @@ const TableDetail = ({ params }: { params: { id: string } }) => {
 						{table && (
 							<tr>
 								<td className='py-10' rowSpan={1}>
-									{table.po41}
+									{/* {table.po41} */}
+									PO : 4
 								</td>
 								<td className='py-10'>{table.po4mapco1}</td>
 								<td className='py-10'>{table.po4mapco2}</td>
@@ -469,7 +502,8 @@ const TableDetail = ({ params }: { params: { id: string } }) => {
 						{table && (
 							<tr>
 								<td className='py-10' rowSpan={1}>
-									{table.po51}
+									{/* {table.po51} */}
+									PO : 5
 								</td>
 								<td className='py-10'>{table.po5mapco1}</td>
 								<td className='py-10'>{table.po5mapco2}</td>
@@ -485,7 +519,8 @@ const TableDetail = ({ params }: { params: { id: string } }) => {
 						{table && (
 							<tr>
 								<td className='py-10' rowSpan={1}>
-									{table.po61}
+									{/* {table.po61} */}
+									PO : 6
 								</td>
 								<td className='py-10'>{table.po6mapco1}</td>
 								<td className='py-10'>{table.po6mapco2}</td>
@@ -496,12 +531,29 @@ const TableDetail = ({ params }: { params: { id: string } }) => {
 								<td className='py-10'>{table.po6mapco7}</td>
 							</tr>
 						)}
+						{/* ************************************ PO :7  **************************************************** */}
+						{table && (
+							<tr>
+								<td className='py-10' rowSpan={1}>
+									{/* {table.po61} */}
+									PO : 7
+								</td>
+								<td className='py-10'>{table.po7mapco1}</td>
+								<td className='py-10'>{table.po7mapco2}</td>
+								<td className='py-10'>{table.po7mapco3}</td>
+								<td className='py-10'>{table.po7mapco4}</td>
+								<td className='py-10'>{table.po7mapco5}</td>
+								<td className='py-10'>{table.po7mapco6}</td>
+								<td className='py-10'>{table.po7mapco7}</td>
+							</tr>
+						)}
 
 						{/* ************************************ PO :8  **************************************************** */}
 						{table && (
 							<tr>
 								<td className='py-10' rowSpan={1}>
 									{table.po81}
+									PO : 8
 								</td>
 								<td className='py-10'>{table.po8mapco1}</td>
 								<td className='py-10'>{table.po8mapco2}</td>
@@ -517,7 +569,8 @@ const TableDetail = ({ params }: { params: { id: string } }) => {
 						{table && (
 							<tr>
 								<td className='py-10' rowSpan={1}>
-									{table.po91}
+									{/* {table.po91} */}
+									PO : 9
 								</td>
 								<td className='py-10'>{table.po9mapco1}</td>
 								<td className='py-10'>{table.po9mapco2}</td>
@@ -533,7 +586,8 @@ const TableDetail = ({ params }: { params: { id: string } }) => {
 						{table && (
 							<tr>
 								<td className='py-10' rowSpan={1}>
-									{table.po101}
+									{/* {table.po101} */}
+									PO : 10
 								</td>
 								<td className='py-10'>{table.po10mapco1}</td>
 								<td className='py-10'>{table.po10mapco2}</td>
@@ -549,7 +603,8 @@ const TableDetail = ({ params }: { params: { id: string } }) => {
 						{table && (
 							<tr>
 								<td className='py-10' rowSpan={1}>
-									{table.po111}
+									{/* {table.po111} */}
+									PO : 11
 								</td>
 
 								<td className='py-10'>{table.po11mapco1}</td>
@@ -566,7 +621,8 @@ const TableDetail = ({ params }: { params: { id: string } }) => {
 						{table && (
 							<tr>
 								<td className='py-10' rowSpan={1}>
-									{table.po121}
+									{/* {table.po121} */}
+									PO : 12
 								</td>
 
 								<td className='py-10'>{table.po12mapco1}</td>
@@ -584,7 +640,8 @@ const TableDetail = ({ params }: { params: { id: string } }) => {
 						{table && (
 							<tr>
 								<td className='py-10' rowSpan={1}>
-									{table.pso11}
+									{/* {table.pso11} */}
+									PSO : 1
 								</td>
 
 								<td className='py-10'>{table.pso1mapco1}</td>
@@ -602,7 +659,8 @@ const TableDetail = ({ params }: { params: { id: string } }) => {
 						{table && (
 							<tr>
 								<td className='py-10' rowSpan={1}>
-									{table.pso21}
+									{/* {table.pso21} */}
+									PSO : 2
 								</td>
 								<td className='py-10'>{table.pso2mapco1}</td>
 								<td className='py-10'>{table.pso2mapco2}</td>
@@ -619,7 +677,8 @@ const TableDetail = ({ params }: { params: { id: string } }) => {
 						{table && (
 							<tr>
 								<td className='py-10' rowSpan={1}>
-									{table.pso31}
+									{/* {table.pso31} */}
+									PSO : 3
 								</td>
 								<td className='py-10'>{table.pso3mapco1}</td>
 								<td className='py-10'>{table.pso3mapco2}</td>
