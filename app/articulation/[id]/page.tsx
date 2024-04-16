@@ -552,7 +552,7 @@ const TableDetail = ({ params }: { params: { id: string } }) => {
 						{table && (
 							<tr>
 								<td className='py-10' rowSpan={1}>
-									{table.po81}
+									{/* {table.po81} */}
 									PO : 8
 								</td>
 								<td className='py-10'>{table.po8mapco1}</td>
