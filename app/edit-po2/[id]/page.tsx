@@ -1125,6 +1125,18 @@ const TablePo2 = ({ params }: { params: { id: string } }) => {
 			toast.error("Failed to save changes");
 		}
 	};
+	const handleInputChange = (value: string, fieldName: string) => {
+		const parsedValue = parseFloat(value);
+
+		if (parsedValue > 1) {
+			toast.error("Value cannot be greater than 1");
+		} else {
+			setEditedTable((prevTable: any) => ({
+				...prevTable,
+				[fieldName]: String(Math.min(Math.max(parsedValue, 0), 1)),
+			}));
+		}
+	};
 
 	if (loading) {
 		return (

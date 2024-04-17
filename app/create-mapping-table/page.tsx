@@ -1358,19 +1358,19 @@ export default function App() {
 		"2.4.4      Extract desired understanding and conclusions consistent with objectives and limitations of the analysis"
 	);
 
-	const [weight21, setWeight21] = useState("0.8");
-	const [weight22, setWeight22] = useState("0.8");
-	const [weight23, setWeight23] = useState("0.8");
-	const [weight24, setWeight24] = useState("0.8");
-	const [weight25, setWeight25] = useState("0.8");
-	const [weight26, setWeight26] = useState("0.8");
-	const [weight27, setWeight27] = useState("0.8");
-	const [weight28, setWeight28] = useState("0.8");
-	const [weight29, setWeight29] = useState("0.8");
-	const [weight210, setWeight210] = useState("0.8");
-	const [weight211, setWeight211] = useState("0.8");
-	const [weight212, setWeight212] = useState("0.8");
-	const [weight213, setWeight213] = useState("0.8");
+	const [weight21, setWeight21] = useState("0.08");
+	const [weight22, setWeight22] = useState("0.08");
+	const [weight23, setWeight23] = useState("0.08");
+	const [weight24, setWeight24] = useState("0.08");
+	const [weight25, setWeight25] = useState("0.08");
+	const [weight26, setWeight26] = useState("0.08");
+	const [weight27, setWeight27] = useState("0.08");
+	const [weight28, setWeight28] = useState("0.08");
+	const [weight29, setWeight29] = useState("0.08");
+	const [weight210, setWeight210] = useState("0.08");
+	const [weight211, setWeight211] = useState("0.08");
+	const [weight212, setWeight212] = useState("0.08");
+	const [weight213, setWeight213] = useState("0.08");
 
 	const [co121, setCo121] = useState("");
 	const [co122, setCo122] = useState("");
@@ -1537,19 +1537,19 @@ export default function App() {
 		"3.4.2      Generate information through appropriate tests to improve or revise the design"
 	);
 
-	const [weight31, setWeight31] = useState("0.8");
-	const [weight32, setWeight32] = useState("0.8");
-	const [weight33, setWeight33] = useState("0.8");
-	const [weight34, setWeight34] = useState("0.8");
-	const [weight35, setWeight35] = useState("0.8");
-	const [weight36, setWeight36] = useState("0.8");
-	const [weight37, setWeight37] = useState("0.8");
-	const [weight38, setWeight38] = useState("0.8");
-	const [weight39, setWeight39] = useState("0.8");
-	const [weight310, setWeight310] = useState("0.8");
-	const [weight311, setWeight311] = useState("0.8");
-	const [weight312, setWeight312] = useState("0.8");
-	const [weight313, setWeight313] = useState("0.8");
+	const [weight31, setWeight31] = useState("0.08");
+	const [weight32, setWeight32] = useState("0.08");
+	const [weight33, setWeight33] = useState("0.08");
+	const [weight34, setWeight34] = useState("0.08");
+	const [weight35, setWeight35] = useState("0.08");
+	const [weight36, setWeight36] = useState("0.08");
+	const [weight37, setWeight37] = useState("0.08");
+	const [weight38, setWeight38] = useState("0.08");
+	const [weight39, setWeight39] = useState("0.08");
+	const [weight310, setWeight310] = useState("0.08");
+	const [weight311, setWeight311] = useState("0.08");
+	const [weight312, setWeight312] = useState("0.08");
+	const [weight313, setWeight313] = useState("0.08");
 
 	const [co131, setCo131] = useState("");
 	const [co132, setCo132] = useState("");

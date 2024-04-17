@@ -110,7 +110,7 @@ const TableDetail = ({ params }: { params: { id: string } }) => {
 
 							<CardFooter>
 								<Link href={`/edit-po/${editedTable?._id}`}>
-									<Button color='secondary'>Edit</Button>
+									<Button color='success'>Edit</Button>
 								</Link>
 							</CardFooter>
 						</Card>
@@ -120,7 +120,7 @@ const TableDetail = ({ params }: { params: { id: string } }) => {
 
 							<CardFooter>
 								<Link href={`/edit-po2/${editedTable?._id}`}>
-									<Button color='secondary'>Edit</Button>
+									<Button color='success'>Edit</Button>
 								</Link>
 							</CardFooter>
 						</Card>
@@ -130,7 +130,7 @@ const TableDetail = ({ params }: { params: { id: string } }) => {
 
 							<CardFooter>
 								<Link href={`/edit-po3/${editedTable?._id}`}>
-									<Button color='secondary'>Edit</Button>
+									<Button color='success'>Edit</Button>
 								</Link>
 							</CardFooter>
 						</Card>
@@ -140,7 +140,7 @@ const TableDetail = ({ params }: { params: { id: string } }) => {
 
 							<CardFooter>
 								<Link href={`/edit-po4/${editedTable?._id}`}>
-									<Button color='secondary'>Edit</Button>
+									<Button color='success'>Edit</Button>
 								</Link>
 							</CardFooter>
 						</Card>
@@ -150,7 +150,7 @@ const TableDetail = ({ params }: { params: { id: string } }) => {
 
 							<CardFooter>
 								<Link href={`/edit-po5/${editedTable?._id}`}>
-									<Button color='secondary'>Edit</Button>
+									<Button color='success'>Edit</Button>
 								</Link>
 							</CardFooter>
 						</Card>
@@ -160,7 +160,7 @@ const TableDetail = ({ params }: { params: { id: string } }) => {
 
 							<CardFooter>
 								<Link href={`/edit-po6/${editedTable?._id}`}>
-									<Button color='secondary'>Edit</Button>
+									<Button color='success'>Edit</Button>
 								</Link>
 							</CardFooter>
 						</Card>
@@ -170,7 +170,7 @@ const TableDetail = ({ params }: { params: { id: string } }) => {
 
 							<CardFooter>
 								<Link href={`/edit-po7/${editedTable?._id}`}>
-									<Button color='secondary'>Edit</Button>
+									<Button color='success'>Edit</Button>
 								</Link>
 							</CardFooter>
 						</Card>
@@ -180,7 +180,7 @@ const TableDetail = ({ params }: { params: { id: string } }) => {
 
 							<CardFooter>
 								<Link href={`/edit-po8/${editedTable?._id}`}>
-									<Button color='secondary'>Edit</Button>
+									<Button color='success'>Edit</Button>
 								</Link>
 							</CardFooter>
 						</Card>
@@ -190,7 +190,7 @@ const TableDetail = ({ params }: { params: { id: string } }) => {
 
 							<CardFooter>
 								<Link href={`/edit-po9/${editedTable?._id}`}>
-									<Button color='secondary'>Edit</Button>
+									<Button color='success'>Edit</Button>
 								</Link>
 							</CardFooter>
 						</Card>
@@ -200,7 +200,7 @@ const TableDetail = ({ params }: { params: { id: string } }) => {
 
 							<CardFooter>
 								<Link href={`/edit-po10/${editedTable?._id}`}>
-									<Button color='secondary'>Edit</Button>
+									<Button color='success'>Edit</Button>
 								</Link>
 							</CardFooter>
 						</Card>
@@ -210,7 +210,7 @@ const TableDetail = ({ params }: { params: { id: string } }) => {
 
 							<CardFooter>
 								<Link href={`/edit-po11/${editedTable?._id}`}>
-									<Button color='secondary'>Edit</Button>
+									<Button color='success'>Edit</Button>
 								</Link>
 							</CardFooter>
 						</Card>
@@ -220,7 +220,7 @@ const TableDetail = ({ params }: { params: { id: string } }) => {
 
 							<CardFooter>
 								<Link href={`/edit-po12/${editedTable?._id}`}>
-									<Button color='secondary'>Edit</Button>
+									<Button color='success'>Edit</Button>
 								</Link>
 							</CardFooter>
 						</Card>
@@ -230,7 +230,7 @@ const TableDetail = ({ params }: { params: { id: string } }) => {
 
 							<CardFooter>
 								<Link href={`/edit-pso1/${editedTable?._id}`}>
-									<Button color='secondary'>Edit</Button>
+									<Button color='success'>Edit</Button>
 								</Link>
 							</CardFooter>
 						</Card>
@@ -240,7 +240,7 @@ const TableDetail = ({ params }: { params: { id: string } }) => {
 
 							<CardFooter>
 								<Link href={`/edit-pso2/${editedTable?._id}`}>
-									<Button color='secondary'>Edit</Button>
+									<Button color='success'>Edit</Button>
 								</Link>
 							</CardFooter>
 						</Card>
@@ -250,7 +250,7 @@ const TableDetail = ({ params }: { params: { id: string } }) => {
 
 							<CardFooter>
 								<Link href={`/edit-pso3/${editedTable?._id}`}>
-									<Button color='secondary'>Edit</Button>
+									<Button color='success'>Edit</Button>
 								</Link>
 							</CardFooter>
 						</Card>
