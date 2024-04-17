@@ -6168,6 +6168,18 @@ export default function App() {
 		}
 	}, [year]);
 
+	const handleInputChange = (
+		value: string,
+		setter: React.Dispatch<React.SetStateAction<string>>
+	) => {
+		const parsedValue = parseFloat(value);
+
+		if (parsedValue > 1) {
+			toast.error("Value cannot be greater than 1");
+		} else {
+			setter(String(Math.min(Math.max(parsedValue, 0), 1)));
+		}
+	};
 	return (
 		<>
 			<form onSubmit={handleSubmit}>
@@ -6312,10 +6324,8 @@ export default function App() {
 										max={1}
 										type='number'
 										value={co111}
-										onChange={(e: { target: { value: any } }) =>
-											setCo111(
-												String(Math.min(Math.max(Number(e.target.value), 0), 1))
-											)
+										onChange={(e) =>
+											handleInputChange(e.target.value, setCo111)
 										}
 									/>
 								</td>
@@ -6323,10 +6333,8 @@ export default function App() {
 									<Input
 										type='number'
 										value={co211}
-										onChange={(e: { target: { value: any } }) =>
-											setCo211(
-												String(Math.min(Math.max(Number(e.target.value), 0), 1))
-											)
+										onChange={(e) =>
+											handleInputChange(e.target.value, setCo211)
 										}
 									/>
 								</td>
@@ -6334,10 +6342,8 @@ export default function App() {
 									<Input
 										type='number'
 										value={co311}
-										onChange={(e: { target: { value: any } }) =>
-											setCo311(
-												String(Math.min(Math.max(Number(e.target.value), 0), 1))
-											)
+										onChange={(e) =>
+											handleInputChange(e.target.value, setCo311)
 										}
 									/>
 								</td>
@@ -6345,10 +6351,8 @@ export default function App() {
 									<Input
 										type='number'
 										value={co411}
-										onChange={(e: { target: { value: any } }) =>
-											setCo411(
-												String(Math.min(Math.max(Number(e.target.value), 0), 1))
-											)
+										onChange={(e) =>
+											handleInputChange(e.target.value, setCo411)
 										}
 									/>
 								</td>
@@ -6356,10 +6360,8 @@ export default function App() {
 									<Input
 										type='number'
 										value={co511}
-										onChange={(e: { target: { value: any } }) =>
-											setCo511(
-												String(Math.min(Math.max(Number(e.target.value), 0), 1))
-											)
+										onChange={(e) =>
+											handleInputChange(e.target.value, setCo511)
 										}
 									/>
 								</td>
@@ -6367,10 +6369,8 @@ export default function App() {
 									<Input
 										type='number'
 										value={co611}
-										onChange={(e: { target: { value: any } }) =>
-											setCo611(
-												String(Math.min(Math.max(Number(e.target.value), 0), 1))
-											)
+										onChange={(e) =>
+											handleInputChange(e.target.value, setCo611)
 										}
 									/>
 								</td>
@@ -6378,10 +6378,8 @@ export default function App() {
 									<Input
 										type='number'
 										value={co711}
-										onChange={(e: { target: { value: any } }) =>
-											setCo711(
-												String(Math.min(Math.max(Number(e.target.value), 0), 1))
-											)
+										onChange={(e) =>
+											handleInputChange(e.target.value, setCo711)
 										}
 									/>
 								</td>
@@ -6437,10 +6435,8 @@ export default function App() {
 									<Input
 										type='number'
 										value={co112}
-										onChange={(e: { target: { value: any } }) =>
-											setCo112(
-												String(Math.min(Math.max(Number(e.target.value), 0), 1))
-											)
+										onChange={(e) =>
+											handleInputChange(e.target.value, setCo112)
 										}
 									/>
 								</td>
@@ -6448,10 +6444,8 @@ export default function App() {
 									<Input
 										type='number'
 										value={co212}
-										onChange={(e: { target: { value: any } }) =>
-											setCo212(
-												String(Math.min(Math.max(Number(e.target.value), 0), 1))
-											)
+										onChange={(e) =>
+											handleInputChange(e.target.value, setCo212)
 										}
 									/>
 								</td>
@@ -6459,10 +6453,8 @@ export default function App() {
 									<Input
 										type='number'
 										value={co312}
-										onChange={(e: { target: { value: any } }) =>
-											setCo312(
-												String(Math.min(Math.max(Number(e.target.value), 0), 1))
-											)
+										onChange={(e) =>
+											handleInputChange(e.target.value, setCo312)
 										}
 									/>
 								</td>
@@ -6470,10 +6462,8 @@ export default function App() {
 									<Input
 										type='number'
 										value={co412}
-										onChange={(e: { target: { value: any } }) =>
-											setCo412(
-												String(Math.min(Math.max(Number(e.target.value), 0), 1))
-											)
+										onChange={(e) =>
+											handleInputChange(e.target.value, setCo412)
 										}
 									/>
 								</td>
@@ -6481,10 +6471,8 @@ export default function App() {
 									<Input
 										type='number'
 										value={co512}
-										onChange={(e: { target: { value: any } }) =>
-											setCo512(
-												String(Math.min(Math.max(Number(e.target.value), 0), 1))
-											)
+										onChange={(e) =>
+											handleInputChange(e.target.value, setCo512)
 										}
 									/>
 								</td>
@@ -6492,10 +6480,8 @@ export default function App() {
 									<Input
 										type='number'
 										value={co612}
-										onChange={(e: { target: { value: any } }) =>
-											setCo612(
-												String(Math.min(Math.max(Number(e.target.value), 0), 1))
-											)
+										onChange={(e) =>
+											handleInputChange(e.target.value, setCo612)
 										}
 									/>
 								</td>
@@ -6503,10 +6489,8 @@ export default function App() {
 									<Input
 										type='number'
 										value={co712}
-										onChange={(e: { target: { value: any } }) =>
-											setCo712(
-												String(Math.min(Math.max(Number(e.target.value), 0), 1))
-											)
+										onChange={(e) =>
+											handleInputChange(e.target.value, setCo712)
 										}
 									/>
 								</td>
@@ -6562,10 +6546,8 @@ export default function App() {
 									<Input
 										type='number'
 										value={co113}
-										onChange={(e: { target: { value: any } }) =>
-											setCo113(
-												String(Math.min(Math.max(Number(e.target.value), 0), 1))
-											)
+										onChange={(e) =>
+											handleInputChange(e.target.value, setCo113)
 										}
 									/>
 								</td>
@@ -6573,10 +6555,8 @@ export default function App() {
 									<Input
 										type='number'
 										value={co213}
-										onChange={(e: { target: { value: any } }) =>
-											setCo213(
-												String(Math.min(Math.max(Number(e.target.value), 0), 1))
-											)
+										onChange={(e) =>
+											handleInputChange(e.target.value, setCo213)
 										}
 									/>
 								</td>
@@ -6584,10 +6564,8 @@ export default function App() {
 									<Input
 										type='number'
 										value={co313}
-										onChange={(e: { target: { value: any } }) =>
-											setCo313(
-												String(Math.min(Math.max(Number(e.target.value), 0), 1))
-											)
+										onChange={(e) =>
+											handleInputChange(e.target.value, setCo313)
 										}
 									/>
 								</td>
@@ -6595,10 +6573,8 @@ export default function App() {
 									<Input
 										type='number'
 										value={co413}
-										onChange={(e: { target: { value: any } }) =>
-											setCo413(
-												String(Math.min(Math.max(Number(e.target.value), 0), 1))
-											)
+										onChange={(e) =>
+											handleInputChange(e.target.value, setCo413)
 										}
 									/>
 								</td>
@@ -6606,10 +6582,8 @@ export default function App() {
 									<Input
 										type='number'
 										value={co513}
-										onChange={(e: { target: { value: any } }) =>
-											setCo513(
-												String(Math.min(Math.max(Number(e.target.value), 0), 1))
-											)
+										onChange={(e) =>
+											handleInputChange(e.target.value, setCo513)
 										}
 									/>
 								</td>
@@ -6617,10 +6591,8 @@ export default function App() {
 									<Input
 										type='number'
 										value={co613}
-										onChange={(e: { target: { value: any } }) =>
-											setCo613(
-												String(Math.min(Math.max(Number(e.target.value), 0), 1))
-											)
+										onChange={(e) =>
+											handleInputChange(e.target.value, setCo613)
 										}
 									/>
 								</td>
@@ -6628,10 +6600,8 @@ export default function App() {
 									<Input
 										type='number'
 										value={co713}
-										onChange={(e: { target: { value: any } }) =>
-											setCo713(
-												String(Math.min(Math.max(Number(e.target.value), 0), 1))
-											)
+										onChange={(e) =>
+											handleInputChange(e.target.value, setCo713)
 										}
 									/>
 								</td>
@@ -6687,10 +6657,8 @@ export default function App() {
 									<Input
 										type='number'
 										value={co114}
-										onChange={(e: { target: { value: any } }) =>
-											setCo114(
-												String(Math.min(Math.max(Number(e.target.value), 0), 1))
-											)
+										onChange={(e) =>
+											handleInputChange(e.target.value, setCo114)
 										}
 									/>
 								</td>
@@ -6698,10 +6666,8 @@ export default function App() {
 									<Input
 										type='number'
 										value={co214}
-										onChange={(e: { target: { value: any } }) =>
-											setCo214(
-												String(Math.min(Math.max(Number(e.target.value), 0), 1))
-											)
+										onChange={(e) =>
+											handleInputChange(e.target.value, setCo214)
 										}
 									/>
 								</td>
@@ -6709,10 +6675,8 @@ export default function App() {
 									<Input
 										type='number'
 										value={co314}
-										onChange={(e: { target: { value: any } }) =>
-											setCo314(
-												String(Math.min(Math.max(Number(e.target.value), 0), 1))
-											)
+										onChange={(e) =>
+											handleInputChange(e.target.value, setCo314)
 										}
 									/>
 								</td>
@@ -6720,10 +6684,8 @@ export default function App() {
 									<Input
 										type='number'
 										value={co414}
-										onChange={(e: { target: { value: any } }) =>
-											setCo414(
-												String(Math.min(Math.max(Number(e.target.value), 0), 1))
-											)
+										onChange={(e) =>
+											handleInputChange(e.target.value, setCo414)
 										}
 									/>
 								</td>
@@ -6731,10 +6693,8 @@ export default function App() {
 									<Input
 										type='number'
 										value={co514}
-										onChange={(e: { target: { value: any } }) =>
-											setCo514(
-												String(Math.min(Math.max(Number(e.target.value), 0), 1))
-											)
+										onChange={(e) =>
+											handleInputChange(e.target.value, setCo514)
 										}
 									/>
 								</td>
@@ -6742,10 +6702,8 @@ export default function App() {
 									<Input
 										type='number'
 										value={co614}
-										onChange={(e: { target: { value: any } }) =>
-											setCo614(
-												String(Math.min(Math.max(Number(e.target.value), 0), 1))
-											)
+										onChange={(e) =>
+											handleInputChange(e.target.value, setCo614)
 										}
 									/>
 								</td>
@@ -6753,10 +6711,8 @@ export default function App() {
 									<Input
 										type='number'
 										value={co714}
-										onChange={(e: { target: { value: any } }) =>
-											setCo714(
-												String(Math.min(Math.max(Number(e.target.value), 0), 1))
-											)
+										onChange={(e) =>
+											handleInputChange(e.target.value, setCo714)
 										}
 									/>
 								</td>
@@ -6812,10 +6768,8 @@ export default function App() {
 									<Input
 										type='number'
 										value={co115}
-										onChange={(e: { target: { value: any } }) =>
-											setCo115(
-												String(Math.min(Math.max(Number(e.target.value), 0), 1))
-											)
+										onChange={(e) =>
+											handleInputChange(e.target.value, setCo115)
 										}
 									/>
 								</td>
@@ -6823,10 +6777,8 @@ export default function App() {
 									<Input
 										type='number'
 										value={co215}
-										onChange={(e: { target: { value: any } }) =>
-											setCo215(
-												String(Math.min(Math.max(Number(e.target.value), 0), 1))
-											)
+										onChange={(e) =>
+											handleInputChange(e.target.value, setCo215)
 										}
 									/>
 								</td>
@@ -6834,10 +6786,8 @@ export default function App() {
 									<Input
 										type='number'
 										value={co315}
-										onChange={(e: { target: { value: any } }) =>
-											setCo315(
-												String(Math.min(Math.max(Number(e.target.value), 0), 1))
-											)
+										onChange={(e) =>
+											handleInputChange(e.target.value, setCo315)
 										}
 									/>
 								</td>
@@ -6845,10 +6795,8 @@ export default function App() {
 									<Input
 										type='number'
 										value={co415}
-										onChange={(e: { target: { value: any } }) =>
-											setCo415(
-												String(Math.min(Math.max(Number(e.target.value), 0), 1))
-											)
+										onChange={(e) =>
+											handleInputChange(e.target.value, setCo415)
 										}
 									/>
 								</td>
@@ -6856,10 +6804,8 @@ export default function App() {
 									<Input
 										type='number'
 										value={co515}
-										onChange={(e: { target: { value: any } }) =>
-											setCo515(
-												String(Math.min(Math.max(Number(e.target.value), 0), 1))
-											)
+										onChange={(e) =>
+											handleInputChange(e.target.value, setCo515)
 										}
 									/>
 								</td>
@@ -6867,10 +6813,8 @@ export default function App() {
 									<Input
 										type='number'
 										value={co615}
-										onChange={(e: { target: { value: any } }) =>
-											setCo615(
-												String(Math.min(Math.max(Number(e.target.value), 0), 1))
-											)
+										onChange={(e) =>
+											handleInputChange(e.target.value, setCo615)
 										}
 									/>
 								</td>
@@ -6878,10 +6822,8 @@ export default function App() {
 									<Input
 										type='number'
 										value={co715}
-										onChange={(e: { target: { value: any } }) =>
-											setCo715(
-												String(Math.min(Math.max(Number(e.target.value), 0), 1))
-											)
+										onChange={(e) =>
+											handleInputChange(e.target.value, setCo715)
 										}
 									/>
 								</td>
@@ -7034,10 +6976,8 @@ export default function App() {
 									<Input
 										type='number'
 										value={co121}
-										onChange={(e: { target: { value: any } }) =>
-											setCo121(
-												String(Math.min(Math.max(Number(e.target.value), 0), 1))
-											)
+										onChange={(e) =>
+											handleInputChange(e.target.value, setCo121)
 										}
 									/>
 								</td>
@@ -7045,10 +6985,8 @@ export default function App() {
 									<Input
 										type='number'
 										value={co221}
-										onChange={(e: { target: { value: any } }) =>
-											setCo221(
-												String(Math.min(Math.max(Number(e.target.value), 0), 1))
-											)
+										onChange={(e) =>
+											handleInputChange(e.target.value, setCo221)
 										}
 									/>
 								</td>
@@ -7056,10 +6994,8 @@ export default function App() {
 									<Input
 										type='number'
 										value={co321}
-										onChange={(e: { target: { value: any } }) =>
-											setCo321(
-												String(Math.min(Math.max(Number(e.target.value), 0), 1))
-											)
+										onChange={(e) =>
+											handleInputChange(e.target.value, setCo321)
 										}
 									/>
 								</td>
@@ -7067,10 +7003,8 @@ export default function App() {
 									<Input
 										type='number'
 										value={co421}
-										onChange={(e: { target: { value: any } }) =>
-											setCo421(
-												String(Math.min(Math.max(Number(e.target.value), 0), 1))
-											)
+										onChange={(e) =>
+											handleInputChange(e.target.value, setCo421)
 										}
 									/>
 								</td>
@@ -7078,10 +7012,8 @@ export default function App() {
 									<Input
 										type='number'
 										value={co521}
-										onChange={(e: { target: { value: any } }) =>
-											setCo521(
-												String(Math.min(Math.max(Number(e.target.value), 0), 1))
-											)
+										onChange={(e) =>
+											handleInputChange(e.target.value, setCo521)
 										}
 									/>
 								</td>
@@ -7089,10 +7021,8 @@ export default function App() {
 									<Input
 										type='number'
 										value={co621}
-										onChange={(e: { target: { value: any } }) =>
-											setCo621(
-												String(Math.min(Math.max(Number(e.target.value), 0), 1))
-											)
+										onChange={(e) =>
+											handleInputChange(e.target.value, setCo621)
 										}
 									/>
 								</td>
@@ -7100,10 +7030,8 @@ export default function App() {
 									<Input
 										type='number'
 										value={co721}
-										onChange={(e: { target: { value: any } }) =>
-											setCo721(
-												String(Math.min(Math.max(Number(e.target.value), 0), 1))
-											)
+										onChange={(e) =>
+											handleInputChange(e.target.value, setCo721)
 										}
 									/>
 								</td>
@@ -7136,10 +7064,8 @@ export default function App() {
 									<Input
 										type='number'
 										value={co122}
-										onChange={(e: { target: { value: any } }) =>
-											setCo122(
-												String(Math.min(Math.max(Number(e.target.value), 0), 1))
-											)
+										onChange={(e) =>
+											handleInputChange(e.target.value, setCo122)
 										}
 									/>
 								</td>
@@ -7147,10 +7073,8 @@ export default function App() {
 									<Input
 										type='number'
 										value={co222}
-										onChange={(e: { target: { value: any } }) =>
-											setCo222(
-												String(Math.min(Math.max(Number(e.target.value), 0), 1))
-											)
+										onChange={(e) =>
+											handleInputChange(e.target.value, setCo222)
 										}
 									/>
 								</td>
@@ -7158,10 +7082,8 @@ export default function App() {
 									<Input
 										type='number'
 										value={co322}
-										onChange={(e: { target: { value: any } }) =>
-											setCo322(
-												String(Math.min(Math.max(Number(e.target.value), 0), 1))
-											)
+										onChange={(e) =>
+											handleInputChange(e.target.value, setCo322)
 										}
 									/>
 								</td>
@@ -7169,10 +7091,8 @@ export default function App() {
 									<Input
 										type='number'
 										value={co422}
-										onChange={(e: { target: { value: any } }) =>
-											setCo422(
-												String(Math.min(Math.max(Number(e.target.value), 0), 1))
-											)
+										onChange={(e) =>
+											handleInputChange(e.target.value, setCo422)
 										}
 									/>
 								</td>
@@ -7180,10 +7100,8 @@ export default function App() {
 									<Input
 										type='number'
 										value={co522}
-										onChange={(e: { target: { value: any } }) =>
-											setCo522(
-												String(Math.min(Math.max(Number(e.target.value), 0), 1))
-											)
+										onChange={(e) =>
+											handleInputChange(e.target.value, setCo522)
 										}
 									/>
 								</td>
@@ -7191,10 +7109,8 @@ export default function App() {
 									<Input
 										type='number'
 										value={co622}
-										onChange={(e: { target: { value: any } }) =>
-											setCo622(
-												String(Math.min(Math.max(Number(e.target.value), 0), 1))
-											)
+										onChange={(e) =>
+											handleInputChange(e.target.value, setCo622)
 										}
 									/>
 								</td>
@@ -7202,10 +7118,8 @@ export default function App() {
 									<Input
 										type='number'
 										value={co722}
-										onChange={(e: { target: { value: any } }) =>
-											setCo722(
-												String(Math.min(Math.max(Number(e.target.value), 0), 1))
-											)
+										onChange={(e) =>
+											handleInputChange(e.target.value, setCo722)
 										}
 									/>
 								</td>
@@ -7238,10 +7152,8 @@ export default function App() {
 									<Input
 										type='number'
 										value={co123}
-										onChange={(e: { target: { value: any } }) =>
-											setCo123(
-												String(Math.min(Math.max(Number(e.target.value), 0), 1))
-											)
+										onChange={(e) =>
+											handleInputChange(e.target.value, setCo123)
 										}
 									/>
 								</td>
@@ -7249,10 +7161,8 @@ export default function App() {
 									<Input
 										type='number'
 										value={co223}
-										onChange={(e: { target: { value: any } }) =>
-											setCo223(
-												String(Math.min(Math.max(Number(e.target.value), 0), 1))
-											)
+										onChange={(e) =>
+											handleInputChange(e.target.value, setCo223)
 										}
 									/>
 								</td>
@@ -7260,10 +7170,8 @@ export default function App() {
 									<Input
 										type='number'
 										value={co323}
-										onChange={(e: { target: { value: any } }) =>
-											setCo323(
-												String(Math.min(Math.max(Number(e.target.value), 0), 1))
-											)
+										onChange={(e) =>
+											handleInputChange(e.target.value, setCo323)
 										}
 									/>
 								</td>
@@ -7271,10 +7179,8 @@ export default function App() {
 									<Input
 										type='number'
 										value={co423}
-										onChange={(e: { target: { value: any } }) =>
-											setCo423(
-												String(Math.min(Math.max(Number(e.target.value), 0), 1))
-											)
+										onChange={(e) =>
+											handleInputChange(e.target.value, setCo423)
 										}
 									/>
 								</td>
@@ -7282,10 +7188,8 @@ export default function App() {
 									<Input
 										type='number'
 										value={co523}
-										onChange={(e: { target: { value: any } }) =>
-											setCo523(
-												String(Math.min(Math.max(Number(e.target.value), 0), 1))
-											)
+										onChange={(e) =>
+											handleInputChange(e.target.value, setCo523)
 										}
 									/>
 								</td>
@@ -7293,10 +7197,8 @@ export default function App() {
 									<Input
 										type='number'
 										value={co623}
-										onChange={(e: { target: { value: any } }) =>
-											setCo623(
-												String(Math.min(Math.max(Number(e.target.value), 0), 1))
-											)
+										onChange={(e) =>
+											handleInputChange(e.target.value, setCo623)
 										}
 									/>
 								</td>
@@ -7304,10 +7206,8 @@ export default function App() {
 									<Input
 										type='number'
 										value={co723}
-										onChange={(e: { target: { value: any } }) =>
-											setCo723(
-												String(Math.min(Math.max(Number(e.target.value), 0), 1))
-											)
+										onChange={(e) =>
+											handleInputChange(e.target.value, setCo723)
 										}
 									/>
 								</td>
@@ -7351,10 +7251,8 @@ export default function App() {
 									<Input
 										type='number'
 										value={co124}
-										onChange={(e: { target: { value: any } }) =>
-											setCo124(
-												String(Math.min(Math.max(Number(e.target.value), 0), 1))
-											)
+										onChange={(e) =>
+											handleInputChange(e.target.value, setCo124)
 										}
 									/>
 								</td>
@@ -7362,10 +7260,8 @@ export default function App() {
 									<Input
 										type='number'
 										value={co224}
-										onChange={(e: { target: { value: any } }) =>
-											setCo224(
-												String(Math.min(Math.max(Number(e.target.value), 0), 1))
-											)
+										onChange={(e) =>
+											handleInputChange(e.target.value, setCo224)
 										}
 									/>
 								</td>
@@ -7373,10 +7269,8 @@ export default function App() {
 									<Input
 										type='number'
 										value={co324}
-										onChange={(e: { target: { value: any } }) =>
-											setCo324(
-												String(Math.min(Math.max(Number(e.target.value), 0), 1))
-											)
+										onChange={(e) =>
+											handleInputChange(e.target.value, setCo324)
 										}
 									/>
 								</td>
@@ -7384,10 +7278,8 @@ export default function App() {
 									<Input
 										type='number'
 										value={co424}
-										onChange={(e: { target: { value: any } }) =>
-											setCo424(
-												String(Math.min(Math.max(Number(e.target.value), 0), 1))
-											)
+										onChange={(e) =>
+											handleInputChange(e.target.value, setCo424)
 										}
 									/>
 								</td>
@@ -7395,10 +7287,8 @@ export default function App() {
 									<Input
 										type='number'
 										value={co524}
-										onChange={(e: { target: { value: any } }) =>
-											setCo524(
-												String(Math.min(Math.max(Number(e.target.value), 0), 1))
-											)
+										onChange={(e) =>
+											handleInputChange(e.target.value, setCo524)
 										}
 									/>
 								</td>
@@ -7406,10 +7296,8 @@ export default function App() {
 									<Input
 										type='number'
 										value={co624}
-										onChange={(e: { target: { value: any } }) =>
-											setCo624(
-												String(Math.min(Math.max(Number(e.target.value), 0), 1))
-											)
+										onChange={(e) =>
+											handleInputChange(e.target.value, setCo624)
 										}
 									/>
 								</td>
@@ -7417,10 +7305,8 @@ export default function App() {
 									<Input
 										type='number'
 										value={co724}
-										onChange={(e: { target: { value: any } }) =>
-											setCo724(
-												String(Math.min(Math.max(Number(e.target.value), 0), 1))
-											)
+										onChange={(e) =>
+											handleInputChange(e.target.value, setCo724)
 										}
 									/>
 								</td>
@@ -7453,10 +7339,8 @@ export default function App() {
 									<Input
 										type='number'
 										value={co125}
-										onChange={(e: { target: { value: any } }) =>
-											setCo125(
-												String(Math.min(Math.max(Number(e.target.value), 0), 1))
-											)
+										onChange={(e) =>
+											handleInputChange(e.target.value, setCo125)
 										}
 									/>
 								</td>
@@ -7464,10 +7348,8 @@ export default function App() {
 									<Input
 										type='number'
 										value={co225}
-										onChange={(e: { target: { value: any } }) =>
-											setCo225(
-												String(Math.min(Math.max(Number(e.target.value), 0), 1))
-											)
+										onChange={(e) =>
+											handleInputChange(e.target.value, setCo225)
 										}
 									/>
 								</td>
@@ -7475,10 +7357,8 @@ export default function App() {
 									<Input
 										type='number'
 										value={co325}
-										onChange={(e: { target: { value: any } }) =>
-											setCo325(
-												String(Math.min(Math.max(Number(e.target.value), 0), 1))
-											)
+										onChange={(e) =>
+											handleInputChange(e.target.value, setCo325)
 										}
 									/>
 								</td>
@@ -7486,10 +7366,8 @@ export default function App() {
 									<Input
 										type='number'
 										value={co425}
-										onChange={(e: { target: { value: any } }) =>
-											setCo425(
-												String(Math.min(Math.max(Number(e.target.value), 0), 1))
-											)
+										onChange={(e) =>
+											handleInputChange(e.target.value, setCo425)
 										}
 									/>
 								</td>
@@ -7497,10 +7375,8 @@ export default function App() {
 									<Input
 										type='number'
 										value={co525}
-										onChange={(e: { target: { value: any } }) =>
-											setCo525(
-												String(Math.min(Math.max(Number(e.target.value), 0), 1))
-											)
+										onChange={(e) =>
+											handleInputChange(e.target.value, setCo525)
 										}
 									/>
 								</td>
@@ -7508,10 +7384,8 @@ export default function App() {
 									<Input
 										type='number'
 										value={co625}
-										onChange={(e: { target: { value: any } }) =>
-											setCo625(
-												String(Math.min(Math.max(Number(e.target.value), 0), 1))
-											)
+										onChange={(e) =>
+											handleInputChange(e.target.value, setCo625)
 										}
 									/>
 								</td>
@@ -7519,10 +7393,8 @@ export default function App() {
 									<Input
 										type='number'
 										value={co725}
-										onChange={(e: { target: { value: any } }) =>
-											setCo725(
-												String(Math.min(Math.max(Number(e.target.value), 0), 1))
-											)
+										onChange={(e) =>
+											handleInputChange(e.target.value, setCo725)
 										}
 									/>
 								</td>
@@ -7555,10 +7427,8 @@ export default function App() {
 									<Input
 										type='number'
 										value={co126}
-										onChange={(e: { target: { value: any } }) =>
-											setCo126(
-												String(Math.min(Math.max(Number(e.target.value), 0), 1))
-											)
+										onChange={(e) =>
+											handleInputChange(e.target.value, setCo126)
 										}
 									/>
 								</td>
@@ -7566,10 +7436,8 @@ export default function App() {
 									<Input
 										type='number'
 										value={co226}
-										onChange={(e: { target: { value: any } }) =>
-											setCo226(
-												String(Math.min(Math.max(Number(e.target.value), 0), 1))
-											)
+										onChange={(e) =>
+											handleInputChange(e.target.value, setCo226)
 										}
 									/>
 								</td>
@@ -7577,10 +7445,8 @@ export default function App() {
 									<Input
 										type='number'
 										value={co326}
-										onChange={(e: { target: { value: any } }) =>
-											setCo326(
-												String(Math.min(Math.max(Number(e.target.value), 0), 1))
-											)
+										onChange={(e) =>
+											handleInputChange(e.target.value, setCo326)
 										}
 									/>
 								</td>
@@ -7588,10 +7454,8 @@ export default function App() {
 									<Input
 										type='number'
 										value={co426}
-										onChange={(e: { target: { value: any } }) =>
-											setCo426(
-												String(Math.min(Math.max(Number(e.target.value), 0), 1))
-											)
+										onChange={(e) =>
+											handleInputChange(e.target.value, setCo426)
 										}
 									/>
 								</td>
@@ -7599,10 +7463,8 @@ export default function App() {
 									<Input
 										type='number'
 										value={co526}
-										onChange={(e: { target: { value: any } }) =>
-											setCo526(
-												String(Math.min(Math.max(Number(e.target.value), 0), 1))
-											)
+										onChange={(e) =>
+											handleInputChange(e.target.value, setCo526)
 										}
 									/>
 								</td>
@@ -7610,10 +7472,8 @@ export default function App() {
 									<Input
 										type='number'
 										value={co626}
-										onChange={(e: { target: { value: any } }) =>
-											setCo626(
-												String(Math.min(Math.max(Number(e.target.value), 0), 1))
-											)
+										onChange={(e) =>
+											handleInputChange(e.target.value, setCo626)
 										}
 									/>
 								</td>
@@ -7621,10 +7481,8 @@ export default function App() {
 									<Input
 										type='number'
 										value={co726}
-										onChange={(e: { target: { value: any } }) =>
-											setCo726(
-												String(Math.min(Math.max(Number(e.target.value), 0), 1))
-											)
+										onChange={(e) =>
+											handleInputChange(e.target.value, setCo726)
 										}
 									/>
 								</td>
@@ -7657,10 +7515,8 @@ export default function App() {
 									<Input
 										type='number'
 										value={co127}
-										onChange={(e: { target: { value: any } }) =>
-											setCo127(
-												String(Math.min(Math.max(Number(e.target.value), 0), 1))
-											)
+										onChange={(e) =>
+											handleInputChange(e.target.value, setCo127)
 										}
 									/>
 								</td>
@@ -7668,10 +7524,8 @@ export default function App() {
 									<Input
 										type='number'
 										value={co227}
-										onChange={(e: { target: { value: any } }) =>
-											setCo227(
-												String(Math.min(Math.max(Number(e.target.value), 0), 1))
-											)
+										onChange={(e) =>
+											handleInputChange(e.target.value, setCo227)
 										}
 									/>
 								</td>
@@ -7679,10 +7533,8 @@ export default function App() {
 									<Input
 										type='number'
 										value={co327}
-										onChange={(e: { target: { value: any } }) =>
-											setCo327(
-												String(Math.min(Math.max(Number(e.target.value), 0), 1))
-											)
+										onChange={(e) =>
+											handleInputChange(e.target.value, setCo327)
 										}
 									/>
 								</td>
@@ -7690,10 +7542,8 @@ export default function App() {
 									<Input
 										type='number'
 										value={co427}
-										onChange={(e: { target: { value: any } }) =>
-											setCo427(
-												String(Math.min(Math.max(Number(e.target.value), 0), 1))
-											)
+										onChange={(e) =>
+											handleInputChange(e.target.value, setCo427)
 										}
 									/>
 								</td>
@@ -7701,10 +7551,8 @@ export default function App() {
 									<Input
 										type='number'
 										value={co527}
-										onChange={(e: { target: { value: any } }) =>
-											setCo527(
-												String(Math.min(Math.max(Number(e.target.value), 0), 1))
-											)
+										onChange={(e) =>
+											handleInputChange(e.target.value, setCo527)
 										}
 									/>
 								</td>
@@ -7712,10 +7560,8 @@ export default function App() {
 									<Input
 										type='number'
 										value={co627}
-										onChange={(e: { target: { value: any } }) =>
-											setCo627(
-												String(Math.min(Math.max(Number(e.target.value), 0), 1))
-											)
+										onChange={(e) =>
+											handleInputChange(e.target.value, setCo627)
 										}
 									/>
 								</td>
@@ -7723,10 +7569,8 @@ export default function App() {
 									<Input
 										type='number'
 										value={co727}
-										onChange={(e: { target: { value: any } }) =>
-											setCo727(
-												String(Math.min(Math.max(Number(e.target.value), 0), 1))
-											)
+										onChange={(e) =>
+											handleInputChange(e.target.value, setCo727)
 										}
 									/>
 								</td>
@@ -7770,10 +7614,8 @@ export default function App() {
 									<Input
 										type='number'
 										value={co128}
-										onChange={(e: { target: { value: any } }) =>
-											setCo128(
-												String(Math.min(Math.max(Number(e.target.value), 0), 1))
-											)
+										onChange={(e) =>
+											handleInputChange(e.target.value, setCo128)
 										}
 									/>
 								</td>
@@ -7781,10 +7623,8 @@ export default function App() {
 									<Input
 										type='number'
 										value={co228}
-										onChange={(e: { target: { value: any } }) =>
-											setCo228(
-												String(Math.min(Math.max(Number(e.target.value), 0), 1))
-											)
+										onChange={(e) =>
+											handleInputChange(e.target.value, setCo228)
 										}
 									/>
 								</td>
@@ -7792,10 +7632,8 @@ export default function App() {
 									<Input
 										type='number'
 										value={co328}
-										onChange={(e: { target: { value: any } }) =>
-											setCo328(
-												String(Math.min(Math.max(Number(e.target.value), 0), 1))
-											)
+										onChange={(e) =>
+											handleInputChange(e.target.value, setCo328)
 										}
 									/>
 								</td>
@@ -7803,10 +7641,8 @@ export default function App() {
 									<Input
 										type='number'
 										value={co428}
-										onChange={(e: { target: { value: any } }) =>
-											setCo428(
-												String(Math.min(Math.max(Number(e.target.value), 0), 1))
-											)
+										onChange={(e) =>
+											handleInputChange(e.target.value, setCo428)
 										}
 									/>
 								</td>
@@ -7814,10 +7650,8 @@ export default function App() {
 									<Input
 										type='number'
 										value={co528}
-										onChange={(e: { target: { value: any } }) =>
-											setCo528(
-												String(Math.min(Math.max(Number(e.target.value), 0), 1))
-											)
+										onChange={(e) =>
+											handleInputChange(e.target.value, setCo528)
 										}
 									/>
 								</td>
@@ -7825,10 +7659,8 @@ export default function App() {
 									<Input
 										type='number'
 										value={co628}
-										onChange={(e: { target: { value: any } }) =>
-											setCo628(
-												String(Math.min(Math.max(Number(e.target.value), 0), 1))
-											)
+										onChange={(e) =>
+											handleInputChange(e.target.value, setCo628)
 										}
 									/>
 								</td>
@@ -7836,10 +7668,8 @@ export default function App() {
 									<Input
 										type='number'
 										value={co728}
-										onChange={(e: { target: { value: any } }) =>
-											setCo728(
-												String(Math.min(Math.max(Number(e.target.value), 0), 1))
-											)
+										onChange={(e) =>
+											handleInputChange(e.target.value, setCo728)
 										}
 									/>
 								</td>
@@ -7872,10 +7702,8 @@ export default function App() {
 									<Input
 										type='number'
 										value={co129}
-										onChange={(e: { target: { value: any } }) =>
-											setCo129(
-												String(Math.min(Math.max(Number(e.target.value), 0), 1))
-											)
+										onChange={(e) =>
+											handleInputChange(e.target.value, setCo129)
 										}
 									/>
 								</td>
@@ -7883,10 +7711,8 @@ export default function App() {
 									<Input
 										type='number'
 										value={co229}
-										onChange={(e: { target: { value: any } }) =>
-											setCo229(
-												String(Math.min(Math.max(Number(e.target.value), 0), 1))
-											)
+										onChange={(e) =>
+											handleInputChange(e.target.value, setCo229)
 										}
 									/>
 								</td>
@@ -7894,10 +7720,8 @@ export default function App() {
 									<Input
 										type='number'
 										value={co329}
-										onChange={(e: { target: { value: any } }) =>
-											setCo329(
-												String(Math.min(Math.max(Number(e.target.value), 0), 1))
-											)
+										onChange={(e) =>
+											handleInputChange(e.target.value, setCo329)
 										}
 									/>
 								</td>
@@ -7905,10 +7729,8 @@ export default function App() {
 									<Input
 										type='number'
 										value={co429}
-										onChange={(e: { target: { value: any } }) =>
-											setCo429(
-												String(Math.min(Math.max(Number(e.target.value), 0), 1))
-											)
+										onChange={(e) =>
+											handleInputChange(e.target.value, setCo429)
 										}
 									/>
 								</td>
@@ -7916,10 +7738,8 @@ export default function App() {
 									<Input
 										type='number'
 										value={co529}
-										onChange={(e: { target: { value: any } }) =>
-											setCo529(
-												String(Math.min(Math.max(Number(e.target.value), 0), 1))
-											)
+										onChange={(e) =>
+											handleInputChange(e.target.value, setCo529)
 										}
 									/>
 								</td>
@@ -7927,10 +7747,8 @@ export default function App() {
 									<Input
 										type='number'
 										value={co629}
-										onChange={(e: { target: { value: any } }) =>
-											setCo629(
-												String(Math.min(Math.max(Number(e.target.value), 0), 1))
-											)
+										onChange={(e) =>
+											handleInputChange(e.target.value, setCo629)
 										}
 									/>
 								</td>
@@ -7938,10 +7756,8 @@ export default function App() {
 									<Input
 										type='number'
 										value={co729}
-										onChange={(e: { target: { value: any } }) =>
-											setCo729(
-												String(Math.min(Math.max(Number(e.target.value), 0), 1))
-											)
+										onChange={(e) =>
+											handleInputChange(e.target.value, setCo729)
 										}
 									/>
 								</td>
@@ -7985,10 +7801,8 @@ export default function App() {
 									<Input
 										type='number'
 										value={co1210}
-										onChange={(e: { target: { value: any } }) =>
-											setCo1210(
-												String(Math.min(Math.max(Number(e.target.value), 0), 1))
-											)
+										onChange={(e) =>
+											handleInputChange(e.target.value, setCo1210)
 										}
 									/>
 								</td>
@@ -7996,10 +7810,8 @@ export default function App() {
 									<Input
 										type='number'
 										value={co2210}
-										onChange={(e: { target: { value: any } }) =>
-											setCo2210(
-												String(Math.min(Math.max(Number(e.target.value), 0), 1))
-											)
+										onChange={(e) =>
+											handleInputChange(e.target.value, setCo2210)
 										}
 									/>
 								</td>
@@ -8007,10 +7819,8 @@ export default function App() {
 									<Input
 										type='number'
 										value={co3210}
-										onChange={(e: { target: { value: any } }) =>
-											setCo3210(
-												String(Math.min(Math.max(Number(e.target.value), 0), 1))
-											)
+										onChange={(e) =>
+											handleInputChange(e.target.value, setCo3210)
 										}
 									/>
 								</td>
@@ -8018,10 +7828,8 @@ export default function App() {
 									<Input
 										type='number'
 										value={co4210}
-										onChange={(e: { target: { value: any } }) =>
-											setCo4210(
-												String(Math.min(Math.max(Number(e.target.value), 0), 1))
-											)
+										onChange={(e) =>
+											handleInputChange(e.target.value, setCo4210)
 										}
 									/>
 								</td>
@@ -8029,10 +7837,8 @@ export default function App() {
 									<Input
 										type='number'
 										value={co5210}
-										onChange={(e: { target: { value: any } }) =>
-											setCo5210(
-												String(Math.min(Math.max(Number(e.target.value), 0), 1))
-											)
+										onChange={(e) =>
+											handleInputChange(e.target.value, setCo5210)
 										}
 									/>
 								</td>
@@ -8040,10 +7846,8 @@ export default function App() {
 									<Input
 										type='number'
 										value={co6210}
-										onChange={(e: { target: { value: any } }) =>
-											setCo6210(
-												String(Math.min(Math.max(Number(e.target.value), 0), 1))
-											)
+										onChange={(e) =>
+											handleInputChange(e.target.value, setCo6210)
 										}
 									/>
 								</td>
@@ -8051,10 +7855,8 @@ export default function App() {
 									<Input
 										type='number'
 										value={co7210}
-										onChange={(e: { target: { value: any } }) =>
-											setCo7210(
-												String(Math.min(Math.max(Number(e.target.value), 0), 1))
-											)
+										onChange={(e) =>
+											handleInputChange(e.target.value, setCo7210)
 										}
 									/>
 								</td>
@@ -8087,10 +7889,8 @@ export default function App() {
 									<Input
 										type='number'
 										value={co1211}
-										onChange={(e: { target: { value: any } }) =>
-											setCo1211(
-												String(Math.min(Math.max(Number(e.target.value), 0), 1))
-											)
+										onChange={(e) =>
+											handleInputChange(e.target.value, setCo1211)
 										}
 									/>
 								</td>
@@ -8098,10 +7898,8 @@ export default function App() {
 									<Input
 										type='number'
 										value={co2211}
-										onChange={(e: { target: { value: any } }) =>
-											setCo2211(
-												String(Math.min(Math.max(Number(e.target.value), 0), 1))
-											)
+										onChange={(e) =>
+											handleInputChange(e.target.value, setCo2211)
 										}
 									/>
 								</td>
@@ -8109,10 +7907,8 @@ export default function App() {
 									<Input
 										type='number'
 										value={co3211}
-										onChange={(e: { target: { value: any } }) =>
-											setCo3211(
-												String(Math.min(Math.max(Number(e.target.value), 0), 1))
-											)
+										onChange={(e) =>
+											handleInputChange(e.target.value, setCo3211)
 										}
 									/>
 								</td>
@@ -8120,10 +7916,8 @@ export default function App() {
 									<Input
 										type='number'
 										value={co4211}
-										onChange={(e: { target: { value: any } }) =>
-											setCo4211(
-												String(Math.min(Math.max(Number(e.target.value), 0), 1))
-											)
+										onChange={(e) =>
+											handleInputChange(e.target.value, setCo4211)
 										}
 									/>
 								</td>
@@ -8131,10 +7925,8 @@ export default function App() {
 									<Input
 										type='number'
 										value={co5211}
-										onChange={(e: { target: { value: any } }) =>
-											setCo5211(
-												String(Math.min(Math.max(Number(e.target.value), 0), 1))
-											)
+										onChange={(e) =>
+											handleInputChange(e.target.value, setCo5211)
 										}
 									/>
 								</td>
@@ -8142,10 +7934,8 @@ export default function App() {
 									<Input
 										type='number'
 										value={co6211}
-										onChange={(e: { target: { value: any } }) =>
-											setCo6211(
-												String(Math.min(Math.max(Number(e.target.value), 0), 1))
-											)
+										onChange={(e) =>
+											handleInputChange(e.target.value, setCo6211)
 										}
 									/>
 								</td>
@@ -8153,10 +7943,8 @@ export default function App() {
 									<Input
 										type='number'
 										value={co7211}
-										onChange={(e: { target: { value: any } }) =>
-											setCo7211(
-												String(Math.min(Math.max(Number(e.target.value), 0), 1))
-											)
+										onChange={(e) =>
+											handleInputChange(e.target.value, setCo7211)
 										}
 									/>
 								</td>
@@ -8189,10 +7977,8 @@ export default function App() {
 									<Input
 										type='number'
 										value={co1212}
-										onChange={(e: { target: { value: any } }) =>
-											setCo1212(
-												String(Math.min(Math.max(Number(e.target.value), 0), 1))
-											)
+										onChange={(e) =>
+											handleInputChange(e.target.value, setCo1212)
 										}
 									/>
 								</td>
@@ -8200,10 +7986,8 @@ export default function App() {
 									<Input
 										type='number'
 										value={co2212}
-										onChange={(e: { target: { value: any } }) =>
-											setCo2212(
-												String(Math.min(Math.max(Number(e.target.value), 0), 1))
-											)
+										onChange={(e) =>
+											handleInputChange(e.target.value, setCo2212)
 										}
 									/>
 								</td>
@@ -8211,10 +7995,8 @@ export default function App() {
 									<Input
 										type='number'
 										value={co3212}
-										onChange={(e: { target: { value: any } }) =>
-											setCo3212(
-												String(Math.min(Math.max(Number(e.target.value), 0), 1))
-											)
+										onChange={(e) =>
+											handleInputChange(e.target.value, setCo3212)
 										}
 									/>
 								</td>
@@ -8222,10 +8004,8 @@ export default function App() {
 									<Input
 										type='number'
 										value={co4212}
-										onChange={(e: { target: { value: any } }) =>
-											setCo4212(
-												String(Math.min(Math.max(Number(e.target.value), 0), 1))
-											)
+										onChange={(e) =>
+											handleInputChange(e.target.value, setCo4212)
 										}
 									/>
 								</td>
@@ -8233,10 +8013,8 @@ export default function App() {
 									<Input
 										type='number'
 										value={co5212}
-										onChange={(e: { target: { value: any } }) =>
-											setCo5212(
-												String(Math.min(Math.max(Number(e.target.value), 0), 1))
-											)
+										onChange={(e) =>
+											handleInputChange(e.target.value, setCo5212)
 										}
 									/>
 								</td>
@@ -8244,10 +8022,8 @@ export default function App() {
 									<Input
 										type='number'
 										value={co6212}
-										onChange={(e: { target: { value: any } }) =>
-											setCo6212(
-												String(Math.min(Math.max(Number(e.target.value), 0), 1))
-											)
+										onChange={(e) =>
+											handleInputChange(e.target.value, setCo6212)
 										}
 									/>
 								</td>
@@ -8255,10 +8031,8 @@ export default function App() {
 									<Input
 										type='number'
 										value={co7212}
-										onChange={(e: { target: { value: any } }) =>
-											setCo7212(
-												String(Math.min(Math.max(Number(e.target.value), 0), 1))
-											)
+										onChange={(e) =>
+											handleInputChange(e.target.value, setCo7212)
 										}
 									/>
 								</td>
@@ -8291,10 +8065,8 @@ export default function App() {
 									<Input
 										type='number'
 										value={co1213}
-										onChange={(e: { target: { value: any } }) =>
-											setCo1213(
-												String(Math.min(Math.max(Number(e.target.value), 0), 1))
-											)
+										onChange={(e) =>
+											handleInputChange(e.target.value, setCo1213)
 										}
 									/>
 								</td>
@@ -8302,10 +8074,8 @@ export default function App() {
 									<Input
 										type='number'
 										value={co2213}
-										onChange={(e: { target: { value: any } }) =>
-											setCo2213(
-												String(Math.min(Math.max(Number(e.target.value), 0), 1))
-											)
+										onChange={(e) =>
+											handleInputChange(e.target.value, setCo2213)
 										}
 									/>
 								</td>
@@ -8313,10 +8083,8 @@ export default function App() {
 									<Input
 										type='number'
 										value={co3213}
-										onChange={(e: { target: { value: any } }) =>
-											setCo3213(
-												String(Math.min(Math.max(Number(e.target.value), 0), 1))
-											)
+										onChange={(e) =>
+											handleInputChange(e.target.value, setCo3213)
 										}
 									/>
 								</td>
@@ -8324,10 +8092,8 @@ export default function App() {
 									<Input
 										type='number'
 										value={co4213}
-										onChange={(e: { target: { value: any } }) =>
-											setCo4213(
-												String(Math.min(Math.max(Number(e.target.value), 0), 1))
-											)
+										onChange={(e) =>
+											handleInputChange(e.target.value, setCo4213)
 										}
 									/>
 								</td>
@@ -8335,10 +8101,8 @@ export default function App() {
 									<Input
 										type='number'
 										value={co5213}
-										onChange={(e: { target: { value: any } }) =>
-											setCo5213(
-												String(Math.min(Math.max(Number(e.target.value), 0), 1))
-											)
+										onChange={(e) =>
+											handleInputChange(e.target.value, setCo5213)
 										}
 									/>
 								</td>
@@ -8346,10 +8110,8 @@ export default function App() {
 									<Input
 										type='number'
 										value={co6213}
-										onChange={(e: { target: { value: any } }) =>
-											setCo6213(
-												String(Math.min(Math.max(Number(e.target.value), 0), 1))
-											)
+										onChange={(e) =>
+											handleInputChange(e.target.value, setCo6213)
 										}
 									/>
 								</td>
@@ -8357,10 +8119,8 @@ export default function App() {
 									<Input
 										type='number'
 										value={co7213}
-										onChange={(e: { target: { value: any } }) =>
-											setCo7213(
-												String(Math.min(Math.max(Number(e.target.value), 0), 1))
-											)
+										onChange={(e) =>
+											handleInputChange(e.target.value, setCo7213)
 										}
 									/>
 								</td>
@@ -8513,10 +8273,8 @@ export default function App() {
 									<Input
 										type='number'
 										value={co131}
-										onChange={(e: { target: { value: any } }) =>
-											setCo131(
-												String(Math.min(Math.max(Number(e.target.value), 0), 1))
-											)
+										onChange={(e) =>
+											handleInputChange(e.target.value, setCo131)
 										}
 									/>
 								</td>
@@ -8524,10 +8282,8 @@ export default function App() {
 									<Input
 										type='number'
 										value={co231}
-										onChange={(e: { target: { value: any } }) =>
-											setCo231(
-												String(Math.min(Math.max(Number(e.target.value), 0), 1))
-											)
+										onChange={(e) =>
+											handleInputChange(e.target.value, setCo231)
 										}
 									/>
 								</td>
@@ -8535,10 +8291,8 @@ export default function App() {
 									<Input
 										type='number'
 										value={co331}
-										onChange={(e: { target: { value: any } }) =>
-											setCo331(
-												String(Math.min(Math.max(Number(e.target.value), 0), 1))
-											)
+										onChange={(e) =>
+											handleInputChange(e.target.value, setCo331)
 										}
 									/>
 								</td>
@@ -8546,10 +8300,8 @@ export default function App() {
 									<Input
 										type='number'
 										value={co431}
-										onChange={(e: { target: { value: any } }) =>
-											setCo431(
-												String(Math.min(Math.max(Number(e.target.value), 0), 1))
-											)
+										onChange={(e) =>
+											handleInputChange(e.target.value, setCo431)
 										}
 									/>
 								</td>
@@ -8557,10 +8309,8 @@ export default function App() {
 									<Input
 										type='number'
 										value={co531}
-										onChange={(e: { target: { value: any } }) =>
-											setCo531(
-												String(Math.min(Math.max(Number(e.target.value), 0), 1))
-											)
+										onChange={(e) =>
+											handleInputChange(e.target.value, setCo531)
 										}
 									/>
 								</td>
@@ -8568,10 +8318,8 @@ export default function App() {
 									<Input
 										type='number'
 										value={co631}
-										onChange={(e: { target: { value: any } }) =>
-											setCo631(
-												String(Math.min(Math.max(Number(e.target.value), 0), 1))
-											)
+										onChange={(e) =>
+											handleInputChange(e.target.value, setCo631)
 										}
 									/>
 								</td>
@@ -8579,10 +8327,8 @@ export default function App() {
 									<Input
 										type='number'
 										value={co731}
-										onChange={(e: { target: { value: any } }) =>
-											setCo731(
-												String(Math.min(Math.max(Number(e.target.value), 0), 1))
-											)
+										onChange={(e) =>
+											handleInputChange(e.target.value, setCo731)
 										}
 									/>
 								</td>
@@ -8615,10 +8361,8 @@ export default function App() {
 									<Input
 										type='number'
 										value={co132}
-										onChange={(e: { target: { value: any } }) =>
-											setCo132(
-												String(Math.min(Math.max(Number(e.target.value), 0), 1))
-											)
+										onChange={(e) =>
+											handleInputChange(e.target.value, setCo132)
 										}
 									/>
 								</td>
@@ -8626,10 +8370,8 @@ export default function App() {
 									<Input
 										type='number'
 										value={co232}
-										onChange={(e: { target: { value: any } }) =>
-											setCo232(
-												String(Math.min(Math.max(Number(e.target.value), 0), 1))
-											)
+										onChange={(e) =>
+											handleInputChange(e.target.value, setCo232)
 										}
 									/>
 								</td>
@@ -8637,10 +8379,8 @@ export default function App() {
 									<Input
 										type='number'
 										value={co332}
-										onChange={(e: { target: { value: any } }) =>
-											setCo332(
-												String(Math.min(Math.max(Number(e.target.value), 0), 1))
-											)
+										onChange={(e) =>
+											handleInputChange(e.target.value, setCo332)
 										}
 									/>
 								</td>
@@ -8648,10 +8388,8 @@ export default function App() {
 									<Input
 										type='number'
 										value={co432}
-										onChange={(e: { target: { value: any } }) =>
-											setCo432(
-												String(Math.min(Math.max(Number(e.target.value), 0), 1))
-											)
+										onChange={(e) =>
+											handleInputChange(e.target.value, setCo432)
 										}
 									/>
 								</td>
@@ -8659,10 +8397,8 @@ export default function App() {
 									<Input
 										type='number'
 										value={co532}
-										onChange={(e: { target: { value: any } }) =>
-											setCo532(
-												String(Math.min(Math.max(Number(e.target.value), 0), 1))
-											)
+										onChange={(e) =>
+											handleInputChange(e.target.value, setCo532)
 										}
 									/>
 								</td>
@@ -8670,10 +8406,8 @@ export default function App() {
 									<Input
 										type='number'
 										value={co632}
-										onChange={(e: { target: { value: any } }) =>
-											setCo632(
-												String(Math.min(Math.max(Number(e.target.value), 0), 1))
-											)
+										onChange={(e) =>
+											handleInputChange(e.target.value, setCo632)
 										}
 									/>
 								</td>
@@ -8681,10 +8415,8 @@ export default function App() {
 									<Input
 										type='number'
 										value={co732}
-										onChange={(e: { target: { value: any } }) =>
-											setCo732(
-												String(Math.min(Math.max(Number(e.target.value), 0), 1))
-											)
+										onChange={(e) =>
+											handleInputChange(e.target.value, setCo732)
 										}
 									/>
 								</td>
@@ -8717,10 +8449,8 @@ export default function App() {
 									<Input
 										type='number'
 										value={co133}
-										onChange={(e: { target: { value: any } }) =>
-											setCo133(
-												String(Math.min(Math.max(Number(e.target.value), 0), 1))
-											)
+										onChange={(e) =>
+											handleInputChange(e.target.value, setCo133)
 										}
 									/>
 								</td>
@@ -8728,10 +8458,8 @@ export default function App() {
 									<Input
 										type='number'
 										value={co233}
-										onChange={(e: { target: { value: any } }) =>
-											setCo233(
-												String(Math.min(Math.max(Number(e.target.value), 0), 1))
-											)
+										onChange={(e) =>
+											handleInputChange(e.target.value, setCo233)
 										}
 									/>
 								</td>
@@ -8739,10 +8467,8 @@ export default function App() {
 									<Input
 										type='number'
 										value={co333}
-										onChange={(e: { target: { value: any } }) =>
-											setCo333(
-												String(Math.min(Math.max(Number(e.target.value), 0), 1))
-											)
+										onChange={(e) =>
+											handleInputChange(e.target.value, setCo333)
 										}
 									/>
 								</td>
@@ -8750,10 +8476,8 @@ export default function App() {
 									<Input
 										type='number'
 										value={co433}
-										onChange={(e: { target: { value: any } }) =>
-											setCo433(
-												String(Math.min(Math.max(Number(e.target.value), 0), 1))
-											)
+										onChange={(e) =>
+											handleInputChange(e.target.value, setCo433)
 										}
 									/>
 								</td>
@@ -8761,10 +8485,8 @@ export default function App() {
 									<Input
 										type='number'
 										value={co533}
-										onChange={(e: { target: { value: any } }) =>
-											setCo533(
-												String(Math.min(Math.max(Number(e.target.value), 0), 1))
-											)
+										onChange={(e) =>
+											handleInputChange(e.target.value, setCo533)
 										}
 									/>
 								</td>
@@ -8772,10 +8494,8 @@ export default function App() {
 									<Input
 										type='number'
 										value={co633}
-										onChange={(e: { target: { value: any } }) =>
-											setCo633(
-												String(Math.min(Math.max(Number(e.target.value), 0), 1))
-											)
+										onChange={(e) =>
+											handleInputChange(e.target.value, setCo633)
 										}
 									/>
 								</td>
@@ -8783,10 +8503,8 @@ export default function App() {
 									<Input
 										type='number'
 										value={co733}
-										onChange={(e: { target: { value: any } }) =>
-											setCo733(
-												String(Math.min(Math.max(Number(e.target.value), 0), 1))
-											)
+										onChange={(e) =>
+											handleInputChange(e.target.value, setCo733)
 										}
 									/>
 								</td>
@@ -8819,10 +8537,8 @@ export default function App() {
 									<Input
 										type='number'
 										value={co134}
-										onChange={(e: { target: { value: any } }) =>
-											setCo134(
-												String(Math.min(Math.max(Number(e.target.value), 0), 1))
-											)
+										onChange={(e) =>
+											handleInputChange(e.target.value, setCo134)
 										}
 									/>
 								</td>
@@ -8830,10 +8546,8 @@ export default function App() {
 									<Input
 										type='number'
 										value={co234}
-										onChange={(e: { target: { value: any } }) =>
-											setCo234(
-												String(Math.min(Math.max(Number(e.target.value), 0), 1))
-											)
+										onChange={(e) =>
+											handleInputChange(e.target.value, setCo234)
 										}
 									/>
 								</td>
@@ -8841,10 +8555,8 @@ export default function App() {
 									<Input
 										type='number'
 										value={co334}
-										onChange={(e: { target: { value: any } }) =>
-											setCo334(
-												String(Math.min(Math.max(Number(e.target.value), 0), 1))
-											)
+										onChange={(e) =>
+											handleInputChange(e.target.value, setCo334)
 										}
 									/>
 								</td>
@@ -8852,10 +8564,8 @@ export default function App() {
 									<Input
 										type='number'
 										value={co434}
-										onChange={(e: { target: { value: any } }) =>
-											setCo434(
-												String(Math.min(Math.max(Number(e.target.value), 0), 1))
-											)
+										onChange={(e) =>
+											handleInputChange(e.target.value, setCo434)
 										}
 									/>
 								</td>
@@ -8863,10 +8573,8 @@ export default function App() {
 									<Input
 										type='number'
 										value={co534}
-										onChange={(e: { target: { value: any } }) =>
-											setCo534(
-												String(Math.min(Math.max(Number(e.target.value), 0), 1))
-											)
+										onChange={(e) =>
+											handleInputChange(e.target.value, setCo534)
 										}
 									/>
 								</td>
@@ -8874,10 +8582,8 @@ export default function App() {
 									<Input
 										type='number'
 										value={co634}
-										onChange={(e: { target: { value: any } }) =>
-											setCo634(
-												String(Math.min(Math.max(Number(e.target.value), 0), 1))
-											)
+										onChange={(e) =>
+											handleInputChange(e.target.value, setCo634)
 										}
 									/>
 								</td>
@@ -8885,10 +8591,8 @@ export default function App() {
 									<Input
 										type='number'
 										value={co734}
-										onChange={(e: { target: { value: any } }) =>
-											setCo734(
-												String(Math.min(Math.max(Number(e.target.value), 0), 1))
-											)
+										onChange={(e) =>
+											handleInputChange(e.target.value, setCo734)
 										}
 									/>
 								</td>
@@ -8921,10 +8625,8 @@ export default function App() {
 									<Input
 										type='number'
 										value={co135}
-										onChange={(e: { target: { value: any } }) =>
-											setCo135(
-												String(Math.min(Math.max(Number(e.target.value), 0), 1))
-											)
+										onChange={(e) =>
+											handleInputChange(e.target.value, setCo135)
 										}
 									/>
 								</td>
@@ -8932,10 +8634,8 @@ export default function App() {
 									<Input
 										type='number'
 										value={co235}
-										onChange={(e: { target: { value: any } }) =>
-											setCo235(
-												String(Math.min(Math.max(Number(e.target.value), 0), 1))
-											)
+										onChange={(e) =>
+											handleInputChange(e.target.value, setCo235)
 										}
 									/>
 								</td>
@@ -8943,10 +8643,8 @@ export default function App() {
 									<Input
 										type='number'
 										value={co335}
-										onChange={(e: { target: { value: any } }) =>
-											setCo335(
-												String(Math.min(Math.max(Number(e.target.value), 0), 1))
-											)
+										onChange={(e) =>
+											handleInputChange(e.target.value, setCo335)
 										}
 									/>
 								</td>
@@ -8954,10 +8652,8 @@ export default function App() {
 									<Input
 										type='number'
 										value={co435}
-										onChange={(e: { target: { value: any } }) =>
-											setCo435(
-												String(Math.min(Math.max(Number(e.target.value), 0), 1))
-											)
+										onChange={(e) =>
+											handleInputChange(e.target.value, setCo435)
 										}
 									/>
 								</td>
@@ -8965,10 +8661,8 @@ export default function App() {
 									<Input
 										type='number'
 										value={co535}
-										onChange={(e: { target: { value: any } }) =>
-											setCo535(
-												String(Math.min(Math.max(Number(e.target.value), 0), 1))
-											)
+										onChange={(e) =>
+											handleInputChange(e.target.value, setCo535)
 										}
 									/>
 								</td>
@@ -8976,10 +8670,8 @@ export default function App() {
 									<Input
 										type='number'
 										value={co635}
-										onChange={(e: { target: { value: any } }) =>
-											setCo635(
-												String(Math.min(Math.max(Number(e.target.value), 0), 1))
-											)
+										onChange={(e) =>
+											handleInputChange(e.target.value, setCo635)
 										}
 									/>
 								</td>
@@ -8987,10 +8679,8 @@ export default function App() {
 									<Input
 										type='number'
 										value={co735}
-										onChange={(e: { target: { value: any } }) =>
-											setCo735(
-												String(Math.min(Math.max(Number(e.target.value), 0), 1))
-											)
+										onChange={(e) =>
+											handleInputChange(e.target.value, setCo735)
 										}
 									/>
 								</td>
@@ -9023,10 +8713,8 @@ export default function App() {
 									<Input
 										type='number'
 										value={co136}
-										onChange={(e: { target: { value: any } }) =>
-											setCo136(
-												String(Math.min(Math.max(Number(e.target.value), 0), 1))
-											)
+										onChange={(e) =>
+											handleInputChange(e.target.value, setCo136)
 										}
 									/>
 								</td>
@@ -9034,10 +8722,8 @@ export default function App() {
 									<Input
 										type='number'
 										value={co236}
-										onChange={(e: { target: { value: any } }) =>
-											setCo236(
-												String(Math.min(Math.max(Number(e.target.value), 0), 1))
-											)
+										onChange={(e) =>
+											handleInputChange(e.target.value, setCo236)
 										}
 									/>
 								</td>
@@ -9045,10 +8731,8 @@ export default function App() {
 									<Input
 										type='number'
 										value={co336}
-										onChange={(e: { target: { value: any } }) =>
-											setCo336(
-												String(Math.min(Math.max(Number(e.target.value), 0), 1))
-											)
+										onChange={(e) =>
+											handleInputChange(e.target.value, setCo336)
 										}
 									/>
 								</td>
@@ -9056,10 +8740,8 @@ export default function App() {
 									<Input
 										type='number'
 										value={co436}
-										onChange={(e: { target: { value: any } }) =>
-											setCo436(
-												String(Math.min(Math.max(Number(e.target.value), 0), 1))
-											)
+										onChange={(e) =>
+											handleInputChange(e.target.value, setCo436)
 										}
 									/>
 								</td>
@@ -9067,10 +8749,8 @@ export default function App() {
 									<Input
 										type='number'
 										value={co536}
-										onChange={(e: { target: { value: any } }) =>
-											setCo536(
-												String(Math.min(Math.max(Number(e.target.value), 0), 1))
-											)
+										onChange={(e) =>
+											handleInputChange(e.target.value, setCo536)
 										}
 									/>
 								</td>
@@ -9078,10 +8758,8 @@ export default function App() {
 									<Input
 										type='number'
 										value={co636}
-										onChange={(e: { target: { value: any } }) =>
-											setCo636(
-												String(Math.min(Math.max(Number(e.target.value), 0), 1))
-											)
+										onChange={(e) =>
+											handleInputChange(e.target.value, setCo636)
 										}
 									/>
 								</td>
@@ -9089,10 +8767,8 @@ export default function App() {
 									<Input
 										type='number'
 										value={co736}
-										onChange={(e: { target: { value: any } }) =>
-											setCo736(
-												String(Math.min(Math.max(Number(e.target.value), 0), 1))
-											)
+										onChange={(e) =>
+											handleInputChange(e.target.value, setCo736)
 										}
 									/>
 								</td>
@@ -9137,10 +8813,8 @@ export default function App() {
 									<Input
 										type='number'
 										value={co137}
-										onChange={(e: { target: { value: any } }) =>
-											setCo137(
-												String(Math.min(Math.max(Number(e.target.value), 0), 1))
-											)
+										onChange={(e) =>
+											handleInputChange(e.target.value, setCo137)
 										}
 									/>
 								</td>
@@ -9148,10 +8822,8 @@ export default function App() {
 									<Input
 										type='number'
 										value={co237}
-										onChange={(e: { target: { value: any } }) =>
-											setCo237(
-												String(Math.min(Math.max(Number(e.target.value), 0), 1))
-											)
+										onChange={(e) =>
+											handleInputChange(e.target.value, setCo237)
 										}
 									/>
 								</td>
@@ -9159,10 +8831,8 @@ export default function App() {
 									<Input
 										type='number'
 										value={co337}
-										onChange={(e: { target: { value: any } }) =>
-											setCo337(
-												String(Math.min(Math.max(Number(e.target.value), 0), 1))
-											)
+										onChange={(e) =>
+											handleInputChange(e.target.value, setCo337)
 										}
 									/>
 								</td>
@@ -9170,10 +8840,8 @@ export default function App() {
 									<Input
 										type='number'
 										value={co437}
-										onChange={(e: { target: { value: any } }) =>
-											setCo437(
-												String(Math.min(Math.max(Number(e.target.value), 0), 1))
-											)
+										onChange={(e) =>
+											handleInputChange(e.target.value, setCo437)
 										}
 									/>
 								</td>
@@ -9181,10 +8849,8 @@ export default function App() {
 									<Input
 										type='number'
 										value={co537}
-										onChange={(e: { target: { value: any } }) =>
-											setCo537(
-												String(Math.min(Math.max(Number(e.target.value), 0), 1))
-											)
+										onChange={(e) =>
+											handleInputChange(e.target.value, setCo537)
 										}
 									/>
 								</td>
@@ -9192,10 +8858,8 @@ export default function App() {
 									<Input
 										type='number'
 										value={co637}
-										onChange={(e: { target: { value: any } }) =>
-											setCo637(
-												String(Math.min(Math.max(Number(e.target.value), 0), 1))
-											)
+										onChange={(e) =>
+											handleInputChange(e.target.value, setCo637)
 										}
 									/>
 								</td>
@@ -9203,10 +8867,8 @@ export default function App() {
 									<Input
 										type='number'
 										value={co737}
-										onChange={(e: { target: { value: any } }) =>
-											setCo737(
-												String(Math.min(Math.max(Number(e.target.value), 0), 1))
-											)
+										onChange={(e) =>
+											handleInputChange(e.target.value, setCo737)
 										}
 									/>
 								</td>
@@ -9239,10 +8901,8 @@ export default function App() {
 									<Input
 										type='number'
 										value={co138}
-										onChange={(e: { target: { value: any } }) =>
-											setCo138(
-												String(Math.min(Math.max(Number(e.target.value), 0), 1))
-											)
+										onChange={(e) =>
+											handleInputChange(e.target.value, setCo138)
 										}
 									/>
 								</td>
@@ -9250,10 +8910,8 @@ export default function App() {
 									<Input
 										type='number'
 										value={co238}
-										onChange={(e: { target: { value: any } }) =>
-											setCo238(
-												String(Math.min(Math.max(Number(e.target.value), 0), 1))
-											)
+										onChange={(e) =>
+											handleInputChange(e.target.value, setCo238)
 										}
 									/>
 								</td>
@@ -9261,10 +8919,8 @@ export default function App() {
 									<Input
 										type='number'
 										value={co338}
-										onChange={(e: { target: { value: any } }) =>
-											setCo338(
-												String(Math.min(Math.max(Number(e.target.value), 0), 1))
-											)
+										onChange={(e) =>
+											handleInputChange(e.target.value, setCo338)
 										}
 									/>
 								</td>
@@ -9272,10 +8928,8 @@ export default function App() {
 									<Input
 										type='number'
 										value={co438}
-										onChange={(e: { target: { value: any } }) =>
-											setCo438(
-												String(Math.min(Math.max(Number(e.target.value), 0), 1))
-											)
+										onChange={(e) =>
+											handleInputChange(e.target.value, setCo438)
 										}
 									/>
 								</td>
@@ -9283,10 +8937,8 @@ export default function App() {
 									<Input
 										type='number'
 										value={co538}
-										onChange={(e: { target: { value: any } }) =>
-											setCo538(
-												String(Math.min(Math.max(Number(e.target.value), 0), 1))
-											)
+										onChange={(e) =>
+											handleInputChange(e.target.value, setCo538)
 										}
 									/>
 								</td>
@@ -9294,10 +8946,8 @@ export default function App() {
 									<Input
 										type='number'
 										value={co638}
-										onChange={(e: { target: { value: any } }) =>
-											setCo638(
-												String(Math.min(Math.max(Number(e.target.value), 0), 1))
-											)
+										onChange={(e) =>
+											handleInputChange(e.target.value, setCo638)
 										}
 									/>
 								</td>
@@ -9305,10 +8955,8 @@ export default function App() {
 									<Input
 										type='number'
 										value={co738}
-										onChange={(e: { target: { value: any } }) =>
-											setCo738(
-												String(Math.min(Math.max(Number(e.target.value), 0), 1))
-											)
+										onChange={(e) =>
+											handleInputChange(e.target.value, setCo738)
 										}
 									/>
 								</td>
@@ -9341,10 +8989,8 @@ export default function App() {
 									<Input
 										type='number'
 										value={co139}
-										onChange={(e: { target: { value: any } }) =>
-											setCo139(
-												String(Math.min(Math.max(Number(e.target.value), 0), 1))
-											)
+										onChange={(e) =>
+											handleInputChange(e.target.value, setCo139)
 										}
 									/>
 								</td>
@@ -9352,10 +8998,8 @@ export default function App() {
 									<Input
 										type='number'
 										value={co239}
-										onChange={(e: { target: { value: any } }) =>
-											setCo239(
-												String(Math.min(Math.max(Number(e.target.value), 0), 1))
-											)
+										onChange={(e) =>
+											handleInputChange(e.target.value, setCo239)
 										}
 									/>
 								</td>
@@ -9363,10 +9007,8 @@ export default function App() {
 									<Input
 										type='number'
 										value={co339}
-										onChange={(e: { target: { value: any } }) =>
-											setCo339(
-												String(Math.min(Math.max(Number(e.target.value), 0), 1))
-											)
+										onChange={(e) =>
+											handleInputChange(e.target.value, setCo339)
 										}
 									/>
 								</td>
@@ -9374,10 +9016,8 @@ export default function App() {
 									<Input
 										type='number'
 										value={co439}
-										onChange={(e: { target: { value: any } }) =>
-											setCo439(
-												String(Math.min(Math.max(Number(e.target.value), 0), 1))
-											)
+										onChange={(e) =>
+											handleInputChange(e.target.value, setCo439)
 										}
 									/>
 								</td>
@@ -9385,10 +9025,8 @@ export default function App() {
 									<Input
 										type='number'
 										value={co539}
-										onChange={(e: { target: { value: any } }) =>
-											setCo539(
-												String(Math.min(Math.max(Number(e.target.value), 0), 1))
-											)
+										onChange={(e) =>
+											handleInputChange(e.target.value, setCo539)
 										}
 									/>
 								</td>
@@ -9396,10 +9034,8 @@ export default function App() {
 									<Input
 										type='number'
 										value={co639}
-										onChange={(e: { target: { value: any } }) =>
-											setCo639(
-												String(Math.min(Math.max(Number(e.target.value), 0), 1))
-											)
+										onChange={(e) =>
+											handleInputChange(e.target.value, setCo639)
 										}
 									/>
 								</td>
@@ -9407,10 +9043,8 @@ export default function App() {
 									<Input
 										type='number'
 										value={co739}
-										onChange={(e: { target: { value: any } }) =>
-											setCo739(
-												String(Math.min(Math.max(Number(e.target.value), 0), 1))
-											)
+										onChange={(e) =>
+											handleInputChange(e.target.value, setCo739)
 										}
 									/>
 								</td>
@@ -9454,10 +9088,8 @@ export default function App() {
 									<Input
 										type='number'
 										value={co1310}
-										onChange={(e: { target: { value: any } }) =>
-											setCo1310(
-												String(Math.min(Math.max(Number(e.target.value), 0), 1))
-											)
+										onChange={(e) =>
+											handleInputChange(e.target.value, setCo1310)
 										}
 									/>
 								</td>
@@ -9465,10 +9097,8 @@ export default function App() {
 									<Input
 										type='number'
 										value={co2310}
-										onChange={(e: { target: { value: any } }) =>
-											setCo2310(
-												String(Math.min(Math.max(Number(e.target.value), 0), 1))
-											)
+										onChange={(e) =>
+											handleInputChange(e.target.value, setCo2310)
 										}
 									/>
 								</td>
@@ -9476,10 +9106,8 @@ export default function App() {
 									<Input
 										type='number'
 										value={co3310}
-										onChange={(e: { target: { value: any } }) =>
-											setCo3310(
-												String(Math.min(Math.max(Number(e.target.value), 0), 1))
-											)
+										onChange={(e) =>
+											handleInputChange(e.target.value, setCo3310)
 										}
 									/>
 								</td>
@@ -9487,10 +9115,8 @@ export default function App() {
 									<Input
 										type='number'
 										value={co4310}
-										onChange={(e: { target: { value: any } }) =>
-											setCo4310(
-												String(Math.min(Math.max(Number(e.target.value), 0), 1))
-											)
+										onChange={(e) =>
+											handleInputChange(e.target.value, setCo4310)
 										}
 									/>
 								</td>
@@ -9498,10 +9124,8 @@ export default function App() {
 									<Input
 										type='number'
 										value={co5310}
-										onChange={(e: { target: { value: any } }) =>
-											setCo5310(
-												String(Math.min(Math.max(Number(e.target.value), 0), 1))
-											)
+										onChange={(e) =>
+											handleInputChange(e.target.value, setCo5310)
 										}
 									/>
 								</td>
@@ -9509,10 +9133,8 @@ export default function App() {
 									<Input
 										type='number'
 										value={co6310}
-										onChange={(e: { target: { value: any } }) =>
-											setCo6310(
-												String(Math.min(Math.max(Number(e.target.value), 0), 1))
-											)
+										onChange={(e) =>
+											handleInputChange(e.target.value, setCo6310)
 										}
 									/>
 								</td>
@@ -9520,10 +9142,8 @@ export default function App() {
 									<Input
 										type='number'
 										value={co7310}
-										onChange={(e: { target: { value: any } }) =>
-											setCo7310(
-												String(Math.min(Math.max(Number(e.target.value), 0), 1))
-											)
+										onChange={(e) =>
+											handleInputChange(e.target.value, setCo7310)
 										}
 									/>
 								</td>
@@ -9556,10 +9176,8 @@ export default function App() {
 									<Input
 										type='number'
 										value={co1311}
-										onChange={(e: { target: { value: any } }) =>
-											setCo1311(
-												String(Math.min(Math.max(Number(e.target.value), 0), 1))
-											)
+										onChange={(e) =>
+											handleInputChange(e.target.value, setCo1311)
 										}
 									/>
 								</td>
@@ -9567,10 +9185,8 @@ export default function App() {
 									<Input
 										type='number'
 										value={co2311}
-										onChange={(e: { target: { value: any } }) =>
-											setCo2311(
-												String(Math.min(Math.max(Number(e.target.value), 0), 1))
-											)
+										onChange={(e) =>
+											handleInputChange(e.target.value, setCo2311)
 										}
 									/>
 								</td>
@@ -9578,10 +9194,8 @@ export default function App() {
 									<Input
 										type='number'
 										value={co3311}
-										onChange={(e: { target: { value: any } }) =>
-											setCo3311(
-												String(Math.min(Math.max(Number(e.target.value), 0), 1))
-											)
+										onChange={(e) =>
+											handleInputChange(e.target.value, setCo3311)
 										}
 									/>
 								</td>
@@ -9589,10 +9203,8 @@ export default function App() {
 									<Input
 										type='number'
 										value={co4311}
-										onChange={(e: { target: { value: any } }) =>
-											setCo4311(
-												String(Math.min(Math.max(Number(e.target.value), 0), 1))
-											)
+										onChange={(e) =>
+											handleInputChange(e.target.value, setCo4311)
 										}
 									/>
 								</td>
@@ -9600,10 +9212,8 @@ export default function App() {
 									<Input
 										type='number'
 										value={co5311}
-										onChange={(e: { target: { value: any } }) =>
-											setCo5311(
-												String(Math.min(Math.max(Number(e.target.value), 0), 1))
-											)
+										onChange={(e) =>
+											handleInputChange(e.target.value, setCo5311)
 										}
 									/>
 								</td>
@@ -9611,10 +9221,8 @@ export default function App() {
 									<Input
 										type='number'
 										value={co6311}
-										onChange={(e: { target: { value: any } }) =>
-											setCo6311(
-												String(Math.min(Math.max(Number(e.target.value), 0), 1))
-											)
+										onChange={(e) =>
+											handleInputChange(e.target.value, setCo6311)
 										}
 									/>
 								</td>
@@ -9622,10 +9230,8 @@ export default function App() {
 									<Input
 										type='number'
 										value={co7311}
-										onChange={(e: { target: { value: any } }) =>
-											setCo7311(
-												String(Math.min(Math.max(Number(e.target.value), 0), 1))
-											)
+										onChange={(e) =>
+											handleInputChange(e.target.value, setCo7311)
 										}
 									/>
 								</td>
@@ -9669,10 +9275,8 @@ export default function App() {
 									<Input
 										type='number'
 										value={co1312}
-										onChange={(e: { target: { value: any } }) =>
-											setCo1312(
-												String(Math.min(Math.max(Number(e.target.value), 0), 1))
-											)
+										onChange={(e) =>
+											handleInputChange(e.target.value, setCo1312)
 										}
 									/>
 								</td>
@@ -9680,10 +9284,8 @@ export default function App() {
 									<Input
 										type='number'
 										value={co2312}
-										onChange={(e: { target: { value: any } }) =>
-											setCo2312(
-												String(Math.min(Math.max(Number(e.target.value), 0), 1))
-											)
+										onChange={(e) =>
+											handleInputChange(e.target.value, setCo2312)
 										}
 									/>
 								</td>
@@ -9691,10 +9293,8 @@ export default function App() {
 									<Input
 										type='number'
 										value={co3312}
-										onChange={(e: { target: { value: any } }) =>
-											setCo3312(
-												String(Math.min(Math.max(Number(e.target.value), 0), 1))
-											)
+										onChange={(e) =>
+											handleInputChange(e.target.value, setCo3312)
 										}
 									/>
 								</td>
@@ -9702,10 +9302,8 @@ export default function App() {
 									<Input
 										type='number'
 										value={co4312}
-										onChange={(e: { target: { value: any } }) =>
-											setCo4312(
-												String(Math.min(Math.max(Number(e.target.value), 0), 1))
-											)
+										onChange={(e) =>
+											handleInputChange(e.target.value, setCo4312)
 										}
 									/>
 								</td>
@@ -9713,10 +9311,8 @@ export default function App() {
 									<Input
 										type='number'
 										value={co5312}
-										onChange={(e: { target: { value: any } }) =>
-											setCo5312(
-												String(Math.min(Math.max(Number(e.target.value), 0), 1))
-											)
+										onChange={(e) =>
+											handleInputChange(e.target.value, setCo5312)
 										}
 									/>
 								</td>
@@ -9724,10 +9320,8 @@ export default function App() {
 									<Input
 										type='number'
 										value={co6312}
-										onChange={(e: { target: { value: any } }) =>
-											setCo6312(
-												String(Math.min(Math.max(Number(e.target.value), 0), 1))
-											)
+										onChange={(e) =>
+											handleInputChange(e.target.value, setCo6312)
 										}
 									/>
 								</td>
@@ -9735,10 +9329,8 @@ export default function App() {
 									<Input
 										type='number'
 										value={co7312}
-										onChange={(e: { target: { value: any } }) =>
-											setCo7312(
-												String(Math.min(Math.max(Number(e.target.value), 0), 1))
-											)
+										onChange={(e) =>
+											handleInputChange(e.target.value, setCo7312)
 										}
 									/>
 								</td>
@@ -9771,10 +9363,8 @@ export default function App() {
 									<Input
 										type='number'
 										value={co1313}
-										onChange={(e: { target: { value: any } }) =>
-											setCo1313(
-												String(Math.min(Math.max(Number(e.target.value), 0), 1))
-											)
+										onChange={(e) =>
+											handleInputChange(e.target.value, setCo1313)
 										}
 									/>
 								</td>
@@ -9782,10 +9372,8 @@ export default function App() {
 									<Input
 										type='number'
 										value={co2313}
-										onChange={(e: { target: { value: any } }) =>
-											setCo2313(
-												String(Math.min(Math.max(Number(e.target.value), 0), 1))
-											)
+										onChange={(e) =>
+											handleInputChange(e.target.value, setCo2313)
 										}
 									/>
 								</td>
@@ -9793,10 +9381,8 @@ export default function App() {
 									<Input
 										type='number'
 										value={co3313}
-										onChange={(e: { target: { value: any } }) =>
-											setCo3313(
-												String(Math.min(Math.max(Number(e.target.value), 0), 1))
-											)
+										onChange={(e) =>
+											handleInputChange(e.target.value, setCo3313)
 										}
 									/>
 								</td>
@@ -9804,10 +9390,8 @@ export default function App() {
 									<Input
 										type='number'
 										value={co4313}
-										onChange={(e: { target: { value: any } }) =>
-											setCo4313(
-												String(Math.min(Math.max(Number(e.target.value), 0), 1))
-											)
+										onChange={(e) =>
+											handleInputChange(e.target.value, setCo4313)
 										}
 									/>
 								</td>
@@ -9815,10 +9399,8 @@ export default function App() {
 									<Input
 										type='number'
 										value={co5313}
-										onChange={(e: { target: { value: any } }) =>
-											setCo5313(
-												String(Math.min(Math.max(Number(e.target.value), 0), 1))
-											)
+										onChange={(e) =>
+											handleInputChange(e.target.value, setCo5313)
 										}
 									/>
 								</td>
@@ -9826,10 +9408,8 @@ export default function App() {
 									<Input
 										type='number'
 										value={co6313}
-										onChange={(e: { target: { value: any } }) =>
-											setCo6313(
-												String(Math.min(Math.max(Number(e.target.value), 0), 1))
-											)
+										onChange={(e) =>
+											handleInputChange(e.target.value, setCo6313)
 										}
 									/>
 								</td>
@@ -9837,10 +9417,8 @@ export default function App() {
 									<Input
 										type='number'
 										value={co7313}
-										onChange={(e: { target: { value: any } }) =>
-											setCo7313(
-												String(Math.min(Math.max(Number(e.target.value), 0), 1))
-											)
+										onChange={(e) =>
+											handleInputChange(e.target.value, setCo7313)
 										}
 									/>
 								</td>
@@ -9992,10 +9570,8 @@ export default function App() {
 									<Input
 										type='number'
 										value={co141}
-										onChange={(e: { target: { value: any } }) =>
-											setCo141(
-												String(Math.min(Math.max(Number(e.target.value), 0), 1))
-											)
+										onChange={(e) =>
+											handleInputChange(e.target.value, setCo141)
 										}
 									/>
 								</td>
@@ -10003,10 +9579,8 @@ export default function App() {
 									<Input
 										type='number'
 										value={co241}
-										onChange={(e: { target: { value: any } }) =>
-											setCo241(
-												String(Math.min(Math.max(Number(e.target.value), 0), 1))
-											)
+										onChange={(e) =>
+											handleInputChange(e.target.value, setCo241)
 										}
 									/>
 								</td>
@@ -10014,10 +9588,8 @@ export default function App() {
 									<Input
 										type='number'
 										value={co341}
-										onChange={(e: { target: { value: any } }) =>
-											setCo341(
-												String(Math.min(Math.max(Number(e.target.value), 0), 1))
-											)
+										onChange={(e) =>
+											handleInputChange(e.target.value, setCo341)
 										}
 									/>
 								</td>
@@ -10025,10 +9597,8 @@ export default function App() {
 									<Input
 										type='number'
 										value={co441}
-										onChange={(e: { target: { value: any } }) =>
-											setCo441(
-												String(Math.min(Math.max(Number(e.target.value), 0), 1))
-											)
+										onChange={(e) =>
+											handleInputChange(e.target.value, setCo441)
 										}
 									/>
 								</td>
@@ -10036,10 +9606,8 @@ export default function App() {
 									<Input
 										type='number'
 										value={co541}
-										onChange={(e: { target: { value: any } }) =>
-											setCo541(
-												String(Math.min(Math.max(Number(e.target.value), 0), 1))
-											)
+										onChange={(e) =>
+											handleInputChange(e.target.value, setCo541)
 										}
 									/>
 								</td>
@@ -10047,10 +9615,8 @@ export default function App() {
 									<Input
 										type='number'
 										value={co641}
-										onChange={(e: { target: { value: any } }) =>
-											setCo641(
-												String(Math.min(Math.max(Number(e.target.value), 0), 1))
-											)
+										onChange={(e) =>
+											handleInputChange(e.target.value, setCo641)
 										}
 									/>
 								</td>
@@ -10058,10 +9624,8 @@ export default function App() {
 									<Input
 										type='number'
 										value={co741}
-										onChange={(e: { target: { value: any } }) =>
-											setCo741(
-												String(Math.min(Math.max(Number(e.target.value), 0), 1))
-											)
+										onChange={(e) =>
+											handleInputChange(e.target.value, setCo741)
 										}
 									/>
 								</td>
@@ -10094,10 +9658,8 @@ export default function App() {
 									<Input
 										type='number'
 										value={co142}
-										onChange={(e: { target: { value: any } }) =>
-											setCo142(
-												String(Math.min(Math.max(Number(e.target.value), 0), 1))
-											)
+										onChange={(e) =>
+											handleInputChange(e.target.value, setCo142)
 										}
 									/>
 								</td>
@@ -10105,10 +9667,8 @@ export default function App() {
 									<Input
 										type='number'
 										value={co242}
-										onChange={(e: { target: { value: any } }) =>
-											setCo242(
-												String(Math.min(Math.max(Number(e.target.value), 0), 1))
-											)
+										onChange={(e) =>
+											handleInputChange(e.target.value, setCo242)
 										}
 									/>
 								</td>
@@ -10116,10 +9676,8 @@ export default function App() {
 									<Input
 										type='number'
 										value={co342}
-										onChange={(e: { target: { value: any } }) =>
-											setCo342(
-												String(Math.min(Math.max(Number(e.target.value), 0), 1))
-											)
+										onChange={(e) =>
+											handleInputChange(e.target.value, setCo342)
 										}
 									/>
 								</td>
@@ -10127,10 +9685,8 @@ export default function App() {
 									<Input
 										type='number'
 										value={co442}
-										onChange={(e: { target: { value: any } }) =>
-											setCo442(
-												String(Math.min(Math.max(Number(e.target.value), 0), 1))
-											)
+										onChange={(e) =>
+											handleInputChange(e.target.value, setCo442)
 										}
 									/>
 								</td>
@@ -10138,10 +9694,8 @@ export default function App() {
 									<Input
 										type='number'
 										value={co542}
-										onChange={(e: { target: { value: any } }) =>
-											setCo542(
-												String(Math.min(Math.max(Number(e.target.value), 0), 1))
-											)
+										onChange={(e) =>
+											handleInputChange(e.target.value, setCo542)
 										}
 									/>
 								</td>
@@ -10149,10 +9703,8 @@ export default function App() {
 									<Input
 										type='number'
 										value={co642}
-										onChange={(e: { target: { value: any } }) =>
-											setCo642(
-												String(Math.min(Math.max(Number(e.target.value), 0), 1))
-											)
+										onChange={(e) =>
+											handleInputChange(e.target.value, setCo642)
 										}
 									/>
 								</td>
@@ -10160,10 +9712,8 @@ export default function App() {
 									<Input
 										type='number'
 										value={co742}
-										onChange={(e: { target: { value: any } }) =>
-											setCo742(
-												String(Math.min(Math.max(Number(e.target.value), 0), 1))
-											)
+										onChange={(e) =>
+											handleInputChange(e.target.value, setCo742)
 										}
 									/>
 								</td>
@@ -10196,10 +9746,8 @@ export default function App() {
 									<Input
 										type='number'
 										value={co143}
-										onChange={(e: { target: { value: any } }) =>
-											setCo143(
-												String(Math.min(Math.max(Number(e.target.value), 0), 1))
-											)
+										onChange={(e) =>
+											handleInputChange(e.target.value, setCo143)
 										}
 									/>
 								</td>
@@ -10207,10 +9755,8 @@ export default function App() {
 									<Input
 										type='number'
 										value={co243}
-										onChange={(e: { target: { value: any } }) =>
-											setCo243(
-												String(Math.min(Math.max(Number(e.target.value), 0), 1))
-											)
+										onChange={(e) =>
+											handleInputChange(e.target.value, setCo243)
 										}
 									/>
 								</td>
@@ -10218,10 +9764,8 @@ export default function App() {
 									<Input
 										type='number'
 										value={co343}
-										onChange={(e: { target: { value: any } }) =>
-											setCo343(
-												String(Math.min(Math.max(Number(e.target.value), 0), 1))
-											)
+										onChange={(e) =>
+											handleInputChange(e.target.value, setCo343)
 										}
 									/>
 								</td>
@@ -10229,10 +9773,8 @@ export default function App() {
 									<Input
 										type='number'
 										value={co443}
-										onChange={(e: { target: { value: any } }) =>
-											setCo443(
-												String(Math.min(Math.max(Number(e.target.value), 0), 1))
-											)
+										onChange={(e) =>
+											handleInputChange(e.target.value, setCo443)
 										}
 									/>
 								</td>
@@ -10240,10 +9782,8 @@ export default function App() {
 									<Input
 										type='number'
 										value={co543}
-										onChange={(e: { target: { value: any } }) =>
-											setCo543(
-												String(Math.min(Math.max(Number(e.target.value), 0), 1))
-											)
+										onChange={(e) =>
+											handleInputChange(e.target.value, setCo543)
 										}
 									/>
 								</td>
@@ -10251,10 +9791,8 @@ export default function App() {
 									<Input
 										type='number'
 										value={co643}
-										onChange={(e: { target: { value: any } }) =>
-											setCo643(
-												String(Math.min(Math.max(Number(e.target.value), 0), 1))
-											)
+										onChange={(e) =>
+											handleInputChange(e.target.value, setCo643)
 										}
 									/>
 								</td>
@@ -10262,10 +9800,8 @@ export default function App() {
 									<Input
 										type='number'
 										value={co743}
-										onChange={(e: { target: { value: any } }) =>
-											setCo743(
-												String(Math.min(Math.max(Number(e.target.value), 0), 1))
-											)
+										onChange={(e) =>
+											handleInputChange(e.target.value, setCo743)
 										}
 									/>
 								</td>
@@ -10298,10 +9834,8 @@ export default function App() {
 									<Input
 										type='number'
 										value={co144}
-										onChange={(e: { target: { value: any } }) =>
-											setCo144(
-												String(Math.min(Math.max(Number(e.target.value), 0), 1))
-											)
+										onChange={(e) =>
+											handleInputChange(e.target.value, setCo144)
 										}
 									/>
 								</td>
@@ -10309,10 +9843,8 @@ export default function App() {
 									<Input
 										type='number'
 										value={co244}
-										onChange={(e: { target: { value: any } }) =>
-											setCo244(
-												String(Math.min(Math.max(Number(e.target.value), 0), 1))
-											)
+										onChange={(e) =>
+											handleInputChange(e.target.value, setCo244)
 										}
 									/>
 								</td>
@@ -10320,10 +9852,8 @@ export default function App() {
 									<Input
 										type='number'
 										value={co344}
-										onChange={(e: { target: { value: any } }) =>
-											setCo344(
-												String(Math.min(Math.max(Number(e.target.value), 0), 1))
-											)
+										onChange={(e) =>
+											handleInputChange(e.target.value, setCo344)
 										}
 									/>
 								</td>
@@ -10331,10 +9861,8 @@ export default function App() {
 									<Input
 										type='number'
 										value={co444}
-										onChange={(e: { target: { value: any } }) =>
-											setCo444(
-												String(Math.min(Math.max(Number(e.target.value), 0), 1))
-											)
+										onChange={(e) =>
+											handleInputChange(e.target.value, setCo444)
 										}
 									/>
 								</td>
@@ -10342,10 +9870,8 @@ export default function App() {
 									<Input
 										type='number'
 										value={co544}
-										onChange={(e: { target: { value: any } }) =>
-											setCo544(
-												String(Math.min(Math.max(Number(e.target.value), 0), 1))
-											)
+										onChange={(e) =>
+											handleInputChange(e.target.value, setCo544)
 										}
 									/>
 								</td>
@@ -10353,10 +9879,8 @@ export default function App() {
 									<Input
 										type='number'
 										value={co644}
-										onChange={(e: { target: { value: any } }) =>
-											setCo644(
-												String(Math.min(Math.max(Number(e.target.value), 0), 1))
-											)
+										onChange={(e) =>
+											handleInputChange(e.target.value, setCo644)
 										}
 									/>
 								</td>
@@ -10364,10 +9888,8 @@ export default function App() {
 									<Input
 										type='number'
 										value={co744}
-										onChange={(e: { target: { value: any } }) =>
-											setCo744(
-												String(Math.min(Math.max(Number(e.target.value), 0), 1))
-											)
+										onChange={(e) =>
+											handleInputChange(e.target.value, setCo744)
 										}
 									/>
 								</td>
@@ -10411,10 +9933,8 @@ export default function App() {
 									<Input
 										type='number'
 										value={co145}
-										onChange={(e: { target: { value: any } }) =>
-											setCo145(
-												String(Math.min(Math.max(Number(e.target.value), 0), 1))
-											)
+										onChange={(e) =>
+											handleInputChange(e.target.value, setCo145)
 										}
 									/>
 								</td>
@@ -10422,10 +9942,8 @@ export default function App() {
 									<Input
 										type='number'
 										value={co245}
-										onChange={(e: { target: { value: any } }) =>
-											setCo245(
-												String(Math.min(Math.max(Number(e.target.value), 0), 1))
-											)
+										onChange={(e) =>
+											handleInputChange(e.target.value, setCo245)
 										}
 									/>
 								</td>
@@ -10433,10 +9951,8 @@ export default function App() {
 									<Input
 										type='number'
 										value={co345}
-										onChange={(e: { target: { value: any } }) =>
-											setCo345(
-												String(Math.min(Math.max(Number(e.target.value), 0), 1))
-											)
+										onChange={(e) =>
+											handleInputChange(e.target.value, setCo345)
 										}
 									/>
 								</td>
@@ -10444,10 +9960,8 @@ export default function App() {
 									<Input
 										type='number'
 										value={co445}
-										onChange={(e: { target: { value: any } }) =>
-											setCo445(
-												String(Math.min(Math.max(Number(e.target.value), 0), 1))
-											)
+										onChange={(e) =>
+											handleInputChange(e.target.value, setCo445)
 										}
 									/>
 								</td>
@@ -10455,10 +9969,8 @@ export default function App() {
 									<Input
 										type='number'
 										value={co545}
-										onChange={(e: { target: { value: any } }) =>
-											setCo545(
-												String(Math.min(Math.max(Number(e.target.value), 0), 1))
-											)
+										onChange={(e) =>
+											handleInputChange(e.target.value, setCo545)
 										}
 									/>
 								</td>
@@ -10466,10 +9978,8 @@ export default function App() {
 									<Input
 										type='number'
 										value={co645}
-										onChange={(e: { target: { value: any } }) =>
-											setCo645(
-												String(Math.min(Math.max(Number(e.target.value), 0), 1))
-											)
+										onChange={(e) =>
+											handleInputChange(e.target.value, setCo645)
 										}
 									/>
 								</td>
@@ -10477,10 +9987,8 @@ export default function App() {
 									<Input
 										type='number'
 										value={co745}
-										onChange={(e: { target: { value: any } }) =>
-											setCo745(
-												String(Math.min(Math.max(Number(e.target.value), 0), 1))
-											)
+										onChange={(e) =>
+											handleInputChange(e.target.value, setCo745)
 										}
 									/>
 								</td>
@@ -10513,10 +10021,8 @@ export default function App() {
 									<Input
 										type='number'
 										value={co146}
-										onChange={(e: { target: { value: any } }) =>
-											setCo146(
-												String(Math.min(Math.max(Number(e.target.value), 0), 1))
-											)
+										onChange={(e) =>
+											handleInputChange(e.target.value, setCo146)
 										}
 									/>
 								</td>
@@ -10524,10 +10030,8 @@ export default function App() {
 									<Input
 										type='number'
 										value={co246}
-										onChange={(e: { target: { value: any } }) =>
-											setCo246(
-												String(Math.min(Math.max(Number(e.target.value), 0), 1))
-											)
+										onChange={(e) =>
+											handleInputChange(e.target.value, setCo246)
 										}
 									/>
 								</td>
@@ -10535,10 +10039,8 @@ export default function App() {
 									<Input
 										type='number'
 										value={co346}
-										onChange={(e: { target: { value: any } }) =>
-											setCo346(
-												String(Math.min(Math.max(Number(e.target.value), 0), 1))
-											)
+										onChange={(e) =>
+											handleInputChange(e.target.value, setCo346)
 										}
 									/>
 								</td>
@@ -10546,10 +10048,8 @@ export default function App() {
 									<Input
 										type='number'
 										value={co446}
-										onChange={(e: { target: { value: any } }) =>
-											setCo446(
-												String(Math.min(Math.max(Number(e.target.value), 0), 1))
-											)
+										onChange={(e) =>
+											handleInputChange(e.target.value, setCo446)
 										}
 									/>
 								</td>
@@ -10557,10 +10057,8 @@ export default function App() {
 									<Input
 										type='number'
 										value={co546}
-										onChange={(e: { target: { value: any } }) =>
-											setCo546(
-												String(Math.min(Math.max(Number(e.target.value), 0), 1))
-											)
+										onChange={(e) =>
+											handleInputChange(e.target.value, setCo546)
 										}
 									/>
 								</td>
@@ -10568,10 +10066,8 @@ export default function App() {
 									<Input
 										type='number'
 										value={co646}
-										onChange={(e: { target: { value: any } }) =>
-											setCo646(
-												String(Math.min(Math.max(Number(e.target.value), 0), 1))
-											)
+										onChange={(e) =>
+											handleInputChange(e.target.value, setCo646)
 										}
 									/>
 								</td>
@@ -10579,10 +10075,8 @@ export default function App() {
 									<Input
 										type='number'
 										value={co746}
-										onChange={(e: { target: { value: any } }) =>
-											setCo746(
-												String(Math.min(Math.max(Number(e.target.value), 0), 1))
-											)
+										onChange={(e) =>
+											handleInputChange(e.target.value, setCo746)
 										}
 									/>
 								</td>
@@ -10627,10 +10121,8 @@ export default function App() {
 									<Input
 										type='number'
 										value={co147}
-										onChange={(e: { target: { value: any } }) =>
-											setCo147(
-												String(Math.min(Math.max(Number(e.target.value), 0), 1))
-											)
+										onChange={(e) =>
+											handleInputChange(e.target.value, setCo147)
 										}
 									/>
 								</td>
@@ -10638,10 +10130,8 @@ export default function App() {
 									<Input
 										type='number'
 										value={co247}
-										onChange={(e: { target: { value: any } }) =>
-											setCo247(
-												String(Math.min(Math.max(Number(e.target.value), 0), 1))
-											)
+										onChange={(e) =>
+											handleInputChange(e.target.value, setCo247)
 										}
 									/>
 								</td>
@@ -10649,10 +10139,8 @@ export default function App() {
 									<Input
 										type='number'
 										value={co347}
-										onChange={(e: { target: { value: any } }) =>
-											setCo347(
-												String(Math.min(Math.max(Number(e.target.value), 0), 1))
-											)
+										onChange={(e) =>
+											handleInputChange(e.target.value, setCo347)
 										}
 									/>
 								</td>
@@ -10660,10 +10148,8 @@ export default function App() {
 									<Input
 										type='number'
 										value={co447}
-										onChange={(e: { target: { value: any } }) =>
-											setCo447(
-												String(Math.min(Math.max(Number(e.target.value), 0), 1))
-											)
+										onChange={(e) =>
+											handleInputChange(e.target.value, setCo447)
 										}
 									/>
 								</td>
@@ -10671,10 +10157,8 @@ export default function App() {
 									<Input
 										type='number'
 										value={co547}
-										onChange={(e: { target: { value: any } }) =>
-											setCo547(
-												String(Math.min(Math.max(Number(e.target.value), 0), 1))
-											)
+										onChange={(e) =>
+											handleInputChange(e.target.value, setCo547)
 										}
 									/>
 								</td>
@@ -10682,10 +10166,8 @@ export default function App() {
 									<Input
 										type='number'
 										value={co647}
-										onChange={(e: { target: { value: any } }) =>
-											setCo647(
-												String(Math.min(Math.max(Number(e.target.value), 0), 1))
-											)
+										onChange={(e) =>
+											handleInputChange(e.target.value, setCo647)
 										}
 									/>
 								</td>
@@ -10693,10 +10175,8 @@ export default function App() {
 									<Input
 										type='number'
 										value={co747}
-										onChange={(e: { target: { value: any } }) =>
-											setCo747(
-												String(Math.min(Math.max(Number(e.target.value), 0), 1))
-											)
+										onChange={(e) =>
+											handleInputChange(e.target.value, setCo747)
 										}
 									/>
 								</td>
@@ -10729,10 +10209,8 @@ export default function App() {
 									<Input
 										type='number'
 										value={co148}
-										onChange={(e: { target: { value: any } }) =>
-											setCo148(
-												String(Math.min(Math.max(Number(e.target.value), 0), 1))
-											)
+										onChange={(e) =>
+											handleInputChange(e.target.value, setCo148)
 										}
 									/>
 								</td>
@@ -10740,10 +10218,8 @@ export default function App() {
 									<Input
 										type='number'
 										value={co248}
-										onChange={(e: { target: { value: any } }) =>
-											setCo248(
-												String(Math.min(Math.max(Number(e.target.value), 0), 1))
-											)
+										onChange={(e) =>
+											handleInputChange(e.target.value, setCo248)
 										}
 									/>
 								</td>
@@ -10751,10 +10227,8 @@ export default function App() {
 									<Input
 										type='number'
 										value={co348}
-										onChange={(e: { target: { value: any } }) =>
-											setCo348(
-												String(Math.min(Math.max(Number(e.target.value), 0), 1))
-											)
+										onChange={(e) =>
+											handleInputChange(e.target.value, setCo348)
 										}
 									/>
 								</td>
@@ -10762,10 +10236,8 @@ export default function App() {
 									<Input
 										type='number'
 										value={co448}
-										onChange={(e: { target: { value: any } }) =>
-											setCo448(
-												String(Math.min(Math.max(Number(e.target.value), 0), 1))
-											)
+										onChange={(e) =>
+											handleInputChange(e.target.value, setCo448)
 										}
 									/>
 								</td>
@@ -10773,10 +10245,8 @@ export default function App() {
 									<Input
 										type='number'
 										value={co548}
-										onChange={(e: { target: { value: any } }) =>
-											setCo548(
-												String(Math.min(Math.max(Number(e.target.value), 0), 1))
-											)
+										onChange={(e) =>
+											handleInputChange(e.target.value, setCo548)
 										}
 									/>
 								</td>
@@ -10784,10 +10254,8 @@ export default function App() {
 									<Input
 										type='number'
 										value={co648}
-										onChange={(e: { target: { value: any } }) =>
-											setCo648(
-												String(Math.min(Math.max(Number(e.target.value), 0), 1))
-											)
+										onChange={(e) =>
+											handleInputChange(e.target.value, setCo648)
 										}
 									/>
 								</td>
@@ -10795,10 +10263,8 @@ export default function App() {
 									<Input
 										type='number'
 										value={co748}
-										onChange={(e: { target: { value: any } }) =>
-											setCo748(
-												String(Math.min(Math.max(Number(e.target.value), 0), 1))
-											)
+										onChange={(e) =>
+											handleInputChange(e.target.value, setCo748)
 										}
 									/>
 								</td>
@@ -10831,10 +10297,8 @@ export default function App() {
 									<Input
 										type='number'
 										value={co149}
-										onChange={(e: { target: { value: any } }) =>
-											setCo149(
-												String(Math.min(Math.max(Number(e.target.value), 0), 1))
-											)
+										onChange={(e) =>
+											handleInputChange(e.target.value, setCo149)
 										}
 									/>
 								</td>
@@ -10842,10 +10306,8 @@ export default function App() {
 									<Input
 										type='number'
 										value={co249}
-										onChange={(e: { target: { value: any } }) =>
-											setCo249(
-												String(Math.min(Math.max(Number(e.target.value), 0), 1))
-											)
+										onChange={(e) =>
+											handleInputChange(e.target.value, setCo249)
 										}
 									/>
 								</td>
@@ -10853,10 +10315,8 @@ export default function App() {
 									<Input
 										type='number'
 										value={co349}
-										onChange={(e: { target: { value: any } }) =>
-											setCo349(
-												String(Math.min(Math.max(Number(e.target.value), 0), 1))
-											)
+										onChange={(e) =>
+											handleInputChange(e.target.value, setCo349)
 										}
 									/>
 								</td>
@@ -10864,10 +10324,8 @@ export default function App() {
 									<Input
 										type='number'
 										value={co449}
-										onChange={(e: { target: { value: any } }) =>
-											setCo449(
-												String(Math.min(Math.max(Number(e.target.value), 0), 1))
-											)
+										onChange={(e) =>
+											handleInputChange(e.target.value, setCo449)
 										}
 									/>
 								</td>
@@ -10875,10 +10333,8 @@ export default function App() {
 									<Input
 										type='number'
 										value={co549}
-										onChange={(e: { target: { value: any } }) =>
-											setCo549(
-												String(Math.min(Math.max(Number(e.target.value), 0), 1))
-											)
+										onChange={(e) =>
+											handleInputChange(e.target.value, setCo549)
 										}
 									/>
 								</td>
@@ -10886,10 +10342,8 @@ export default function App() {
 									<Input
 										type='number'
 										value={co649}
-										onChange={(e: { target: { value: any } }) =>
-											setCo649(
-												String(Math.min(Math.max(Number(e.target.value), 0), 1))
-											)
+										onChange={(e) =>
+											handleInputChange(e.target.value, setCo649)
 										}
 									/>
 								</td>
@@ -10897,10 +10351,8 @@ export default function App() {
 									<Input
 										type='number'
 										value={co749}
-										onChange={(e: { target: { value: any } }) =>
-											setCo749(
-												String(Math.min(Math.max(Number(e.target.value), 0), 1))
-											)
+										onChange={(e) =>
+											handleInputChange(e.target.value, setCo749)
 										}
 									/>
 								</td>
@@ -10933,10 +10385,8 @@ export default function App() {
 									<Input
 										type='number'
 										value={co1410}
-										onChange={(e: { target: { value: any } }) =>
-											setCo1410(
-												String(Math.min(Math.max(Number(e.target.value), 0), 1))
-											)
+										onChange={(e) =>
+											handleInputChange(e.target.value, setCo1410)
 										}
 									/>
 								</td>
@@ -10944,10 +10394,8 @@ export default function App() {
 									<Input
 										type='number'
 										value={co2410}
-										onChange={(e: { target: { value: any } }) =>
-											setCo2410(
-												String(Math.min(Math.max(Number(e.target.value), 0), 1))
-											)
+										onChange={(e) =>
+											handleInputChange(e.target.value, setCo2410)
 										}
 									/>
 								</td>
@@ -10955,10 +10403,8 @@ export default function App() {
 									<Input
 										type='number'
 										value={co3410}
-										onChange={(e: { target: { value: any } }) =>
-											setCo3410(
-												String(Math.min(Math.max(Number(e.target.value), 0), 1))
-											)
+										onChange={(e) =>
+											handleInputChange(e.target.value, setCo3410)
 										}
 									/>
 								</td>
@@ -10966,10 +10412,8 @@ export default function App() {
 									<Input
 										type='number'
 										value={co4410}
-										onChange={(e: { target: { value: any } }) =>
-											setCo4410(
-												String(Math.min(Math.max(Number(e.target.value), 0), 1))
-											)
+										onChange={(e) =>
+											handleInputChange(e.target.value, setCo4410)
 										}
 									/>
 								</td>
@@ -10977,10 +10421,8 @@ export default function App() {
 									<Input
 										type='number'
 										value={co5410}
-										onChange={(e: { target: { value: any } }) =>
-											setCo5410(
-												String(Math.min(Math.max(Number(e.target.value), 0), 1))
-											)
+										onChange={(e) =>
+											handleInputChange(e.target.value, setCo5410)
 										}
 									/>
 								</td>
@@ -10988,10 +10430,8 @@ export default function App() {
 									<Input
 										type='number'
 										value={co6410}
-										onChange={(e: { target: { value: any } }) =>
-											setCo6410(
-												String(Math.min(Math.max(Number(e.target.value), 0), 1))
-											)
+										onChange={(e) =>
+											handleInputChange(e.target.value, setCo6410)
 										}
 									/>
 								</td>
@@ -10999,10 +10439,8 @@ export default function App() {
 									<Input
 										type='number'
 										value={co7410}
-										onChange={(e: { target: { value: any } }) =>
-											setCo7410(
-												String(Math.min(Math.max(Number(e.target.value), 0), 1))
-											)
+										onChange={(e) =>
+											handleInputChange(e.target.value, setCo7410)
 										}
 									/>
 								</td>
@@ -11155,10 +10593,8 @@ export default function App() {
 									<Input
 										type='number'
 										value={co151}
-										onChange={(e: { target: { value: any } }) =>
-											setCo151(
-												String(Math.min(Math.max(Number(e.target.value), 0), 1))
-											)
+										onChange={(e) =>
+											handleInputChange(e.target.value, setCo151)
 										}
 									/>
 								</td>
@@ -11166,10 +10602,8 @@ export default function App() {
 									<Input
 										type='number'
 										value={co251}
-										onChange={(e: { target: { value: any } }) =>
-											setCo251(
-												String(Math.min(Math.max(Number(e.target.value), 0), 1))
-											)
+										onChange={(e) =>
+											handleInputChange(e.target.value, setCo251)
 										}
 									/>
 								</td>
@@ -11177,10 +10611,8 @@ export default function App() {
 									<Input
 										type='number'
 										value={co351}
-										onChange={(e: { target: { value: any } }) =>
-											setCo351(
-												String(Math.min(Math.max(Number(e.target.value), 0), 1))
-											)
+										onChange={(e) =>
+											handleInputChange(e.target.value, setCo351)
 										}
 									/>
 								</td>
@@ -11188,10 +10620,8 @@ export default function App() {
 									<Input
 										type='number'
 										value={co451}
-										onChange={(e: { target: { value: any } }) =>
-											setCo451(
-												String(Math.min(Math.max(Number(e.target.value), 0), 1))
-											)
+										onChange={(e) =>
+											handleInputChange(e.target.value, setCo451)
 										}
 									/>
 								</td>
@@ -11199,10 +10629,8 @@ export default function App() {
 									<Input
 										type='number'
 										value={co551}
-										onChange={(e: { target: { value: any } }) =>
-											setCo551(
-												String(Math.min(Math.max(Number(e.target.value), 0), 1))
-											)
+										onChange={(e) =>
+											handleInputChange(e.target.value, setCo551)
 										}
 									/>
 								</td>
@@ -11210,10 +10638,8 @@ export default function App() {
 									<Input
 										type='number'
 										value={co651}
-										onChange={(e: { target: { value: any } }) =>
-											setCo651(
-												String(Math.min(Math.max(Number(e.target.value), 0), 1))
-											)
+										onChange={(e) =>
+											handleInputChange(e.target.value, setCo651)
 										}
 									/>
 								</td>
@@ -11221,10 +10647,8 @@ export default function App() {
 									<Input
 										type='number'
 										value={co751}
-										onChange={(e: { target: { value: any } }) =>
-											setCo751(
-												String(Math.min(Math.max(Number(e.target.value), 0), 1))
-											)
+										onChange={(e) =>
+											handleInputChange(e.target.value, setCo751)
 										}
 									/>
 								</td>
@@ -11257,10 +10681,8 @@ export default function App() {
 									<Input
 										type='number'
 										value={co152}
-										onChange={(e: { target: { value: any } }) =>
-											setCo152(
-												String(Math.min(Math.max(Number(e.target.value), 0), 1))
-											)
+										onChange={(e) =>
+											handleInputChange(e.target.value, setCo152)
 										}
 									/>
 								</td>
@@ -11268,10 +10690,8 @@ export default function App() {
 									<Input
 										type='number'
 										value={co252}
-										onChange={(e: { target: { value: any } }) =>
-											setCo252(
-												String(Math.min(Math.max(Number(e.target.value), 0), 1))
-											)
+										onChange={(e) =>
+											handleInputChange(e.target.value, setCo252)
 										}
 									/>
 								</td>
@@ -11279,10 +10699,8 @@ export default function App() {
 									<Input
 										type='number'
 										value={co352}
-										onChange={(e: { target: { value: any } }) =>
-											setCo352(
-												String(Math.min(Math.max(Number(e.target.value), 0), 1))
-											)
+										onChange={(e) =>
+											handleInputChange(e.target.value, setCo352)
 										}
 									/>
 								</td>
