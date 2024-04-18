@@ -34,19 +34,19 @@ const TablePo2 = ({ params }: { params: { id: string } }) => {
 	// Define the calculation function
 	const calculatePo3mapco1 = () => {
 		const sumCo =
-			parseInt(editedTable?.co131 || 0) +
-			parseInt(editedTable?.co132 || 0) +
-			parseInt(editedTable?.co133 || 0) +
-			parseInt(editedTable?.co134 || 0) +
-			parseInt(editedTable?.co135 || 0) +
-			parseInt(editedTable?.co136 || 0) +
-			parseInt(editedTable?.co137 || 0) +
-			parseInt(editedTable?.co138 || 0) +
-			parseInt(editedTable?.co139 || 0) +
-			parseInt(editedTable?.co1310 || 0) +
-			parseInt(editedTable?.co1311 || 0) +
-			parseInt(editedTable?.co1312 || 0) +
-			parseInt(editedTable?.co1313 || 0);
+			parseInt(editedTable?.co131 || "") +
+			parseInt(editedTable?.co132 || "") +
+			parseInt(editedTable?.co133 || "") +
+			parseInt(editedTable?.co134 || "") +
+			parseInt(editedTable?.co135 || "") +
+			parseInt(editedTable?.co136 || "") +
+			parseInt(editedTable?.co137 || "") +
+			parseInt(editedTable?.co138 || "") +
+			parseInt(editedTable?.co139 || "") +
+			parseInt(editedTable?.co1310 || "") +
+			parseInt(editedTable?.co1311 || "") +
+			parseInt(editedTable?.co1312 || "") +
+			parseInt(editedTable?.co1313 || "");
 		const calculatedValue = Math.round((sumCo * 0.08) / 0.33);
 		setEditedTable((prevTable: any) => ({
 			...prevTable,
@@ -55,19 +55,19 @@ const TablePo2 = ({ params }: { params: { id: string } }) => {
 	};
 	const calculatePo3mapco2 = () => {
 		const sumCo =
-			parseInt(editedTable?.co231 || 0) +
-			parseInt(editedTable?.co232 || 0) +
-			parseInt(editedTable?.co233 || 0) +
-			parseInt(editedTable?.co234 || 0) +
-			parseInt(editedTable?.co235 || 0) +
-			parseInt(editedTable?.co236 || 0) +
-			parseInt(editedTable?.co237 || 0) +
-			parseInt(editedTable?.co238 || 0) +
-			parseInt(editedTable?.co239 || 0) +
-			parseInt(editedTable?.co2310 || 0) +
-			parseInt(editedTable?.co2311 || 0) +
-			parseInt(editedTable?.co2312 || 0) +
-			parseInt(editedTable?.co2313 || 0);
+			parseInt(editedTable?.co231 || "") +
+			parseInt(editedTable?.co232 || "") +
+			parseInt(editedTable?.co233 || "") +
+			parseInt(editedTable?.co234 || "") +
+			parseInt(editedTable?.co235 || "") +
+			parseInt(editedTable?.co236 || "") +
+			parseInt(editedTable?.co237 || "") +
+			parseInt(editedTable?.co238 || "") +
+			parseInt(editedTable?.co239 || "") +
+			parseInt(editedTable?.co2310 || "") +
+			parseInt(editedTable?.co2311 || "") +
+			parseInt(editedTable?.co2312 || "") +
+			parseInt(editedTable?.co2313 || "");
 		const calculatedValue = Math.round((sumCo * 0.08) / 0.33);
 		setEditedTable((prevTable: any) => ({
 			...prevTable,
@@ -76,19 +76,19 @@ const TablePo2 = ({ params }: { params: { id: string } }) => {
 	};
 	const calculatePo3mapco3 = () => {
 		const sumCo =
-			parseInt(editedTable?.co331 || 0) +
-			parseInt(editedTable?.co332 || 0) +
-			parseInt(editedTable?.co333 || 0) +
-			parseInt(editedTable?.co334 || 0) +
-			parseInt(editedTable?.co335 || 0) +
-			parseInt(editedTable?.co336 || 0) +
-			parseInt(editedTable?.co337 || 0) +
-			parseInt(editedTable?.co338 || 0) +
-			parseInt(editedTable?.co339 || 0) +
-			parseInt(editedTable?.co3310 || 0) +
-			parseInt(editedTable?.co3311 || 0) +
-			parseInt(editedTable?.co3312 || 0) +
-			parseInt(editedTable?.co3313 || 0);
+			parseInt(editedTable?.co331 || "") +
+			parseInt(editedTable?.co332 || "") +
+			parseInt(editedTable?.co333 || "") +
+			parseInt(editedTable?.co334 || "") +
+			parseInt(editedTable?.co335 || "") +
+			parseInt(editedTable?.co336 || "") +
+			parseInt(editedTable?.co337 || "") +
+			parseInt(editedTable?.co338 || "") +
+			parseInt(editedTable?.co339 || "") +
+			parseInt(editedTable?.co3310 || "") +
+			parseInt(editedTable?.co3311 || "") +
+			parseInt(editedTable?.co3312 || "") +
+			parseInt(editedTable?.co3313 || "");
 		const calculatedValue = Math.round((sumCo * 0.08) / 0.33);
 		setEditedTable((prevTable: any) => ({
 			...prevTable,
@@ -97,19 +97,19 @@ const TablePo2 = ({ params }: { params: { id: string } }) => {
 	};
 	const calculatePo3mapco4 = () => {
 		const sumCo =
-			parseInt(editedTable?.co431 || 0) +
-			parseInt(editedTable?.co432 || 0) +
-			parseInt(editedTable?.co433 || 0) +
-			parseInt(editedTable?.co434 || 0) +
-			parseInt(editedTable?.co435 || 0) +
-			parseInt(editedTable?.co436 || 0) +
-			parseInt(editedTable?.co437 || 0) +
-			parseInt(editedTable?.co438 || 0) +
-			parseInt(editedTable?.co439 || 0) +
-			parseInt(editedTable?.co4310 || 0) +
-			parseInt(editedTable?.co4311 || 0) +
-			parseInt(editedTable?.co4312 || 0) +
-			parseInt(editedTable?.co4313 || 0);
+			parseInt(editedTable?.co431 || "") +
+			parseInt(editedTable?.co432 || "") +
+			parseInt(editedTable?.co433 || "") +
+			parseInt(editedTable?.co434 || "") +
+			parseInt(editedTable?.co435 || "") +
+			parseInt(editedTable?.co436 || "") +
+			parseInt(editedTable?.co437 || "") +
+			parseInt(editedTable?.co438 || "") +
+			parseInt(editedTable?.co439 || "") +
+			parseInt(editedTable?.co4310 || "") +
+			parseInt(editedTable?.co4311 || "") +
+			parseInt(editedTable?.co4312 || "") +
+			parseInt(editedTable?.co4313 || "");
 		const calculatedValue = Math.round((sumCo * 0.08) / 0.33);
 		setEditedTable((prevTable: any) => ({
 			...prevTable,
@@ -118,19 +118,19 @@ const TablePo2 = ({ params }: { params: { id: string } }) => {
 	};
 	const calculatePo3mapco5 = () => {
 		const sumCo =
-			parseInt(editedTable?.co531 || 0) +
-			parseInt(editedTable?.co532 || 0) +
-			parseInt(editedTable?.co533 || 0) +
-			parseInt(editedTable?.co534 || 0) +
-			parseInt(editedTable?.co535 || 0) +
-			parseInt(editedTable?.co536 || 0) +
-			parseInt(editedTable?.co537 || 0) +
-			parseInt(editedTable?.co538 || 0) +
-			parseInt(editedTable?.co539 || 0) +
-			parseInt(editedTable?.co5310 || 0) +
-			parseInt(editedTable?.co5311 || 0) +
-			parseInt(editedTable?.co5312 || 0) +
-			parseInt(editedTable?.co5313 || 0);
+			parseInt(editedTable?.co531 || "") +
+			parseInt(editedTable?.co532 || "") +
+			parseInt(editedTable?.co533 || "") +
+			parseInt(editedTable?.co534 || "") +
+			parseInt(editedTable?.co535 || "") +
+			parseInt(editedTable?.co536 || "") +
+			parseInt(editedTable?.co537 || "") +
+			parseInt(editedTable?.co538 || "") +
+			parseInt(editedTable?.co539 || "") +
+			parseInt(editedTable?.co5310 || "") +
+			parseInt(editedTable?.co5311 || "") +
+			parseInt(editedTable?.co5312 || "") +
+			parseInt(editedTable?.co5313 || "");
 		const calculatedValue = Math.round((sumCo * 0.08) / 0.33);
 		setEditedTable((prevTable: any) => ({
 			...prevTable,
@@ -139,19 +139,19 @@ const TablePo2 = ({ params }: { params: { id: string } }) => {
 	};
 	const calculatePo3mapco6 = () => {
 		const sumCo =
-			parseInt(editedTable?.co631 || 0) +
-			parseInt(editedTable?.co632 || 0) +
-			parseInt(editedTable?.co633 || 0) +
-			parseInt(editedTable?.co634 || 0) +
-			parseInt(editedTable?.co635 || 0) +
-			parseInt(editedTable?.co636 || 0) +
-			parseInt(editedTable?.co637 || 0) +
-			parseInt(editedTable?.co638 || 0) +
-			parseInt(editedTable?.co639 || 0) +
-			parseInt(editedTable?.co6310 || 0) +
-			parseInt(editedTable?.co6311 || 0) +
-			parseInt(editedTable?.co6312 || 0) +
-			parseInt(editedTable?.co6313 || 0);
+			parseInt(editedTable?.co631 || "") +
+			parseInt(editedTable?.co632 || "") +
+			parseInt(editedTable?.co633 || "") +
+			parseInt(editedTable?.co634 || "") +
+			parseInt(editedTable?.co635 || "") +
+			parseInt(editedTable?.co636 || "") +
+			parseInt(editedTable?.co637 || "") +
+			parseInt(editedTable?.co638 || "") +
+			parseInt(editedTable?.co639 || "") +
+			parseInt(editedTable?.co6310 || "") +
+			parseInt(editedTable?.co6311 || "") +
+			parseInt(editedTable?.co6312 || "") +
+			parseInt(editedTable?.co6313 || "");
 		const calculatedValue = Math.round((sumCo * 0.08) / 0.33);
 		setEditedTable((prevTable: any) => ({
 			...prevTable,
@@ -160,19 +160,19 @@ const TablePo2 = ({ params }: { params: { id: string } }) => {
 	};
 	const calculatePo3mapco7 = () => {
 		const sumCo =
-			parseInt(editedTable?.co731 || 0) +
-			parseInt(editedTable?.co732 || 0) +
-			parseInt(editedTable?.co733 || 0) +
-			parseInt(editedTable?.co734 || 0) +
-			parseInt(editedTable?.co735 || 0) +
-			parseInt(editedTable?.co736 || 0) +
-			parseInt(editedTable?.co737 || 0) +
-			parseInt(editedTable?.co738 || 0) +
-			parseInt(editedTable?.co739 || 0) +
-			parseInt(editedTable?.co7310 || 0) +
-			parseInt(editedTable?.co7311 || 0) +
-			parseInt(editedTable?.co7312 || 0) +
-			parseInt(editedTable?.co7313 || 0);
+			parseInt(editedTable?.co731 || "") +
+			parseInt(editedTable?.co732 || "") +
+			parseInt(editedTable?.co733 || "") +
+			parseInt(editedTable?.co734 || "") +
+			parseInt(editedTable?.co735 || "") +
+			parseInt(editedTable?.co736 || "") +
+			parseInt(editedTable?.co737 || "") +
+			parseInt(editedTable?.co738 || "") +
+			parseInt(editedTable?.co739 || "") +
+			parseInt(editedTable?.co7310 || "") +
+			parseInt(editedTable?.co7311 || "") +
+			parseInt(editedTable?.co7312 || "") +
+			parseInt(editedTable?.co7313 || "");
 		const calculatedValue = Math.round((sumCo * 0.08) / 0.33);
 		setEditedTable((prevTable: any) => ({
 			...prevTable,
@@ -977,566 +977,7 @@ const TablePo2 = ({ params }: { params: { id: string } }) => {
 		editedTable?.psoco733,
 		editedTable?.psoco734,
 	]);
-	// **************************    PO:3     *************************************
 
-	const handleCo131Change = (e: React.ChangeEvent<HTMLInputElement>) => {
-		setEditedTable((prevTable: any) => ({
-			...prevTable,
-			co131: e.target.value,
-		}));
-	};
-	const handleCo231Change = (e: React.ChangeEvent<HTMLInputElement>) => {
-		setEditedTable((prevTable: any) => ({
-			...prevTable,
-			co231: e.target.value,
-		}));
-	};
-	const handleCo331Change = (e: React.ChangeEvent<HTMLInputElement>) => {
-		setEditedTable((prevTable: any) => ({
-			...prevTable,
-			co331: e.target.value,
-		}));
-	};
-	const handleCo431Change = (e: React.ChangeEvent<HTMLInputElement>) => {
-		setEditedTable((prevTable: any) => ({
-			...prevTable,
-			co431: e.target.value,
-		}));
-	};
-	const handleCo531Change = (e: React.ChangeEvent<HTMLInputElement>) => {
-		setEditedTable((prevTable: any) => ({
-			...prevTable,
-			co531: e.target.value,
-		}));
-	};
-	const handleCo631Change = (e: React.ChangeEvent<HTMLInputElement>) => {
-		setEditedTable((prevTable: any) => ({
-			...prevTable,
-			co631: e.target.value,
-		}));
-	};
-	const handleCo731Change = (e: React.ChangeEvent<HTMLInputElement>) => {
-		setEditedTable((prevTable: any) => ({
-			...prevTable,
-			co731: e.target.value,
-		}));
-	};
-
-	const handleCo132Change = (e: React.ChangeEvent<HTMLInputElement>) => {
-		setEditedTable((prevTable: any) => ({
-			...prevTable,
-			co132: e.target.value,
-		}));
-	};
-	const handleCo232Change = (e: React.ChangeEvent<HTMLInputElement>) => {
-		setEditedTable((prevTable: any) => ({
-			...prevTable,
-			co232: e.target.value,
-		}));
-	};
-	const handleCo332Change = (e: React.ChangeEvent<HTMLInputElement>) => {
-		setEditedTable((prevTable: any) => ({
-			...prevTable,
-			co332: e.target.value,
-		}));
-	};
-	const handleCo432Change = (e: React.ChangeEvent<HTMLInputElement>) => {
-		setEditedTable((prevTable: any) => ({
-			...prevTable,
-			co432: e.target.value,
-		}));
-	};
-	const handleCo532Change = (e: React.ChangeEvent<HTMLInputElement>) => {
-		setEditedTable((prevTable: any) => ({
-			...prevTable,
-			co532: e.target.value,
-		}));
-	};
-	const handleCo632Change = (e: React.ChangeEvent<HTMLInputElement>) => {
-		setEditedTable((prevTable: any) => ({
-			...prevTable,
-			co632: e.target.value,
-		}));
-	};
-	const handleCo732Change = (e: React.ChangeEvent<HTMLInputElement>) => {
-		setEditedTable((prevTable: any) => ({
-			...prevTable,
-			co732: e.target.value,
-		}));
-	};
-
-	const handleCo133Change = (e: React.ChangeEvent<HTMLInputElement>) => {
-		setEditedTable((prevTable: any) => ({
-			...prevTable,
-			co133: e.target.value,
-		}));
-	};
-	const handleCo233Change = (e: React.ChangeEvent<HTMLInputElement>) => {
-		setEditedTable((prevTable: any) => ({
-			...prevTable,
-			co233: e.target.value,
-		}));
-	};
-	const handleCo333Change = (e: React.ChangeEvent<HTMLInputElement>) => {
-		setEditedTable((prevTable: any) => ({
-			...prevTable,
-			co333: e.target.value,
-		}));
-	};
-	const handleCo433Change = (e: React.ChangeEvent<HTMLInputElement>) => {
-		setEditedTable((prevTable: any) => ({
-			...prevTable,
-			co433: e.target.value,
-		}));
-	};
-	const handleCo533Change = (e: React.ChangeEvent<HTMLInputElement>) => {
-		setEditedTable((prevTable: any) => ({
-			...prevTable,
-			co533: e.target.value,
-		}));
-	};
-	const handleCo633Change = (e: React.ChangeEvent<HTMLInputElement>) => {
-		setEditedTable((prevTable: any) => ({
-			...prevTable,
-			co633: e.target.value,
-		}));
-	};
-	const handleCo733Change = (e: React.ChangeEvent<HTMLInputElement>) => {
-		setEditedTable((prevTable: any) => ({
-			...prevTable,
-			co733: e.target.value,
-		}));
-	};
-
-	const handleCo134Change = (e: React.ChangeEvent<HTMLInputElement>) => {
-		setEditedTable((prevTable: any) => ({
-			...prevTable,
-			co134: e.target.value,
-		}));
-	};
-	const handleCo234Change = (e: React.ChangeEvent<HTMLInputElement>) => {
-		setEditedTable((prevTable: any) => ({
-			...prevTable,
-			co234: e.target.value,
-		}));
-	};
-	const handleCo334Change = (e: React.ChangeEvent<HTMLInputElement>) => {
-		setEditedTable((prevTable: any) => ({
-			...prevTable,
-			co334: e.target.value,
-		}));
-	};
-	const handleCo434Change = (e: React.ChangeEvent<HTMLInputElement>) => {
-		setEditedTable((prevTable: any) => ({
-			...prevTable,
-			co434: e.target.value,
-		}));
-	};
-	const handleCo534Change = (e: React.ChangeEvent<HTMLInputElement>) => {
-		setEditedTable((prevTable: any) => ({
-			...prevTable,
-			co534: e.target.value,
-		}));
-	};
-	const handleCo634Change = (e: React.ChangeEvent<HTMLInputElement>) => {
-		setEditedTable((prevTable: any) => ({
-			...prevTable,
-			co634: e.target.value,
-		}));
-	};
-	const handleCo734Change = (e: React.ChangeEvent<HTMLInputElement>) => {
-		setEditedTable((prevTable: any) => ({
-			...prevTable,
-			co734: e.target.value,
-		}));
-	};
-
-	const handleCo135Change = (e: React.ChangeEvent<HTMLInputElement>) => {
-		setEditedTable((prevTable: any) => ({
-			...prevTable,
-			co135: e.target.value,
-		}));
-	};
-	const handleCo235Change = (e: React.ChangeEvent<HTMLInputElement>) => {
-		setEditedTable((prevTable: any) => ({
-			...prevTable,
-			co235: e.target.value,
-		}));
-	};
-	const handleCo335Change = (e: React.ChangeEvent<HTMLInputElement>) => {
-		setEditedTable((prevTable: any) => ({
-			...prevTable,
-			co335: e.target.value,
-		}));
-	};
-	const handleCo435Change = (e: React.ChangeEvent<HTMLInputElement>) => {
-		setEditedTable((prevTable: any) => ({
-			...prevTable,
-			co435: e.target.value,
-		}));
-	};
-	const handleCo535Change = (e: React.ChangeEvent<HTMLInputElement>) => {
-		setEditedTable((prevTable: any) => ({
-			...prevTable,
-			co535: e.target.value,
-		}));
-	};
-	const handleCo635Change = (e: React.ChangeEvent<HTMLInputElement>) => {
-		setEditedTable((prevTable: any) => ({
-			...prevTable,
-			co635: e.target.value,
-		}));
-	};
-	const handleCo735Change = (e: React.ChangeEvent<HTMLInputElement>) => {
-		setEditedTable((prevTable: any) => ({
-			...prevTable,
-			co735: e.target.value,
-		}));
-	};
-
-	const handleCo136Change = (e: React.ChangeEvent<HTMLInputElement>) => {
-		setEditedTable((prevTable: any) => ({
-			...prevTable,
-			co136: e.target.value,
-		}));
-	};
-	const handleCo236Change = (e: React.ChangeEvent<HTMLInputElement>) => {
-		setEditedTable((prevTable: any) => ({
-			...prevTable,
-			co236: e.target.value,
-		}));
-	};
-	const handleCo336Change = (e: React.ChangeEvent<HTMLInputElement>) => {
-		setEditedTable((prevTable: any) => ({
-			...prevTable,
-			co336: e.target.value,
-		}));
-	};
-	const handleCo436Change = (e: React.ChangeEvent<HTMLInputElement>) => {
-		setEditedTable((prevTable: any) => ({
-			...prevTable,
-			co436: e.target.value,
-		}));
-	};
-	const handleCo536Change = (e: React.ChangeEvent<HTMLInputElement>) => {
-		setEditedTable((prevTable: any) => ({
-			...prevTable,
-			co536: e.target.value,
-		}));
-	};
-	const handleCo636Change = (e: React.ChangeEvent<HTMLInputElement>) => {
-		setEditedTable((prevTable: any) => ({
-			...prevTable,
-			co636: e.target.value,
-		}));
-	};
-	const handleCo736Change = (e: React.ChangeEvent<HTMLInputElement>) => {
-		setEditedTable((prevTable: any) => ({
-			...prevTable,
-			co736: e.target.value,
-		}));
-	};
-
-	const handleCo137Change = (e: React.ChangeEvent<HTMLInputElement>) => {
-		setEditedTable((prevTable: any) => ({
-			...prevTable,
-			co137: e.target.value,
-		}));
-	};
-	const handleCo237Change = (e: React.ChangeEvent<HTMLInputElement>) => {
-		setEditedTable((prevTable: any) => ({
-			...prevTable,
-			co237: e.target.value,
-		}));
-	};
-	const handleCo337Change = (e: React.ChangeEvent<HTMLInputElement>) => {
-		setEditedTable((prevTable: any) => ({
-			...prevTable,
-			co337: e.target.value,
-		}));
-	};
-	const handleCo437Change = (e: React.ChangeEvent<HTMLInputElement>) => {
-		setEditedTable((prevTable: any) => ({
-			...prevTable,
-			co437: e.target.value,
-		}));
-	};
-	const handleCo537Change = (e: React.ChangeEvent<HTMLInputElement>) => {
-		setEditedTable((prevTable: any) => ({
-			...prevTable,
-			co537: e.target.value,
-		}));
-	};
-	const handleCo637Change = (e: React.ChangeEvent<HTMLInputElement>) => {
-		setEditedTable((prevTable: any) => ({
-			...prevTable,
-			co637: e.target.value,
-		}));
-	};
-	const handleCo737Change = (e: React.ChangeEvent<HTMLInputElement>) => {
-		setEditedTable((prevTable: any) => ({
-			...prevTable,
-			co737: e.target.value,
-		}));
-	};
-
-	const handleCo138Change = (e: React.ChangeEvent<HTMLInputElement>) => {
-		setEditedTable((prevTable: any) => ({
-			...prevTable,
-			co138: e.target.value,
-		}));
-	};
-	const handleCo238Change = (e: React.ChangeEvent<HTMLInputElement>) => {
-		setEditedTable((prevTable: any) => ({
-			...prevTable,
-			co238: e.target.value,
-		}));
-	};
-	const handleCo338Change = (e: React.ChangeEvent<HTMLInputElement>) => {
-		setEditedTable((prevTable: any) => ({
-			...prevTable,
-			co338: e.target.value,
-		}));
-	};
-	const handleCo438Change = (e: React.ChangeEvent<HTMLInputElement>) => {
-		setEditedTable((prevTable: any) => ({
-			...prevTable,
-			co438: e.target.value,
-		}));
-	};
-	const handleCo538Change = (e: React.ChangeEvent<HTMLInputElement>) => {
-		setEditedTable((prevTable: any) => ({
-			...prevTable,
-			co538: e.target.value,
-		}));
-	};
-	const handleCo638Change = (e: React.ChangeEvent<HTMLInputElement>) => {
-		setEditedTable((prevTable: any) => ({
-			...prevTable,
-			co638: e.target.value,
-		}));
-	};
-	const handleCo738Change = (e: React.ChangeEvent<HTMLInputElement>) => {
-		setEditedTable((prevTable: any) => ({
-			...prevTable,
-			co738: e.target.value,
-		}));
-	};
-
-	const handleCo139Change = (e: React.ChangeEvent<HTMLInputElement>) => {
-		setEditedTable((prevTable: any) => ({
-			...prevTable,
-			co139: e.target.value,
-		}));
-	};
-	const handleCo239Change = (e: React.ChangeEvent<HTMLInputElement>) => {
-		setEditedTable((prevTable: any) => ({
-			...prevTable,
-			co239: e.target.value,
-		}));
-	};
-	const handleCo339Change = (e: React.ChangeEvent<HTMLInputElement>) => {
-		setEditedTable((prevTable: any) => ({
-			...prevTable,
-			co339: e.target.value,
-		}));
-	};
-	const handleCo439Change = (e: React.ChangeEvent<HTMLInputElement>) => {
-		setEditedTable((prevTable: any) => ({
-			...prevTable,
-			co439: e.target.value,
-		}));
-	};
-	const handleCo539Change = (e: React.ChangeEvent<HTMLInputElement>) => {
-		setEditedTable((prevTable: any) => ({
-			...prevTable,
-			co539: e.target.value,
-		}));
-	};
-	const handleCo639Change = (e: React.ChangeEvent<HTMLInputElement>) => {
-		setEditedTable((prevTable: any) => ({
-			...prevTable,
-			co639: e.target.value,
-		}));
-	};
-	const handleCo739Change = (e: React.ChangeEvent<HTMLInputElement>) => {
-		setEditedTable((prevTable: any) => ({
-			...prevTable,
-			co739: e.target.value,
-		}));
-	};
-
-	const handleCo1310Change = (e: React.ChangeEvent<HTMLInputElement>) => {
-		setEditedTable((prevTable: any) => ({
-			...prevTable,
-			co1310: e.target.value,
-		}));
-	};
-	const handleCo2310Change = (e: React.ChangeEvent<HTMLInputElement>) => {
-		setEditedTable((prevTable: any) => ({
-			...prevTable,
-			co2310: e.target.value,
-		}));
-	};
-	const handleCo3310Change = (e: React.ChangeEvent<HTMLInputElement>) => {
-		setEditedTable((prevTable: any) => ({
-			...prevTable,
-			co3310: e.target.value,
-		}));
-	};
-	const handleCo4310Change = (e: React.ChangeEvent<HTMLInputElement>) => {
-		setEditedTable((prevTable: any) => ({
-			...prevTable,
-			co4310: e.target.value,
-		}));
-	};
-	const handleCo5310Change = (e: React.ChangeEvent<HTMLInputElement>) => {
-		setEditedTable((prevTable: any) => ({
-			...prevTable,
-			co5310: e.target.value,
-		}));
-	};
-	const handleCo6310Change = (e: React.ChangeEvent<HTMLInputElement>) => {
-		setEditedTable((prevTable: any) => ({
-			...prevTable,
-			co6310: e.target.value,
-		}));
-	};
-	const handleCo7310Change = (e: React.ChangeEvent<HTMLInputElement>) => {
-		setEditedTable((prevTable: any) => ({
-			...prevTable,
-			co7310: e.target.value,
-		}));
-	};
-
-	const handleCo1311Change = (e: React.ChangeEvent<HTMLInputElement>) => {
-		setEditedTable((prevTable: any) => ({
-			...prevTable,
-			co1311: e.target.value,
-		}));
-	};
-	const handleCo2311Change = (e: React.ChangeEvent<HTMLInputElement>) => {
-		setEditedTable((prevTable: any) => ({
-			...prevTable,
-			co2311: e.target.value,
-		}));
-	};
-	const handleCo3311Change = (e: React.ChangeEvent<HTMLInputElement>) => {
-		setEditedTable((prevTable: any) => ({
-			...prevTable,
-			co3311: e.target.value,
-		}));
-	};
-	const handleCo4311Change = (e: React.ChangeEvent<HTMLInputElement>) => {
-		setEditedTable((prevTable: any) => ({
-			...prevTable,
-			co4311: e.target.value,
-		}));
-	};
-	const handleCo5311Change = (e: React.ChangeEvent<HTMLInputElement>) => {
-		setEditedTable((prevTable: any) => ({
-			...prevTable,
-			co5311: e.target.value,
-		}));
-	};
-	const handleCo6311Change = (e: React.ChangeEvent<HTMLInputElement>) => {
-		setEditedTable((prevTable: any) => ({
-			...prevTable,
-			co6311: e.target.value,
-		}));
-	};
-	const handleCo7311Change = (e: React.ChangeEvent<HTMLInputElement>) => {
-		setEditedTable((prevTable: any) => ({
-			...prevTable,
-			co7311: e.target.value,
-		}));
-	};
-
-	const handleCo1312Change = (e: React.ChangeEvent<HTMLInputElement>) => {
-		setEditedTable((prevTable: any) => ({
-			...prevTable,
-			co1312: e.target.value,
-		}));
-	};
-	const handleCo2312Change = (e: React.ChangeEvent<HTMLInputElement>) => {
-		setEditedTable((prevTable: any) => ({
-			...prevTable,
-			co2312: e.target.value,
-		}));
-	};
-	const handleCo3312Change = (e: React.ChangeEvent<HTMLInputElement>) => {
-		setEditedTable((prevTable: any) => ({
-			...prevTable,
-			co3312: e.target.value,
-		}));
-	};
-	const handleCo4312Change = (e: React.ChangeEvent<HTMLInputElement>) => {
-		setEditedTable((prevTable: any) => ({
-			...prevTable,
-			co4312: e.target.value,
-		}));
-	};
-	const handleCo5312Change = (e: React.ChangeEvent<HTMLInputElement>) => {
-		setEditedTable((prevTable: any) => ({
-			...prevTable,
-			co5312: e.target.value,
-		}));
-	};
-	const handleCo6312Change = (e: React.ChangeEvent<HTMLInputElement>) => {
-		setEditedTable((prevTable: any) => ({
-			...prevTable,
-			co6312: e.target.value,
-		}));
-	};
-	const handleCo7312Change = (e: React.ChangeEvent<HTMLInputElement>) => {
-		setEditedTable((prevTable: any) => ({
-			...prevTable,
-			co7312: e.target.value,
-		}));
-	};
-
-	const handleCo1313Change = (e: React.ChangeEvent<HTMLInputElement>) => {
-		setEditedTable((prevTable: any) => ({
-			...prevTable,
-			co1313: e.target.value,
-		}));
-	};
-	const handleCo2313Change = (e: React.ChangeEvent<HTMLInputElement>) => {
-		setEditedTable((prevTable: any) => ({
-			...prevTable,
-			co2313: e.target.value,
-		}));
-	};
-	const handleCo3313Change = (e: React.ChangeEvent<HTMLInputElement>) => {
-		setEditedTable((prevTable: any) => ({
-			...prevTable,
-			co3313: e.target.value,
-		}));
-	};
-	const handleCo4313Change = (e: React.ChangeEvent<HTMLInputElement>) => {
-		setEditedTable((prevTable: any) => ({
-			...prevTable,
-			co4313: e.target.value,
-		}));
-	};
-	const handleCo5313Change = (e: React.ChangeEvent<HTMLInputElement>) => {
-		setEditedTable((prevTable: any) => ({
-			...prevTable,
-			co5313: e.target.value,
-		}));
-	};
-	const handleCo6313Change = (e: React.ChangeEvent<HTMLInputElement>) => {
-		setEditedTable((prevTable: any) => ({
-			...prevTable,
-			co6313: e.target.value,
-		}));
-	};
-	const handleCo7313Change = (e: React.ChangeEvent<HTMLInputElement>) => {
-		setEditedTable((prevTable: any) => ({
-			...prevTable,
-			co7313: e.target.value,
-		}));
-	};
 	const handleSaveChanges = async () => {
 		try {
 			const response = await fetch(`/api/table/${id}`, {
@@ -1568,6 +1009,19 @@ const TablePo2 = ({ params }: { params: { id: string } }) => {
 	if (error) {
 		return <p>{error}</p>;
 	}
+
+	const handleInputChange = (value: string, fieldName: string) => {
+		const parsedValue = parseFloat(value);
+
+		if (parsedValue > 1) {
+			toast.error("Value cannot be greater than 1");
+		} else {
+			setEditedTable((prevTable: any) => ({
+				...prevTable,
+				[fieldName]: String(Math.min(Math.max(parsedValue, 0), 1)),
+			}));
+		}
+	};
 
 	return (
 		<div className='overflow-x-auto'>
@@ -1631,50 +1085,50 @@ const TablePo2 = ({ params }: { params: { id: string } }) => {
 						<td>
 							<Input
 								type='number'
-								value={editedTable?.co131}
-								onChange={handleCo131Change}
+								value={editedTable?.co131 || ""}
+								onChange={(e) => handleInputChange(e.target.value, "co131")}
 							/>
 						</td>
 						<td>
 							<Input
 								type='number'
-								value={editedTable?.co231}
-								onChange={handleCo231Change}
+								value={editedTable?.co231 || ""}
+								onChange={(e) => handleInputChange(e.target.value, "co231")}
 							/>
 						</td>
 						<td>
 							<Input
 								type='number'
-								value={editedTable?.co331}
-								onChange={handleCo331Change}
+								value={editedTable?.co331 || ""}
+								onChange={(e) => handleInputChange(e.target.value, "co331")}
 							/>
 						</td>
 						<td>
 							<Input
 								type='number'
-								value={editedTable?.co431}
-								onChange={handleCo431Change}
+								value={editedTable?.co431 || ""}
+								onChange={(e) => handleInputChange(e.target.value, "co431")}
 							/>
 						</td>
 						<td>
 							<Input
 								type='number'
-								value={editedTable?.co531}
-								onChange={handleCo531Change}
+								value={editedTable?.co531 || ""}
+								onChange={(e) => handleInputChange(e.target.value, "co531")}
 							/>
 						</td>
 						<td>
 							<Input
 								type='number'
-								value={editedTable?.co631}
-								onChange={handleCo631Change}
+								value={editedTable?.co631 || ""}
+								onChange={(e) => handleInputChange(e.target.value, "co631")}
 							/>
 						</td>
 						<td>
 							<Input
 								type='number'
-								value={editedTable?.co731}
-								onChange={handleCo731Change}
+								value={editedTable?.co731 || ""}
+								onChange={(e) => handleInputChange(e.target.value, "co731")}
 							/>
 						</td>
 					</tr>
@@ -1688,50 +1142,50 @@ const TablePo2 = ({ params }: { params: { id: string } }) => {
 						<td>
 							<Input
 								type='number'
-								value={editedTable?.co132}
-								onChange={handleCo132Change}
+								value={editedTable?.co132 || ""}
+								onChange={(e) => handleInputChange(e.target.value, "co132")}
 							/>
 						</td>
 						<td>
 							<Input
 								type='number'
-								value={editedTable?.co232}
-								onChange={handleCo232Change}
+								value={editedTable?.co232 || ""}
+								onChange={(e) => handleInputChange(e.target.value, "co232")}
 							/>
 						</td>
 						<td>
 							<Input
 								type='number'
-								value={editedTable?.co332}
-								onChange={handleCo332Change}
+								value={editedTable?.co332 || ""}
+								onChange={(e) => handleInputChange(e.target.value, "co332")}
 							/>
 						</td>
 						<td>
 							<Input
 								type='number'
-								value={editedTable?.co432}
-								onChange={handleCo432Change}
+								value={editedTable?.co432 || ""}
+								onChange={(e) => handleInputChange(e.target.value, "co432")}
 							/>
 						</td>
 						<td>
 							<Input
 								type='number'
-								value={editedTable?.co532}
-								onChange={handleCo532Change}
+								value={editedTable?.co532 || ""}
+								onChange={(e) => handleInputChange(e.target.value, "co532")}
 							/>
 						</td>
 						<td>
 							<Input
 								type='number'
-								value={editedTable?.co632}
-								onChange={handleCo632Change}
+								value={editedTable?.co632 || ""}
+								onChange={(e) => handleInputChange(e.target.value, "co632")}
 							/>
 						</td>
 						<td>
 							<Input
 								type='number'
-								value={editedTable?.co732}
-								onChange={handleCo732Change}
+								value={editedTable?.co732 || ""}
+								onChange={(e) => handleInputChange(e.target.value, "co732")}
 							/>
 						</td>
 					</tr>
@@ -1745,50 +1199,50 @@ const TablePo2 = ({ params }: { params: { id: string } }) => {
 						<td>
 							<Input
 								type='number'
-								value={editedTable?.co133}
-								onChange={handleCo133Change}
+								value={editedTable?.co133 || ""}
+								onChange={(e) => handleInputChange(e.target.value, "co133")}
 							/>
 						</td>
 						<td>
 							<Input
 								type='number'
-								value={editedTable?.co233}
-								onChange={handleCo233Change}
+								value={editedTable?.co233 || ""}
+								onChange={(e) => handleInputChange(e.target.value, "co233")}
 							/>
 						</td>
 						<td>
 							<Input
 								type='number'
-								value={editedTable?.co333}
-								onChange={handleCo333Change}
+								value={editedTable?.co333 || ""}
+								onChange={(e) => handleInputChange(e.target.value, "co333")}
 							/>
 						</td>
 						<td>
 							<Input
 								type='number'
-								value={editedTable?.co433}
-								onChange={handleCo433Change}
+								value={editedTable?.co433 || ""}
+								onChange={(e) => handleInputChange(e.target.value, "co433")}
 							/>
 						</td>
 						<td>
 							<Input
 								type='number'
-								value={editedTable?.co533}
-								onChange={handleCo533Change}
+								value={editedTable?.co533 || ""}
+								onChange={(e) => handleInputChange(e.target.value, "co533")}
 							/>
 						</td>
 						<td>
 							<Input
 								type='number'
-								value={editedTable?.co633}
-								onChange={handleCo633Change}
+								value={editedTable?.co633 || ""}
+								onChange={(e) => handleInputChange(e.target.value, "co633")}
 							/>
 						</td>
 						<td>
 							<Input
 								type='number'
-								value={editedTable?.co733}
-								onChange={handleCo733Change}
+								value={editedTable?.co733 || ""}
+								onChange={(e) => handleInputChange(e.target.value, "co733")}
 							/>
 						</td>
 					</tr>
@@ -1802,50 +1256,50 @@ const TablePo2 = ({ params }: { params: { id: string } }) => {
 						<td>
 							<Input
 								type='number'
-								value={editedTable?.co134}
-								onChange={handleCo134Change}
+								value={editedTable?.co134 || ""}
+								onChange={(e) => handleInputChange(e.target.value, "co134")}
 							/>
 						</td>
 						<td>
 							<Input
 								type='number'
-								value={editedTable?.co234}
-								onChange={handleCo234Change}
+								value={editedTable?.co234 || ""}
+								onChange={(e) => handleInputChange(e.target.value, "co234")}
 							/>
 						</td>
 						<td>
 							<Input
 								type='number'
-								value={editedTable?.co334}
-								onChange={handleCo334Change}
+								value={editedTable?.co334 || ""}
+								onChange={(e) => handleInputChange(e.target.value, "co334")}
 							/>
 						</td>
 						<td>
 							<Input
 								type='number'
-								value={editedTable?.co434}
-								onChange={handleCo434Change}
+								value={editedTable?.co434 || ""}
+								onChange={(e) => handleInputChange(e.target.value, "co434")}
 							/>
 						</td>
 						<td>
 							<Input
 								type='number'
-								value={editedTable?.co534}
-								onChange={handleCo534Change}
+								value={editedTable?.co534 || ""}
+								onChange={(e) => handleInputChange(e.target.value, "co534")}
 							/>
 						</td>
 						<td>
 							<Input
 								type='number'
-								value={editedTable?.co634}
-								onChange={handleCo634Change}
+								value={editedTable?.co634 || ""}
+								onChange={(e) => handleInputChange(e.target.value, "co634")}
 							/>
 						</td>
 						<td>
 							<Input
 								type='number'
-								value={editedTable?.co734}
-								onChange={handleCo734Change}
+								value={editedTable?.co734 || ""}
+								onChange={(e) => handleInputChange(e.target.value, "co734")}
 							/>
 						</td>
 					</tr>
@@ -1859,50 +1313,50 @@ const TablePo2 = ({ params }: { params: { id: string } }) => {
 						<td>
 							<Input
 								type='number'
-								value={editedTable?.co135}
-								onChange={handleCo135Change}
+								value={editedTable?.co135 || ""}
+								onChange={(e) => handleInputChange(e.target.value, "co135")}
 							/>
 						</td>
 						<td>
 							<Input
 								type='number'
-								value={editedTable?.co235}
-								onChange={handleCo235Change}
+								value={editedTable?.co235 || ""}
+								onChange={(e) => handleInputChange(e.target.value, "co235")}
 							/>
 						</td>
 						<td>
 							<Input
 								type='number'
-								value={editedTable?.co335}
-								onChange={handleCo335Change}
+								value={editedTable?.co335 || ""}
+								onChange={(e) => handleInputChange(e.target.value, "co335")}
 							/>
 						</td>
 						<td>
 							<Input
 								type='number'
-								value={editedTable?.co435}
-								onChange={handleCo435Change}
+								value={editedTable?.co435 || ""}
+								onChange={(e) => handleInputChange(e.target.value, "co435")}
 							/>
 						</td>
 						<td>
 							<Input
 								type='number'
-								value={editedTable?.co535}
-								onChange={handleCo535Change}
+								value={editedTable?.co535 || ""}
+								onChange={(e) => handleInputChange(e.target.value, "co535")}
 							/>
 						</td>
 						<td>
 							<Input
 								type='number'
-								value={editedTable?.co635}
-								onChange={handleCo635Change}
+								value={editedTable?.co635 || ""}
+								onChange={(e) => handleInputChange(e.target.value, "co635")}
 							/>
 						</td>
 						<td>
 							<Input
 								type='number'
-								value={editedTable?.co735}
-								onChange={handleCo735Change}
+								value={editedTable?.co735 || ""}
+								onChange={(e) => handleInputChange(e.target.value, "co735")}
 							/>
 						</td>
 					</tr>
@@ -1916,50 +1370,50 @@ const TablePo2 = ({ params }: { params: { id: string } }) => {
 						<td>
 							<Input
 								type='number'
-								value={editedTable?.co136}
-								onChange={handleCo136Change}
+								value={editedTable?.co136 || ""}
+								onChange={(e) => handleInputChange(e.target.value, "co136")}
 							/>
 						</td>
 						<td>
 							<Input
 								type='number'
-								value={editedTable?.co236}
-								onChange={handleCo236Change}
+								value={editedTable?.co236 || ""}
+								onChange={(e) => handleInputChange(e.target.value, "co236")}
 							/>
 						</td>
 						<td>
 							<Input
 								type='number'
-								value={editedTable?.co336}
-								onChange={handleCo336Change}
+								value={editedTable?.co336 || ""}
+								onChange={(e) => handleInputChange(e.target.value, "co336")}
 							/>
 						</td>
 						<td>
 							<Input
 								type='number'
-								value={editedTable?.co436}
-								onChange={handleCo436Change}
+								value={editedTable?.co436 || ""}
+								onChange={(e) => handleInputChange(e.target.value, "co436")}
 							/>
 						</td>
 						<td>
 							<Input
 								type='number'
-								value={editedTable?.co536}
-								onChange={handleCo536Change}
+								value={editedTable?.co536 || ""}
+								onChange={(e) => handleInputChange(e.target.value, "co536")}
 							/>
 						</td>
 						<td>
 							<Input
 								type='number'
-								value={editedTable?.co636}
-								onChange={handleCo636Change}
+								value={editedTable?.co636 || ""}
+								onChange={(e) => handleInputChange(e.target.value, "co636")}
 							/>
 						</td>
 						<td>
 							<Input
 								type='number'
-								value={editedTable?.co736}
-								onChange={handleCo736Change}
+								value={editedTable?.co736 || ""}
+								onChange={(e) => handleInputChange(e.target.value, "co736")}
 							/>
 						</td>
 					</tr>
@@ -1977,50 +1431,50 @@ const TablePo2 = ({ params }: { params: { id: string } }) => {
 						<td>
 							<Input
 								type='number'
-								value={editedTable?.co137}
-								onChange={handleCo137Change}
+								value={editedTable?.co137 || ""}
+								onChange={(e) => handleInputChange(e.target.value, "co137")}
 							/>
 						</td>
 						<td>
 							<Input
 								type='number'
-								value={editedTable?.co237}
-								onChange={handleCo237Change}
+								value={editedTable?.co237 || ""}
+								onChange={(e) => handleInputChange(e.target.value, "co237")}
 							/>
 						</td>
 						<td>
 							<Input
 								type='number'
-								value={editedTable?.co337}
-								onChange={handleCo337Change}
+								value={editedTable?.co337 || ""}
+								onChange={(e) => handleInputChange(e.target.value, "co337")}
 							/>
 						</td>
 						<td>
 							<Input
 								type='number'
-								value={editedTable?.co437}
-								onChange={handleCo437Change}
+								value={editedTable?.co437 || ""}
+								onChange={(e) => handleInputChange(e.target.value, "co437")}
 							/>
 						</td>
 						<td>
 							<Input
 								type='number'
-								value={editedTable?.co537}
-								onChange={handleCo537Change}
+								value={editedTable?.co537 || ""}
+								onChange={(e) => handleInputChange(e.target.value, "co537")}
 							/>
 						</td>
 						<td>
 							<Input
 								type='number'
-								value={editedTable?.co637}
-								onChange={handleCo637Change}
+								value={editedTable?.co637 || ""}
+								onChange={(e) => handleInputChange(e.target.value, "co637")}
 							/>
 						</td>
 						<td>
 							<Input
 								type='number'
-								value={editedTable?.co737}
-								onChange={handleCo737Change}
+								value={editedTable?.co737 || ""}
+								onChange={(e) => handleInputChange(e.target.value, "co737")}
 							/>
 						</td>
 					</tr>
@@ -2034,50 +1488,50 @@ const TablePo2 = ({ params }: { params: { id: string } }) => {
 						<td>
 							<Input
 								type='number'
-								value={editedTable?.co138}
-								onChange={handleCo138Change}
+								value={editedTable?.co138 || ""}
+								onChange={(e) => handleInputChange(e.target.value, "co138")}
 							/>
 						</td>
 						<td>
 							<Input
 								type='number'
-								value={editedTable?.co238}
-								onChange={handleCo238Change}
+								value={editedTable?.co238 || ""}
+								onChange={(e) => handleInputChange(e.target.value, "co238")}
 							/>
 						</td>
 						<td>
 							<Input
 								type='number'
-								value={editedTable?.co338}
-								onChange={handleCo338Change}
+								value={editedTable?.co338 || ""}
+								onChange={(e) => handleInputChange(e.target.value, "co338")}
 							/>
 						</td>
 						<td>
 							<Input
 								type='number'
-								value={editedTable?.co438}
-								onChange={handleCo438Change}
+								value={editedTable?.co438 || ""}
+								onChange={(e) => handleInputChange(e.target.value, "co438")}
 							/>
 						</td>
 						<td>
 							<Input
 								type='number'
-								value={editedTable?.co538}
-								onChange={handleCo538Change}
+								value={editedTable?.co538 || ""}
+								onChange={(e) => handleInputChange(e.target.value, "co538")}
 							/>
 						</td>
 						<td>
 							<Input
 								type='number'
-								value={editedTable?.co638}
-								onChange={handleCo638Change}
+								value={editedTable?.co638 || ""}
+								onChange={(e) => handleInputChange(e.target.value, "co638")}
 							/>
 						</td>
 						<td>
 							<Input
 								type='number'
-								value={editedTable?.co738}
-								onChange={handleCo738Change}
+								value={editedTable?.co738 || ""}
+								onChange={(e) => handleInputChange(e.target.value, "co738")}
 							/>
 						</td>
 					</tr>
@@ -2091,50 +1545,50 @@ const TablePo2 = ({ params }: { params: { id: string } }) => {
 						<td>
 							<Input
 								type='number'
-								value={editedTable?.co139}
-								onChange={handleCo139Change}
+								value={editedTable?.co139 || ""}
+								onChange={(e) => handleInputChange(e.target.value, "co139")}
 							/>
 						</td>
 						<td>
 							<Input
 								type='number'
-								value={editedTable?.co239}
-								onChange={handleCo239Change}
+								value={editedTable?.co239 || ""}
+								onChange={(e) => handleInputChange(e.target.value, "co239")}
 							/>
 						</td>
 						<td>
 							<Input
 								type='number'
-								value={editedTable?.co339}
-								onChange={handleCo339Change}
+								value={editedTable?.co339 || ""}
+								onChange={(e) => handleInputChange(e.target.value, "co339")}
 							/>
 						</td>
 						<td>
 							<Input
 								type='number'
-								value={editedTable?.co439}
-								onChange={handleCo439Change}
+								value={editedTable?.co439 || ""}
+								onChange={(e) => handleInputChange(e.target.value, "co439")}
 							/>
 						</td>
 						<td>
 							<Input
 								type='number'
-								value={editedTable?.co539}
-								onChange={handleCo539Change}
+								value={editedTable?.co539 || ""}
+								onChange={(e) => handleInputChange(e.target.value, "co539")}
 							/>
 						</td>
 						<td>
 							<Input
 								type='number'
-								value={editedTable?.co639}
-								onChange={handleCo639Change}
+								value={editedTable?.co639 || ""}
+								onChange={(e) => handleInputChange(e.target.value, "co639")}
 							/>
 						</td>
 						<td>
 							<Input
 								type='number'
-								value={editedTable?.co739}
-								onChange={handleCo739Change}
+								value={editedTable?.co739 || ""}
+								onChange={(e) => handleInputChange(e.target.value, "co739")}
 							/>
 						</td>
 					</tr>
@@ -2151,50 +1605,50 @@ const TablePo2 = ({ params }: { params: { id: string } }) => {
 						<td>
 							<Input
 								type='number'
-								value={editedTable?.co1310}
-								onChange={handleCo1310Change}
+								value={editedTable?.co1310 || ""}
+								onChange={(e) => handleInputChange(e.target.value, "co1310")}
 							/>
 						</td>
 						<td>
 							<Input
 								type='number'
-								value={editedTable?.co2310}
-								onChange={handleCo2310Change}
+								value={editedTable?.co2310 || ""}
+								onChange={(e) => handleInputChange(e.target.value, "co2310")}
 							/>
 						</td>
 						<td>
 							<Input
 								type='number'
-								value={editedTable?.co3310}
-								onChange={handleCo3310Change}
+								value={editedTable?.co3310 || ""}
+								onChange={(e) => handleInputChange(e.target.value, "co3310")}
 							/>
 						</td>
 						<td>
 							<Input
 								type='number'
-								value={editedTable?.co4310}
-								onChange={handleCo4310Change}
+								value={editedTable?.co4310 || ""}
+								onChange={(e) => handleInputChange(e.target.value, "co4310")}
 							/>
 						</td>
 						<td>
 							<Input
 								type='number'
-								value={editedTable?.co5310}
-								onChange={handleCo5310Change}
+								value={editedTable?.co5310 || ""}
+								onChange={(e) => handleInputChange(e.target.value, "co5310")}
 							/>
 						</td>
 						<td>
 							<Input
 								type='number'
-								value={editedTable?.co6310}
-								onChange={handleCo6310Change}
+								value={editedTable?.co6310 || ""}
+								onChange={(e) => handleInputChange(e.target.value, "co6310")}
 							/>
 						</td>
 						<td>
 							<Input
 								type='number'
-								value={editedTable?.co7310}
-								onChange={handleCo7310Change}
+								value={editedTable?.co7310 || ""}
+								onChange={(e) => handleInputChange(e.target.value, "co7310")}
 							/>
 						</td>
 					</tr>
@@ -2208,50 +1662,50 @@ const TablePo2 = ({ params }: { params: { id: string } }) => {
 						<td>
 							<Input
 								type='number'
-								value={editedTable?.co1311}
-								onChange={handleCo1311Change}
+								value={editedTable?.co1311 || ""}
+								onChange={(e) => handleInputChange(e.target.value, "co1311")}
 							/>
 						</td>
 						<td>
 							<Input
 								type='number'
-								value={editedTable?.co2311}
-								onChange={handleCo2311Change}
+								value={editedTable?.co2311 || ""}
+								onChange={(e) => handleInputChange(e.target.value, "co2311")}
 							/>
 						</td>
 						<td>
 							<Input
 								type='number'
-								value={editedTable?.co3311}
-								onChange={handleCo3311Change}
+								value={editedTable?.co3311 || ""}
+								onChange={(e) => handleInputChange(e.target.value, "co3311")}
 							/>
 						</td>
 						<td>
 							<Input
 								type='number'
-								value={editedTable?.co4311}
-								onChange={handleCo4311Change}
+								value={editedTable?.co4311 || ""}
+								onChange={(e) => handleInputChange(e.target.value, "co4311")}
 							/>
 						</td>
 						<td>
 							<Input
 								type='number'
-								value={editedTable?.co5311}
-								onChange={handleCo5311Change}
+								value={editedTable?.co5311 || ""}
+								onChange={(e) => handleInputChange(e.target.value, "co5311")}
 							/>
 						</td>
 						<td>
 							<Input
 								type='number'
-								value={editedTable?.co6311}
-								onChange={handleCo6311Change}
+								value={editedTable?.co6311 || ""}
+								onChange={(e) => handleInputChange(e.target.value, "co6311")}
 							/>
 						</td>
 						<td>
 							<Input
 								type='number'
-								value={editedTable?.co7311}
-								onChange={handleCo7311Change}
+								value={editedTable?.co7311 || ""}
+								onChange={(e) => handleInputChange(e.target.value, "co7311")}
 							/>
 						</td>
 					</tr>
@@ -2268,50 +1722,50 @@ const TablePo2 = ({ params }: { params: { id: string } }) => {
 						<td>
 							<Input
 								type='number'
-								value={editedTable?.co1312}
-								onChange={handleCo1312Change}
+								value={editedTable?.co1312 || ""}
+								onChange={(e) => handleInputChange(e.target.value, "co1312")}
 							/>
 						</td>
 						<td>
 							<Input
 								type='number'
-								value={editedTable?.co2312}
-								onChange={handleCo2312Change}
+								value={editedTable?.co2312 || ""}
+								onChange={(e) => handleInputChange(e.target.value, "co2312")}
 							/>
 						</td>
 						<td>
 							<Input
 								type='number'
-								value={editedTable?.co3312}
-								onChange={handleCo3312Change}
+								value={editedTable?.co3312 || ""}
+								onChange={(e) => handleInputChange(e.target.value, "co3312")}
 							/>
 						</td>
 						<td>
 							<Input
 								type='number'
-								value={editedTable?.co4312}
-								onChange={handleCo4312Change}
+								value={editedTable?.co4312 || ""}
+								onChange={(e) => handleInputChange(e.target.value, "co4312")}
 							/>
 						</td>
 						<td>
 							<Input
 								type='number'
-								value={editedTable?.co5312}
-								onChange={handleCo5312Change}
+								value={editedTable?.co5312 || ""}
+								onChange={(e) => handleInputChange(e.target.value, "co5312")}
 							/>
 						</td>
 						<td>
 							<Input
 								type='number'
-								value={editedTable?.co6312}
-								onChange={handleCo6312Change}
+								value={editedTable?.co6312 || ""}
+								onChange={(e) => handleInputChange(e.target.value, "co6312")}
 							/>
 						</td>
 						<td>
 							<Input
 								type='number'
-								value={editedTable?.co7312}
-								onChange={handleCo7312Change}
+								value={editedTable?.co7312 || ""}
+								onChange={(e) => handleInputChange(e.target.value, "co7312")}
 							/>
 						</td>
 					</tr>
@@ -2325,50 +1779,50 @@ const TablePo2 = ({ params }: { params: { id: string } }) => {
 						<td>
 							<Input
 								type='number'
-								value={editedTable?.co1313}
-								onChange={handleCo1313Change}
+								value={editedTable?.co1313 || ""}
+								onChange={(e) => handleInputChange(e.target.value, "co1313")}
 							/>
 						</td>
 						<td>
 							<Input
 								type='number'
-								value={editedTable?.co2313}
-								onChange={handleCo2313Change}
+								value={editedTable?.co2313 || ""}
+								onChange={(e) => handleInputChange(e.target.value, "co2313")}
 							/>
 						</td>
 						<td>
 							<Input
 								type='number'
-								value={editedTable?.co3313}
-								onChange={handleCo3313Change}
+								value={editedTable?.co3313 || ""}
+								onChange={(e) => handleInputChange(e.target.value, "co3313")}
 							/>
 						</td>
 						<td>
 							<Input
 								type='number'
-								value={editedTable?.co4313}
-								onChange={handleCo4313Change}
+								value={editedTable?.co4313 || ""}
+								onChange={(e) => handleInputChange(e.target.value, "co4313")}
 							/>
 						</td>
 						<td>
 							<Input
 								type='number'
-								value={editedTable?.co5313}
-								onChange={handleCo5313Change}
+								value={editedTable?.co5313 || ""}
+								onChange={(e) => handleInputChange(e.target.value, "co5313")}
 							/>
 						</td>
 						<td>
 							<Input
 								type='number'
-								value={editedTable?.co6313}
-								onChange={handleCo6313Change}
+								value={editedTable?.co6313 || ""}
+								onChange={(e) => handleInputChange(e.target.value, "co6313")}
 							/>
 						</td>
 						<td>
 							<Input
 								type='number'
-								value={editedTable?.co7313}
-								onChange={handleCo7313Change}
+								value={editedTable?.co7313 || ""}
+								onChange={(e) => handleInputChange(e.target.value, "co7313")}
 							/>
 						</td>
 					</tr>

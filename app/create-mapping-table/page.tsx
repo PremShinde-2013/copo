@@ -4854,23 +4854,6 @@ export default function App() {
 	const handleSubmit = async (e: any) => {
 		e.preventDefault();
 
-		// if (
-		// 	!po ||
-		// 	!competency ||
-		// 	!indicators ||
-		// 	!weight ||
-		// 	!co1 ||
-		// 	!co2 ||
-		// 	!co3 ||
-		// 	!co4 ||
-		// 	!co5 ||
-		// 	!co6 ||
-		// 	!co7
-		// ) {
-		// 	alert("fill all fields");
-		// 	return;
-		// }
-
 		try {
 			// const res = await fetch("http://localhost:3000/api/table", {
 			const res = await fetch("https://copo-attainment.vercel.app/api/table", {

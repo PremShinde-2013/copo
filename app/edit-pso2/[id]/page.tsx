@@ -33,10 +33,10 @@ const TablePo2 = ({ params }: { params: { id: string } }) => {
 	// Define the calculation function
 	const calculatePso2mapco1 = () => {
 		const sumCo =
-			parseInt(editedTable?.psoco121 || 0) +
-			parseInt(editedTable?.psoco122 || 0) +
-			parseInt(editedTable?.psoco123 || 0) +
-			parseInt(editedTable?.psoco124 || 0);
+			parseInt(editedTable?.psoco121 || "") +
+			parseInt(editedTable?.psoco122 || "") +
+			parseInt(editedTable?.psoco123 || "") +
+			parseInt(editedTable?.psoco124 || "");
 		const calculatedValue = Math.round((sumCo * 0.25) / 0.33);
 		setEditedTable((prevTable: any) => ({
 			...prevTable,
@@ -45,10 +45,10 @@ const TablePo2 = ({ params }: { params: { id: string } }) => {
 	};
 	const calculatePso2mapco2 = () => {
 		const sumCo =
-			parseInt(editedTable?.psoco221 || 0) +
-			parseInt(editedTable?.psoco222 || 0) +
-			parseInt(editedTable?.psoco223 || 0) +
-			parseInt(editedTable?.psoco224 || 0);
+			parseInt(editedTable?.psoco221 || "") +
+			parseInt(editedTable?.psoco222 || "") +
+			parseInt(editedTable?.psoco223 || "") +
+			parseInt(editedTable?.psoco224 || "");
 		const calculatedValue = Math.round((sumCo * 0.25) / 0.33);
 		setEditedTable((prevTable: any) => ({
 			...prevTable,
@@ -57,10 +57,10 @@ const TablePo2 = ({ params }: { params: { id: string } }) => {
 	};
 	const calculatePso2mapco3 = () => {
 		const sumCo =
-			parseInt(editedTable?.psoco321 || 0) +
-			parseInt(editedTable?.psoco322 || 0) +
-			parseInt(editedTable?.psoco323 || 0) +
-			parseInt(editedTable?.psoco324 || 0);
+			parseInt(editedTable?.psoco321 || "") +
+			parseInt(editedTable?.psoco322 || "") +
+			parseInt(editedTable?.psoco323 || "") +
+			parseInt(editedTable?.psoco324 || "");
 		const calculatedValue = Math.round((sumCo * 0.25) / 0.33);
 		setEditedTable((prevTable: any) => ({
 			...prevTable,
@@ -69,10 +69,10 @@ const TablePo2 = ({ params }: { params: { id: string } }) => {
 	};
 	const calculatePso2mapco4 = () => {
 		const sumCo =
-			parseInt(editedTable?.psoco421 || 0) +
-			parseInt(editedTable?.psoco422 || 0) +
-			parseInt(editedTable?.psoco423 || 0) +
-			parseInt(editedTable?.psoco424 || 0);
+			parseInt(editedTable?.psoco421 || "") +
+			parseInt(editedTable?.psoco422 || "") +
+			parseInt(editedTable?.psoco423 || "") +
+			parseInt(editedTable?.psoco424 || "");
 		const calculatedValue = Math.round((sumCo * 0.25) / 0.33);
 		setEditedTable((prevTable: any) => ({
 			...prevTable,
@@ -81,10 +81,10 @@ const TablePo2 = ({ params }: { params: { id: string } }) => {
 	};
 	const calculatePso2mapco5 = () => {
 		const sumCo =
-			parseInt(editedTable?.psoco521 || 0) +
-			parseInt(editedTable?.psoco522 || 0) +
-			parseInt(editedTable?.psoco523 || 0) +
-			parseInt(editedTable?.psoco524 || 0);
+			parseInt(editedTable?.psoco521 || "") +
+			parseInt(editedTable?.psoco522 || "") +
+			parseInt(editedTable?.psoco523 || "") +
+			parseInt(editedTable?.psoco524 || "");
 		const calculatedValue = Math.round((sumCo * 0.25) / 0.33);
 		setEditedTable((prevTable: any) => ({
 			...prevTable,
@@ -93,10 +93,10 @@ const TablePo2 = ({ params }: { params: { id: string } }) => {
 	};
 	const calculatePso2mapco6 = () => {
 		const sumCo =
-			parseInt(editedTable?.psoco621 || 0) +
-			parseInt(editedTable?.psoco622 || 0) +
-			parseInt(editedTable?.psoco623 || 0) +
-			parseInt(editedTable?.psoco624 || 0);
+			parseInt(editedTable?.psoco621 || "") +
+			parseInt(editedTable?.psoco622 || "") +
+			parseInt(editedTable?.psoco623 || "") +
+			parseInt(editedTable?.psoco624 || "");
 		const calculatedValue = Math.round((sumCo * 0.25) / 0.33);
 		setEditedTable((prevTable: any) => ({
 			...prevTable,
@@ -105,10 +105,10 @@ const TablePo2 = ({ params }: { params: { id: string } }) => {
 	};
 	const calculatePso2mapco7 = () => {
 		const sumCo =
-			parseInt(editedTable?.psoco721 || 0) +
-			parseInt(editedTable?.psoco722 || 0) +
-			parseInt(editedTable?.psoco723 || 0) +
-			parseInt(editedTable?.psoco724 || 0);
+			parseInt(editedTable?.psoco721 || "") +
+			parseInt(editedTable?.psoco722 || "") +
+			parseInt(editedTable?.psoco723 || "") +
+			parseInt(editedTable?.psoco724 || "");
 		const calculatedValue = Math.round((sumCo * 0.25) / 0.33);
 		setEditedTable((prevTable: any) => ({
 			...prevTable,
@@ -796,7 +796,7 @@ const TablePo2 = ({ params }: { params: { id: string } }) => {
 
 		// ******************************* PSO:1 *****************************
 
-		editedTable?.psoco111,
+		editedTable?.psoco121,
 		editedTable?.psoco112,
 		editedTable?.psoco113,
 		editedTable?.psoco114,
@@ -913,180 +913,6 @@ const TablePo2 = ({ params }: { params: { id: string } }) => {
 		editedTable?.psoco734,
 	]);
 
-	// **************************    PSO:2     *************************************
-
-	const handlePsoCo121Change = (e: React.ChangeEvent<HTMLInputElement>) => {
-		setEditedTable((prevTable: any) => ({
-			...prevTable,
-			psoco121: e.target.value,
-		}));
-	};
-	const handlePsoCo221Change = (e: React.ChangeEvent<HTMLInputElement>) => {
-		setEditedTable((prevTable: any) => ({
-			...prevTable,
-			psoco221: e.target.value,
-		}));
-	};
-	const handlePsoCo321Change = (e: React.ChangeEvent<HTMLInputElement>) => {
-		setEditedTable((prevTable: any) => ({
-			...prevTable,
-			psoco321: e.target.value,
-		}));
-	};
-	const handlePsoCo421Change = (e: React.ChangeEvent<HTMLInputElement>) => {
-		setEditedTable((prevTable: any) => ({
-			...prevTable,
-			psoco421: e.target.value,
-		}));
-	};
-	const handlePsoCo521Change = (e: React.ChangeEvent<HTMLInputElement>) => {
-		setEditedTable((prevTable: any) => ({
-			...prevTable,
-			psoco521: e.target.value,
-		}));
-	};
-	const handlePsoCo621Change = (e: React.ChangeEvent<HTMLInputElement>) => {
-		setEditedTable((prevTable: any) => ({
-			...prevTable,
-			psoco621: e.target.value,
-		}));
-	};
-	const handlePsoCo721Change = (e: React.ChangeEvent<HTMLInputElement>) => {
-		setEditedTable((prevTable: any) => ({
-			...prevTable,
-			psoco721: e.target.value,
-		}));
-	};
-
-	const handlePsoCo122Change = (e: React.ChangeEvent<HTMLInputElement>) => {
-		setEditedTable((prevTable: any) => ({
-			...prevTable,
-			psoco122: e.target.value,
-		}));
-	};
-	const handlePsoCo222Change = (e: React.ChangeEvent<HTMLInputElement>) => {
-		setEditedTable((prevTable: any) => ({
-			...prevTable,
-			psoco222: e.target.value,
-		}));
-	};
-	const handlePsoCo322Change = (e: React.ChangeEvent<HTMLInputElement>) => {
-		setEditedTable((prevTable: any) => ({
-			...prevTable,
-			psoco322: e.target.value,
-		}));
-	};
-	const handlePsoCo422Change = (e: React.ChangeEvent<HTMLInputElement>) => {
-		setEditedTable((prevTable: any) => ({
-			...prevTable,
-			psoco422: e.target.value,
-		}));
-	};
-	const handlePsoCo522Change = (e: React.ChangeEvent<HTMLInputElement>) => {
-		setEditedTable((prevTable: any) => ({
-			...prevTable,
-			psoco522: e.target.value,
-		}));
-	};
-	const handlePsoCo622Change = (e: React.ChangeEvent<HTMLInputElement>) => {
-		setEditedTable((prevTable: any) => ({
-			...prevTable,
-			psoco622: e.target.value,
-		}));
-	};
-	const handlePsoCo722Change = (e: React.ChangeEvent<HTMLInputElement>) => {
-		setEditedTable((prevTable: any) => ({
-			...prevTable,
-			psoco722: e.target.value,
-		}));
-	};
-
-	const handlePsoCo123Change = (e: React.ChangeEvent<HTMLInputElement>) => {
-		setEditedTable((prevTable: any) => ({
-			...prevTable,
-			psoco123: e.target.value,
-		}));
-	};
-	const handlePsoCo223Change = (e: React.ChangeEvent<HTMLInputElement>) => {
-		setEditedTable((prevTable: any) => ({
-			...prevTable,
-			psoco223: e.target.value,
-		}));
-	};
-	const handlePsoCo323Change = (e: React.ChangeEvent<HTMLInputElement>) => {
-		setEditedTable((prevTable: any) => ({
-			...prevTable,
-			psoco323: e.target.value,
-		}));
-	};
-	const handlePsoCo423Change = (e: React.ChangeEvent<HTMLInputElement>) => {
-		setEditedTable((prevTable: any) => ({
-			...prevTable,
-			psoco423: e.target.value,
-		}));
-	};
-	const handlePsoCo523Change = (e: React.ChangeEvent<HTMLInputElement>) => {
-		setEditedTable((prevTable: any) => ({
-			...prevTable,
-			psoco523: e.target.value,
-		}));
-	};
-	const handlePsoCo623Change = (e: React.ChangeEvent<HTMLInputElement>) => {
-		setEditedTable((prevTable: any) => ({
-			...prevTable,
-			psoco623: e.target.value,
-		}));
-	};
-	const handlePsoCo723Change = (e: React.ChangeEvent<HTMLInputElement>) => {
-		setEditedTable((prevTable: any) => ({
-			...prevTable,
-			psoco723: e.target.value,
-		}));
-	};
-
-	const handlePsoCo124Change = (e: React.ChangeEvent<HTMLInputElement>) => {
-		setEditedTable((prevTable: any) => ({
-			...prevTable,
-			psoco124: e.target.value,
-		}));
-	};
-	const handlePsoCo224Change = (e: React.ChangeEvent<HTMLInputElement>) => {
-		setEditedTable((prevTable: any) => ({
-			...prevTable,
-			psoco224: e.target.value,
-		}));
-	};
-	const handlePsoCo324Change = (e: React.ChangeEvent<HTMLInputElement>) => {
-		setEditedTable((prevTable: any) => ({
-			...prevTable,
-			psoco324: e.target.value,
-		}));
-	};
-	const handlePsoCo424Change = (e: React.ChangeEvent<HTMLInputElement>) => {
-		setEditedTable((prevTable: any) => ({
-			...prevTable,
-			psoco424: e.target.value,
-		}));
-	};
-	const handlePsoCo524Change = (e: React.ChangeEvent<HTMLInputElement>) => {
-		setEditedTable((prevTable: any) => ({
-			...prevTable,
-			psoco524: e.target.value,
-		}));
-	};
-	const handlePsoCo624Change = (e: React.ChangeEvent<HTMLInputElement>) => {
-		setEditedTable((prevTable: any) => ({
-			...prevTable,
-			psoco624: e.target.value,
-		}));
-	};
-	const handlePsoCo724Change = (e: React.ChangeEvent<HTMLInputElement>) => {
-		setEditedTable((prevTable: any) => ({
-			...prevTable,
-			psoco724: e.target.value,
-		}));
-	};
-
 	const handleSaveChanges = async () => {
 		try {
 			const response = await fetch(`/api/table/${id}`, {
@@ -1118,6 +944,19 @@ const TablePo2 = ({ params }: { params: { id: string } }) => {
 	if (error) {
 		return <p>{error}</p>;
 	}
+
+	const handleInputChange = (value: string, fieldName: string) => {
+		const parsedValue = parseFloat(value);
+
+		if (parsedValue > 1) {
+			toast.error("Value cannot be greater than 1");
+		} else {
+			setEditedTable((prevTable: any) => ({
+				...prevTable,
+				[fieldName]: String(Math.min(Math.max(parsedValue, 0), 1)),
+			}));
+		}
+	};
 
 	return (
 		<div className='overflow-x-auto'>
@@ -1181,50 +1020,50 @@ const TablePo2 = ({ params }: { params: { id: string } }) => {
 						<td>
 							<Input
 								type='number'
-								value={editedTable?.psoco121}
-								onChange={handlePsoCo121Change}
+								value={editedTable?.psoco121 || ""}
+								onChange={(e) => handleInputChange(e.target.value, "psoco121")}
 							/>
 						</td>
 						<td>
 							<Input
 								type='number'
-								value={editedTable?.psoco221}
-								onChange={handlePsoCo221Change}
+								value={editedTable?.psoco221 || ""}
+								onChange={(e) => handleInputChange(e.target.value, "psoco221")}
 							/>
 						</td>
 						<td>
 							<Input
 								type='number'
-								value={editedTable?.psoco321}
-								onChange={handlePsoCo321Change}
+								value={editedTable?.psoco321 || ""}
+								onChange={(e) => handleInputChange(e.target.value, "psoco321")}
 							/>
 						</td>
 						<td>
 							<Input
 								type='number'
-								value={editedTable?.psoco421}
-								onChange={handlePsoCo421Change}
+								value={editedTable?.psoco421 || ""}
+								onChange={(e) => handleInputChange(e.target.value, "psoco421")}
 							/>
 						</td>
 						<td>
 							<Input
 								type='number'
-								value={editedTable?.psoco521}
-								onChange={handlePsoCo521Change}
+								value={editedTable?.psoco521 || ""}
+								onChange={(e) => handleInputChange(e.target.value, "psoco521")}
 							/>
 						</td>
 						<td>
 							<Input
 								type='number'
-								value={editedTable?.psoco621}
-								onChange={handlePsoCo621Change}
+								value={editedTable?.psoco621 || ""}
+								onChange={(e) => handleInputChange(e.target.value, "psoco621")}
 							/>
 						</td>
 						<td>
 							<Input
 								type='number'
-								value={editedTable?.psoco721}
-								onChange={handlePsoCo721Change}
+								value={editedTable?.psoco721 || ""}
+								onChange={(e) => handleInputChange(e.target.value, "psoco721")}
 							/>
 						</td>
 					</tr>
@@ -1238,50 +1077,50 @@ const TablePo2 = ({ params }: { params: { id: string } }) => {
 						<td>
 							<Input
 								type='number'
-								value={editedTable?.psoco122}
-								onChange={handlePsoCo122Change}
+								value={editedTable?.psoco122 || ""}
+								onChange={(e) => handleInputChange(e.target.value, "psoco122")}
 							/>
 						</td>
 						<td>
 							<Input
 								type='number'
-								value={editedTable?.psoco222}
-								onChange={handlePsoCo222Change}
+								value={editedTable?.psoco222 || ""}
+								onChange={(e) => handleInputChange(e.target.value, "psoco222")}
 							/>
 						</td>
 						<td>
 							<Input
 								type='number'
-								value={editedTable?.psoco322}
-								onChange={handlePsoCo322Change}
+								value={editedTable?.psoco322 || ""}
+								onChange={(e) => handleInputChange(e.target.value, "psoco322")}
 							/>
 						</td>
 						<td>
 							<Input
 								type='number'
-								value={editedTable?.psoco422}
-								onChange={handlePsoCo422Change}
+								value={editedTable?.psoco422 || ""}
+								onChange={(e) => handleInputChange(e.target.value, "psoco422")}
 							/>
 						</td>
 						<td>
 							<Input
 								type='number'
-								value={editedTable?.psoco522}
-								onChange={handlePsoCo522Change}
+								value={editedTable?.psoco522 || ""}
+								onChange={(e) => handleInputChange(e.target.value, "psoco522")}
 							/>
 						</td>
 						<td>
 							<Input
 								type='number'
-								value={editedTable?.psoco622}
-								onChange={handlePsoCo622Change}
+								value={editedTable?.psoco622 || ""}
+								onChange={(e) => handleInputChange(e.target.value, "psoco622")}
 							/>
 						</td>
 						<td>
 							<Input
 								type='number'
-								value={editedTable?.psoco722}
-								onChange={handlePsoCo722Change}
+								value={editedTable?.psoco722 || ""}
+								onChange={(e) => handleInputChange(e.target.value, "psoco722")}
 							/>
 						</td>
 					</tr>
@@ -1299,50 +1138,50 @@ const TablePo2 = ({ params }: { params: { id: string } }) => {
 						<td>
 							<Input
 								type='number'
-								value={editedTable?.psoco123}
-								onChange={handlePsoCo123Change}
+								value={editedTable?.psoco123 || ""}
+								onChange={(e) => handleInputChange(e.target.value, "psoco123")}
 							/>
 						</td>
 						<td>
 							<Input
 								type='number'
-								value={editedTable?.psoco223}
-								onChange={handlePsoCo223Change}
+								value={editedTable?.psoco223 || ""}
+								onChange={(e) => handleInputChange(e.target.value, "psoco223")}
 							/>
 						</td>
 						<td>
 							<Input
 								type='number'
-								value={editedTable?.psoco323}
-								onChange={handlePsoCo323Change}
+								value={editedTable?.psoco323 || ""}
+								onChange={(e) => handleInputChange(e.target.value, "psoco323")}
 							/>
 						</td>
 						<td>
 							<Input
 								type='number'
-								value={editedTable?.psoco423}
-								onChange={handlePsoCo423Change}
+								value={editedTable?.psoco423 || ""}
+								onChange={(e) => handleInputChange(e.target.value, "psoco423")}
 							/>
 						</td>
 						<td>
 							<Input
 								type='number'
-								value={editedTable?.psoco523}
-								onChange={handlePsoCo523Change}
+								value={editedTable?.psoco523 || ""}
+								onChange={(e) => handleInputChange(e.target.value, "psoco523")}
 							/>
 						</td>
 						<td>
 							<Input
 								type='number'
-								value={editedTable?.psoco623}
-								onChange={handlePsoCo623Change}
+								value={editedTable?.psoco623 || ""}
+								onChange={(e) => handleInputChange(e.target.value, "psoco623")}
 							/>
 						</td>
 						<td>
 							<Input
 								type='number'
-								value={editedTable?.psoco723}
-								onChange={handlePsoCo723Change}
+								value={editedTable?.psoco723 || ""}
+								onChange={(e) => handleInputChange(e.target.value, "psoco723")}
 							/>
 						</td>
 					</tr>
@@ -1356,50 +1195,50 @@ const TablePo2 = ({ params }: { params: { id: string } }) => {
 						<td>
 							<Input
 								type='number'
-								value={editedTable?.psoco124}
-								onChange={handlePsoCo124Change}
+								value={editedTable?.psoco124 || ""}
+								onChange={(e) => handleInputChange(e.target.value, "psoco124")}
 							/>
 						</td>
 						<td>
 							<Input
 								type='number'
-								value={editedTable?.psoco224}
-								onChange={handlePsoCo224Change}
+								value={editedTable?.psoco224 || ""}
+								onChange={(e) => handleInputChange(e.target.value, "psoco224")}
 							/>
 						</td>
 						<td>
 							<Input
 								type='number'
-								value={editedTable?.psoco324}
-								onChange={handlePsoCo324Change}
+								value={editedTable?.psoco324 || ""}
+								onChange={(e) => handleInputChange(e.target.value, "psoco324")}
 							/>
 						</td>
 						<td>
 							<Input
 								type='number'
-								value={editedTable?.psoco424}
-								onChange={handlePsoCo424Change}
+								value={editedTable?.psoco424 || ""}
+								onChange={(e) => handleInputChange(e.target.value, "psoco424")}
 							/>
 						</td>
 						<td>
 							<Input
 								type='number'
-								value={editedTable?.psoco524}
-								onChange={handlePsoCo524Change}
+								value={editedTable?.psoco524 || ""}
+								onChange={(e) => handleInputChange(e.target.value, "psoco524")}
 							/>
 						</td>
 						<td>
 							<Input
 								type='number'
-								value={editedTable?.psoco624}
-								onChange={handlePsoCo624Change}
+								value={editedTable?.psoco624 || ""}
+								onChange={(e) => handleInputChange(e.target.value, "psoco624")}
 							/>
 						</td>
 						<td>
 							<Input
 								type='number'
-								value={editedTable?.psoco724}
-								onChange={handlePsoCo724Change}
+								value={editedTable?.psoco724 || ""}
+								onChange={(e) => handleInputChange(e.target.value, "psoco724")}
 							/>
 						</td>
 					</tr>
@@ -1437,7 +1276,9 @@ const TablePo2 = ({ params }: { params: { id: string } }) => {
 					</tr>
 				</tbody>
 			</table>
-			<Button onClick={handleSaveChanges}>Save Changes</Button>
+			<Button onClick={handleSaveChanges} color='success'>
+				Save Changes
+			</Button>
 		</div>
 	);
 };
