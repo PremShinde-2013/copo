@@ -1402,15 +1402,9 @@ const TablePo2 = ({ params }: { params: { id: string } }) => {
 					</tr>
 				</tbody>
 			</table>
-			<Button onClick={handleSaveChanges}>Save Changes</Button>
-
-			<div className='mt-8'>
-				<Link href={`/po-table/${editedTable?._id}`}>
-					<Button variant='flat' color='success'>
-						Edit
-					</Button>
-				</Link>
-			</div>
+			<Button onClick={handleSaveChanges} color='success' variant='flat'>
+				Save Changes
+			</Button>
 		</div>
 	);
 };
