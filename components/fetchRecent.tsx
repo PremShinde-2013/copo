@@ -1233,11 +1233,14 @@ interface TableData {
 	updatedAt: Date;
 }
 
+// const res = await fetch("http://localhost:3000/api/get-recent-tables", {
 const fetchRecent = async (): Promise<TableData[] | null> => {
 	try {
-		// const res = await fetch("http://localhost:3000/api/get-recent-tables", {
 		const res = await fetch(
-			"https://copo-attainment.vercel.app/api/get-recent-tables",
+			// "http://localhost:3000/api/get-recent-tables?_=" +
+			"https://copo-attainment.vercel.app/api/get-recent-tables?_=" +
+				Date.now(),
+			// Append a unique timestamp as a query parameter to bust cache
 			{
 				cache: "no-store",
 			}
