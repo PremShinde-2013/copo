@@ -26,7 +26,7 @@ npx create-next-app -e https://github.com/nextui-org/next-app-template
 ### Install dependencies
 
 ```bash
-npm install
+npm install --force
 ```
 
 ### Run the development server
