@@ -379,7 +379,7 @@ const TableDetail = ({ params }: { params: { id: string } }) => {
 								max={1}
 								type='number'
 								// value={editedTable2?.co111 || "0"}
-								value={editedTable2?.co111 || "0"}
+								value={editedTable2?.co111 || ""}
 								onChange={(e) => handleInputChange(e.target.value, "co111")}
 							/>
 						</td>
@@ -388,7 +388,7 @@ const TableDetail = ({ params }: { params: { id: string } }) => {
 								min={0}
 								max={1}
 								type='number'
-								value={editedTable2?.co211 || "0"}
+								value={editedTable2?.co211 || ""}
 								onChange={(e) => handleInputChange(e.target.value, "co211")}
 							/>
 						</td>
@@ -397,7 +397,7 @@ const TableDetail = ({ params }: { params: { id: string } }) => {
 								min={0}
 								max={1}
 								type='number'
-								value={editedTable2?.co311 || "0"}
+								value={editedTable2?.co311 || ""}
 								onChange={(e) => handleInputChange(e.target.value, "co311")}
 							/>
 						</td>
@@ -406,28 +406,28 @@ const TableDetail = ({ params }: { params: { id: string } }) => {
 								min={0}
 								max={1}
 								type='number'
-								value={editedTable2?.co411 || "0"}
+								value={editedTable2?.co411 || ""}
 								onChange={(e) => handleInputChange(e.target.value, "co411")}
 							/>
 						</td>
 						<td>
 							<Input
 								type='number'
-								value={editedTable2?.co511 || "0"}
+								value={editedTable2?.co511 || ""}
 								onChange={(e) => handleInputChange(e.target.value, "co511")}
 							/>
 						</td>
 						<td>
 							<Input
 								type='number'
-								value={editedTable2?.co611 || "0"}
+								value={editedTable2?.co611 || ""}
 								onChange={(e) => handleInputChange(e.target.value, "co611")}
 							/>
 						</td>
 						<td>
 							<Input
 								type='number'
-								value={editedTable2?.co711 || "0"}
+								value={editedTable2?.co711 || ""}
 								onChange={(e) => handleInputChange(e.target.value, "co711")}
 							/>
 						</td>
@@ -448,49 +448,49 @@ const TableDetail = ({ params }: { params: { id: string } }) => {
 						<td>
 							<Input
 								type='number'
-								value={editedTable2?.co112 || "0"}
+								value={editedTable2?.co112 || ""}
 								onChange={(e) => handleInputChange(e.target.value, "co112")}
 							/>
 						</td>
 						<td>
 							<Input
 								type='number'
-								value={editedTable2?.co212 || "0"}
+								value={editedTable2?.co212 || ""}
 								onChange={(e) => handleInputChange(e.target.value, "co212")}
 							/>
 						</td>
 						<td>
 							<Input
 								type='number'
-								value={editedTable2?.co312 || "0"}
+								value={editedTable2?.co312 || ""}
 								onChange={(e) => handleInputChange(e.target.value, "co312")}
 							/>
 						</td>
 						<td>
 							<Input
 								type='number'
-								value={editedTable2?.co412 || "0"}
+								value={editedTable2?.co412 || ""}
 								onChange={(e) => handleInputChange(e.target.value, "co412")}
 							/>
 						</td>
 						<td>
 							<Input
 								type='number'
-								value={editedTable2?.co512 || "0"}
+								value={editedTable2?.co512 || ""}
 								onChange={(e) => handleInputChange(e.target.value, "co512")}
 							/>
 						</td>
 						<td>
 							<Input
 								type='number'
-								value={editedTable2?.co612 || "0"}
+								value={editedTable2?.co612 || ""}
 								onChange={(e) => handleInputChange(e.target.value, "co612")}
 							/>
 						</td>
 						<td>
 							<Input
 								type='number'
-								value={editedTable2?.co712 || "0"}
+								value={editedTable2?.co712 || ""}
 								onChange={(e) => handleInputChange(e.target.value, "co712")}
 							/>
 						</td>
@@ -511,49 +511,49 @@ const TableDetail = ({ params }: { params: { id: string } }) => {
 						<td>
 							<Input
 								type='number'
-								value={editedTable2?.co113 || "0"}
+								value={editedTable2?.co113 || ""}
 								onChange={(e) => handleInputChange(e.target.value, "co113")}
 							/>
 						</td>
 						<td>
 							<Input
 								type='number'
-								value={editedTable2?.co213 || "0"}
+								value={editedTable2?.co213 || ""}
 								onChange={(e) => handleInputChange(e.target.value, "co213")}
 							/>
 						</td>
 						<td>
 							<Input
 								type='number'
-								value={editedTable2?.co313 || "0"}
+								value={editedTable2?.co313 || ""}
 								onChange={(e) => handleInputChange(e.target.value, "co313")}
 							/>
 						</td>
 						<td>
 							<Input
 								type='number'
-								value={editedTable2?.co413 || "0"}
+								value={editedTable2?.co413 || ""}
 								onChange={(e) => handleInputChange(e.target.value, "co413")}
 							/>
 						</td>
 						<td>
 							<Input
 								type='number'
-								value={editedTable2?.co513 || "0"}
+								value={editedTable2?.co513 || ""}
 								onChange={(e) => handleInputChange(e.target.value, "co513")}
 							/>
 						</td>
 						<td>
 							<Input
 								type='number'
-								value={editedTable2?.co613 || "0"}
+								value={editedTable2?.co613 || ""}
 								onChange={(e) => handleInputChange(e.target.value, "co613")}
 							/>
 						</td>
 						<td>
 							<Input
 								type='number'
-								value={editedTable2?.co713 || "0"}
+								value={editedTable2?.co713 || ""}
 								onChange={(e) => handleInputChange(e.target.value, "co713")}
 							/>
 						</td>
@@ -574,49 +574,49 @@ const TableDetail = ({ params }: { params: { id: string } }) => {
 						<td>
 							<Input
 								type='number'
-								value={editedTable2?.co114 || "0"}
+								value={editedTable2?.co114 || ""}
 								onChange={(e) => handleInputChange(e.target.value, "co114")}
 							/>
 						</td>
 						<td>
 							<Input
 								type='number'
-								value={editedTable2?.co214 || "0"}
+								value={editedTable2?.co214 || ""}
 								onChange={(e) => handleInputChange(e.target.value, "co214")}
 							/>
 						</td>
 						<td>
 							<Input
 								type='number'
-								value={editedTable2?.co314 || "0"}
+								value={editedTable2?.co314 || ""}
 								onChange={(e) => handleInputChange(e.target.value, "co314")}
 							/>
 						</td>
 						<td>
 							<Input
 								type='number'
-								value={editedTable2?.co414 || "0"}
+								value={editedTable2?.co414 || ""}
 								onChange={(e) => handleInputChange(e.target.value, "co414")}
 							/>
 						</td>
 						<td>
 							<Input
 								type='number'
-								value={editedTable2?.co514 || "0"}
+								value={editedTable2?.co514 || ""}
 								onChange={(e) => handleInputChange(e.target.value, "co514")}
 							/>
 						</td>
 						<td>
 							<Input
 								type='number'
-								value={editedTable2?.co614 || "0"}
+								value={editedTable2?.co614 || ""}
 								onChange={(e) => handleInputChange(e.target.value, "co614")}
 							/>
 						</td>
 						<td>
 							<Input
 								type='number'
-								value={editedTable2?.co714 || "0"}
+								value={editedTable2?.co714 || ""}
 								onChange={(e) => handleInputChange(e.target.value, "co714")}
 							/>
 						</td>
@@ -637,49 +637,49 @@ const TableDetail = ({ params }: { params: { id: string } }) => {
 						<td>
 							<Input
 								type='number'
-								value={editedTable2?.co115 || "0"}
+								value={editedTable2?.co115 || ""}
 								onChange={(e) => handleInputChange(e.target.value, "co115")}
 							/>
 						</td>
 						<td>
 							<Input
 								type='number'
-								value={editedTable2?.co215 || "0"}
+								value={editedTable2?.co215 || ""}
 								onChange={(e) => handleInputChange(e.target.value, "co215")}
 							/>
 						</td>
 						<td>
 							<Input
 								type='number'
-								value={editedTable2?.co315 || "0"}
+								value={editedTable2?.co315 || ""}
 								onChange={(e) => handleInputChange(e.target.value, "co315")}
 							/>
 						</td>
 						<td>
 							<Input
 								type='number'
-								value={editedTable2?.co415 || "0"}
+								value={editedTable2?.co415 || ""}
 								onChange={(e) => handleInputChange(e.target.value, "co415")}
 							/>
 						</td>
 						<td>
 							<Input
 								type='number'
-								value={editedTable2?.co515 || "0"}
+								value={editedTable2?.co515 || ""}
 								onChange={(e) => handleInputChange(e.target.value, "co515")}
 							/>
 						</td>
 						<td>
 							<Input
 								type='number'
-								value={editedTable2?.co615 || "0"}
+								value={editedTable2?.co615 || ""}
 								onChange={(e) => handleInputChange(e.target.value, "co615")}
 							/>
 						</td>
 						<td>
 							<Input
 								type='number'
-								value={editedTable2?.co715 || "0"}
+								value={editedTable2?.co715 || ""}
 								onChange={(e) => handleInputChange(e.target.value, "co715")}
 							/>
 						</td>
