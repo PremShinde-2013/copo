@@ -379,7 +379,10 @@ const TableDetail = ({ params }: { params: { id: string } }) => {
 								max={1}
 								type='number'
 								// value={editedTable2?.co111 || "0"}
-								value={editedTable2?.co111 || ""}
+								// value={editedTable2?.co111 || ""}
+								value={
+									editedTable2?.co111 === "" ? 0 : editedTable2?.co111 || ""
+								}
 								onChange={(e) => handleInputChange(e.target.value, "co111")}
 							/>
 						</td>
@@ -388,7 +391,10 @@ const TableDetail = ({ params }: { params: { id: string } }) => {
 								min={0}
 								max={1}
 								type='number'
-								value={editedTable2?.co211 || ""}
+								// value={editedTable2?.co211 || ""}
+								value={
+									editedTable2?.co211 === "" ? 0 : editedTable2?.co211 || ""
+								}
 								onChange={(e) => handleInputChange(e.target.value, "co211")}
 							/>
 						</td>
